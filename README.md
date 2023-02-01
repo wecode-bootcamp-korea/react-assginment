@@ -8,7 +8,8 @@
 - Directory(`cd Desktop`) 이동 후 해당 repo를 clone 받아주세요.
 - VS Code에서 해당 폴더를 열고 VS Code 에서 터미널을 열어주세요.(`cmd + j` / `ctrl + j`)
 - main 브랜치에서 `npm install` 명령어로 package를 설치해주세요.
-- 설치가 끝나면, main 브랜치를 기준으로 `assignment/기수-본인이름` 브랜치를 만들어주세요.  (ex. `assignment/00-kimgaebal`)
+- 설치가 끝나면, main 브랜치를 기준으로 `assignment/기수-본인이름` 브랜치를 만들어주세요. 
+  (ex. `assignment/00-kimgaebal`)
 - 새롭게 생성한 브랜치로 checkout 해주세요.
 
 ## 진행 방법
