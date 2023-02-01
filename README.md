@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# [Front] Foundation - React 과제안내
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 디테일한 가이드는 [Issues 탭](https://github.com/wecode-bootcamp-korea/react-assginment/issues)에 있는 내용을 확인해주세요.
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+## 초기 세팅
+- Directory(`cd Desktop`) 이동 후 해당 repo를 clone 받아주세요.
+- VS Code에서 해당 폴더를 열고 VS Code 에서 터미널을 열어주세요.(`cmd + j` / `ctrl + j`)
+- main 브랜치에서 `npm install` 명령어로 package를 설치해주세요.
+- 설치가 끝나면, main 브랜치를 기준으로 `assignment/기수-본인이름` 브랜치를 만들어주세요.  (ex. `assignment/00-kimgaebal`)
+- 새롭게 생성한 브랜치로 checkout 해주세요.
 
-### `npm start`
+## 진행 방법
+- 각 과제의 디테일한 진행방법은 [Issues 탭](https://github.com/wecode-bootcamp-korea/react-assginment/issues)에 있는 내용을 확인하고, 가이드에 맞게 과제를 진행해주세요.
+- 각 과제에 대한 작업이 끝나면 각 과제별 안내드린 커밋 메세지를 작성하고 PR을 올려 과제를 제출합니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 주의 사항
+- 각 과제별로 제출하는 경로가 다릅니다! 라벨을 먼저 확인하시고, 해당 과제 안내에 따라서 올바른 경로로 과제를 제출해주세요.
+- 각 과제별 코드리뷰를 받게 되면 해당 리뷰는 반드시 반영해주세요.
+- 리뷰를 반영했다면 해당 과제 번호와 함께 커밋 메세지로 리뷰 사항 반영이라고 남기고 push 해주세요. (ex. `assignment4-1 : 리뷰 사항 반영`)
