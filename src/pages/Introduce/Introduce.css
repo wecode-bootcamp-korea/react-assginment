@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   border: 1px solid black;
   width: 250px;
@@ -7,6 +10,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
 }
 .container {
   border: 1px solid black;
@@ -17,13 +21,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 .wecode {
   color: white;
 }
 .secContainer {
-  margin-left: -97px;
+  margin-left: -88px;
+  margin-top: 10px;
 }
 .p {
   margin-bottom: -15px;
 }
+/* .input {
+  width: 100%;
+  display: block;
+} */
