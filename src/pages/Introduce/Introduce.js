@@ -2,6 +2,15 @@ import React from "react";
 import Profile from "./img/KakaoTalk_20230213_204309040.jpg";
 
 const Introduction = () => {
+
+    const handleInput=()=>{
+        console.log("input 태그 동작");
+    }
+
+    const handleButton=()=>{
+        console.log("button 태그 동작");
+    }
+
   return (
     <main
       style={{
@@ -21,7 +30,7 @@ const Introduction = () => {
         }}
       >
         <img
-          style={{ width: "100%", height: "90%", borderRadius: "15px" }}
+          style={{ width: "100%", height: "85%", borderRadius: "15px" }}
           src={Profile}
           alt=""
         />
@@ -30,6 +39,8 @@ const Introduction = () => {
           <br />
           43기
         </p>
+        <input onChange={handleInput} type="text" />
+        <button onClick={handleButton}>클릭</button>
       </div>
     </main>
   );
