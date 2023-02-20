@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 20px;
+  margin: 20px 20px 12px 20px;
   width: 320px;
   height: 320px;
   color: white;
@@ -27,10 +27,15 @@
 }
 
 .name {
-  margin: 10px 20px;
+  margin: 5px 20px;
   font-weight: bold;
 }
 
 .class {
-  margin: 0 20px;
+  margin: 5px 20px;
+}
+
+input {
+  margin-left: 18px;
+  width: 250px;
 }
