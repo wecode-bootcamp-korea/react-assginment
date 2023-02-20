@@ -12,6 +12,12 @@ const Introduce = () => {
         홍태훈
       </strong>
       <div style={margin}>43기</div>
+      <div style={flex}>
+        <input style={input} onChange={handleInput}></input>
+        <button style={button} onClick={handleButton}>
+          클릭
+        </button>
+      </div>
     </div>
   );
 };
@@ -40,4 +46,30 @@ const boxStyle = {
 const margin = {
   marginLeft: "10px",
 };
+
+const input = {
+  width: "60px",
+  margin: "0px 0px 10px 6px",
+  height: "14px",
+};
+
+const button = {
+  width: "35px",
+  height: "20px",
+  marginRight: "10px",
+  fontSize: "10px",
+};
+
+const flex = {
+  display: "flex",
+};
+
+function handleInput() {
+  console.log("input 태그동작");
+}
+
+function handleButton() {
+  console.log("button 태그동작");
+}
+
 export default Introduce;
