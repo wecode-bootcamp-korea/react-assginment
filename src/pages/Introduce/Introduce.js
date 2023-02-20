@@ -18,6 +18,19 @@ const Introduce = () => {
       <div style={infoStyle} className="subcontent">
         43기
       </div>
+      <input
+        type="text"
+        onChange={(handleInput) => {
+          console.log("input 태그 작동");
+        }}
+      ></input>
+      <button
+        onClick={(handleButton) => {
+          console.log("button 태그 작동");
+        }}
+      >
+        button
+      </button>
     </div>
   );
 };
@@ -44,7 +57,7 @@ const wecodeStyle = {
 
 const nameStyle = {
   marginLeft: "10px",
-  marginBottom: "3px",
+  fontSize: "20px",
 };
 
 const infoStyle = {
