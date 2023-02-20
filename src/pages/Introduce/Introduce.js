@@ -25,6 +25,24 @@ const userStyle = {
   fontSize: "10px",
 };
 
+const input = {
+  width: "55%",
+  fontSize: "8px",
+};
+
+const button = {
+  padding: "0",
+  width: "30px",
+  fontSize: "8px",
+};
+
+const handleChange = () => {
+  console.log("input 태그 동작");
+};
+
+const handleClick = () => {
+  console.log("button 태그 동작");
+};
 const Introduce = () => {
   return (
     <div className="Introduce" style={IntroduceStyle}>
@@ -38,6 +56,16 @@ const Introduce = () => {
           <b>김진평</b>
           <br />
           43기
+          <br />
+          <input
+            type="text"
+            className="inputText"
+            style={input}
+            onChange={handleChange}
+          />
+          <button className="button" style={button} onClick={handleClick}>
+            클릭
+          </button>
         </div>
       </section>
     </div>
