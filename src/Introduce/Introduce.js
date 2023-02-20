@@ -19,11 +19,11 @@ const Self = ()=> {
 }
 
 const handleInput = ()=> {
-    console.log("");
+    console.log("input 태그 동작");
 }
 
 const handleButton = ()=> {
-    console.log("");
+    console.log("button 태그 동작");
 
 }
 
