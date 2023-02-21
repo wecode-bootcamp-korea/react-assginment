@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./introduce.css";
+import "./introduce.scss";
 
 const Self = () => {
   const navigate = useNavigate();
@@ -9,9 +9,7 @@ const Self = () => {
     <div className="main">
       <img alt="myPicture" src="img/비니비니.jpg"></img>
       <div className="information">
-        <p>
-          <b>문은빈</b>
-        </p>
+        <p className="myName">문은빈</p>
         <p>43기</p>
         <date className="inputInfo">
           <input type={Text}></input>

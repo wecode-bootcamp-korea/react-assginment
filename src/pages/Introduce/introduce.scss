@@ -1,7 +1,10 @@
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
+
 .main {
   margin: auto;
   width: 240px;
-  height: 300px;
+  height: 330px;
   border: 1px solid black;
   border-radius: 5px;
   display: flex;
@@ -18,6 +21,16 @@ img {
 .information {
   justify-content: left;
   margin: 0px 10px;
+}
+
+.myName {
+  font-size: 17px;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    color: $green;
+    transition: 0.7s;
+  }
 }
 
 p {
