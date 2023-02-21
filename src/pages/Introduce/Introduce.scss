@@ -1,0 +1,48 @@
+@import "/src/style/mixin.scss";
+@import "/src/style/variables.scss";
+
+.Introduce {
+  border: 1px solid black;
+  width: 110px;
+  border-radius: 5px;
+
+  .main {
+    margin: 8px;
+    background-color: black;
+    border-radius: 5px;
+
+    .content {
+      @include flexCenter;
+      color: white;
+      height: 100px;
+    }
+  }
+
+  .userInfo {
+    .user {
+      margin: 0px 0px 5px 10px;
+      font-size: 10px;
+
+      .userName {
+        &:hover {
+          color: $green;
+        }
+      }
+
+      .inputText {
+        width: 55%;
+        font-size: 8px;
+      }
+
+      .button {
+        padding: 0;
+        width: 30px;
+        font-size: 8px;
+      }
+
+      .linkToProduct {
+        font-size: 8px;
+      }
+    }
+  }
+}
