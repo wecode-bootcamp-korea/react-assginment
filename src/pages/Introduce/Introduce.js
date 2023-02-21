@@ -1,8 +1,6 @@
-// import React from "react";
-// import "./common.scss";
-
-//
 import React from "react";
+import "../../style/common.scss";
+import { Link } from "react-router-dom";
 
 const Introduce = () => {
   return (
@@ -19,18 +17,25 @@ const Introduce = () => {
         43기
       </div>
       <input
+        className="input"
         type="text"
         onChange={(handleInput) => {
-          console.log("input 태그 작동");
+          console.log("input 태그 작동"); //jsx 태그들 안에 함수표현식 쓰지 않기 -> 수정할 것
         }}
       ></input>
       <button
+        className="button"
         onClick={(handleButton) => {
           console.log("button 태그 작동");
         }}
       >
-        button
+        클릭
       </button>
+      <div>
+        <Link to="/product" className="moveLink">
+          product 페이지로 이동
+        </Link>
+      </div>
     </div>
   );
 };
@@ -38,16 +43,17 @@ const Introduce = () => {
 const boxStyle = {
   border: "1px solid",
   borderRadius: "7px",
-  width: "120px",
+  width: "150px",
+  height: "240px",
   margin: "auto",
 };
 
 const wecodeStyle = {
   display: "flex",
-  height: "100px",
+  height: "130px",
   backgroundColor: "black",
   color: "white",
-  width: "100px",
+  width: "130px",
   alignItems: "center",
   margin: "10px auto",
 
