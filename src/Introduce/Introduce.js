@@ -1,5 +1,6 @@
 import React from "react";
 import "../Introduce/Introduce.css"
+import {Link} from "react-router-dom";
 
 
 const Self = ()=> {
@@ -12,7 +13,8 @@ const Self = ()=> {
             <h5>43기</h5>
             <form>
                 <input type="text" onChange={handleInput}></input>
-                <button type="button" onClick={handleButton}>버튼</button>
+                <button type="button" onClick={handleButton}><Link to="/Product">버튼</Link></button>
+                <p href="/Product">Product 페이지로 이동</p>
             </form>
         </div>
     ) ;
