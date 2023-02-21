@@ -12,6 +12,7 @@
   width: 250px;
   height: 100vh;
   margin: 0 auto;
+  font-size: 14px;
   .introduce-box {
     flex-direction: column;
     padding: 14px;
@@ -40,5 +41,8 @@
   }
   input {
     width: 110px;
+  }
+  .input-box {
+    margin: 5px 0;
   }
 }
