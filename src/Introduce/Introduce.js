@@ -1,15 +1,15 @@
 import React from "react";
-import "../Introduce/Introduce.css"
+import "../Introduce/Introduce.scss"
 import {Link} from "react-router-dom";
 
 
 const Self = ()=> {
     return(
-        <div className="outline">
+        <nav className="outline">
             <div className="logobox">
                 <h1 className="text">wecode</h1>
             </div>
-            <h2>오지수</h2>
+            <button>오지수</button>
             <h5>43기</h5>
             <form>
                 <input type="text" onChange={handleInput}></input>
@@ -17,7 +17,7 @@ const Self = ()=> {
                 <br/>
                 <a href="/Product">Product 페이지로 이동</a>
             </form>
-        </div>
+        </nav>
     ) ;
 }
 
