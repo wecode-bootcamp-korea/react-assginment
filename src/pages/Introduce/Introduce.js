@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/common.scss";
+import "../../pages/Introduce/Introduce.scss";
 import { Link } from "react-router-dom";
 
 const Introduce = () => {
