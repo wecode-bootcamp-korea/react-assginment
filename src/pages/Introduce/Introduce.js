@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Introduce = () => {
   return (
@@ -14,9 +15,15 @@ const Introduce = () => {
       <div style={margin}>43기</div>
       <div style={flex}>
         <input style={input} onChange={handleInput}></input>
-        <button style={button} onClick={handleButton}>
-          클릭
-        </button>
+
+        <Link to="/product">
+          <button style={button} onClick={handleButton}>
+            클릭
+          </button>
+        </Link>
+      </div>
+      <div style={{ fontSize: "13px" }}>
+        <Link to="/product">product페이지로 이동</Link>
       </div>
     </div>
   );
@@ -41,6 +48,7 @@ const boxStyle = {
   borderRadius: "5px",
   width: "120px",
   margin: "auto",
+  marginTop: "25%",
 };
 
 const margin = {
