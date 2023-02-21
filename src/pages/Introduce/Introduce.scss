@@ -1,8 +1,53 @@
 @import "../../style/varialbes.scss";
+@import "../../style//mixin.scss";
 
-.info {
-  &:hover {
-    cursor: pointer;
-    color: $grColor;
+.box {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 120px;
+  margin: auto;
+  margin-top: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .weCodeBox {
+    display: flex;
+    height: 100px;
+    background-color: black;
+    color: white;
+    width: 100px;
+    align-items: center;
+    margin: 10px auto;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  .info {
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+      color: $grColor;
+    }
+  }
+
+  .inputBox {
+    display: flex;
+
+    .input {
+      width: 60px;
+      margin: 0px 0px 10px 6px;
+      height: 14px;
+    }
+
+    .button {
+      width: "35px";
+      height: "20px";
+      margin-right: "10px";
+      font-size: "10px";
+    }
+  }
+  .link {
+    font-size: 13px;
   }
 }
