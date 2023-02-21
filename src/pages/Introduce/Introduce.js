@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const IntroduceStyle = {
   border: "1px solid black",
@@ -36,14 +37,21 @@ const button = {
   fontSize: "8px",
 };
 
-const handleChange = () => {
-  console.log("input 태그 동작");
+const linkToProduct = {
+  fontSize: "8px",
 };
 
-const handleClick = () => {
-  console.log("button 태그 동작");
-};
 const Introduce = () => {
+  const navigate = useNavigate();
+  const handleChange = () => {
+    console.log("input 태그 동작");
+  };
+
+  const handleClick = () => {
+    console.log("button 태그 동작");
+    navigate("/product");
+  };
+
   return (
     <div className="Introduce" style={IntroduceStyle}>
       <section className="main" style={mainStyle}>
@@ -66,6 +74,9 @@ const Introduce = () => {
           <button className="button" style={button} onClick={handleClick}>
             클릭
           </button>
+          <Link to="/product" style={linkToProduct}>
+            product 페이지로 이동
+          </Link>
         </div>
       </section>
     </div>
