@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Introduce.css';
 
 const Introduce = () => {
-  
   return (
     <div className="wrapper">
       <div className="container">
@@ -18,17 +18,18 @@ const Introduce = () => {
         <form>
           <input type="text" onChange={handleInput} />
           <button type="button" onClick={handleButton}>
-            출력
+            <Link to="/product">출력</Link>
           </button>
+          <Link to="/product"> prdouct 페이지로 이동 </Link>
         </form>
       </div>
     </div>
   );
 };
 const handleInput = () => {
-  console.log('');
+  console.log('input 태그 동작');
 };
 const handleButton = () => {
-  console.log('');
+  console.log('button 태그 동작');
 };
 export default Introduce;
