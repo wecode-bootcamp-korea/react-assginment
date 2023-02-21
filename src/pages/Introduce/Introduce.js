@@ -1,4 +1,5 @@
 import React from "react";
+import "./Introduce.scss";
 import { Link } from "react-router-dom";
 
 const Introduce = () => {

@@ -1,0 +1,8 @@
+@import "../../style/varialbes.scss";
+
+.info {
+  &:hover {
+    cursor: pointer;
+    color: $grColor;
+  }
+}
