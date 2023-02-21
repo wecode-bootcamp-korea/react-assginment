@@ -1,17 +1,9 @@
 import React from 'react';
-import "./Introduce.css";
+import "./Introduce.scss";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Introduce = () => {
-
-    // const handleInput = () => {
-    //     console.log("input 태그 동작")
-    // };
-
-    // const handleButton = () => {
-    //     console.log("button 태그 동작")
-    // };
 
     const navigate = useNavigate();
 
@@ -30,9 +22,10 @@ const Introduce = () => {
             <input type="text"></input>
             <button onClick={goToProduct}>button</button>
         </div>
-        <span><Link to="/product">product 페이지로 이동</Link></span>
+        <span>
+            <Link to="/product">product 페이지로 이동</Link>
+        </span>
     </div>
 );};
     
-
 export default Introduce;

@@ -1,0 +1,17 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin textStyle ($FSvalue, $FWvalue) {
+    font-size: $FSvalue;
+    font-weight: $FWvalue;
+}
+
+body {
+    @include flexCenter();
+    h1 {
+        @include textStyle(25, 500)
+    }
+}

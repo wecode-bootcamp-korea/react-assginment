@@ -8,7 +8,6 @@ import Count from './pages/Product/components/Count/Count';
 import Color from './pages/Product/components/Color/Color';
 
 
-
 const Router = () => {
     return (
         <BrowserRouter>
