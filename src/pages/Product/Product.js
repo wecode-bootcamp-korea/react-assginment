@@ -4,7 +4,7 @@ import "./Product.scss";
 const Product = () => {
   const price = 300;
   const totalPrice = price;
-
+  
   return (
     <div className="product">
       <div className="productDetail">

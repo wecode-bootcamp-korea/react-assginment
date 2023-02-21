@@ -1,0 +1,32 @@
+$radius: 15px;
+
+.introduce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .wrap {
+    border: 1px solid black;
+    width: 20%;
+    height: 55%;
+    border-radius: $radius;
+    padding: 15px;
+
+    img {
+      width: 100%;
+      height: 85%;
+      border-radius: $radius;
+    }
+
+    p {
+      margin: 0;
+    }
+    &:hover {
+      color: green;
+    }
+    a {
+      display: block;
+    }
+  }
+}
