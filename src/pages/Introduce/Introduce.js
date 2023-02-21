@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import "./Introduce.scss";
+import "../../style/variables.scss";
+import "../../style/mixin.scss";
 
 const Introduce = () => {
   return (

@@ -33,6 +33,9 @@
     padding-top: 10px;
     h1:nth-child(1) {
       font-weight: 700;
+      &:hover {
+        color: red;
+      }
     }
     h1:nth-child(2) {
       margin-top: 5px;
