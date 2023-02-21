@@ -1,5 +1,7 @@
 @import url("../../style/common.scss");
 @import url("../../style/reset.scss");
+@import url("../../style/variables.scss");
+@import url("../../style/mixin.scss");
 
 @mixin center {
   display: flex;
