@@ -7,7 +7,7 @@
 
 .wecodeWrap {
   width: 360px;
-  height: 440px;
+  height: 450px;
   border: 1px solid black;
   border-radius: 7px;
 }
@@ -38,4 +38,8 @@
 input {
   margin-left: 18px;
   width: 250px;
+}
+
+.moveToProduct {
+  margin: 0 18px;
 }

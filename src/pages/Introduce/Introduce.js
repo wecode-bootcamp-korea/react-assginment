@@ -1,5 +1,6 @@
 import React from "react";
 import "./Introduce.css";
+import { Link } from "react-router-dom";
 
 const Introduce = () => {
   return (
@@ -9,7 +10,10 @@ const Introduce = () => {
         <p className="name">권유정</p>
         <p className="class">43기</p>
         <input onChange={handleInput}></input>
-        <button onClick={handleButton}>클릭</button>
+        <Link to="/product">
+          <button onClick={handleButton}>클릭</button>
+          <p className="moveToProduct">product 페이지로 이동</p>
+        </Link>
       </div>
     </nav>
   );
