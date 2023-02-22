@@ -1,18 +1,20 @@
 import React from "react";
 import "../Introduce/Introduce.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
+  const navigate = useNavigate();
   function handleInput() {
     console.log("input 태그동작");
   }
 
   function handleButton() {
     console.log("button 태그동작");
+    navigate("/product");
   }
 
   return (
-    <div className="box">
+    <div className="introduce">
       <div className="boxWwrap">
         <div className="weCodeBox">
           <h2>{">"}wecode</h2>
@@ -23,11 +25,9 @@ const Introduce = () => {
       <div className="inputBox">
         <input className="input" onChange={handleInput}></input>
 
-        <Link to="/product">
-          <button className="button" onClick={handleButton}>
-            클릭
-          </button>
-        </Link>
+        <button className="button" onClick={handleButton}>
+          클릭
+        </button>
       </div>
       <div>
         <Link to="/product" className="link">
