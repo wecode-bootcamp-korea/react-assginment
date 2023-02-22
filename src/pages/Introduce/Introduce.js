@@ -1,7 +1,7 @@
 import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import "./Introduce.scss";
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 
 const Introduce = () => {
 
