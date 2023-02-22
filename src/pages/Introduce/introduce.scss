@@ -1,11 +1,17 @@
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
+// * {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+// }
 .main {
   margin: auto;
   width: 240px;
   height: 330px;
-  border: 1px solid black;
+  border: 1px solid $black;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -26,6 +32,7 @@ img {
 .myName {
   font-size: 17px;
   font-weight: bold;
+
   &:hover {
     cursor: pointer;
     color: $green;
