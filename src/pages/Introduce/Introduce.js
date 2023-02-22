@@ -1,16 +1,16 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./introduce.scss";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './introduce.scss';
 
-const Self = () => {
+const Introduce = () => {
   const navigate = useNavigate();
 
   const handleButton = () => {
-    navigate("/product");
+    navigate('/product');
   };
 
   return (
-    <div className="main">
+    <div className="introduce">
       <img alt="myPicture" src="img/비니비니.jpg"></img>
       <div className="information">
         <p className="myName">문은빈</p>
@@ -25,11 +25,4 @@ const Self = () => {
   );
 };
 
-// function handleInput() {
-//   console.log("input 태그 동작");
-// }
-
-// function handleButton() {
-//   console.log("button 태그 동작");
-// }
-export default Self;
+export default Introduce;

@@ -1,5 +1,5 @@
-import React from "react";
-import "./Color.scss";
+import React from 'react';
+import './Color.scss';
 
 const Color = () => {
   return (

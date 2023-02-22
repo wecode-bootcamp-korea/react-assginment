@@ -1,5 +1,5 @@
-@import "../../style/variables.scss";
-@import "../../style/mixin.scss";
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
 
 // * {
 //   display: flex;
@@ -7,7 +7,7 @@
 //   align-items: center;
 //   height: 100vh;
 // }
-.main {
+.introduce {
   margin: auto;
   width: 240px;
   height: 330px;
@@ -16,44 +16,44 @@
   display: flex;
   flex-direction: column;
   padding: 20px 0;
-}
 
-img {
-  width: 200px;
-  height: 200px;
-  margin: 0px auto 10px auto;
-}
-
-.information {
-  justify-content: left;
-  margin: 0px 10px;
-}
-
-.myName {
-  font-size: 17px;
-  font-weight: bold;
-
-  &:hover {
-    cursor: pointer;
-    color: $green;
-    transition: 0.7s;
+  img {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto 10px auto;
   }
-}
 
-p {
-  font-size: 15px;
-  margin: 0 6px;
-}
+  .information {
+    justify-content: left;
+    margin: 0px 10px;
 
-.inputInfo {
-  display: flex;
-  margin: 10px 3px;
-}
+    .myName {
+      font-size: 17px;
+      font-weight: bold;
 
-button {
-  font-size: 5px;
-}
+      &:hover {
+        cursor: pointer;
+        color: $green;
+        transition: 0.7s;
+      }
+    }
 
-input {
-  height: 25px;
+    p {
+      font-size: 15px;
+      margin: 0 6px;
+    }
+
+    .inputInfo {
+      display: flex;
+      margin: 10px 3px;
+
+      input {
+        height: 25px;
+      }
+
+      button {
+        font-size: 5px;
+      }
+    }
+  }
 }
