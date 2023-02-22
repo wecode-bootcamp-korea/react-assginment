@@ -1,6 +1,5 @@
 import React from "react";
-import { Routes, Route, Link, NavLink  } from "react-router-dom";
-import Product from "../Product/Product";
+import { Link } from "react-router-dom";
 import "./Introduce.scss";
 
 const Introduce = () => {
@@ -19,11 +18,8 @@ const Introduce = () => {
                 console.log("button 동작 ㅇㅈ");
               }}
             >클릭</button>
-            <li><Link to="../Product/Product">aaa</Link></li>
-            <Routes>
-              <Route path="../Product/Product" element={<Product/>}></Route>
-            </Routes>
-            <NavLink to="../Product/Product">product로 이동</NavLink>
+            <br/>
+            <Link to="/product">product로 이동</Link>
           </div>
         </div>
       </div>
