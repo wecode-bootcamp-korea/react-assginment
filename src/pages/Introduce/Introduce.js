@@ -1,9 +1,13 @@
 import React from "react";
-import "./Introduce.scss";
 import { Link, useNavigate } from "react-router-dom";
+import "./Introduce.scss";
 
 const Introduce = () => {
   const navigate = useNavigate();
+
+  const handleInput = () => {
+    console.log("input 태그 동작");
+  };
 
   const goToProduct = () => {
     navigate("/product");
@@ -25,13 +29,5 @@ const Introduce = () => {
     </nav>
   );
 };
-
-const handleInput = () => {
-  console.log("input 태그 동작");
-};
-
-// const handleButton = () => {
-//   console.log("button 태그 동작");
-// };
 
 export default Introduce;
