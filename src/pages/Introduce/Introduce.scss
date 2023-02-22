@@ -1,6 +1,6 @@
-@import url(/src/style/mixin.scss);
-@import url(/src/style/variables.scss);
-
+@import "../../style/mixin.scss";
+@import "../../style/common.scss";
+@import "../../style/reset.scss";
 
     .introduce {
         display: flex;
@@ -17,15 +17,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 220px;
-            width: 220px;
-            margin-top: 50px;
+            height: 200px;
+            width: 200px;
+            margin: 40px 0px 20px 0px;
             border: 1px solid black;
             border-radius: 10px;
             background-color: black;
             color: white;
         }
-
+        
         p {
             margin-right: 150px;
             &:hover {

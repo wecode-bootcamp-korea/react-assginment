@@ -8,10 +8,3 @@
     font-size: $FSvalue;
     font-weight: $FWvalue;
 }
-
-body {
-    @include flexCenter();
-    h1 {
-        @include textStyle(25, 500)
-    }
-}
