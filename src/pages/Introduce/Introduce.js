@@ -1,7 +1,19 @@
 import React from "react";
 import "./Introduce.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const image = () => {
+const Introduce = () => {
+  const navigate = useNavigate();
+
+  const handleInput = () => {
+    console.log("input 태그 동작");
+  };
+
+  const handleButton = () => {
+    navigate("/product");
+  };
+
   return (
     <div className="contentContainer">
       <div className="logoBox">
@@ -17,16 +29,9 @@ const image = () => {
           클릭
         </button>
       </form>
+      <Link to="/product">Product 페이지로 이동</Link>
     </div>
   );
 };
 
-const handleInput = () => {
-  console.log("input 태그 동작");
-};
-
-const handleButton = () => {
-  console.log("button 태그 동작");
-};
-
-export default image;
+export default Introduce;
