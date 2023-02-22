@@ -1,10 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Introduce/Introduce.scss";
 
 const Introduce = () => {
+  const navigate = useNavigate();
+
+  const goToProduct = () => {
+    navigate("/product");
+  };
+
+  function handleInput() {
+    console.log("input 태그동작");
+  }
+
   return (
-    <div className="outLine">
+    <div className="introduce">
       <div className="logobox">
         <h1 className="text">wecode</h1>
       </div>
@@ -12,11 +22,10 @@ const Introduce = () => {
       <p className="th"> 43기</p>
       <form>
         <input type="text" onChange={handleInput} />
-        <Link to="/product">
-          <button type="button" className="login_btn" onClick={handleButton}>
-            클릭
-          </button>
-        </Link>
+
+        <button type="button" className="login_btn" onClick={goToProduct}>
+          클릭
+        </button>
       </form>
 
       <p className="moveToProduct">
@@ -26,10 +35,4 @@ const Introduce = () => {
   );
 };
 
-function handleInput() {
-  console.log("input 태그동작");
-}
-function handleButton() {
-  console.log("button 태그 동작");
-}
 export default Introduce;
