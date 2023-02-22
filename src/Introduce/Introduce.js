@@ -1,10 +1,15 @@
 import React from "react";
 import "../Introduce/Introduce.scss";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 
 const Introduce = ()=> {
+    
+    const navigate = useNavigate();
+    const goToProduct = () => {
+        navigate("/Product");
+    }
 
     return(
         <nav className="Introduce">
@@ -15,9 +20,9 @@ const Introduce = ()=> {
             <h5>43기</h5>
             <form>
                 <input type="text" onChange={handleInput}></input>
-                <button type="button"><Link to ="/Product">버튼</Link></button>
+                <button type="button" onClick={goToProduct}>버튼</button>
                 <br/>
-                <a href="/Product">Product 페이지로 이동</a>
+                <Link to ="/Product">Product 페이지로 이동</Link>
             </form>
         </nav>
     ) ;
