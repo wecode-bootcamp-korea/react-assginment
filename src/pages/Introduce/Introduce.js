@@ -14,7 +14,7 @@ const Introduce = () => {
   };
 
   return (
-    <div className="Introduce">
+    <div className="introduce">
       <section className="main">
         <div className="content">＞wecode</div>
       </section>
