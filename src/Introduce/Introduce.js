@@ -3,13 +3,13 @@ import "../Introduce/Introduce.scss"
 import {Link} from "react-router-dom";
 
 
-const Self = ()=> {
+const Introduce = ()=> {
     return(
-        <nav className="outline">
+        <nav className="Introduce">
             <div className="logobox">
-                <h1 className="text">wecode</h1>
+                <h1 className="mainbox">wecode</h1>
             </div>
-            <button>오지수</button>
+            <h2 className="namebox">오지수</h2>
             <h5>43기</h5>
             <form>
                 <input type="text" onChange={handleInput}></input>
@@ -31,4 +31,4 @@ const handleButton = ()=> {
 }
 
 
-export default Self;
+export default Introduce;
