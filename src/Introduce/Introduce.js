@@ -1,9 +1,11 @@
 import React from "react";
-import "../Introduce/Introduce.scss"
+import "../Introduce/Introduce.scss";
 import {Link} from "react-router-dom";
 
 
+
 const Introduce = ()=> {
+
     return(
         <nav className="Introduce">
             <div className="logobox">
@@ -13,13 +15,13 @@ const Introduce = ()=> {
             <h5>43기</h5>
             <form>
                 <input type="text" onChange={handleInput}></input>
-                <button type="button" onClick={handleButton}><Link to="/Product">버튼</Link></button>
+                <button type="button"><Link to ="/Product">버튼</Link></button>
                 <br/>
                 <a href="/Product">Product 페이지로 이동</a>
             </form>
         </nav>
     ) ;
-}
+};
 
 const handleInput = ()=> {
     console.log("input 태그 동작");
