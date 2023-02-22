@@ -12,7 +12,7 @@ const Introduce = () => {
     };
 
     return (
-    <div className = "box">
+    <div className = "introduce">
         <div className = "wecodebox">
             <h1>>wecode</h1>
         </div>

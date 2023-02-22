@@ -1,9 +1,8 @@
 @import url(/src/style/mixin.scss);
 @import url(/src/style/variables.scss);
 
-body {
-    height: 100vh;
-    .box {
+
+    .introduce {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -33,4 +32,4 @@ body {
                 color: red;
             }
         }
-    }
+    
