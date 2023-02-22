@@ -11,6 +11,10 @@ const Introduce = () => {
         navigate('/product');
     };
 
+    const handleInput = () => {
+        console.log("input 태그 동작")
+    }
+
     return (
     <div className = "introduce">
         <div className = "wecodebox">
@@ -19,7 +23,7 @@ const Introduce = () => {
         <p>유정인</p>
         <p>43기</p>
         <div>
-            <input type="text"></input>
+            <input type="text" onChange={handleInput}/>
             <button onClick={goToProduct}>button</button>
         </div>
         <span>
