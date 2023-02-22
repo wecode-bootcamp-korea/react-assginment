@@ -1,11 +1,6 @@
-@import url("../../style/common.scss");
-@import url("../../style/reset.scss");
-
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "../../style/common.scss";
+@import "../../style/reset.scss";
+@import "../../style/variables.scss";
 
 .introduce {
   @include center;
@@ -13,12 +8,14 @@
   height: 100vh;
   margin: 0 auto;
   font-size: 14px;
+
   .introduce-box {
     flex-direction: column;
     padding: 14px;
     border: 1px solid black;
     border-radius: 5px;
   }
+
   .introduce-wecode {
     @include center;
     width: 150px;
@@ -29,6 +26,7 @@
     color: white;
     font-size: 28px;
   }
+
   .introduce-detail {
     padding-top: 10px;
     h1:nth-child(1) {
@@ -42,9 +40,11 @@
       font-size: 12px;
     }
   }
+
   input {
     width: 110px;
   }
+
   .input-box {
     margin: 5px 0;
   }
