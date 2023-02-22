@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Introduce.css';
+import './Introduce.scss';
 
 const Introduce = () => {
   return (
@@ -20,7 +20,9 @@ const Introduce = () => {
           <button type="button" onClick={handleButton}>
             <Link to="/product">출력</Link>
           </button>
-          <Link to="/product"> prdouct 페이지로 이동 </Link>
+          <p>
+            <Link to="/product"> prdouct 페이지로 이동 </Link>
+          </p>
         </form>
       </div>
     </div>
