@@ -1,9 +1,53 @@
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
-.content {
-  &:hover {
-    cursor: pointer;
-    color: $greenColor;
+.introduce {
+  @include flexCenter;
+  border-radius: 7px;
+  width: 150px;
+
+  .weCodeBox {
+    border: 1px solid;
+    border-radius: 7px;
+    width: 150px;
+    height: 240px;
+    margin: auto;
+
+    .wecodeStyle {
+      @include flexCenter;
+      height: 130px;
+      background-color: black;
+      color: white;
+      width: 130px;
+      margin: 10px auto;
+      border-radius: 7px;
+    }
+  }
+  .infoWrap {
+    .content {
+      margin-left: 10px;
+      font-size: 20px;
+      &:hover {
+        cursor: pointer;
+        color: $greenColor;
+      }
+    }
+    .subcontent {
+      margin-left: 10px;
+      font-size: 8px;
+    }
+    .input {
+      width: 80px;
+      margin-left: 10px;
+    }
+
+    .button {
+      width: 40px;
+    }
+
+    .moveLink {
+      font-size: 13px;
+      margin-left: 10px;
+    }
   }
 }
