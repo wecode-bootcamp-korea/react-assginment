@@ -1,7 +1,7 @@
 import React from "react";
-import "./Introduce.scss";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "./Introduce.scss";
 
 const Introduce = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Introduce = () => {
   };
 
   return (
-    <div className="contentContainer">
+    <div className="introduce">
       <div className="logoBox">
         <h1>&gt; wecode</h1>
       </div>
