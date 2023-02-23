@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Review.scss";
 
-const Review = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const Review = (props) => {
+  const { isVisible, setIsVisible } = props;
   return (
     <div className="review">
       <div className="user">
