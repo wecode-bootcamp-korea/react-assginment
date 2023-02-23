@@ -1,12 +1,11 @@
 import React from 'react';
+import '../ColorButton/ColorButton.scss'
 
 const ColorButton = (props) => {
-    
+    const {color, setColor} = props
     return (
         <>
-            <button className="colorButton white" onClick={() => {props.setColor("white")}} />
-            <button className="colorButton red" onClick={() => {props.setColor("red")}} />
-            <button className="colorButton yellow" onClick={() => {props.setColor("yellow")}} />
+            <button className={`colorButton ${color}`} onClick={() => {setColor(color)}} />
         </> )
 }
 export default ColorButton;

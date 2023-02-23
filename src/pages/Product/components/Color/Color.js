@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ColorButton from '../ColorButton/ColorButton'
 import "./Color.scss";
 
-const Color = () => {
-  const [color, setColor] = useState("white");
+const Color = (props) => {
+  const {color, setColor} = props;
 
   return (
     <div className="color">
@@ -13,7 +13,9 @@ const Color = () => {
         {color}
       </span>
       <div className="colorHandler">
-        <ColorButton setColor={setColor} />
+        <ColorButton color={"white"} setColor={setColor} />
+        <ColorButton color={"red"} setColor={setColor} />
+        <ColorButton color={"yellow"} setColor={setColor} />
       </div>
     </div>
   );

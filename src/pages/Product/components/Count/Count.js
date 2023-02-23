@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [number, setNumber] = useState (1);
+const Count = (props) => {
+const {number, setNumber} = props;
+
   const onIncrease = () => {
     setNumber(prevNumber => prevNumber + 1);
   }
@@ -10,6 +11,9 @@ const Count = () => {
     setNumber(prevNumber => prevNumber - 1);
   }
   const reset = () => {
+    setNumber(1);
+  }
+  if (number<1) {
     setNumber(1);
   }
 
