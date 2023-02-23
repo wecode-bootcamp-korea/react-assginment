@@ -1,34 +1,27 @@
 import React from "react";
-import "../../style/common.scss";
 import "../../pages/Introduce/Introduce.scss";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Introduce = () => {
-  const navigate = useNavigate();
-
-  const handleButton = () => {
-    navigate("/product");
-  };
-
   //첫 부모태그 className은 컴포넌트이름을 그대로 사용하되, 소문자로 하는게 좋음 box 말고 introduce
   return (
     <div className="introduce">
       <div className="weCodeBox">
-        <h2 className="wecodeStyle">{">"}wecode</h2>
+        <div className="wecodeStyle">{">"}wecode</div>
         <div className="infoWrap">
           <strong className="content">김준영</strong>
           <div className="subcontent">43기</div>
           <input
             className="input"
             type="text"
-            onChange={(handleInput) => {
+            onChange={() => {
               console.log("input 태그 작동"); //jsx 태그들 안에 함수표현식 쓰지 않기 -> 수정할 것
             }}
           ></input>
           <button
             className="button"
-            onClick={(handleButton) => {
+            onClick={() => {
               console.log("button 태그 작동");
             }}
           >
