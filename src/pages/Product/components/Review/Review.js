@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Review.scss";
 
-const Review = () => {
-  const [isHidden, setIsHidden] = useState("true");
+const Review = (props) => {
+  const { isHidden, setIsHidden } = props;
 
   return (
     <div className="review">
