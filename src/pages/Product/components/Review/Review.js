@@ -1,10 +1,10 @@
 import React from 'react';
 import './Review.scss';
-import { useState } from 'react';
+// import { useState } from 'react';
 
-const Review = () => {
-  const [fold, setFold] = useState(true);
-
+const Review = props => {
+  console.log(props);
+  const { review, setReview } = props;
   return (
     <div className="review">
       <div className="user">
@@ -16,7 +16,7 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {fold && (
+        {review && (
           <div className="reviewMainContents">
             주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
             <br />
@@ -27,10 +27,10 @@ const Review = () => {
         <span
           className="reviewMainHandler"
           onClick={() => {
-            setFold(!fold);
+            setReview(!review);
           }}
         >
-          {fold ? '접기 ▲' : '더보기 ▼'}
+          {review ? '접기 ▲' : '더보기 ▼'}
         </span>
       </div>
     </div>
