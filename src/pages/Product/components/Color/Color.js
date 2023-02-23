@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
-const Color = () => {
-  const [color, setColor] = useState("white");
+const Color = (props) => {
+  const { color, setColor } = props;
 
   return (
     <div className="color">
       <span className="colorText">
         색상 :
-        <div className="selected" style={{ backgroundColor: color }} />
+        <div className={`selected ${color}`} />
         {color}
       </span>
-      <ColorButton color={color} setColor={setColor} />
+      <div className="color-button-box">
+        <ColorButton color={"white"} setColor={setColor} />
+        <ColorButton color={"red"} setColor={setColor} />
+        <ColorButton color={"yellow"} setColor={setColor} />
+      </div>
     </div>
   );
 };

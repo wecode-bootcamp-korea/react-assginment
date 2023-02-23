@@ -1,28 +1,26 @@
 import React, { useState } from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [num, setNum] = useState("1");
-
+const Count = (props) => {
   const countMinus = () => {
-    num > 1 ? setNum(Number(num) - 1) : setNum("1");
+    props.num > 1 ? props.setNum(Number(props.num) - 1) : props.setNum("1");
   };
 
   const countPlus = () => {
-    setNum(Number(num) + 1);
+    props.setNum(Number(props.num) + 1);
   };
 
   return (
     <div className="count">
       <div className="countInput">
         <button onClick={countMinus}>-</button>
-        <div className="countInputText">{num}</div>
+        <div className="countInputText">{props.num}</div>
         <button onClick={countPlus}>+</button>
       </div>
       <button
         className="resetBtn"
         onClick={() => {
-          setNum("1");
+          props.setNum("1");
         }}
       >
         reset
