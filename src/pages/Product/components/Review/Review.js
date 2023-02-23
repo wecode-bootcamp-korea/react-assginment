@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Review.scss";
 
-const Review = () => {
-  const [watch, setWatch] = useState("더보기 ▼");
+const Review = (props) => {
+  const { watch, setWatch } = props;
 
   const changeWatch = () => {
     setWatch("접기 ▲");
