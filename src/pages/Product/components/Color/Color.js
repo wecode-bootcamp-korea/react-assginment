@@ -1,6 +1,6 @@
 import React from "react";
-import "./Color.scss";
 import { useState } from "react";
+import "./Color.scss";
 
 const Color = () => {
   const [color, setColor] = useState("white");
