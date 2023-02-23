@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Introduce from "./pages/Introduce/Introduce";
 import Product from "./pages/Product/Product";
 import ProductList from "./pages/ProductList/ProductList";
-import Review from "./pages/Review/Review";
-import Count from "./pages/Count/Count";
-import Color from "./pages/Color/Color";
+import Review from "./pages/Product/components/Review/Review";
+import Count from "./pages/Product/components/Count/Count";
+import Color from "./pages/Product/components/Color/Color";
 
 const Router = () => {
   return (
