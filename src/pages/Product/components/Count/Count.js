@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Count.scss";
 
 const Count = () => {
-  const [count, setCount] = useState("");
+  const [count, setCount] = useState("1");
 
   return (
     <div className="count">
