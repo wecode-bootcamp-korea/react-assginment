@@ -1,9 +1,5 @@
-@mixin flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-$green: green;
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
 
 .wrap_introduce {
   @include flexCenter;
