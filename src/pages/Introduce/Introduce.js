@@ -15,7 +15,7 @@ const Introduction = () => {
   };
 
   return (
-    <main>
+    <session>
       <div className="introduce">
         <div className="wrap">
           <img src={Profile} alt="" />
@@ -29,7 +29,7 @@ const Introduction = () => {
           <Link to="/product">product페이지로 이동</Link>
         </div>
       </div>
-    </main>
+    </session>
   );
 };
 export default Introduction;
