@@ -4,24 +4,20 @@ import "./Count.scss";
 const Count = () => {
   const [num, setNum] = useState("1");
 
+  const countMinus = () => {
+    num > 1 ? setNum(Number(num) - 1) : setNum("1");
+  };
+
+  const countPlus = () => {
+    setNum(Number(num) + 1);
+  };
+
   return (
     <div className="count">
       <div className="countInput">
-        <button
-          onClick={() => {
-            num > 1 ? setNum(Number(num) - 1) : setNum("1");
-          }}
-        >
-          -
-        </button>
+        <button onClick={countMinus}>-</button>
         <div className="countInputText">{num}</div>
-        <button
-          onClick={() => {
-            setNum(Number(num) + 1);
-          }}
-        >
-          +
-        </button>
+        <button onClick={countPlus}>+</button>
       </div>
       <button
         className="resetBtn"
