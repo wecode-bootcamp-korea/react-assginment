@@ -39,6 +39,9 @@
     &Contents {
       margin-bottom: 12px;
       line-height: 150%;
+      &.hide {
+        display: none;
+      }
     }
 
     &Handler {
