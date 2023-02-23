@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = () => {
-  let [color, setColor] = useState("white");
+  const [color, setColor] = useState("white");
 
   return (
     <div className="color">
@@ -11,36 +12,12 @@ const Color = () => {
         <div className="selected" style={{ backgroundColor: color }} />
         {color}
       </span>
-
-      <div className="colorButton">
-        <div className="colorHandler">
-          <button
-            className="colorButton white"
-            onClick={() => {
-              setColor("white");
-            }}
-          />
-          <button
-            className="colorButton red"
-            onClick={() => {
-              setColor("red");
-            }}
-          />
-          <button
-            className="colorButton yellow"
-            onClick={() => {
-              setColor("yellow");
-            }}
-          />
-        </div>
-      </div>
+      <ColorButton color={color} setColor={setColor} />
     </div>
   );
 };
 
 export default Color;
-
-// import ColorButton from "../ColorButton/ColorButton";
 
 // {
 //   let changeColor = (i) => {
@@ -48,5 +25,3 @@ export default Color;
 //     copy.splice(i, 1);
 //     setColor(copy);
 //   };
-
-//  <ColorButton change={changeColor} />

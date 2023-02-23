@@ -2,6 +2,7 @@
 
 .colorHandler {
   display: flex;
+
   .colorButton {
     @include colors;
     width: 32px;

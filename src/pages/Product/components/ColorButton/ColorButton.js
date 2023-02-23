@@ -5,9 +5,24 @@ const ColorButton = (props) => {
   return (
     <div className="colorButton">
       <div className="colorHandler">
-        <button className="colorButton white" onClick={props.change} />
-        <button className="colorButton red" onClick={props.change} />
-        <button className="colorButton yellow" onClick={props.change} />
+        <button
+          className="colorButton white"
+          onClick={() => {
+            props.setColor("white");
+          }}
+        />
+        <button
+          className="colorButton red"
+          onClick={() => {
+            props.setColor("red");
+          }}
+        />
+        <button
+          className="colorButton yellow"
+          onClick={() => {
+            props.setColor("yellow");
+          }}
+        />
       </div>
     </div>
   );
