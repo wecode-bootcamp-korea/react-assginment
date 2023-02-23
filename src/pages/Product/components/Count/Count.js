@@ -13,7 +13,6 @@ const Count = () => {
             if (count < 2) {
               setCount(1);
             }
-            console.log(count);
           }}
         >
           -
