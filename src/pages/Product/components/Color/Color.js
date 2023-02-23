@@ -3,14 +3,13 @@ import "./Color.scss";
 
 const Color = () => {
   const [color, setColor] = useState("white");
-  const colorName = color;
 
   return (
     <div className="color">
       <span className="colorText">
         색상 :
-        <div className="selected" style={{ backgroundColor: color }} />
-        {colorName}
+        <div className={`selected ${color}`} />
+        {color}
       </span>
       <div className="colorHandler">
         <button
