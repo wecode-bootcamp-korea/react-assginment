@@ -12,7 +12,7 @@ const Introduce = ()=> {
     }
 
     return(
-        <nav className="Introduce">
+        <nav className="introduce">
             <div className="logobox">
                 <h1 className="mainbox">wecode</h1>
             </div>
@@ -32,10 +32,10 @@ const handleInput = ()=> {
     console.log("input 태그 동작");
 }
 
-const handleButton = ()=> {
-    console.log("button 태그 동작");
+// const handleButton = ()=> {
+//     console.log("button 태그 동작");
 
-}
+// }
 
 
 export default Introduce;
