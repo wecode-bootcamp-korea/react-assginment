@@ -3,19 +3,27 @@ import "./Count.scss";
 
 const Count = () => {
   const [count, setCount] = useState(1);
-  console.log("resetBtn 클릭");
-  if (count < 1) {
-    setCount(1);
+
+  const minusCount = () => {
+    // if (count === 1 && num === -1) return;
+    if (count > 1) {
+      setCount(count - 1);
+    } else {
+      setCount(1);
+    }
+    
   }
 
-  // if (count === 1 && num === -1) return;
+  const plusCount = () => {
+    setCount(count + 1);
+  }
   
   return (
     <div className="count">
       <div className="countInput">
-        <button onClick={() => {setCount(count-1)}}>-</button>        
+        <button onClick={minusCount}>-</button>
         <div className={`countInputText ${count}`}>{count}</div>
-        <button onClick={() => {setCount(count+1)}}>+</button>
+        <button onClick={plusCount}>+</button>
       </div>
       <button className="resetBtn" onClick={() => {setCount(1)}}>
         reset
