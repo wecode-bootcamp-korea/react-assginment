@@ -22,10 +22,3 @@ const Color = (props) => {
 };
 
 export default Color;
-
-// {
-//   let changeColor = (i) => {
-//     let copy = [...color];
-//     copy.splice(i, 1);
-//     setColor(copy);
-//   };
