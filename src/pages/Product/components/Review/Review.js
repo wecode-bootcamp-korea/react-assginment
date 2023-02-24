@@ -1,9 +1,9 @@
 import React from "react";
 import "./Review.scss";
-import { useState } from "react";
 
-const Review = () => {
-  const [fold, setFold] = useState(false);
+const Review = (props) => {
+  const { fold, setFold } = props;
+
   return (
     <div className="review">
       <div className="user">
