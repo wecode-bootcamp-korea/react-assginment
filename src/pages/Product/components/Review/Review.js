@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Review.scss";
 
-const Review = () => {
-  const [review, setReview] = useState(false);
+const Review = (props) => {
+  const { review, setReview } = props;
   const toggleButton = () => {
     setReview(!review);
   };
