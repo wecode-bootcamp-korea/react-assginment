@@ -7,6 +7,8 @@ const Count = () => {
   if (count < 1) {
     setCount(1);
   }
+
+  // if (count === 1 && num === -1) return;
   
   return (
     <div className="count">
