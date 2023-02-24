@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [count, setCount] = useState(1);
+const Count = (props) => {
+  const {count, setCount} =props
 
   if (count < 1) {
     setCount(1);
