@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import "./Color.scss";
 import ColorButton from "../ColorButton/ColorButton";
 
-
 const Color = () => {
   const[color, setColor] = useState("white");
 

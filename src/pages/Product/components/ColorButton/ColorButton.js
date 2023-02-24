@@ -12,4 +12,3 @@ const ColorButton = (props) => {
 };
 
 export default ColorButton;
-
