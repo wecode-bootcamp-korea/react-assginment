@@ -26,7 +26,7 @@ const Review = () => {
             setIsOpen((isOpen) => !isOpen);
           }}
         >
-          {isOpen ? '접기 ▼' : '더보기'}
+          {isOpen ? '접기 ' : '더보기'}
         </span>
       </div>
     </div>
