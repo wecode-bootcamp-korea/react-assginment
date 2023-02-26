@@ -7,7 +7,7 @@ import "./Product.scss";
 
 const Product = () => {
   const [color, setColor] = useState("white");
-  const [watch, setWatch] = useState("더보기 ▼");
+  const [isReviewOpen, setIsReviewOpen] = useState(false);
   const [number, setNumber] = useState(1);
 
   const price = 300;
@@ -37,7 +37,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review watch={watch} setWatch={setWatch} />
+        <Review isReviewOpen={isReviewOpen} setIsReviewOpen={setIsReviewOpen} />
       </div>
     </div>
   );
