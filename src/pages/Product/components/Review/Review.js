@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Review.scss";
 
 const Review = () => {
-  const [review, setReview] = useState(false);
+  const [isReviewOpen, setIsReviewOpen] = useState(false);
 
   return (
     <div className="review">
@@ -15,7 +15,7 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {review && (
+        {isReviewOpen && (
           <div className="reviewMainContents">
             주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
             <br />
@@ -25,10 +25,10 @@ const Review = () => {
         <span
           className="reviewMainHandler"
           onClick={() => {
-            setReview(!review);
+            setIsReviewOpen(!isReviewOpen);
           }}
         >
-          {review ? "접기▲" : "더보기 ▼"}
+          {isReviewOpen ? "접기▲" : "더보기 ▼"}
         </span>
       </div>
     </div>

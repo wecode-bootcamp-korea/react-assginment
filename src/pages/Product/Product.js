@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import "./Product.scss";
 import Color from "./components/Color/Color";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
+import "./Product.scss";
 
 const Product = () => {
-  const price = 300;
-  const totalPrice = price;
   const [color, setColor] = useState("red");
+  const [count, setCount] = useState(1);
+  const price = 300;
+  const totalPrice = price * count;
+
   return (
     <div className="product">
       <div className="productDetail">
@@ -29,7 +31,7 @@ const Product = () => {
 
           <div className="quantity">
             <span> 수량 : </span>
-            <Count />
+            <Count count={count} setCount={setCount} />
           </div>
           <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
           <button className="buyBtn">구매하기</button>

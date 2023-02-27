@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [count, setCount] = useState(1);
+const Count = (props) => {
+  const { count, setCount } = props;
+
+  const handleCount = () => {
+    count > 1 ? setCount(count - 1) : setCount(1);
+  };
 
   return (
     <div className="count">
       <div className="countInput">
         <button
           onClick={() => {
-            if (count > 1) {
-              setCount(count - 1);
-            } else setCount(1);
+            handleCount();
           }}
         >
           -
