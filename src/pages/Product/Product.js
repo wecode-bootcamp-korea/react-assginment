@@ -6,10 +6,8 @@ import Review from "./components/Review/Review";
 import "./Product.scss";
 
 const Product = () => {
-  const price = 300;
   const [color, setColor] = useState("white");
   const [number, setNumber] = useState (1);
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="product">
@@ -24,13 +22,13 @@ const Product = () => {
         <div className="productDetailInfo">
           <span className="title">골프공</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+          <span>가격 : 300 원</span>
           <Color color={color} setColor={setColor}/>
           <div className="quantity">
             <span> 수량 : </span>
             <Count number={number} setNumber={setNumber}/>
           </div>
-          <span>최종 가격 : {price*number.toLocaleString()} 원</span>
+          <span>최종 가격 : {300*number.toLocaleString()} 원</span>
           <button className="buyBtn">구매하기</button>
         </div>
       </div>
@@ -38,7 +36,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <Review />
       </div>
     </div>
   );

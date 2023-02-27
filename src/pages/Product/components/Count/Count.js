@@ -9,11 +9,11 @@ const {number, setNumber} = props;
   }
   const onDecrease = () => {
     setNumber(prevNumber => prevNumber - 1);
+    if (number<=1) {
+      setNumber(1)
+    }
   }
   const reset = () => {
-    setNumber(1);
-  }
-  if (number<1) {
     setNumber(1);
   }
 

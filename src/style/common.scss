@@ -1,3 +1,4 @@
+@import '../style/mixin.scss';
 body {
   @include flexCenter;
   height: 100vh;

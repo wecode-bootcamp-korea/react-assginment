@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = (props) => {
-  const {isOpen, setIsOpen} = props;
+const Review = () => {
+  
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(isOpen => !isOpen);
