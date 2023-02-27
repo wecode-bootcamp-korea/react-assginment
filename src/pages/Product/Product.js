@@ -11,7 +11,7 @@ const Product = () => {
   const [number, setNumber] = useState(1);
 
   const price = 300;
-  const totalPrice = price * `${number}`;
+  const totalPrice = price * number;
 
   return (
     <div className="product">

@@ -15,14 +15,12 @@ const Review = (props) => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {isReviewOpen ? (
+        {isReviewOpen && (
           <div className="reviewMainContents">
             주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
             <br />
             다음에도 필요하면 또 여기서 시킬 것 같아요.
           </div>
-        ) : (
-          "" // false 일 때 '빈 문자열' 이라는 명확한 값이 존재하지 않는 상황 => '&& 연산자' 사용: 조건이 true 일 때만 보여주겠다 => isReviewOpen && (보여질 내용)}
         )}
         <span
           className="reviewMainHandler"
