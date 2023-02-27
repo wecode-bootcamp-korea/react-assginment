@@ -8,10 +8,6 @@ const Count = (props) => {
     if (number > 1) {
       setNumber(number - 1);
     }
-
-    if (number === 1) {
-      setNumber(1);
-    }
   };
 
   return (

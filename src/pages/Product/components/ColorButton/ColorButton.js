@@ -4,7 +4,7 @@ import "./ColorButton.scss";
 const ColorButton = (props) => {
   const { color, setColor } = props;
   return (
-    <div className="ColorButton">
+    <div className="colorButton">
       <button
         className={`color ${color}`}
         onClick={() => {
