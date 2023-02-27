@@ -8,7 +8,7 @@ import "./Product.scss";
 const Product = () => {
   const [color, setColor] = useState("white"); //리액트는 단방향이라
   const [count, setCount] = useState(1); //위에서 아래로 내려오기 때문에
-  const [fold, setFold] = useState(false); // 다시 선언해줘야함 & 위치는 꼭 위에
+  const [isReviewOpen, setIsReviewOpen] = useState(false); // 다시 선언해줘야함 & 위치는 꼭 위에
 
   const price = 300;
   const totalPrice = price * count;
@@ -40,7 +40,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review fold={fold} setFold={setFold} />
+        <Review isReviewOpen={isReviewOpen} setIsReviewOpen={setIsReviewOpen} />
       </div>
     </div>
   );

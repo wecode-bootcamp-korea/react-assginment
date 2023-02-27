@@ -2,7 +2,7 @@ import React from "react";
 import "./Review.scss";
 
 const Review = (props) => {
-  const { fold, setFold } = props;
+  const { isReviewOpen, setIsReviewOpen } = props;
 
   return (
     <div className="review">
@@ -15,7 +15,7 @@ const Review = (props) => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {fold && (
+        {isReviewOpen && (
           <div className="reviewMainContents">
             주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
             <br />
@@ -25,10 +25,10 @@ const Review = (props) => {
         <span
           className="reviewMainHandler"
           onClick={() => {
-            setFold(!fold);
+            setIsReviewOpen(!isReviewOpen);
           }}
         >
-          {fold ? "접기▲" : "더보기 ▼"}
+          {isReviewOpen ? "접기▲" : "더보기 ▼"}
         </span>
       </div>
     </div>
