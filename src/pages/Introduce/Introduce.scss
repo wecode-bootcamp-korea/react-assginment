@@ -1,9 +1,8 @@
-@import "../../style/variables.scss";
-@import "../../style/mixin.scss";
-@import "../../style/reset.scss";
-
 .introduce {
-  @include flexCenter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 100vh;
 
   .wrap {
@@ -24,12 +23,49 @@
       margin: 0;
 
       &:hover {
-        color: $green;
+        color: green;
       }
     }
 
     a {
       display: block;
+    }
+  }
+
+  .constantData {
+    display: flex;
+    margin-top: 20px;
+
+    ul {
+      border: 1px solid black;
+      margin-right: 10px;
+
+      .red {
+        background-color: red;
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+    }
+
+    li:first-child {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+    li {
+      margin: 10px;
     }
   }
 }
