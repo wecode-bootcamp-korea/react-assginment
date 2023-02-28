@@ -2,45 +2,97 @@
 @import "../../style/mixin.scss";
 
 .introduce {
-  border: 1px solid $black;
   position: fixed;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  padding: 1em;
-  border-radius: 10px;
 
-  .logobox {
-    width: 150px;
-    height: 150px;
-    @include flexCenter;
+  .mainBox {
+    width: min-content;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid $black;
     border-radius: 10px;
-    background-color: $black;
-    border: 1px solid$black;
 
-    .text {
-      color: white;
+    .logoBox {
+      @include flexCenter;
+      width: 10em;
+      height: 10em;
+      background-color: #000;
+      border-radius: 10px;
+      color: #fff;
+
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+
+    .nameBox {
+      margin-top: 1em;
+
+      h2 {
+        margin: 0;
+        font-size: 1em;
+
+        &:hover {
+          color: $green;
+        }
+      }
+
+      p {
+        margin: 0;
+        color: gray;
+        font-size: 0.7em;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      input {
+        width: 8em;
+      }
+
+      button {
+        width: max-content;
+      }
     }
   }
 
-  .name {
-    &:hover {
-      color: $green;
-    }
-    font-size: medium;
-  }
+  .colorBoxContainter {
+    margin-top: 1rem;
+    display: flex;
 
-  .th {
-    font-size: small;
-  }
-  .login_btn {
-    margin: 10px 0 5px 0;
-    color: white;
-    background-color: #c0dffd;
-    border-radius: 5px;
-    border-style: none;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+    .colorBox {
+      width: min-content;
+      padding: 0.5em;
+      border: 1px solid $black;
+      border-radius: 10px;
+
+      .logoBox {
+        @include flexCenter;
+        width: 6em;
+        height: 6em;
+        background-color: #000;
+        border-radius: 10px;
+        color: #fff;
+      }
+
+      .nameBox {
+        margin-top: 1em;
+
+        h2 {
+          margin: 0;
+          font-size: 0.9em;
+        }
+
+        p {
+          margin: 0;
+          font-size: 0.8em;
+        }
+      }
+    }
   }
 }
