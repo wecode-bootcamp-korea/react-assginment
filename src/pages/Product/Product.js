@@ -6,7 +6,8 @@ import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
 
 const Product = () => {
-const [price, setPrice] = useState(300)
+const price = 300;
+const totalPrice = price;
 const [review, setReview] = useState(false);
 const [color, setColor] = useState("white");
 
