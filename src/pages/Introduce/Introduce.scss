@@ -6,7 +6,7 @@
   border-radius: 5px;
   width: 120px;
   margin: auto;
-  margin-top: 25%;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -49,5 +49,64 @@
   }
   .link {
     font-size: 13px;
+  }
+}
+.flexBox {
+  display: flex;
+  justify-content: center;
+
+  .colorBox {
+    margin: 0px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+
+    .red {
+      background-color: red;
+      display: flex;
+      height: 100px;
+      width: 100px;
+      align-items: center;
+      margin: 10px auto;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    .yellow {
+      background-color: yellow;
+      display: flex;
+      height: 100px;
+      width: 100px;
+      align-items: center;
+      margin: 10px auto;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    .green {
+      background-color: green;
+      display: flex;
+      height: 100px;
+      width: 100px;
+      align-items: center;
+      margin: 10px auto;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    .blue {
+      background-color: blue;
+      display: flex;
+      height: 100px;
+      width: 100px;
+      align-items: center;
+      margin: 10px auto;
+      justify-content: center;
+      border-radius: 5px;
+    }
   }
 }
