@@ -1,12 +1,6 @@
 @import '../../style/variables.scss';
 @import '../../style/mixin.scss';
 
-// * {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-// }
 .introduce {
   margin: auto;
   width: 240px;
@@ -53,6 +47,37 @@
 
       button {
         font-size: 5px;
+      }
+    }
+  }
+}
+
+.colorBoxContainter {
+  display: flex;
+  justify-content: center;
+
+  .colorBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 170px;
+    height: 190px;
+    border: 1px solid $black;
+    border-radius: 10px;
+
+    .logoBox {
+      margin: 8px 2px;
+      display: flex;
+      width: 150px;
+      height: 100px;
+    }
+    .nameBox {
+      h2 {
+        margin: 3px;
+      }
+      p {
+        margin: 3px;
       }
     }
   }
