@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Product.scss";
 import Color from "./components/Color/Color";
 import Count from "./components/Count/Count";
@@ -9,6 +9,14 @@ const Product = () => {
   const [color, setColor] = useState("white");
   const [count, setCount] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
+  const [fetchData, setFetchData] = useState();
+
+  useEffect(() => {
+    fetch("/data/mockupData.json", { method: "GET" })
+      .then((response) => response.json())
+      .then((data) => setFetchData(data));
+  }, []);
+  console.log(fetchData);
 
   const price = 300;
   const totalPrice = price;
