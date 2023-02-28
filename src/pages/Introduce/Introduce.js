@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import Nav from '../components/Nav/Nav';
 import "./Introduce.scss";
 
 
@@ -16,7 +17,7 @@ const Introduce = () => {
     }
 
     return (
-    <div className = "introduce">
+    <div className = "introduce">  
         <div className = "wecodebox">
             <h1>>wecode</h1>
         </div>
@@ -31,5 +32,4 @@ const Introduce = () => {
         </span>
     </div>
 );};
-    
-export default Introduce;
+ export default Introduce;

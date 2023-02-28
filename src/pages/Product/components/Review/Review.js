@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Nav from "../../../components/Nav/Nav";
 import "./Review.scss";
 
 const Review = () => {
