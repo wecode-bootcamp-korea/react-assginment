@@ -3,7 +3,7 @@
 
 .introduce {
   border-radius: 7px;
-  width: 150px;
+  width: 100%;
 
   .weCodeBox {
     border: 1px solid;
@@ -12,7 +12,7 @@
     height: 240px;
     margin: auto;
 
-    .wecodeStyle {
+    .weCodeStyle {
       @include flexCenter;
       height: 130px;
       background-color: black;
@@ -21,32 +21,59 @@
       margin: 10px auto;
       border-radius: 7px;
     }
-  }
-  .infoWrap {
-    .content {
-      margin-left: 10px;
-      font-size: 20px;
-      &:hover {
-        cursor: pointer;
-        color: $greenColor;
+    .infoWrap {
+      .content {
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        &:hover {
+          cursor: pointer;
+          color: $greenColor;
+        }
+      }
+      .subContent {
+        margin-left: 10px;
+        margin-top: 3px;
+        font-size: 15px;
+      }
+      .input {
+        width: 80px;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+
+      .button {
+        width: 40px;
+      }
+
+      .moveLink {
+        font-size: 13px;
+        margin-left: 10px;
       }
     }
-    .subcontent {
-      margin-left: 10px;
-      font-size: 8px;
-    }
-    .input {
-      width: 80px;
-      margin-left: 10px;
+  }
+  .colorList {
+    @include flexCenter;
+    margin-top: 20px;
+    gap: 10px;
+
+    .colorBox {
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 10px;
     }
 
-    .button {
-      width: 40px;
+    .colorListColor {
+      width: 110px;
+      height: 110px;
     }
 
-    .moveLink {
-      font-size: 13px;
-      margin-left: 10px;
+    .colorName {
+      margin: 10px 0 5px 0;
+      font-weight: bold;
+    }
+    .colorRgbName {
+      font-weight: bold;
     }
   }
 }
