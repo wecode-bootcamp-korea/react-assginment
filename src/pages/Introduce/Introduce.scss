@@ -2,7 +2,9 @@
 @import "../../style/mixin.scss";
 
 .introduce {
-  @include flexCenter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
 
   .wecodeWrap {
@@ -46,6 +48,26 @@
       .moveToProduct {
         margin: 0 18px;
       }
+    }
+  }
+
+  .colorCardWrap {
+    display: flex;
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .blue {
+      background-color: blue;
     }
   }
 }
