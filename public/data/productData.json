@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "color": "red",
+    "image": "/images/golf-ball-red.jpg",
+    "name": "골프공",
+    "price": 300,
+    "review": "!"
+  },
+  {
+    "id": 2,
+    "color": "yellow",
+    "image": "/images/golf-ball-yellow.jpg",
+    "name": "골프공",
+    "price": 300,
+    "review": "!"
+  },
+  {
+    "id": 3,
+    "color": "white",
+    "image": "/images/golf-ball-white.jpg",
+    "name": "골프공",
+    "price": 300,
+    "review": "!"
+  }
+]

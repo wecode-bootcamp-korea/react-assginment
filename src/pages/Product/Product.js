@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Color from "./components/Color/Color";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Count from "./components/Count/Count";
@@ -9,21 +9,48 @@ const Product = () => {
   const [color, setColor] = useState("white");
   const [number, setNumber] = useState(1);
   const [isHidden, setIsHidden] = useState(true);
-
-  const price = 300;
+  const [productData, setProductData] = useState([]);
+  const [price, setPrice] = useState(0);
+  // const price = 300;
   const totalPrice = price * number;
 
+  useEffect(() => {
+    fetch("http://localhost:3000/data/productData.json", { method: "GET" })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setProductData(data);
+      });
+  }, []);
+
+  // console.log(productData);
+  useEffect(() => {
+    setPrice(productData.price);
+  }, [productData]);
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
-          <img src={`/images/golf-ball-${color}.jpg`} alt={`golf-ball`} />
+          {productData.map((info, idx) => {
+            return productData[idx].color === color ? (
+              <img key={info.id} src={`${info.image}`} alt={`golf-ball`} />
+            ) : null;
+          })}
           <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
-          <span className="title">골프공</span>
+          {/* {productData[ ] */}
+          {productData.map((info, idx) => {
+            return productData[idx].color === color ? (
+              <span key={info.id} className="title">
+                {info.name}
+              </span>
+            ) : null;
+          })}
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+          {productData.map((info) => {
+            return <span key={info.id}>가격 : {info.price}원</span>;
+          })}
           <Color color={color} setColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
