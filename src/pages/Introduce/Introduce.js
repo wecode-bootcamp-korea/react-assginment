@@ -11,12 +11,12 @@ const Introduce = () => {
 
   return (
     <div className="introduce">
-      <img alt="myPicture" src="img/비니비니.jpg"></img>
+      <img alt="myPicture" src="img/비니비니.jpg" />
       <div className="information">
         <p className="myName">문은빈</p>
         <p>43기</p>
         <date className="inputInfo">
-          <input type={Text}></input>
+          <input type={Text} />
           <button onClick={handleButton}>클릭</button>
         </date>
         <Link to="/product">Product 페이지로 이동!</Link>
