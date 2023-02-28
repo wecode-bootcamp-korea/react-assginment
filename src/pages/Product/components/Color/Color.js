@@ -13,10 +13,16 @@ const Color = props => {
         {color}
       </span>
       <div className="colorHandler">
-        <ColorButton setColor={setColor} />
+        <ColorButton color="white" setColor={setColor} />
+        <ColorButton Color="red" setColor={setColor} />
+        <ColorButton Color="yello" setColor={setColor} />
       </div>
     </div>
   );
 };
 
 export default Color;
+
+//  템블릿 리터럴?
+//  백틱사용하는 이유
+//  스테이트가 변하면 다시 렌더링이 된다

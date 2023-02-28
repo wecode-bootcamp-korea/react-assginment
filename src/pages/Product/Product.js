@@ -9,7 +9,7 @@ import './Product.scss';
 const Product = () => {
   const [color, setColor] = useState('white');
   const [counter, setCount] = useState(1);
-  const [review, setReview] = useState(true);
+  const [review, setReview] = useState(false);
   const price = 300;
   const totalPrice = price * counter;
   if (counter <= 0) {
@@ -49,3 +49,11 @@ const Product = () => {
 };
 
 export default Product;
+
+// 1. 어디가 바뀔지 확인하고 어떻게 바뀌는지 확인
+// 2. 어떤 이벤트가 있어야지 변하는지 , 어떻게 변하는지 확인
+// 3. 함수의 순서를 확인
+
+// 불리언값으로 렌더링하는 경우는 앞에 is를 붙여 줌
+
+// 함수안에서 조건문안에 return을 적으면 그대로 멈춤

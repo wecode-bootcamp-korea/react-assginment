@@ -1,6 +1,8 @@
 import React from 'react';
 import './Count.scss';
 
+// const Count = {counter, setCount} => {}
+
 const Count = props => {
   const { counter, setCount } = props;
 
