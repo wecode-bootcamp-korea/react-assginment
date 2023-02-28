@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
+import Nav from './../../../components/Nav/Nav';
 
 const Color = () => {
   const [color, setColor] = useState("white");
     
   return (
-    <div className="color">
+    <div className="color">      
+    <Nav />
       <span className="colorText">
         색상 :
         <div className={`selected ${color}`}/>

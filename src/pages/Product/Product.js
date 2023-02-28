@@ -4,6 +4,7 @@ import ColorButton from './components/ColorButton/ColorButton';
 import Color from "./components/Color/Color";
 import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
+import Nav from './../components/Nav/Nav';
 
 const Product = () => {
   const [count, setCount] = useState(1);
@@ -15,6 +16,7 @@ const Product = () => {
 
   return (
     <div className="product">
+      <Nav />      
       <div className="productDetail">
         <div className="productDetailImg">
           <img

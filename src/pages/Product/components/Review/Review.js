@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Review.scss";
+import Nav from './../../../components/Nav/Nav';
 
 const Review = () => {
   const [isReviewOpen, setIsReviewOpen] = useState(false);
@@ -7,6 +8,7 @@ const Review = () => {
 
   return (
     <div className="review">
+    <Nav />
       <div className="user">
         <img src="/images/avatar.jpg" alt="avatar" />
         <div className="userInfo">

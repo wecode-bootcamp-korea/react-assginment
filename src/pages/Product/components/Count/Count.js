@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Nav from "../../../components/Nav/Nav";
 import "./Count.scss";
 
 const Count = (props) => {
@@ -20,6 +21,7 @@ const Count = (props) => {
   
   return (
     <div className="count">
+    <Nav />
       <div className="countInput">
         <button onClick={minusCount}>-</button>
         <div className={`countInputText ${props.count}`}>{props.count}</div>
