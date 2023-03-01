@@ -3,7 +3,8 @@ import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = (props) => {
-  const { color, setColor } = props;
+  const { color, setColor, fetchData, setTitle, setPrice, setProductImg } =
+    props;
 
   return (
     <div className="color">
@@ -13,9 +14,22 @@ const Color = (props) => {
         {color}
       </span>
       <div className="colorHandler">
-        <ColorButton color={"white"} setColor={setColor} />
-        <ColorButton color={"red"} setColor={setColor} />
-        <ColorButton color={"yellow"} setColor={setColor} />
+        {fetchData &&
+          fetchData.map((product) => {
+            return (
+              <ColorButton
+                key={product.id}
+                color={product.color}
+                price={product.price}
+                title={product.title}
+                productImg={product.productImg}
+                setColor={setColor}
+                setTitle={setTitle}
+                setPrice={setPrice}
+                setProductImg={setProductImg}
+              />
+            );
+          })}
       </div>
     </div>
   );
