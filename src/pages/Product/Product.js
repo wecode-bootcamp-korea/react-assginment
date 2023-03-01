@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Color from "./components/Color/Color";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Count from "./components/Count/Count";
@@ -8,27 +8,49 @@ import "./Product.scss";
 const Product = () => {
   const [color, setColor] = useState("white");
   const [number, setNumber] = useState (1);
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/Jeongin.json', {
+    method: 'GET'
+  })
+    .then(res => res.json())
+    .then(data => {
+      setProduct(data);
+    });
+  },[])
 
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
-          <img
-            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-            alt={`golf_ball`}
-          />
+          {product.map((product, key) => 
+            product.color === color &&(
+              <img
+              key={key}
+              src={`${product.product_image}`} // color 이름에 따라 다른 이미지 경로 넣기
+              alt={`golf_ball`}
+            />)
+            )
+          }
           <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
-          <span className="title">골프공</span>
+        {product.map((product, key) => 
+            product.color === color &&(
+          <span key={key} className="title">{product.title}</span>))}
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : 300 원</span>
+          {product.map((product, key) => 
+            product.color === color &&(
+              <span key={key}>가격 : {product.price}원</span>))}
           <Color color={color} setColor={setColor}/>
           <div className="quantity">
             <span> 수량 : </span>
             <Count number={number} setNumber={setNumber}/>
           </div>
-          <span>최종 가격 : {300*number.toLocaleString()} 원</span>
+          {product.map((product, key) => 
+            product.color === color &&(
+          <span key={key}>최종 가격 : {product.price * number.toLocaleString()} 원</span>))}
           <button className="buyBtn">구매하기</button>
         </div>
       </div>

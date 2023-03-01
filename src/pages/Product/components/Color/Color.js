@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "../../../components/Nav/Nav";
 import ColorButton from '../ColorButton/ColorButton'
 import "./Color.scss";
 

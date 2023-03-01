@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import Nav from "../../../components/Nav/Nav";
 import "./Review.scss";
 
-const Review = () => {
+const Review = (props) => {
   
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(isOpen => !isOpen);
   }
-
+console.log(props)
   return (
     <div className="review">
       <div className="user">

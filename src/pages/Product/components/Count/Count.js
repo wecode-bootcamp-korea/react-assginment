@@ -1,7 +1,5 @@
 import React from "react";
-import Nav from "../../../components/Nav/Nav";
 import "./Count.scss";
-
 
 const Count = (props) => {
 const {number, setNumber} = props;
