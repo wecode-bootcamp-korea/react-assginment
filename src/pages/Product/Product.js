@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Color from "./components/Color/Color";
 import Count from "./components/Count/Count";
@@ -9,23 +9,53 @@ import "./Product.scss";
 
 const Product = () => {
   const [color, setColor] = useState("white");
+  const [productData, setProductData] = useState([]);
   const [num, setNum] = useState(1);
-  const price = "300";
+
+  console.log(productData[0]);
+  const price = 300;
+
+  useEffect(() => {
+    fetch("/data/productData.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setProductData(data);
+      });
+  }, []);
 
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
-          <img
-            src={`/images/golf-ball-${color}.jpg`}
-            alt={`golf-ball-${color}`}
-          />
+          {productData.map((info, idx) => {
+            return productData[idx].color === color ? (
+              <img
+                key={info.id}
+                src={`${info.image_url}`}
+                alt={`golf-ball-${color}`}
+              />
+            ) : null;
+          })}
           <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
-          <span className="title">골프공</span>
+          {productData.map((info, idx) => {
+            return productData[idx].color === color ? (
+              <span key={info.id} className="title">
+                {info.title}
+              </span>
+            ) : null;
+          })}
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price} 원</span>
+          {productData.map((info, idx) => {
+            return productData[idx].color === color ? (
+              <span key={info.id} className="price">
+                {info.price} 원
+              </span>
+            ) : null;
+          })}
           <Color color={color} setColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
@@ -39,7 +69,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review />
+        <Review productData={productData} color={color} />
       </div>
     </div>
   );
