@@ -10,8 +10,8 @@ const Product = () => {
   const [number, setNumber] = useState(1);
   const [isHidden, setIsHidden] = useState(true);
   const [productData, setProductData] = useState([]);
-  const [price, setPrice] = useState(0);
-  // const price = 300;
+  // const [price, setPrice] = useState(300);
+  const price = 300;
   const totalPrice = price * number;
 
   useEffect(() => {
@@ -24,9 +24,10 @@ const Product = () => {
   }, []);
 
   // console.log(productData);
-  useEffect(() => {
-    setPrice(productData.price);
-  }, [productData]);
+  // useEffect(() => {
+  //   setPrice(productData.price);
+  // }, [productData]);
+
   return (
     <div className="product">
       <div className="productDetail">
@@ -48,9 +49,7 @@ const Product = () => {
             ) : null;
           })}
           <span>비거리를 비약적으로 늘려줍니다</span>
-          {productData.map((info) => {
-            return <span key={info.id}>가격 : {info.price}원</span>;
-          })}
+          <span>가격 : {price}원</span>
           <Color color={color} setColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
@@ -64,7 +63,16 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review isHidden={isHidden} setIsHidden={setIsHidden} />
+        {productData &&
+          productData.map((info, idx) => {
+            return productData[idx].color === color ? (
+              <Review
+                info={info}
+                isHidden={isHidden}
+                setIsHidden={setIsHidden}
+              />
+            ) : null;
+          })}
       </div>
     </div>
   );

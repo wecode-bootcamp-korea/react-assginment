@@ -4,18 +4,12 @@ import "./Count.scss";
 const Count = (props) => {
   const { number, setNumber } = props;
 
-  const minusNumber = () => {
-    if (number > 1) {
-      setNumber(number - 1);
-    }
-  };
-
   return (
     <div className="count">
       <div className="countInput">
         <button
           onClick={() => {
-            minusNumber();
+            number > 1 && setNumber(number - 1);
           }}
         >
           -
