@@ -1,7 +1,7 @@
 import React from "react";
 import "../../pages/Introduce/Introduce.scss";
 
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Introduce = () => {
   //첫 부모태그 className은 컴포넌트이름을 그대로 사용하되, 소문자로 하는게 좋음 box 말고 introduce
