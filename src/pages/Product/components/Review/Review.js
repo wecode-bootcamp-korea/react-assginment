@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import "./Review.scss";
 
 const Review = (props) => {

@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import "./Count.scss";
 
 const Count = (props) => {
