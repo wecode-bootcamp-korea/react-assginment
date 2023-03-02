@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Product.scss';
 import ColorButton from './components/ColorButton/ColorButton';
 import Color from './components/Color/Color';
@@ -10,31 +10,59 @@ const Product = () => {
   const [color, setColor] = useState('white');
   const [counter, setCount] = useState(1);
   const [review, setReview] = useState(false);
+  const [productData, setProductData] = useState([]);
   const price = 300;
   const totalPrice = price * counter;
   if (counter <= 0) {
     setCount(1);
   }
+
+  useEffect(() => {
+    fetch('/data/productData.json', { method: 'GET' })
+      .then(response => response.json())
+      .then(data => setProductData(data));
+  }, []);
+
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
-          <img
-            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-            alt={`golf-ball`}
-          />
+          {productData.map((info, index) => {
+            return productData[index].color === color ? (
+              <img
+                key={info.id}
+                src={`${info.image}`}
+                alt={`golf-ball-${color}`}
+              />
+            ) : null;
+          })}
+
           <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
-          <span className="title">골프공</span>
+          <span className="title">{productData.title}</span>
+          {productData.map((info, index) => {
+            return productData[index].color === color ? (
+              <span key={info.id} className="title">
+                {info.title}
+              </span>
+            ) : null;
+          })}
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+          {productData.map((info, index) => {
+            return productData[index].color === color ? (
+              <span key={info.id} className="price">
+                가격: {info.price} 원
+              </span>
+            ) : null;
+          })}
+
           <Color setColor={setColor} color={color} />
           <div className="quantity">
             <span> 수량 : </span>
             <Count counter={counter} setCount={setCount} />
           </div>
-          <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
+          <span>최종 가격 : {counter * price} 원</span>
           <button className="buyBtn">구매하기</button>
         </div>
       </div>
@@ -49,11 +77,3 @@ const Product = () => {
 };
 
 export default Product;
-
-// 1. 어디가 바뀔지 확인하고 어떻게 바뀌는지 확인
-// 2. 어떤 이벤트가 있어야지 변하는지 , 어떻게 변하는지 확인
-// 3. 함수의 순서를 확인
-
-// 불리언값으로 렌더링하는 경우는 앞에 is를 붙여 줌
-
-// 함수안에서 조건문안에 return을 적으면 그대로 멈춤

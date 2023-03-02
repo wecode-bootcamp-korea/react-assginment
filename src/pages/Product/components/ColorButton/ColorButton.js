@@ -8,7 +8,7 @@ const ColorButton = props => {
     <button
       className={`colorButton ${color}`}
       onClick={() => {
-        setColor({ color });
+        setColor(color);
       }}
     />
   );
