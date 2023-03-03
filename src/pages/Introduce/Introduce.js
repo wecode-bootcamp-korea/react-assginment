@@ -41,7 +41,7 @@ const Introduce = () => {
           <div key={info.id} className="Introduce">
             <div
               className="container"
-              style={{backgroundColor: `${info.item}`}}
+              style={{ backgroundColor: `${info.item}` }}
             ></div>
             <div className="secContainer">
               <strong className="p">이름: {info.item}</strong>
