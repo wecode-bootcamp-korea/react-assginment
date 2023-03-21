@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Introduce.scss';
 
 const Introduce = () => {
@@ -24,8 +25,12 @@ const Introduce = () => {
           <div className="gen-no">44기</div>
           <form onSubmit={handleSubmit}>   
             <input type="text" name="input" id="" onInput={handleInput} />
-            <button onClick={handleClick}>클릭</button>  
+            <Link to="/product">
+              <button onClick={handleClick}>클릭</button> 
+            </Link>
+            
           </form>
+          <Link to="/product">Product 페이지로 이동</Link>
         </span>
       </div> 
       
