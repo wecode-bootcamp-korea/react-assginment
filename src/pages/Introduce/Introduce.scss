@@ -7,7 +7,7 @@
         @include flexCenter;
         flex-direction: column;  
         margin: auto;
-        margin-top: 20%;
+        margin-top:  10%;
         border: 1px solid black;
         border-radius: 5px;
         width: 300px;
@@ -20,13 +20,16 @@
             background-image: url(../../assets/images/cat.jpeg);
             border-radius: 5px;
         }
+
         .nameArea {
             margin-top: 10px;
             display: flex;
             flex-direction: column;
+
             .profileName {
-                text-align: left;
                 @include nameText;
+                text-align: left;
+
                 &:hover {
                     color: $green;
                     cursor: default;
@@ -34,9 +37,9 @@
             }
     
             .profileSub {
+                @include subText;
                 text-align: left;
                 margin-top: 5px;
-                @include subText;
             }
         
             .inputArea {
@@ -54,41 +57,4 @@
         }
     }
 }
-
-
-// .profileImg {
-//     // display: flex;
-//     // justify-content: center;
-//     // align-items: center;
-//     width: 200px;
-//     height: 200px;
-//     background-size: cover;
-//     background-image: url(../../assets/images/cat.jpeg);
-//     border-radius: 5px;
-// }
-
-// form .profileName {
-//     width: 200px;
-//     text-align: left;
-// }
-
-// form .profileSub {
-//     text-align: left;
-//     margin-top: 5px;
-//     width: 200px;
-//     font-size: 12px;
-//     color: lightgray;
-// }
-
-// form .inputArea {
-//     display: flex;
-//     align-items: center;
-//     margin-top: 10px;
-//     width: 200px;
-// }
-
-// .inputArea button {
-//     width: 50px;
-//     height: 22px;
-// }
 
