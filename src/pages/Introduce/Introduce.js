@@ -1,17 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Introduce.scss";
 
 const Introduce = () => {
   //const [inputValue, setInputValue] = usestate(" ");
 
+  const navigate = useNavigate();
+
+  //바로 hook를 쓰지 않고 함수를 만들어서 쓸 때
+  // const loginBtn = () => {
+  //   navigate("./product");
+  // };
   const HandleInput = () => {
-    console.log("input태그 동작");
+    console.log("input 태그 동작");
   };
 
   const HandleButton = (e) => {
     e.preventDefault();
     console.log("button태그 동작");
+    navigate("/product");
   };
 
   return (
@@ -26,7 +33,12 @@ const Introduce = () => {
             HandleInput(e);
           }}
         />
-        <button className="button" onClick={HandleButton}>
+        <button
+          className="button"
+          onClick={(e) => {
+            HandleButton(e);
+          }}
+        >
           클릭
         </button>
       </form>
