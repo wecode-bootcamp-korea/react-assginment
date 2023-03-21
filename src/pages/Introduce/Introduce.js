@@ -20,7 +20,7 @@ const Introduce = () => {
     <div className="container">
       <div className="card">
         <span>
-          <div className='card-image'></div>       
+          <div className='card-image' style={{ backgroundImage: "url('https://image.rocketpunch.com/company/99609/wecode_logo_1590553949.jpg?s=400x400&t=inside')"}} />       
           <div className="name">김정환</div>
           <div className="gen-no">44기</div>
           <form onSubmit={handleSubmit}>   
