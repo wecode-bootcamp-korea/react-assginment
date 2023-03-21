@@ -1,56 +1,94 @@
-// .introduce {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
+
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.introduce {
+    .profileFrame {
+        @include flexCenter;
+        flex-direction: column;  
+        margin: auto;
+        margin-top: 20%;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 300px;
+        height: 350px;
+
+        .profileImg {
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-image: url(../../assets/images/cat.jpeg);
+            border-radius: 5px;
+        }
+        .nameArea {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            .profileName {
+                text-align: left;
+                @include nameText;
+                &:hover {
+                    color: $green;
+                    cursor: default;
+                }
+            }
+    
+            .profileSub {
+                text-align: left;
+                margin-top: 5px;
+                @include subText;
+            }
+        
+            .inputArea {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                width: 200px;
+    
+                button {
+                    width: 50px;
+                    height: 22px;
+                }
+            }
+
+        }
+    }
+}
+
+
+// .profileImg {
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     width: 200px;
+//     height: 200px;
+//     background-size: cover;
+//     background-image: url(../../assets/images/cat.jpeg);
+//     border-radius: 5px;
 // }
 
-.profileFrame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 20%;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 300px;
-    height: 350px;
-}
+// form .profileName {
+//     width: 200px;
+//     text-align: left;
+// }
 
-.profileImg {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-image: url(../../assets/images/cat.jpeg);
-    border-radius: 5px;
-}
+// form .profileSub {
+//     text-align: left;
+//     margin-top: 5px;
+//     width: 200px;
+//     font-size: 12px;
+//     color: lightgray;
+// }
 
-form .profileName {
-    width: 200px;
-    text-align: left;
-}
+// form .inputArea {
+//     display: flex;
+//     align-items: center;
+//     margin-top: 10px;
+//     width: 200px;
+// }
 
-form .profileSub {
-    text-align: left;
-    margin-top: 5px;
-    width: 200px;
-    font-size: 12px;
-    color: lightgray;
-}
-
-form .inputArea {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    width: 200px;
-}
-
-.inputArea button {
-    width: 50px;
-    height: 22px;
-}
+// .inputArea button {
+//     width: 50px;
+//     height: 22px;
+// }
 

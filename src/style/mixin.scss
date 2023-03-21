@@ -1,0 +1,15 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+@mixin nameText {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@mixin subText {
+    font-size: 12px;
+    color: lightgray;
+}
