@@ -13,8 +13,8 @@ function Introduce() {
 
   function handleButton(e) {
     console.log('button 태그 동작');
-    e.preventDefault();
     Navigate('/product');
+    e.preventDefault();
   }
 
   return (
