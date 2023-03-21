@@ -1,6 +1,5 @@
 import React from "react";
-import "./Introduce.css";
-
+import "./Introduce.scss";
 import { useNavigate } from "react-router-dom";
 
 const IntroduceName = () => {
@@ -17,7 +16,7 @@ const IntroduceName = () => {
   };
 
   return (
-    <div className="body">
+    <div className="introducename">
       <div className="container">
         <div className="logobox">
           <span>{logoname}</span>
