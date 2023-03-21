@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Introduce.scss';
 
 const Introduce = () => {
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,11 +15,11 @@ const Introduce = () => {
   }
 
   const handleClick = () => {
-    console.log('button 태그 동작');
+    navigate('./product');
   }
 
   return(
-    <div className="container">
+    <div className="introduce">
       <div className="card">
         <span>
           <div className='card-image' style={{ backgroundImage: "url('https://image.rocketpunch.com/company/99609/wecode_logo_1590553949.jpg?s=400x400&t=inside')"}} />       
@@ -25,10 +27,7 @@ const Introduce = () => {
           <div className="gen-no">44기</div>
           <form onSubmit={handleSubmit}>   
             <input type="text" name="input" id="" onInput={handleInput} />
-            <Link to="/product">
-              <button onClick={handleClick}>클릭</button> 
-            </Link>
-            
+            <button onClick={handleClick}>클릭</button> 
           </form>
           <Link to="/product">Product 페이지로 이동</Link>
         </span>

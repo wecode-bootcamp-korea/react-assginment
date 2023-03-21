@@ -2,38 +2,40 @@
 @import '../../style/mixin.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-.container {
+.introduce {
   @include flexCenter;
   height: 100vh;
-}
 
-.card {
+  .card {
   padding: 10px;
   border: 1.5px solid $black-color;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
-}
+  }
 
-.card-image {
-  width: 200px;
-  height: 200px;
-  background-color: $black-color;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
+  .card-image {
+    width: 200px;
+    height: 200px;
+    background-color: $black-color;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
 
-.name {
-  margin-top: 4px;
-  @include textStyle(14px, bold);
+  .name {
+    @include textStyle(14px, bold);
+    margin-top: 4px;    
 
-  &:hover {
-    color: $green-color;
+    &:hover {
+      color: $green-color;
+    }
+  }
+
+  .gen-no {
+    @include textStyle(12px, 500);
   }
 }
 
-.gen-no {
-  @include textStyle(12px, 500);
-}
+
 
 
