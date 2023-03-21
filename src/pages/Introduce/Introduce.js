@@ -17,7 +17,7 @@ const Introduce = () => {
   return (
     <div className="introduce">
       <div className="image"></div>
-      <p>44기 조건호</p>
+      <p className="name">44기 조건호</p>
       <form>
         <input
           className="input"
