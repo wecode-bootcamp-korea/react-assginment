@@ -1,18 +1,22 @@
 import React from 'react';
 import './Introduce.scss';
-
-const clamp = '>wecode';
-
-function handleInput() {
-  console.log('input 태그 동작');
-}
-
-function handleButton(e) {
-  console.log('button 태그 동작');
-  e.preventDefault();
-}
+import { Link, useNavigate } from 'react-router-dom';
 
 function Introduce() {
+  const clamp = '>wecode';
+
+  const Navigate = useNavigate();
+
+  function handleInput() {
+    console.log('input 태그 동작');
+  }
+
+  function handleButton(e) {
+    console.log('button 태그 동작');
+    e.preventDefault();
+    Navigate('/product');
+  }
+
   return (
     <div className="introduce">
       <div className="blackBox">
@@ -24,6 +28,9 @@ function Introduce() {
         <input onChange={handleInput} />
         <button onClick={handleButton}>클릭</button>
       </form>
+      <Link className="link" to="/product">
+        product 페이지로 이동
+      </Link>
     </div>
   );
 }

@@ -4,7 +4,7 @@
 
 .introduce {
   width: 470px;
-  height: 630px;
+  height: 690px;
   margin: 100px auto;
   border: 2px solid #000000;
   border-radius: 15px;
@@ -24,9 +24,7 @@
     color: #ffffff;
     font-size: 80px;
   }
-}
 
-.introduce {
   h1 {
     font-size: 40px;
     margin: 0 0 0 40px;
@@ -36,11 +34,15 @@
     font-size: 30px;
     margin: 0 0 15px 40px;
   }
-}
 
-.introduce {
   form {
     text-align: center;
+  }
+
+  .link {
+    display: inline-block;
+    font-size: 30px;
+    margin: 20px 0 0 40px;
   }
 }
 
