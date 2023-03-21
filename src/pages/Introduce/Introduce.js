@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Route, Link, Navigate, useNavigate } from "react-router-dom";
+import Product from "../Product/Product";
 import "./Introduce.scss";
+
 
 const Introduce = () => {
   const [input, setInput] = useState("");
@@ -13,8 +16,10 @@ const Introduce = () => {
     console.log("button 태그 동작");
   };
 
+
+
   return (
-    <form>
+    <form className="introduce">
       <div className="profileFrame">
         <img className="profileImg" />
         <span className="profileName">신효민</span>
@@ -25,13 +30,9 @@ const Introduce = () => {
               HandleInput(e);
             }}
           />
-          <button
-            onClick={(e) => {
-              Handlebutton(e);
-              e.preventDefault(e);
-            }}
-          > 클릭 </button>
+          <Link to="/product"> <button> 클릭 </button> </Link>
         </span>
+        <Link to="/product">product 페이지로 이동</Link>
       </div>
     </form>
   );
