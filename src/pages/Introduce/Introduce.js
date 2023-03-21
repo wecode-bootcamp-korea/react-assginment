@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./Introduce.scss";
 
 const Introduce = () => {
@@ -15,18 +15,24 @@ const Introduce = () => {
   };
 
   return (
-    <div className="box">
+    <div className="introduce">
       <div className="image"></div>
       <p>44기 조건호</p>
       <form>
         <input
+          className="input"
           type="text"
           onChange={(e) => {
             HandleInput(e);
           }}
         />
-        <button onClick={HandleButton}>클릭</button>
+        <button className="button" onClick={HandleButton}>
+          클릭
+        </button>
       </form>
+      <Link className="link" to="./product">
+        product 페이지로 넘어가기
+      </Link>
     </div>
   );
 };
