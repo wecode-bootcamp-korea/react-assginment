@@ -1,3 +1,8 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+// @import 'mixin';
+// @import 'variables';
+
 .introduce{
 
   .profileWrap {
@@ -58,5 +63,11 @@
     color: rgb(94, 92, 89);
     font-weight: 500;
     text-decoration: none;
+  }
+
+  .name{
+    &:hover{
+      color: $green;
+    }
   }
 }
