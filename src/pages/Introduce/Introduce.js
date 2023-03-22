@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Product from "../Product/Product";
+import Color from "../Product/components/Color/Color";
 import "./Introduce.scss";
+
 
 
 const Introduce = () => {
@@ -38,6 +40,7 @@ const Introduce = () => {
           <button onClick={goToMain}> 클릭 </button>
           </span>
           <Link to="/product">product 페이지로 이동</Link>
+          <Link to="/Color">Color Pick 페이지로 이동</Link>
         </div>
       </div>
     </form>
