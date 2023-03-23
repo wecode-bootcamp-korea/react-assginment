@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './Product.scss';
 import Color from './components/Color/Color';
 import Count from './components/Count/Count';
@@ -22,7 +22,6 @@ const Product = () => {
     setAmount(1);
   }
 
-  const golfBallImg = useRef();
   const [imgColor, setImgColor] = useState('white');
 
   function whiteImg() {
@@ -42,7 +41,6 @@ const Product = () => {
       <div className="productDetail">
         <div className="productDetailImg">
           <img
-            ref={golfBallImg}
             src={`/images/golf-ball-${imgColor}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
           />
