@@ -6,13 +6,6 @@ const Review = () => {
   const [btn,setBtn] = useState(false)
   const [btnTxt, setbtnTxt] = useState('더보기 ▼')
 
-  // const changeReview = () => {
-  //   if(btn === false){
-  //     setBtn('더보기 ▼')
-  //   } else {
-  //     setBtn('접기 ▲')
-  //   }
-  // }
   function returnBtn (){
     if(btn === false){
       setBtn(true)
@@ -46,13 +39,7 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        
         <ChangeTheReview></ChangeTheReview>
-        {/* <div className="reviewMainContents">
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-          <br />
-          다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div> */}
         <span className="reviewMainHandler" onClick={() => {returnBtn()}}>
           {btnTxt}
         </span>
