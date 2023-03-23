@@ -1,9 +1,13 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Introduce.scss";
 
 const Introduce = () => {
+  const navigate = useNavigate();
+
   function handleButton() {
     console.log("button 태그 동작");
+    navigate("/product");
   }
 
   function handleInput() {
@@ -20,6 +24,7 @@ const Introduce = () => {
         <div className="class">44기</div>
         <input onChange={handleInput}></input>
         <button onClick={handleButton}>클릭</button>
+        <Link to="/product">product 페이지로 이동</Link>
       </div>
     </div>
   );
