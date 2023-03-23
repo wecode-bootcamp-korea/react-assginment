@@ -36,7 +36,7 @@ const Review = () => {
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
         {/** 여기에 리뷰 더보기 정보 추가 */}
-        { buttonClick == true ? <MoreInfo /> : null }
+        { buttonClick === true ? <MoreInfo /> : null }
         <span className="reviewMainHandler" onClick={() => { Click(buttonClick); }}>
           {buttonInfo}
         </span>
