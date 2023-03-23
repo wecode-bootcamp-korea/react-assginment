@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Review.scss";
 
+const CommentOn = () => {
+  return (
+    <div className="reviewMainContents">
+      주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+      <br />
+      다음에도 필요하면 또 여기서 시킬 것 같아요.
+    </div>
+  );
+};
 const Review = () => {
+  const [moreBtn, setMoreBtn] = useState("더보기 ▼");
+  const [isView, setIsView] = useState(false);
+  const btnHandle = () => {
+    if (moreBtn === "더보기 ▼") {
+      setMoreBtn("접기 ▲");
+      setIsView(true);
+    } else {
+      setMoreBtn("더보기 ▼");
+      setIsView(false);
+    }
+  };
+
   return (
     <div className="review">
       <div className="user">
@@ -13,13 +34,9 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        <div className="reviewMainContents">
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-          <br />
-          다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div>
-        <span className="reviewMainHandler" onClick={() => {}}>
-          더보기 ▼
+        {isView === true ? <CommentOn /> : null}
+        <span className="reviewMainHandler" onClick={btnHandle}>
+          {moreBtn}
         </span>
       </div>
     </div>
