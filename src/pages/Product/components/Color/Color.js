@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "../ColorButton/ColorButton";
+import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = () => {
@@ -12,13 +14,9 @@ const Color = () => {
         <div className="selected" style={ {backgroundColor: colorChange } }/>
         { colorName }
       </span>
-      <div className="colorHandler">
-        <button className="colorButton white" onClick={() => { setColorName('white'); setColorChange('white') }} />
-        <button className="colorButton red" onClick={() => { setColorName('red'); setColorChange('red')}} />
-        <button className="colorButton yellow" onClick={() => { setColorName('yellow'); setColorChange('yellow') }} />
-      </div>
+      <ColorButton setColorName={setColorName} setColorChange={setColorChange}/>
     </div>
   );
 };
-
+// props 전달 할때는 함수를 보내는 것인지 변수를 보내는 것인지도 생각해서 보내주자.
 export default Color;
