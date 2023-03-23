@@ -42,7 +42,7 @@ const Introduce = () => {
           클릭
         </button>
       </form>
-      <Link className="link" to="./product">
+      <Link className="link" to="/product">
         product 페이지로 넘어가기
       </Link>
     </div>

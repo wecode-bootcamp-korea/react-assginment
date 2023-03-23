@@ -4,15 +4,15 @@ import "./Review.scss";
 const Review = () => {
   const [showMore, setShowMore] = useState(false);
 
-  // const comment = () => {
-  //   return (
-  //     <div className="reviewMainContents">
-  //       주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-  //       <br />
-  //       다음에도 필요하면 또 여기서 시킬 것 같아요.
-  //     </div>
-  //   );
-  // };
+  const comment = () => {
+    return (
+      <div className="reviewMainContents">
+        주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+        <br />
+        다음에도 필요하면 또 여기서 시킬 것 같아요.
+      </div>
+    );
+  };
 
   return (
     <div className="review">
@@ -24,19 +24,19 @@ const Review = () => {
         </div>
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      {/* {comment} */}
+      {/* {showMore && comment()} */}
+
+      {showMore ? comment() : null}
+
       <div className="reviewMain">
-        {/* <div className="reviewMainContents">
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-          <br />
-          다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div> */}
         <span
           className="reviewMainHandler"
           onClick={() => {
             setShowMore(!showMore);
           }}
         >
-          {showMore ? "더보기 ▼" : "더보기 ▲"}
+          {showMore ? "접기 ▲" : "더보기 ▼"}
         </span>
       </div>
     </div>
