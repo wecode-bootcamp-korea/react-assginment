@@ -1,7 +1,20 @@
-import React from "react";
-import "./Review.scss";
+import React, { useState, useRef } from 'react';
+import './Review.scss';
 
 const Review = () => {
+  const [button, setButton] = useState('더보기 ▼');
+  const mainReview = useRef();
+
+  function seeMore() {
+    if (button === '더보기 ▼') {
+      setButton('접기 ▲');
+      mainReview.current.classList.add('show');
+    } else if (button === '접기 ▲') {
+      setButton('더보기 ▼');
+      mainReview.current.className = 'reviewMainContents';
+    }
+  }
+
   return (
     <div className="review">
       <div className="user">
@@ -13,13 +26,13 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        <div className="reviewMainContents">
+        <div ref={mainReview} className="reviewMainContents">
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
         </div>
-        <span className="reviewMainHandler" onClick={() => {}}>
-          더보기 ▼
+        <span className="reviewMainHandler" onClick={seeMore}>
+          {button}
         </span>
       </div>
     </div>
