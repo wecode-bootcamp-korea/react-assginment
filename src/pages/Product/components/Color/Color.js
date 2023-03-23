@@ -7,7 +7,7 @@ const Color = (props) => {
 
   return (
     <div className="color">
-      <span className="colorText" value={colorName}>
+      <span className="colorText" value={props.text}>
         색상 :
         <div className="selected" style={{ backgroundColor: colorName }}/>
         white

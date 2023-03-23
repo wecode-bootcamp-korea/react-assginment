@@ -11,7 +11,6 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path={["/", "/introduce"]} component={<Introduce />}></Route> */}
         <Route path="/" element={<Introduce />}></Route>
         <Route path="/product" element={<Product />}></Route>
         <Route path="/productList" element={<ProductList />}></Route>
