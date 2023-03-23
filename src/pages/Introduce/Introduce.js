@@ -24,7 +24,9 @@ const Introduce = () => {
         <div className="class">44기</div>
         <input onChange={handleInput}></input>
         <button onClick={handleButton}>클릭</button>
-        <Link to="/product">product 페이지로 이동</Link>
+        <div className="link">
+          <Link to="/product">product 페이지로 이동</Link>
+        </div>
       </div>
     </div>
   );
