@@ -2,23 +2,26 @@ import React, { useState, useRef } from 'react';
 import './Color.scss';
 import ColorButton from '../ColorButton/ColorButton';
 
-const Color = () => {
+const Color = ({ whiteImg, redImg, yellowImg }) => {
   const [color, setColor] = useState();
   const colorBox = useRef();
 
   function whiteChange() {
     setColor('white');
     colorBox.current.className = 'selected white';
+    whiteImg();
   }
 
   function redChange() {
     setColor('red');
     colorBox.current.className = 'selected red';
+    redImg();
   }
 
   function yellowChange() {
     setColor('yellow');
     colorBox.current.className = 'selected yellow';
+    yellowImg();
   }
 
   return (
