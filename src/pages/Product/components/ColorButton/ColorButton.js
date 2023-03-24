@@ -1,5 +1,5 @@
 import React from "react";
-import "./ColorButton.scss"
+import "../Color/Color"
 
 function ColorButton(props) {
   //자식영역
@@ -8,18 +8,9 @@ function ColorButton(props) {
   //   props.setColorName(['white', 'red', 'yellow'])
   // }
 
-  // const Button = () => {
-  
-  //   <div className="Button">
-  //     <button className="colorButton white" onClick={() => props.setColorName('white')} />
-  //     <button className="colorButton red" onClick={() => props.setColorName('red')} />
-  //     <button className="colorButton yellow" onClick={() => props.setColorName('yellow')} />
-  //   </div>;
-  // };
-
   return (
     <div className="colorButton">
-      <button className="{colorButton + {props.colorName}}" onClick={props.colorName}></button>
+      <button className="{colorButton + {props.colorName}}" onClick={props.setColorName}></button>
     </div>
   );
 }

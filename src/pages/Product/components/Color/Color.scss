@@ -12,7 +12,7 @@
   }
 }
 
-.color {
+.color{
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -21,7 +21,6 @@
     display: flex;
     gap: 10px;
   }
-
   .selected {
     @include colors;
     width: 24px;
@@ -37,15 +36,15 @@
     cursor: pointer;
   }
 
-  // .colorButton {
-  //   @include colors;
-  //   width: 32px;
-  //   height: 32px;
-  //   border-radius: 50%;
-  //   cursor: pointer;
+  .colorButton {
+    @include colors;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
 
-    // &.selected {
-    //   border: double;
-    // }
+    &.selected {
+      border: double;
+    }
   }
-
+}
