@@ -1,5 +1,6 @@
 import React from "react";
 import "./ColorButton.scss";
+
 const ColorButton = (props) => {
   return (
     <div className="colorButton">
