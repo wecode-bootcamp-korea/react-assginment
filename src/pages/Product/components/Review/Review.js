@@ -10,9 +10,12 @@ const CommentOn = () => {
     </div>
   );
 };
+
 const Review = () => {
   const [moreBtn, setMoreBtn] = useState("더보기 ▼");
+
   const [isView, setIsView] = useState(false);
+
   const btnHandle = () => {
     if (moreBtn === "더보기 ▼") {
       setMoreBtn("접기 ▲");

@@ -1,61 +1,57 @@
 @import "../../style/mixin.scss";
 @import "../../style/variables";
 
-* {
-  box-sizing: border-box;
-}
-
-.introducename {
+.introduce {
   @include flexCenter;
 
   .container {
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 30px;
-  }
 
-  .container .logobox {
-    width: 240px;
-    height: 240px;
-    margin-bottom: 30px;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 12px;
-    text-align: center;
-  }
+    .logobox {
+      width: 240px;
+      height: 240px;
+      margin-bottom: 30px;
+      background-color: black;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 12px;
+      text-align: center;
 
-  .container .logobox span {
-    color: #fff;
-    @include textStyle(36px, 800);
-    line-height: 240px;
-  }
-
-  .container .name {
-    display: block;
-    @include textStyle(24px, 700);
-
-    &:hover {
-      color: $green;
+      span {
+        @include textStyle(36px, 800);
+        color: #fff;
+        line-height: 240px;
+      }
     }
-  }
 
-  .container .class {
-    @include textStyle(20px, 400);
-  }
+    .name {
+      @include textStyle(24px, 700);
+      display: block;
 
-  .container form {
-    margin-top: 10px;
-  }
+      &:hover {
+        color: $green;
+      }
+    }
 
-  .container form input {
-    width: 196px;
-    height: 28px;
-    margin-right: 4px;
-  }
+    .class {
+      @include textStyle(20px, 400);
+    }
 
-  .container form button {
-    width: 40px;
-    height: 28px;
+    form {
+      margin-top: 10px;
+
+      input {
+        width: 196px;
+        height: 28px;
+        margin-right: 4px;
+      }
+
+      button {
+        width: 40px;
+        height: 28px;
+      }
+    }
   }
 }

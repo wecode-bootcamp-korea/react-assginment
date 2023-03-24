@@ -1,14 +1,16 @@
 import React from "react";
-import "./Introduce.scss";
 import { useNavigate } from "react-router-dom";
+import "./Introduce.scss";
 
-const IntroduceName = () => {
+const Introduce = () => {
   const navigate = useNavigate();
 
   const logoname = "> wecode";
+
   const handleInput = () => {
     console.log("input 태그 동작");
   };
+
   const handleButton = (e) => {
     e.preventDefault();
     navigate("/product");
@@ -16,7 +18,7 @@ const IntroduceName = () => {
   };
 
   return (
-    <div className="introducename">
+    <div className="introduce">
       <div className="container">
         <div className="logobox">
           <span>{logoname}</span>
@@ -32,4 +34,4 @@ const IntroduceName = () => {
   );
 };
 
-export default IntroduceName;
+export default Introduce;

@@ -12,11 +12,12 @@ const Red = (props) => {
 const Yellow = (props) => {
   return <button className={props.className} onClick={props.onClick} />;
 };
-const Color = () => {
+
+const ColorButton = () => {
   const [colorName, setColorName] = useState("white");
 
   return (
-    <div className="color">
+    <div className="colorButton">
       <span className="colorText">
         색상 :
         <div className="selected" style={{ backgroundColor: colorName }} />
@@ -46,4 +47,4 @@ const Color = () => {
   );
 };
 
-export default Color;
+export default ColorButton;
