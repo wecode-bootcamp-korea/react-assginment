@@ -1,5 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import "./Introduce.scss";
 
 const Introduce = () => {
@@ -28,6 +29,9 @@ const Introduce = () => {
         <form>
           <input type="text" onChange={handleInput} />
           <button onClick={handleButton}>클릭</button>
+          <Link to="/product" className="link">
+            상품보러 가기
+          </Link>
         </form>
       </div>
     </div>
