@@ -23,12 +23,9 @@ const Color = () => {
         {colorName}
       </span>
       <div className="colorHandler">
-        <ColorButton colorName={colorName} setColorName={white}></ColorButton>
-        <ColorButton colorName={colorName} setColorName={red}></ColorButton>
-        <ColorButton colorName={colorName} setColorName={yellow}></ColorButton>
-        {/* <button className="colorButton white" onClick={() => setColorName('white')} />
-        <button className="colorButton red" onClick={() => setColorName('red')} />
-        <button className="colorButton yellow" onClick={() => setColorName('yellow')} /> */}
+        <ColorButton colorName={'white'} setColorName={white}></ColorButton>
+        <ColorButton colorName={'red'} setColorName={red}></ColorButton>
+        <ColorButton colorName={'yellow'} setColorName={yellow}></ColorButton>
       </div>
     </div>
   );

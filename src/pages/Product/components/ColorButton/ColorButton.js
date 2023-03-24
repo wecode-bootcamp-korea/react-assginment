@@ -10,7 +10,7 @@ function ColorButton(props) {
 
   return (
     <div className="colorButton">
-      <button className="{colorButton + {props.colorName}}" onClick={props.setColorName}></button>
+      <button className={`colorButton ${props.colorName}`} onClick={props.setColorName}></button>
     </div>
   );
 }

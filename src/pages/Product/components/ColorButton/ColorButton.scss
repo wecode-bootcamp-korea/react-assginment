@@ -1,16 +1,16 @@
-// @mixin colors {
-//   &.white {
-//     background-color: white;
-//   }
+@mixin colors {
+  &.white {
+    background-color: white;
+  }
 
-//   &.red {
-//     background-color: #f32321;
-//   }
+  &.red {
+    background-color: #f32321;
+  }
 
-//   &.yellow {
-//     background-color: #faf1b0;
-//   }
-// }
+  &.yellow {
+    background-color: #faf1b0;
+  }
+}
 
 // .colorButton {
 //   @include colors;
@@ -22,5 +22,10 @@
 //   &.selected {
 //     border: double;
 //   }
+//}
 
-// }
+.colorButton{
+  @include colors;
+  width: 32px;
+  height: 32px;
+}
