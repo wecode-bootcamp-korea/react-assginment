@@ -1,15 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Color from './components/Color/Color';
 import ColorButton from './components/ColorButton/ColorButton';
 import Count from './components/Count/Count';
 import Review from './components/Review/Review';
 import "./Product.scss";
 
+
 const Product = () => {
   // 컬러값 및 변경을 위한 훅 정의
   const [color, setColor] = useState('white');
   // 카운터 값 및 변경을 위한 훅 정의
   const [count, setCount] = useState(1);
+
+  const [productInfo, setProductInfo] = useState([]);
+
+  console.log(productInfo);
+
+  useEffect(() => {
+    fetch('/data/golfBallData.json')
+      .then((response) => response.json())
+      .then((data) => {
+        setProductInfo(data);
+      });
+      }, [])
 
   const cost = 300;
 

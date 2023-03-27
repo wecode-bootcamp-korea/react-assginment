@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "white",
+    "color": "white",
+    "cost": 300,
+    "image": "/images/golf-ball-white.jpg",
+    "review": "배송도 빠르고 정말 좋아요."
+  },
+  {
+    "id": 2,
+    "name": "red",
+    "color": "red",
+    "cost": 300,
+    "image": "/images/golf-ball-red.jpg"
+  },
+  {
+    "id": 3,
+    "name": "yellow",
+    "color": "yellow",
+    "cost": 300,
+    "image": "/images/golf-ball-yellow.jpg"
+  }
+]

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Introduce from './pages/Introduce/Introduce';
 import Nav from './pages/components/Nav/Nav';
+import Practice from './pages/Practice/Practice';
 import Product from './pages/Product/Product';
 import ProductList from './pages/ProductList/ProductList';
 import Review from './pages/Product/components/Review/Review';
@@ -20,6 +21,7 @@ const Router = () => {
           <Route path="/review" element={<Review />} />
           <Route path="/count" element={<Count />} />
           <Route path="/color" element={<Color />} />
+          <Route path="/practice" element={<Practice />} />
         </Routes>
     </BrowserRouter>
   )
