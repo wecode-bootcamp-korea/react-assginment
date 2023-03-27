@@ -6,11 +6,16 @@
   @include flexCenter;
   height: 100vh;
 
+  .card-container {
+    @include flexCenter;
+  }
+
   .card {
   padding: 10px;
   border: 1.5px solid $black-color;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
+  
   }
 
   .card-image {
@@ -33,6 +38,11 @@
 
   .gen-no {
     @include textStyle(12px, 500);
+  }
+
+  .color-card-container {
+    display: flex;
+    align-items: center;
   }
 }
 

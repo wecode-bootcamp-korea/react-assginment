@@ -1,0 +1,22 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.color-card {
+  @include flexCenter;
+  padding: 8px;
+  border: 1px solid $black-color;
+  border-radius: 5px;
+  margin: 16px 8px; 
+
+  .color-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  div {
+    padding: 4px 0;
+  }
+}
