@@ -50,7 +50,7 @@ const Introduce = () => {
       </div>
       <div className="boxs">
         {COLOR_BOX.map((color) => (
-          <Colorbox name={color.name} rgb={color.rgb} />
+          <Colorbox key={color.id} name={color.name} rgb={color.rgb} />
         ))}
       </div>
     </div>
