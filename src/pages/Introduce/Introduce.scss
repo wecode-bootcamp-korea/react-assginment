@@ -7,7 +7,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 500px;
+    margin: 20px;
+
     }
   .profileCard {
     width: 300px;
@@ -67,5 +69,49 @@
     &:hover{
       color: $green;
     }
+  }
+
+  .clone-card{
+    width: 120px;
+    height: 165px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 13px;
+    display: inline-block;
+  }
+
+  .red, .yellow, .green, .blue{
+    margin: 9px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  .red{
+    background-color: rgb(225, 0, 0);
+  }
+
+  .yellow{
+    background-color: rgb(225,225,0);
+  }
+
+  .blue{
+    background-color: rgb(0, 128, 0);
+  }
+
+  .green{
+    background-color: rgb(0, 0, 225);
+  }
+
+  .clone-card p{
+    margin: 0 10px;
+  }
+
+  .clon-card-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
