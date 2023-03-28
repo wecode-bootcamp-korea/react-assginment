@@ -6,20 +6,26 @@ import ProductList from "../ProductList/ProductList";
 import Review from "../Product/components/Review/Review";
 import Count from "../Product/components/Count/Count";
 import Color from "../Product/components/Color/Color";
+import Nav from "../components/Nav/Nav";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
-        <Route path="/" element={<Introduce />}></Route>
-        <Route path="/product" element={<Product />}></Route>
-        <Route path="/productList" element={<ProductList />}></Route>
-        <Route path="/review" element={<Review />}></Route>
-        <Route path="/count" element={<Count />}></Route>
-        <Route path="/color" element={<Color />}></Route>
+        {ROUTER.map((info)=>(<Route key={info.id} path={info.path} element={info.element}></Route>))}
       </Routes>
     </BrowserRouter>
   );
 };
 
 export default Router;
+
+const ROUTER = [
+  {id: 1, path: "/", element: <Introduce /> },
+  {id: 2, path: "/product", element: <Product /> },
+  {id: 3, path: "/productList", element: <ProductList /> },
+  {id: 4, path: "/review", element: <Review /> },
+  {id: 5, path: "/count", element: <Count /> },
+  {id: 6, path: "/color", element: <Color /> },
+];

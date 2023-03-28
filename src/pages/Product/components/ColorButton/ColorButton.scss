@@ -10,6 +10,12 @@
   &.yellow {
     background-color: #faf1b0;
   }
+
+  .colorButton{
+    @include colors;
+    width: 32px;
+    height: 32px;
+  }
 }
 
 // .colorButton {
@@ -24,8 +30,3 @@
 //   }
 //}
 
-.colorButton{
-  @include colors;
-  width: 32px;
-  height: 32px;
-}
