@@ -1,7 +1,9 @@
-{
-  "id": 1,
-  "productImage": "/images/golf-ball-",
-  "productTitle": "거리를 비약적으로 늘려줍니다.",
-  "productPrice": 300,
-  "productReview": "배송도 빠르고 정말 좋아요 다음에도 필요하면 또 여기서 시킬 것 같아요."
-}
+
+  {
+    "id": 1,
+    "productImage": "/images/golf-ball-",
+    "productTitle": "거리를 비약적으로 늘려줍니다.",
+    "productPrice": 300,
+    "productReview": "배송도 빠르고 정말 좋아요 다음에도 필요하면 또 여기서 시킬 것 같아요."
+  }
+
