@@ -9,7 +9,7 @@ const Product = () => {
   const [productImg, setProductImg] = useState("/images/golf-ball-white.jpg");
   const [colorChip, setColorChip] = useState("colorButton white");
   const [colorName, setColorName] = useState("white");
-  const price = 300;
+  //const price = 300;
   const [totalPrice, setTotalPrice] = useState(300);
   const [productList, setProductList] = useState([]);
 
@@ -18,9 +18,6 @@ const Product = () => {
       .then((response) => response.json())
       .then((result) => setProductList(result));
   }, []);
-
-  console.log(productList);
-  //const totalPrice = price;
 
   return (
     <div>
@@ -31,14 +28,14 @@ const Product = () => {
               <div className="productDetailImg">
                 <img
                   src={`${data.img}${colorName}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-                  alt={data.img}
+                  alt="골프공"
                 />
                 <ColorButton className={colorChip} />
               </div>
               <div className="productDetailInfo">
                 <span className="title">{data.title}</span>
                 <span>비거리를 비약적으로 늘려줍니다</span>
-                <span>가격 : {price.toLocaleString()} 원</span>
+                <span>가격 : {data.price.toLocaleString()} 원</span>
                 <Color
                   setProductImg={setProductImg}
                   setColorChip={setColorChip}
