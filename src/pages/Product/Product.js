@@ -4,11 +4,19 @@ import Color from './components/Color/Color';
 import Count from './components/Count/Count';
 import Review from './components/Review/Review';
 import ColorButton from './components/ColorButton/ColorButton';
+import { useEffect } from 'react';
 
 const Product = () => {
   const price = 300;
   const totalPrice = price;
   const [amount, setAmount] = useState(1);
+  const [mockData, setMockData] = useState([0]);
+
+  useEffect(() => {
+    fetch('/data/mockData.json')
+      .then((response) => response.json())
+      .then((result) => setMockData(result));
+  }, []);
 
   function increaseAmount() {
     setAmount(amount + 1);
@@ -41,15 +49,19 @@ const Product = () => {
       <div className="productDetail">
         <div className="productDetailImg">
           <img
-            src={`/images/golf-ball-${imgColor}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+            src={`${mockData[0] && mockData[0].productImage}${imgColor}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
           />
           <ColorButton />
         </div>
         <div className="productDetailInfo">
-          <span className="title">골프공</span>
+          <span className="title">
+            {mockData[0] && mockData[0].productTitle}
+          </span>
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+          <span>
+            가격 : {mockData[0] && mockData[0].productPrice.toLocaleString()} 원
+          </span>
           <Color whiteImg={whiteImg} redImg={redImg} yellowImg={yellowImg} />
           <div className="quantity">
             <span> 수량 : </span>
@@ -67,7 +79,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review />
+        <Review review={mockData[0] && mockData[0].productReview} />
       </div>
     </div>
   );
