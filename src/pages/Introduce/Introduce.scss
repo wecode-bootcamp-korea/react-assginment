@@ -1,60 +1,62 @@
-
-@import '../../style/variables.scss';
-@import '../../style/mixin.scss';
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
 
 .introduce {
-    .profileFrame {
-        @include flexCenter;
-        flex-direction: column;  
-        margin: auto;
-        margin-top:  10%;
-        border: 1px solid black;
-        border-radius: 5px;
-        width: 300px;
-        height: 350px;
+  .profileFrame {
+    @include flexCenter;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10%;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    height: 350px;
 
-        .profileImg {
-            width: 200px;
-            height: 200px;
-            background-size: cover;
-            background-image: url(../../assets/images/cat.jpeg);
-            border-radius: 5px;
-        }
-
-        .nameArea {
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-
-            .profileName {
-                @include nameText;
-                text-align: left;
-
-                &:hover {
-                    color: $green;
-                    cursor: default;
-                }
-            }
-    
-            .profileSub {
-                @include subText;
-                text-align: left;
-                margin-top: 5px;
-            }
-        
-            .inputArea {
-                display: flex;
-                align-items: center;
-                margin-top: 10px;
-                width: 200px;
-    
-                button {
-                    width: 50px;
-                    height: 22px;
-                }
-            }
-
-        }
+    .profileImg {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-image: url(../../assets/images/cat.jpeg);
+      border-radius: 5px;
     }
-}
 
+    .nameArea {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .profileName {
+        @include nameText;
+        text-align: left;
+
+        &:hover {
+          color: $green;
+          cursor: default;
+        }
+      }
+
+      .profileSub {
+        @include subText;
+        text-align: left;
+        margin-top: 5px;
+      }
+
+      .inputArea {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        width: 200px;
+
+        button {
+          width: 50px;
+          height: 22px;
+        }
+      }
+    }
+  }
+  .colorDiv {
+    display: flex;
+    justify-content: center;
+
+  }
+}

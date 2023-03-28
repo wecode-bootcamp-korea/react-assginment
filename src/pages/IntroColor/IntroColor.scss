@@ -1,0 +1,33 @@
+@import '../../style/mixin.scss';
+
+.miniProfileFrame {
+    @include flexCenter;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 3%;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 250px;
+
+    .profileColor {
+      width: 170px;
+      height: 170px;
+      border-radius: 5px;
+
+    }
+    .miniNameArea {
+      display: flex;
+      flex-direction: column;
+
+      .miniProfileName {
+          @include miniName;
+          margin-top: 10px;
+      }
+    
+      .miniProfileSub {
+          @include miniName;
+          margin-top: 5px;
+      }
+    }
+  }
