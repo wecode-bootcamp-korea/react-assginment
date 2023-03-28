@@ -1,12 +1,20 @@
 @import "../../style/mixin.scss";
 @import "../../style/variables.scss";
 .introduce {
-  @include flex;
-  border: 1px solid $blackColor;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  margin: 300px auto;
+  // @include flex;
+  // border: 1px solid $blackColor;
+  width: 200px;
+  height: 750px;
+  // display: flex;
+  margin: 200px auto;
+  // flex-direction: column;
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .image {
     width: 100px;
@@ -15,7 +23,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: 10px;
   }
 
   .input {
@@ -31,5 +38,11 @@
     &:hover {
       color: $greenColor;
     }
+  }
+
+  .boxs {
+    display: flex;
+    margin-top: 30px;
+    margin-left: -170px;
   }
 }

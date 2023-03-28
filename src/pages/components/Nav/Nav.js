@@ -24,6 +24,7 @@ const Nav = () => {
         <div className="menuBox">
           {/* {LINK_LIST.map(() => console.log("하잉"))} */}
           {LINK_LIST.map((linkList) => {
+            console.log("잘찍히나?");
             return (
               <Link key={linkList.id} to={linkList.route}>
                 {linkList.title}
