@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = (props) => {
   const [buttonClick, setButtonClick] = useState(false);
   const [buttonInfo, setButtonInfo] = useState("더보기 ▼");
 
   function MoreInfo() {
     return (
       <div className="reviewMainContents">
-        주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-        <br />
-        다음에도 필요하면 또 여기서 시킬 것 같아요.
+        {props.productReview}
       </div>
     );
   }
