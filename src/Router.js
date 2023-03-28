@@ -7,10 +7,12 @@ import Count from "./pages/Product/components/Count/Count";
 import Color from "./pages/Product/components/Color/Color";
 import Review from "./pages/Product/components/Review/Review";
 import ColorButton from "./pages/Product/components/ColorButton/ColorButton";
+import Nav from "./pages/components/Nav/Nav";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Introduce />} />
         <Route path="/product" element={<Product />} />

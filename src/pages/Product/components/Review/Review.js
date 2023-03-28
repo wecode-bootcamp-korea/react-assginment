@@ -29,15 +29,15 @@ const Review = () => {
   return (
     <div className="review">
       <div className="user">
-        <img src="/images/avatar.jpg" alt="avatar" />
+        <img src="/images/profile04.jpg" alt="avatar" />
         <div className="userInfo">
-          <div className="name">위코드</div>
+          <div className="name">jiyoeun</div>
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {isView === true ? <CommentOn /> : null}
+        {isView ? <CommentOn /> : null}
         <span className="reviewMainHandler" onClick={btnHandle}>
           {moreBtn}
         </span>
