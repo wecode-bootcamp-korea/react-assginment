@@ -3,20 +3,21 @@ import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = (props) => {
-  const [colorName, setColorName] = useState("white");
-
   return (
     <div className="color">
       <span className="colorText">
         색상 :
-        <div className="selected" style={{ backgroundColor: colorName }} />
-        {colorName}
+        <div
+          className="selected"
+          style={{ backgroundColor: props.colorName }}
+        />
+        {props.colorName}
       </span>
       <div className="colorHandler">
         <ColorButton
           className="colorButton white"
           onClick={() => {
-            setColorName("white");
+            props.setColorName("white");
             props.setProductImg("/images/golf-ball-white.jpg");
             props.setColorChip("colorButton white");
           }}
@@ -24,7 +25,7 @@ const Color = (props) => {
         <ColorButton
           className="colorButton red"
           onClick={() => {
-            setColorName("red");
+            props.setColorName("red");
             props.setProductImg("/images/golf-ball-red.jpg");
             props.setColorChip("colorButton red");
           }}
@@ -32,7 +33,7 @@ const Color = (props) => {
         <ColorButton
           className="colorButton yellow"
           onClick={() => {
-            setColorName("yellow");
+            props.setColorName("yellow");
             props.setProductImg("/images/golf-ball-yellow.jpg");
             props.setColorChip("colorButton yellow");
           }}
