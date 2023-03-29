@@ -39,13 +39,15 @@ function Introduce () {
           <Link to="/product" className="link">▶︎ product 페이지로 이동</Link>
         </div>
       </div>
-      {INTRODUCE_CARD.map((info)=>(
-      <div key={info.id} className='clone-card'>
-        <div className={info.name} ></div>
-        <p>{info.name}</p>
-        <p>{info.rgb}</p>
+      <div className="clon-card-wrap">
+        {INTRODUCE_CARD.map((info)=>(
+          <div key={info.id} className='clone-card'>
+            <div className={info.name} ></div>
+            <p>{info.name}</p>
+            <p>{info.rgb}</p>
+          </div>
+        ))}
       </div>
-    ))}
     </div>
 
   );
