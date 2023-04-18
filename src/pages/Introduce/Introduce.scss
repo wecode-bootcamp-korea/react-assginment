@@ -1,3 +1,5 @@
+@import '/src/style/variables.scss';
+@import '/src/style/mixin.scss';
 
 .introduce {
   display: flex;
@@ -13,17 +15,39 @@
     
     .profileImg {
       width: 300px;
-      margin-bottom: 10px;
       border-radius: 15px;
     }
-    
-    .profileName {
-      margin: 0;
-      font-size: 25px;
+
+    .userInfoBox {
+      margin: 10px 0;
+
+      .profileName {
+        width: max-content;
+        margin: 0;
+        font-size: 25px;
+  
+        &:hover {
+          color: $green;
+        }
+      }
     }
     
+
     .generation {
       margin: 0;
+    }
+    
+    .eventBox {
+      display: flex;
+
+      .inputBox {
+        width: 100%;  
+      }
+
+      .post {
+        width: 50px;
+        height: 30px;
+      }
     }
 
   }
