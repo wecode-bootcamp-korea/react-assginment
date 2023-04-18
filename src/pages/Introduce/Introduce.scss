@@ -1,15 +1,13 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
 .introduce {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  @include flexCenter;
   .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid $black;
     width: 150px;
     height: 250px;
     img {
@@ -22,11 +20,40 @@
       justify-content: flex-start;
       align-items: flex-start;
       margin-left: 20px;
+
+      .myName {
+        color: $black;
+        @include textStyle(20px, bold);
+        &:hover {
+          color: $green;
+        }
+      }
+      .numb {
+        color: $red;
+        @include textStyle(14px, 400);
+      }
     }
 
     .inBtn {
+      @include flexCenter;
+      flex-direction: column;
+
+      margin-top: 20px;
+
       .inputs {
         width: 50px;
+      }
+      .btns {
+        background-color: $black;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin-top: 10px;
+
+        @include textStyle(14px, 500);
       }
     }
   }
