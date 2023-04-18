@@ -1,0 +1,32 @@
+.introduce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.userProfileContainer {
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+.userProfileContainer img {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 6px;
+}
+
+.userProfileContainer > div {
+  line-height: 2px;
+}
+
+.userProfileContainer > div p:first-child {
+  font-weight: 900;
+}
+
+.userProfileContainer > div p:last-child {
+  font-size: 0.7rem;
+}
