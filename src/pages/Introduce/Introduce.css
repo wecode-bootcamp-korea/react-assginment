@@ -22,7 +22,7 @@
 }
 
 .bottomWrapper {
-  height: 60px;
+  /* height: 60px; */
 }
 
 .userProfileContainer > div {
@@ -53,4 +53,8 @@
   width: 50px;
   height: 100%;
   font-size: 0.65rem;
+}
+
+.userProfileContainer a {
+  font-size: 0.8rem;
 }
