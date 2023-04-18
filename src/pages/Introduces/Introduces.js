@@ -1,15 +1,8 @@
 import React from "react";
 import "./Introduce.scss";
+import { Link } from "react-router-dom";
 
 const Introduce = () => {
-  const handleInput = () => {
-    console.log("input 태그 동작");
-  };
-
-  const handleButton = () => {
-    console.log("button 태그 동작");
-  };
-
   return (
     <div className="introduce">
       <div className="box">
@@ -20,9 +13,14 @@ const Introduce = () => {
         <span className="name">연정아</span>
         <span className="session">45기</span>
         <div className="search">
-          <input onChange={handleInput} />
-          <button onClick={handleButton}>입력</button>
+          <input />
+          <Link to="/product">
+            <button>입력</button>
+          </Link>
         </div>
+        <Link to="/product">
+          <span>product 페이지로 이동</span>
+        </Link>
       </div>
     </div>
   );
