@@ -1,3 +1,6 @@
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -29,7 +32,6 @@
 
   #이경진 {
     font-weight: bold;
-    margin-top: 10px;
   }
   #기수 {
     font-size: 15px;
@@ -48,5 +50,10 @@
   .link {
     margin-left: 10%;
     text-decoration: none;
+    color: $black;
+
+    &:hover {
+      color: $green;
+    }
   }
 }
