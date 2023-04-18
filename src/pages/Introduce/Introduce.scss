@@ -1,0 +1,53 @@
+
+
+.wrap {
+    display: flex;
+    justify-content: center;
+}
+
+  .container {
+    width: 300px;
+    height: 320px;
+    background-color: white;
+    border-color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-top: 250px;
+  
+  }
+
+  .box {
+    width: 250px;
+    height: 220px;
+    background-color: black;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 8px;
+   
+  }
+  
+.name-box {
+  width: auto;
+  height: auto;
+  margin-left: 28px;
+}
+
+.name1 {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: 400;
+  
+}
+
+.inputbox {
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+  margin-left: 50px;
+}
+
+.input {
+  width: 120px;
+  height: 16px;
+}
