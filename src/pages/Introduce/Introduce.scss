@@ -1,0 +1,30 @@
+
+.introduce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .container {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: max-content;
+    padding: 30px 30px;
+    
+    .profileImg {
+      border-radius: 15px;
+      width: 300px;
+    }
+    
+    .profileName {
+      margin: 0;
+      font-size: 25px;
+    }
+    
+    .generation {
+      margin: 0;
+    }
+
+  }
+}
+
