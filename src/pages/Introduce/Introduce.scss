@@ -23,4 +23,29 @@ $border-radius-10: 10px;
   .name {
     font-weight: bold;
   }
+
+  .numTh {
+    margin-bottom: 10px;
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+
+    & * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 22px;
+    }
+
+    input {
+      width: 200px;
+    }
+
+    button {
+      width: 40px;
+    }
+  }
 }
