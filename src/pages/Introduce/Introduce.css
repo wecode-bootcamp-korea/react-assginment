@@ -1,0 +1,24 @@
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  padding: 16px;
+ border: 1px solid black;
+ width: 400px;
+}
+
+.profile-img{
+  width: 100%;
+}
+
+.profile-info{
+  padding-top: 16px;
+}
+
+.name{
+  font-weight: bolder;
+}
