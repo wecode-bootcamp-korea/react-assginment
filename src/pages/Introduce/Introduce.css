@@ -5,31 +5,37 @@ body {
 }
 
 .introduce {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 20px;
   width: 200px;
-  height: 250px;
+  height: 290px;
   border: 1px solid black;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 .introduce > img {
-  margin-bottom: 10px;
-  width: 160px;
-  height: 160px;
+  margin:0 0 10px 0;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
 }
 
 .introduce > h2 {
   margin: 0;
+  width: 160px;
   font-size: 18px;
 }
 
 .introduce > h3 {
-  margin: 0;
+  margin: 0 0 10px;
+  width: 160px;
   font-size: 13px;
+}
+
+.introduce > input {
+  margin-right: 10px;
+  width: 130px;
+}
+
+.introduce > button {
+width: 50px;
 }
