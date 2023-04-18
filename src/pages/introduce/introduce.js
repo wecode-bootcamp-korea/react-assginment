@@ -1,5 +1,7 @@
 import React from "react";
 import "./introduce.scss";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function handleInput() {
   console.log("input 태그 동작");
@@ -11,6 +13,11 @@ function handleButton() {
 }
 
 const Profile = () => {
+  const navigate = useNavigate();
+  const ToProduct = () => {
+    navigate("/product");
+  };
+
   return (
     <div className="container">
       <img src="/images/me.jpg" />
@@ -22,8 +29,11 @@ const Profile = () => {
       </p>
       <div className="search">
         <input type="text" onChange={handleInput}></input>
-        <button onClick={handleButton}>클릭</button>
+        <button onClick={ToProduct}>클릭</button>
       </div>
+      <Link to="/product" className="link">
+        Product로 이동
+      </Link>
     </div>
   );
 };
