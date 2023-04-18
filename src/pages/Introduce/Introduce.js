@@ -1,5 +1,5 @@
 import React from "react"
-import './Introduce.css'
+import './Introduce.scss'
 import {Link, useNavigate} from 'react-router-dom'
 
 const Introduce = () => {
