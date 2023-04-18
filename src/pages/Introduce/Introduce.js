@@ -1,8 +1,11 @@
 import React from "react";
 import './Introduce.scss';
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Introduce = () => {
+    const navigate = useNavigate();
+
     const handleInput = (e) => {
         console.log('input 태그 동작')
         // console.log(e.target.value)
@@ -10,6 +13,7 @@ const Introduce = () => {
 
     const handleButton = () => {
         console.log('button 태그 동작')
+        navigate('/product');
     }
 
 
@@ -22,6 +26,13 @@ const Introduce = () => {
                 <p>45기</p>
                 <input className = 'txt' type ='text' onChange={handleInput} ></input>
                 <input className = 'btn' type ='button' value="클릭" onClick={handleButton}></input>
+                
+                
+                <div>
+                    <Link to='/product'>Product 페이지로 이동</Link>
+                </div>
+                
+                
             </div>
         </div>
     );
