@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.introduce > img {
+  margin-bottom: 10px;
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+}
+
+.introduce > h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.introduce > h3 {
+  margin: 0;
+  font-size: 13px;
+}
