@@ -1,0 +1,27 @@
+.introduce {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    img {
+      width: 130px;
+    }
+    .myDetail {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: 20px;
+    }
+  }
+}
