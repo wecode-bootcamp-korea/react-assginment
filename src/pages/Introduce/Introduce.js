@@ -1,7 +1,6 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../Introduce/Introduce.scss";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 function Introduce() {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ function Introduce() {
   return (
     <div className="introduce" style={{ boxSizing: "border-box" }}>
       <div className="userProfileContainer">
-        <img alt="user profile image" src="/images/cat.jpeg" />
+        <img alt="user profile" src="/images/cat.jpeg" />
         <div className="bottomWrapper">
           <div>
             <p>문유현</p>
