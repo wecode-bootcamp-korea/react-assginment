@@ -1,0 +1,25 @@
+.Introduce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+.Introduceform {
+  border-style: solid;
+  border-radius: 10px;
+  height: 350px;
+  width: 250px;
+  font-size: 13px;
+}
+
+.Info {
+  margin-left: 20px;
+}
+
+.Introduceimg {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
