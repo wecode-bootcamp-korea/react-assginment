@@ -17,9 +17,14 @@ const Router = () => {
         <Route path="/review" element={<Review />} />
         <Route path="/count" element={<Count />} />
         <Route path="/color" element={<Color />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
 };
 
 export default Router;
+
+const NotFound = () => {
+  return <div>페이지를 찾을 수 없습니다</div>;
+};

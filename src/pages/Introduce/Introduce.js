@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
   return (
-    <div className="container">
+    <div className="introduce">
       <div className="wrapper">
         <img className="profile-img" src="/images/cat.jpeg" alt="" />
         <div className="profile-info">
@@ -20,22 +20,22 @@ const Introduce = () => {
     </div>
   );
 };
+
 const handleInput = () => {
   console.log("input 태그 동작");
 };
-
-const handleButton = () => {
-  console.log("button 태그 동작");
-  navigate("/product");
-};
-
-const navigate = useNavigate();
 
 export const Input = () => {
   return <input type="text" className="input" onChange={handleInput} />;
 };
 
 export const Button = () => {
+  const navigate = useNavigate();
+  const handleButton = () => {
+    console.log("button 태그 동작");
+    navigate("/product");
+  };
+
   return (
     <button className="btn" onClick={handleButton}>
       클릭
