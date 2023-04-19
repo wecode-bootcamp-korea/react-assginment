@@ -6,6 +6,7 @@ import ProductList from './pages/ProductList/ProductList'
 import Review from './pages/Product/components/Review/Review'
 import Count from './pages/Product/components/Count/Count'
 import Color from './pages/Product/components/Color/Color'
+import Notfound from "./pages/Notfound/Notfound";
 
 const Router = () => {
   return (
@@ -17,9 +18,9 @@ const Router = () => {
         <Route path="/review" element={<Review />} />
         <Route path="/count" element={<Count />} />
         <Route path="/color" element={<Color />} />
+        <Route path='*' element={<Notfound />} />
       </Routes>
     </BrowserRouter>
-
   )
 }
 

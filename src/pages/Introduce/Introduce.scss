@@ -2,15 +2,13 @@
 @import '/src/style/mixin.scss';
 
 .introduce {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   height: 100vh;
 
   .container {
     width: max-content;
     padding: 30px 30px;
-    border: 1px solid black;
+    border: 1px solid $mainBlack;
     border-radius: 15px;
     
     .profileImg {
@@ -22,16 +20,15 @@
       margin: 10px 0;
 
       .profileName {
+        @include textStyle (25px, 700);
         width: max-content;
         margin: 0;
-        font-size: 25px;
   
         &:hover {
-          color: $green;
+          color: $mainGreen;
         }
       }
     }
-    
 
     .generation {
       margin: 0;
@@ -49,7 +46,6 @@
         height: 30px;
       }
     }
-
   }
 }
 
