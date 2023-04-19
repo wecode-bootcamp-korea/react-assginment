@@ -17,9 +17,13 @@ const AppRouter = () => {
         <Route path="/review" element={<Review />} />
         <Route path="/count" element={<Count />} />
         <Route path="/color" element={<Color />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
 };
 
 export default AppRouter;
+const NotFound = () => {
+  return <div>찾을수 없습니다</div>;
+};

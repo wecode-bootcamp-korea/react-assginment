@@ -2,17 +2,20 @@
 @import "../../style/variables.scss";
 
 .introduce {
-  height: 100vh;
   @include flexCenter;
+  height: 100vh;
+
   .wrapper {
     @include flexCenter;
     flex-direction: column;
     border: 1px solid $black;
     width: 150px;
     height: 250px;
+
     img {
       width: 130px;
     }
+
     .myDetail {
       width: 150px;
       display: flex;
@@ -22,28 +25,31 @@
       margin-left: 20px;
 
       .myName {
-        color: $black;
         @include textStyle(20px, bold);
+        color: $black;
+
         &:hover {
           color: $green;
         }
       }
+
       .numb {
-        color: $red;
         @include textStyle(14px, 400);
+        color: $red;
       }
     }
 
     .inBtn {
       @include flexCenter;
       flex-direction: column;
-
       margin-top: 20px;
 
       .inputs {
         width: 50px;
       }
+
       .btns {
+        @include textStyle(14px, 500);
         background-color: $black;
         color: white;
         border: none;
@@ -52,8 +58,6 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         margin-top: 10px;
-
-        @include textStyle(14px, 500);
       }
     }
   }
