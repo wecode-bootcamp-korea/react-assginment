@@ -7,7 +7,6 @@ import Review from "./pages/Product/components/Review/Review"
 import Count from "./pages/Product/components/Count/Count"
 import Color from "./pages/Product/components/Color/Color"
 
-
 const Router = () => {
   return (
     <BrowserRouter>
@@ -18,9 +17,14 @@ const Router = () => {
         <Route path="/review" element={<Review />} />
         <Route path="/count" element={<Count />} />
         <Route path="/color" element={<Color />} />
+        <Route path="*" element={<Nothing />} />/
       </Routes>
     </BrowserRouter>
   )
 }
 
 export default Router
+
+const Nothing = () => {
+  return <h1>Nothing</h1>
+}
