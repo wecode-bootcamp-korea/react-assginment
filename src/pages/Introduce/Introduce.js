@@ -11,6 +11,7 @@ const Introduce = () => {
 
   const handleButton = () => {
     console.log("button 태그 동작");
+    navigate("/product");
   };
 
   const handleLinkClick = () => {
@@ -20,7 +21,7 @@ const Introduce = () => {
   return (
     <div className="introduce">
       <div className="wrapper">
-        <img src="/images/cat.jpeg"></img>
+        <img src="/images/cat.jpeg" alt="고양이"></img>
 
         <div className="myDetail">
           <div className="myName">김준섭</div>
@@ -29,7 +30,7 @@ const Introduce = () => {
 
         <div className="inBtn">
           <input className="inputs" onChange={handleInput}></input>
-          <button className="btns" onClick={() => navigate("/product")}>
+          <button className="btns" onClick={handleButton}>
             버튼
           </button>
           <Link to="/product" onClick={handleLinkClick}>
