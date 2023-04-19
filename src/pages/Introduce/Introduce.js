@@ -1,13 +1,17 @@
 import React from "react";
 import "./Introduce.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
+  const navigate = useNavigate();
+
   const handleInput = () => {
     console.log("input 태그 동작");
   };
 
   const handleButton = () => {
     console.log("button 태그 동작");
+    navigate("/product");
   };
 
   return (
@@ -25,6 +29,7 @@ const Introduce = () => {
           <button onClick={handleButton} className="buttonMotion">
             클릭
           </button>
+          <Link to="/product">product 페이지로 이동</Link>
         </div>
       </div>
     </div>
