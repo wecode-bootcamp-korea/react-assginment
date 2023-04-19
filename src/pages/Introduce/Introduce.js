@@ -1,5 +1,5 @@
 import React from "react";
-import "./Introduce.css";
+import "./Introduce.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
@@ -23,7 +23,9 @@ const Introduce = () => {
           alt="자기소개 이미지"
         />
         <div className="Info">
-          <h2>이소진</h2>
+          <div className="Name">
+            <h2>이소진</h2>
+          </div>
           <h3>45기</h3>
           <input onChange={handleInput} className="InputMotion" type="text" />
           <button onClick={handleButton} className="buttonMotion">
