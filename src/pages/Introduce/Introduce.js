@@ -1,6 +1,6 @@
 import React from "react";
 import "./Introduce.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
   return (
@@ -26,7 +26,10 @@ const handleInput = () => {
 
 const handleButton = () => {
   console.log("button 태그 동작");
+  navigate("/product");
 };
+
+const navigate = useNavigate();
 
 export const Input = () => {
   return <input type="text" className="input" onChange={handleInput} />;
