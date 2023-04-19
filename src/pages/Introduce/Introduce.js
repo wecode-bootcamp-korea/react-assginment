@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import '../Introduce/Introduce.scss'
+import './Introduce.scss'
 
 const Introduce = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Introduce = () => {
     <>
     <div className='introduce'>
         <div className='box'>
-            <img className='picture' src='/images/cat.jpeg'></img>
+            <img className='picture' src='/images/cat.jpeg' alt=''></img>
             <h1>전승범</h1>
             <h2>45기</h2>
             <input onChange={handleInput}></input>
