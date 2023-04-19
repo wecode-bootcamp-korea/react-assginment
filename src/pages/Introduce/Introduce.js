@@ -10,7 +10,6 @@ const Introduce = () => {
   };
 
   const navigate = useNavigate();
-
   const goToProduct = () => {
     navigate('/product');
   };
