@@ -11,6 +11,7 @@ const Color = () => {
     setColor(col);
   };
 
+  // 출력
   return (
     <div className="color">
       <span className="colorText">
