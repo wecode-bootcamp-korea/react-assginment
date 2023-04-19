@@ -10,7 +10,6 @@ import Color from "./pages/Product/components/Color/Color";
 const Router = () => {
   return (
     <>
-      <div>Router</div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Introduce />} />
@@ -19,6 +18,7 @@ const Router = () => {
           <Route path="/review" element={<Review />} />
           <Route path="/count" element={<Count />} />
           <Route path="/color" element={<Color />} />
+          <Route path="*" element={"없는 페이지예용~"} />
         </Routes>
       </BrowserRouter>
     </>
