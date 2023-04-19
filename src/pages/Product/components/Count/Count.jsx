@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Count.scss";
 
 const Count = () => {
+
   // 변수
   const [count, setCount] = useState(1);
 
@@ -23,6 +24,7 @@ const Count = () => {
       </button>
     </div>
   );
+
 };
 
 export default Count;

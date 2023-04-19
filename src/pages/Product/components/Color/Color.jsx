@@ -7,9 +7,7 @@ const Color = () => {
   const [color, setColor] = useState(null);
 
   // 함수
-  const changeColor = col => {
-    setColor(col);
-  };
+  const changeColor = col => setColor(col);
 
   // 출력
   return (
@@ -26,6 +24,7 @@ const Color = () => {
       </div>
     </div>
   );
+
 };
 
 export default Color;
