@@ -10,6 +10,7 @@ import Product from './pages/Product/Product';
         <Routes>
           <Route path="/" element={<Introduce />} />
           <Route path="/product" element={<Product />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
                                       
       </BrowserRouter>
@@ -18,3 +19,7 @@ import Product from './pages/Product/Product';
 
 
     export default Router;
+
+    const NotFound = () => {
+      return <div>페이지를 찾을 수 없습니다.</div>
+    }

@@ -1,10 +1,9 @@
-
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
 
 .wrap {
-    display: flex;
-    justify-content: center;
-}
-
+    @include flexCenter;
+  
   .container {
     width: 300px;
     height: 320px;
@@ -13,10 +12,8 @@
     border: 1px solid black;
     border-radius: 8px;
     margin-top: 250px;
-  
-  }
 
-  .box {
+    .box {
     width: 250px;
     height: 220px;
     background-color: black;
@@ -27,27 +24,34 @@
    
   }
   
-.name-box {
-  width: auto;
-  height: auto;
-  margin-left: 28px;
-}
+    .name-box {
+    width: auto;
+    height: auto;
+    margin-left: 28px;
 
-.name1 {
-  margin-top: 10px;
-  margin-bottom: 4px;
-  font-weight: 400;
-  
-}
+    .name1 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    
+    &:hover {
+      color: red;
+
+    }
 
 .inputbox {
   display: flex;
   justify-content: center;
   margin-top: -25px;
   margin-left: 50px;
-}
 
-.input {
+  .input {
   width: 120px;
   height: 16px;
+
+          } 
+        }
+      }
+    }
+  }
 }

@@ -7,7 +7,7 @@ const Introduce = () => {
     const handleInput = () => {
       console.log("input 태그 동작");
     }
-
+    
     const navigate = useNavigate();
     const goToProduct = () => {
       navigate('/product');
