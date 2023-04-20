@@ -1,10 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Color from "./components/Color/Color";
 import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
 import "./Product.scss";
-import { useState } from "react";
 
 const Product = () => {
 
