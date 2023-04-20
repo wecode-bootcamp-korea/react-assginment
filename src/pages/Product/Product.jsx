@@ -11,12 +11,18 @@ const Product = () => {
   // 변수
   const colors = [`white`, `red`, `yellow`];
   const [color, setColor] = useState(colors[0]);
+  const [upColor, setUpColor] = useState([0, 0, 1]);
   const price = 300;
   const [totalPrice, setTotalPrice] = useState(price);
   const [count, setCount] = useState(1);
 
   // 함수
-  const changeColor = col => setColor(col);
+  const changeColor = col => {
+    setColor(col);
+    if (col === colors[0]) setUpColor([1, 0, 0]);
+    else if (col === colors[1]) setUpColor([0, 1, 0]);
+    else if (col === colors[2]) setUpColor([0, 0, 1]);
+  };
 
   const countUp = () => {
     setCount(count + 1);
@@ -46,13 +52,13 @@ const Product = () => {
               alt={`golf-ball`}
             />
             {/* ColorButton 컴포넌트 위치 */}
-            <ColorButton color={color} colors={colors} changeColor={changeColor} />
+            <ColorButton color={color} colors={colors} changeColor={changeColor} upColor={upColor} />
           </div>
           <div className="productDetailInfo">
             <span className="title">골프공</span>
             <span>비거리를 비약적으로 늘려줍니다</span>
             <span>가격 : {price.toLocaleString()} 원</span>
-            <Color color={color} colors={colors} changeColor={changeColor} />
+            <Color color={color} colors={colors} changeColor={changeColor} upColor={upColor} />
             <div className="quantity">
               <span> 수량 : </span>
               {/* Count 컴포넌트 위치 */}
