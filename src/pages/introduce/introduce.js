@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "../../style/common.scss";
 import "./introduce.scss";
 
 const Profile = () => {
