@@ -9,14 +9,33 @@ import { useState } from "react";
 const Product = () => {
 
   // 변수
-  const [color, setColor] = useState(null);
+  const [color, setColor] = useState(`white`);
+  const [count, setCount] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(300);
   const colors = [`white`, `red`, `yellow`];
   const price = 300;
-  const totalPrice = price;
 
   // 함수
   const changeColor = col => setColor(col);
 
+  const countUp = () => {
+    setCount(count + 1);
+    setTotalPrice(totalPrice + 300);
+  };
+
+  const countDown = () => {
+    if (count > 1) {
+      setCount(count - 1);
+      setTotalPrice(totalPrice - 300);
+    }
+  };
+
+  const reset = () => {
+    setCount(1);
+    setTotalPrice(price);
+  };
+
+  // 출력
   return (
     <>
       <div className="product">
@@ -37,7 +56,7 @@ const Product = () => {
             <div className="quantity">
               <span> 수량 : </span>
               {/* Count 컴포넌트 위치 */}
-              <Count />
+              <Count count={count} countUp={countUp} countDown={countDown} reset={reset} />
             </div>
             <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
             <button className="buyBtn">구매하기</button>
