@@ -1,8 +1,10 @@
 import React from "react";
-import "./Introduce.scss";
 import { Link, useNavigate } from "react-router-dom";
+import "./Introduce.scss";
 
 const Introduce = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="introduce">
       <div className="wrapper">
@@ -11,7 +13,7 @@ const Introduce = () => {
           <div className="name">김희연</div>
           <div className="cohort-number">45기</div>
           <Input />
-          <Button />
+          <Button link={navigate} />
           <div>
             <Link to="/product">product 페이지로 이동</Link>
           </div>
@@ -21,19 +23,17 @@ const Introduce = () => {
   );
 };
 
-const handleInput = () => {
-  console.log("input 태그 동작");
-};
-
 export const Input = () => {
+  const handleInput = () => {
+    console.log("input 태그 동작");
+  };
   return <input type="text" className="input" onChange={handleInput} />;
 };
 
-export const Button = () => {
-  const navigate = useNavigate();
+export const Button = (props) => {
   const handleButton = () => {
     console.log("button 태그 동작");
-    navigate("/product");
+    props.link("/product");
   };
 
   return (
