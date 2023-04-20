@@ -1,7 +1,6 @@
 import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import './Introduce.scss';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 const Introduce = () => {
     const handleInput = () => {
@@ -13,6 +12,7 @@ const Introduce = () => {
       navigate('/product');
     }
   
+
   return (
       <>
         <div className='wrap'>
