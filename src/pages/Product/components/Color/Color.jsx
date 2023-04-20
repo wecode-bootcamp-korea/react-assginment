@@ -1,7 +1,7 @@
 import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
-const Color = ({ color, colors, changeColor, upColor }) => {
+const Color = ({ colors, color, changeColor }) => {
 
   // 출력
   return (
@@ -12,7 +12,7 @@ const Color = ({ color, colors, changeColor, upColor }) => {
           <div className={`selected ${color}`} />
           {color}
         </span>
-        <ColorButton changeColor={changeColor} colors={colors} upColor={upColor} />
+        <ColorButton colors={colors} color={color} changeColor={changeColor} />
       </div>
     </>
   );

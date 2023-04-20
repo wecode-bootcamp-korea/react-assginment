@@ -12,4 +12,12 @@
       border: double;
     }
   }
+
+  .zUp {
+    z-index: 1;
+  }
+
+  .zDown {
+    z-index: 0;
+  }
 }
