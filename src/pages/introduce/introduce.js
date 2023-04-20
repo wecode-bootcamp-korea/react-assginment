@@ -1,7 +1,7 @@
 import React from "react";
-import "./introduce.scss";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "./introduce.scss";
 
 function handleInput() {
   console.log("input 태그 동작");
