@@ -7,11 +7,6 @@ function handleInput() {
   console.log("input 태그 동작");
 }
 
-function handleButton() {
-  alert("잘 부탁드립니다");
-  console.log("button 태그 동작");
-}
-
 const Profile = () => {
   const navigate = useNavigate();
   const ToProduct = () => {
@@ -20,7 +15,7 @@ const Profile = () => {
 
   return (
     <div className="container">
-      <img src="/images/me.jpg" />
+      <img alt="myimg" src="/images/me.jpg" />
       <p className="content" id="이경진">
         이경진
       </p>
