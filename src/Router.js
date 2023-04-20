@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Introduce from './pages/Introduce/Introduce'
 import Product from './pages/Product/Product';
 import Color from './pages/Product/components/Color/Color';
+import Count from './pages/Product/components/Count/Count';
 
   const Router = () => {
     return (
@@ -13,6 +14,7 @@ import Color from './pages/Product/components/Color/Color';
           <Route path="/product" element={<Product />} />
           <Route path="/Color" element={<Color />} />
           <Route path='*' element={<NotFound />} />
+          <Route path="/Count" element={<Count />} />
         </Routes>
                                       
       </BrowserRouter>
