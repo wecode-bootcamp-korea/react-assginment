@@ -1,8 +1,12 @@
 import React from "react";
 import "./Introduce.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
+  const navigate = useNavigate();
+  const handleBtn = () => {
+    navigate("/product");
+  };
   return (
     <div className="introduce">
       <div className="box">
@@ -14,9 +18,7 @@ const Introduce = () => {
         <span className="session">45기</span>
         <div className="search">
           <input />
-          <Link to="/product">
-            <button>입력</button>
-          </Link>
+          <button onClick={handleBtn}>입력</button>
         </div>
         <Link to="/product">
           <span>product 페이지로 이동</span>
