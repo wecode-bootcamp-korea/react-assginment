@@ -47,4 +47,11 @@
       cursor: pointer;
     }
   }
+  .open{
+    display: block;
+  }
+
+  .close{
+    display: none;
+  }
 }
