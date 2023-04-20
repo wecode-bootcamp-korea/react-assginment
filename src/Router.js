@@ -17,7 +17,7 @@ const Router = () => {
         <Route path="/review" element={<Review />} />
         <Route path="/count" element={<Count />} />
         <Route path="/color" element={<Color />} />
-        <Route path="*" element={<Nothing />} />/
+        <Route path="*" element={<Nothing />} />
       </Routes>
     </BrowserRouter>
   )
