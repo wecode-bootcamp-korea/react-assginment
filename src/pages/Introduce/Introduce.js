@@ -14,10 +14,6 @@ const Introduce = () => {
     navigate("/product");
   };
 
-  const handleLinkClick = () => {
-    console.log("Link 컴포넌트 동작");
-  };
-
   return (
     <div className="introduce">
       <div className="wrapper">
@@ -33,9 +29,7 @@ const Introduce = () => {
           <button className="btns" onClick={handleButton}>
             버튼
           </button>
-          <Link to="/product" onClick={handleLinkClick}>
-            Product 페이지로 이동
-          </Link>
+          <Link to="/product">Product 페이지로 이동</Link>
         </div>
       </div>
     </div>
