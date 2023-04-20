@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  let [count, setCount] = useState(1);
+const Count = (props) => {
+  console.log(props);
 
   return (
     <div className="count">
       <div className="countInput">
         <button
           onClick={() => {
-            setCount(count > 1 ? count - 1 : 1);
+            props.setCount(props.count > 1 ? props.count - 1 : 1);
 
             /* 
             
@@ -30,7 +30,7 @@ const Count = () => {
         >
           -
         </button>
-        <div className="countInputText">{count}</div>
+        <div className="countInputText">{props.count}</div>
         <button
           onClick={() => {
             /* // 1번 코드
@@ -38,7 +38,7 @@ const Count = () => {
             setCount(count); */
 
             // 2번 코드
-            setCount(count + 1);
+            props.setCount(props.count + 1);
           }}
         >
           +
@@ -47,7 +47,7 @@ const Count = () => {
       <button
         className="resetBtn"
         onClick={() => {
-          setCount(1);
+          props.setCount(1);
         }}
       >
         reset
