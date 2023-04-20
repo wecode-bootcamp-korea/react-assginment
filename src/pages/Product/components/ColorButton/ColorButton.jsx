@@ -1,12 +1,10 @@
 import React from "react";
 import "./ColorButton.scss";
 
-const ColorButton = ({ colors, changeColor }) => {
+const ColorButton = ({ color, changeColor }) => {
 
   return (
-    <>
-      <button className={`colorButton ${colors}`} onClick={() => changeColor(colors)} />
-    </>
+    <button className={`colorButton ${color}`} onClick={() => changeColor(color)} />
   );
 };
 

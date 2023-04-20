@@ -15,24 +15,22 @@ const Introduce = () => {
   };
 
   return (
-    <>
-      <div className="introduce">
-        <div className="proImg"></div>
-        <div className="name">
-          <span>양진민</span>
-        </div>
-        <div className="numTh">
-          <span>45기</span>
-        </div>
-        <div className="input" onChange={() => handleInput()}>
-          <input type="text" />
-          <button onClick={() => handleButton()}>클릭</button>
-        </div>
-        <div>
-          <Link to="/product">Product 페이지로 이동</Link>
-        </div>
+    <div className="introduce">
+      <div className="proImg"></div>
+      <div className="name">
+        <span>양진민</span>
       </div>
-    </>
+      <div className="numTh">
+        <span>45기</span>
+      </div>
+      <div className="input" onChange={() => handleInput()}>
+        <input type="text" />
+        <button onClick={() => handleButton()}>클릭</button>
+      </div>
+      <div>
+        <Link to="/product">Product 페이지로 이동</Link>
+      </div>
+    </div>
   );
 };
 

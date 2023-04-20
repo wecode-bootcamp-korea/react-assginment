@@ -10,20 +10,18 @@ import Color from "./pages/Product/components/Color/Color";
 
 const Router = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Introduce />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/productList" element={<ProductList />} />
-          <Route path="/review" element={<Review />} />
-          <Route path="/count" element={<Count />} />
-          <Route path="/color" element={<Color />} />
-          <Route path="*" element={"없는 페이지예용~"} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Introduce />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/productList" element={<ProductList />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/count" element={<Count />} />
+        <Route path="/color" element={<Color />} />
+        <Route path="*" element={"없는 페이지예용~"} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

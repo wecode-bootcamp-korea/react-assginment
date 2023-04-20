@@ -9,65 +9,73 @@ import "./Product.scss";
 const Product = () => {
 
   // 변수
-  const colors = [`white`, `red`, `yellow`];
-  const [color, setColor] = useState(colors[0]);
-  const price = 300;
-  const [totalPrice, setTotalPrice] = useState(price);
-  const [count, setCount] = useState(1);
+  const colors = [`white`, `red`, `yellow`];            // 색상
+  const [color, setColor] = useState(colors[0]);        // 색상 변경
+  const price = 300;                                    // 가격
+  const [totalPrice, setTotalPrice] = useState(price);  // 가격 총합
+  const [count, setCount] = useState(1);                // 가격 카운트
 
   // 함수
-  const changeColor = col => setColor(col);
+  const changeColor = col => setColor(col); // 색상 변경
 
-  const countUp = () => {
+  const countUp = () => {   // 구매 수량 증가
     setCount(count + 1);
     setTotalPrice(totalPrice + price);
   };
 
-  const countDown = () => {
+  const countDown = () => { // 구매 수량 감소
     if (count > 1) {
       setCount(count - 1);
       setTotalPrice(totalPrice - price);
     }
   };
 
-  const reset = () => {
+  const reset = () => {     // 구매 수량 초기화
     setCount(1);
     setTotalPrice(price);
   };
 
   // 출력
   return (
-    <>
-      <div className="product">
-        <div className="productDetail">
-          <div className="productDetailImg">
-            <img
-              src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-              alt={`golf-ball`}
-            />
-            <ColorButton colors={color} changeColor={changeColor} />
-          </div>
-          <div className="productDetailInfo">
-            <span className="title">골프공</span>
-            <span>비거리를 비약적으로 늘려줍니다</span>
-            <span>가격 : {price.toLocaleString()} 원</span>
-            <Color colors={colors} color={color} changeColor={changeColor} />
-            <div className="quantity">
-              <span> 수량 : </span>
-              <Count count={count} countUp={countUp} countDown={countDown} reset={reset} />
-            </div>
-            <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
-            <button className="buyBtn">구매하기</button>
-          </div>
+    <div className="product">
+
+      {/* 상품 정보 */}
+      <div className="productDetail">
+
+        {/* 상품 이미지 */}
+        <div className="productDetailImg">
+          <img
+            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+            alt={`golf-ball`}
+          />
+          <ColorButton color={color} changeColor={changeColor} />
         </div>
-        <div className="reviewList">
-          <div className="reviewListHeader">
-            <span>상품평</span>
+
+        {/* 상품 상세 정보 */}
+        <div className="productDetailInfo">
+          <span className="title">골프공</span>
+          <span>비거리를 비약적으로 늘려줍니다</span>
+          <span>가격 : {price.toLocaleString()} 원</span>
+          <Color colors={colors} color={color} changeColor={changeColor} />
+          <div className="quantity">
+            <span> 수량 : </span>
+            <Count count={count} countUp={countUp} countDown={countDown} reset={reset} />
           </div>
-          <Review />
+          <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
+          <button className="buyBtn">구매하기</button>
         </div>
+
       </div>
-    </>
+
+      {/* 상품평 */}
+      <div className="reviewList">
+        <div className="reviewListHeader">
+          <span>상품평</span>
+        </div>
+        <Review />
+      </div>
+
+    </div>
   );
 };
 
