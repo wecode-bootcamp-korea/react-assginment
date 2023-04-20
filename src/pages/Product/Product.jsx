@@ -9,24 +9,24 @@ import { useState } from "react";
 const Product = () => {
 
   // 변수
-  const [color, setColor] = useState(`white`);
-  const [count, setCount] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(300);
   const colors = [`white`, `red`, `yellow`];
+  const [color, setColor] = useState(colors[0]);
   const price = 300;
+  const [totalPrice, setTotalPrice] = useState(price);
+  const [count, setCount] = useState(1);
 
   // 함수
   const changeColor = col => setColor(col);
 
   const countUp = () => {
     setCount(count + 1);
-    setTotalPrice(totalPrice + 300);
+    setTotalPrice(totalPrice + price);
   };
 
   const countDown = () => {
     if (count > 1) {
       setCount(count - 1);
-      setTotalPrice(totalPrice - 300);
+      setTotalPrice(totalPrice - price);
     }
   };
 

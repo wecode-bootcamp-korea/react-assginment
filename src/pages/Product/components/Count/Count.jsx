@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
 const Count = ({ count, countUp, countDown, reset }) => {
