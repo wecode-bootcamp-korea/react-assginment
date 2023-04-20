@@ -8,19 +8,23 @@ import Count from "./pages/Product/components/Count/Count";
 import Color from "./pages/Product/components/Color/Color";
 
 const Router = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Introduce/>} />
-                <Route path="/product" element={<Product/>} />
-                <Route path="/productList" element={<ProductList/>} />
-                <Route path="/review" element={<Review/>} />
-                <Route path="/count" element={<Count/>} />
-                <Route path="/color" element={<Color/>} /> 
-            </Routes>
-        </BrowserRouter>
-    )
-}
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Introduce />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/productList" element={<ProductList />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/count" element={<Count />} />
+        <Route path="/color" element={<Color />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default Router;
 
+const NotFound = () => {
+  return <h1>페이지를 찾을 수 없습니다.</h1>;
+};
