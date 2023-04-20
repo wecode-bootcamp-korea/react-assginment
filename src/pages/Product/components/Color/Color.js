@@ -14,7 +14,9 @@ const Color = () => {
         {color}
       </span>
       <div className="colorHandler">
-        <ColorButton setColor={setColor} />
+        <ColorButton setColor={setColor} color="white" />
+        <ColorButton setColor={setColor} color="red" />
+        <ColorButton setColor={setColor} color="yellow" />
       </div>
     </div>
   );
