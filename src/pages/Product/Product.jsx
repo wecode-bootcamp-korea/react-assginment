@@ -1,40 +1,57 @@
 import React from "react";
+import ColorButton from "./components/ColorButton/ColorButton";
+import Color from "./components/Color/Color";
+import Count from "./components/Count/Count";
+import Review from "./components/Review/Review";
 import "./Product.scss";
+import { useState } from "react";
 
 const Product = () => {
+
+  // 변수
+  const [color, setColor] = useState(null);
+  const colors = [`white`, `red`, `yellow`];
   const price = 300;
   const totalPrice = price;
 
+  // 함수
+  const changeColor = col => setColor(col);
+
   return (
-    <div className="product">
-      <div className="productDetail">
-        <div className="productDetailImg">
-          <img
-            src={`/images/golf-ball-.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-            alt={`golf-ball`}
-          />
-          {/* ColorButton 컴포넌트 위치 */}
-        </div>
-        <div className="productDetailInfo">
-          <span className="title">골프공</span>
-          <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
-          {/* Color 컴포넌트 위치 */}
-          <div className="quantity">
-            <span> 수량 : </span>
-            {/* Count 컴포넌트 위치 */}
+    <>
+      <div className="product">
+        <div className="productDetail">
+          <div className="productDetailImg">
+            <img
+              src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+              alt={`golf-ball`}
+            />
+            {/* ColorButton 컴포넌트 위치 */}
+            <ColorButton color={color} colors={colors} changeColor={changeColor} />
           </div>
-          <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
-          <button className="buyBtn">구매하기</button>
+          <div className="productDetailInfo">
+            <span className="title">골프공</span>
+            <span>비거리를 비약적으로 늘려줍니다</span>
+            <span>가격 : {price.toLocaleString()} 원</span>
+            <Color color={color} colors={colors} changeColor={changeColor} />
+            <div className="quantity">
+              <span> 수량 : </span>
+              {/* Count 컴포넌트 위치 */}
+              <Count />
+            </div>
+            <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
+            <button className="buyBtn">구매하기</button>
+          </div>
+        </div>
+        <div className="reviewList">
+          <div className="reviewListHeader">
+            <span>상품평</span>
+          </div>
+          {/* Review 컴포넌트 위치 */}
+          <Review />
         </div>
       </div>
-      <div className="reviewList">
-        <div className="reviewListHeader">
-          <span>상품평</span>
-        </div>
-        {/* Review 컴포넌트 위치 */}
-      </div>
-    </div>
+    </>
   );
 };
 

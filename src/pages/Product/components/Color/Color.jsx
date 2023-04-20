@@ -1,14 +1,7 @@
-import React, { useState } from "react";
 import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
-const Color = () => {
-
-  // 변수
-  const [color, setColor] = useState(null);
-
-  // 함수
-  const changeColor = col => setColor(col);
+const Color = ({ color, colors, changeColor }) => {
 
   // 출력
   return (
@@ -19,7 +12,7 @@ const Color = () => {
           <div className={`selected ${color}`} />
           {color}
         </span>
-        <ColorButton changeColor={changeColor} />
+        <ColorButton changeColor={changeColor} colors={colors} />
       </div>
     </>
   );
