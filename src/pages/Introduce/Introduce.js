@@ -1,6 +1,6 @@
 import React from "react";
-import "./Introduce.scss";
 import { Link, useNavigate } from "react-router-dom";
+import "./Introduce.scss";
 
 const Introduce = () => {
   const navigate = useNavigate();
@@ -15,19 +15,19 @@ const Introduce = () => {
   };
 
   return (
-    <div className="Introduce">
-      <div className="Introduceform">
+    <div className="introduce">
+      <div className="introduceform">
         <img
-          className="Introduceimg"
+          className="introduceimg"
           src="/images/ZzangGu.jpg"
           alt="자기소개 이미지"
         />
-        <div className="Info">
-          <div className="Name">
+        <div className="info">
+          <div className="name">
             <h2>이소진</h2>
           </div>
           <h3>45기</h3>
-          <input onChange={handleInput} className="InputMotion" type="text" />
+          <input onChange={handleInput} className="inputMotion" type="text" />
           <button onClick={handleButton} className="buttonMotion">
             클릭
           </button>

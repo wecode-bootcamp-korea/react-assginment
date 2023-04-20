@@ -1,20 +1,20 @@
 @import "/src/style/variables.scss";
 @import "/src/style/mixin.scss";
 
-.Introduce {
+.introduce {
   @include flexcenter;
   margin-top: 300px;
 
-  .Introduceform {
+  .introduceform {
+    @include textStyle(13, 13px);
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
     height: 300px;
     width: 250px;
-    @include textStyle(13, 13px);
   }
 
-  .Introduceimg {
+  .introduceimg {
     height: 200px;
     width: 200px;
     margin: auto;
@@ -22,11 +22,11 @@
     margin-top: 20px;
   }
 
-  .Info {
+  .info {
     margin-left: 20px;
   }
 
-  .Name {
+  .name {
     &:hover {
       color: green;
     }
