@@ -1,23 +1,13 @@
 @import "./../color/color.scss";
 
-.colorHandler {
-  .colorButton {
-    @include colors;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
+.colorButton {
+  @include colors;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
 
-    &.selected {
-      border: double;
-    }
-  }
-
-  .zUp {
-    z-index: 1;
-  }
-
-  .zDown {
-    z-index: 0;
+  &.selected {
+    border: double;
   }
 }

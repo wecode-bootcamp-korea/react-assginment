@@ -12,7 +12,11 @@ const Color = ({ colors, color, changeColor }) => {
           <div className={`selected ${color}`} />
           {color}
         </span>
-        <ColorButton colors={colors} color={color} changeColor={changeColor} />
+        <div className="colorHandler">
+          <ColorButton colors={colors[0]} changeColor={changeColor} />
+          <ColorButton colors={colors[1]} changeColor={changeColor} />
+          <ColorButton colors={colors[2]} changeColor={changeColor} />
+        </div>
       </div>
     </>
   );

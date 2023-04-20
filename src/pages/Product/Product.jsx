@@ -45,7 +45,7 @@ const Product = () => {
               src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
               alt={`golf-ball`}
             />
-            <ColorButton colors={colors} color={color} changeColor={changeColor} />
+            <ColorButton colors={color} changeColor={changeColor} />
           </div>
           <div className="productDetailInfo">
             <span className="title">골프공</span>
