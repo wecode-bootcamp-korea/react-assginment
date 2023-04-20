@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Introduce from './pages/Introduce/Introduce'
 import Product from './pages/Product/Product';
+import Color from './pages/Product/components/Color/Color';
 
   const Router = () => {
     return (
@@ -10,6 +11,7 @@ import Product from './pages/Product/Product';
         <Routes>
           <Route path="/" element={<Introduce />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/Color" element={<Color />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
                                       
