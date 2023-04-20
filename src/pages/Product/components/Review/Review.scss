@@ -39,6 +39,10 @@
     &Contents {
       margin-bottom: 12px;
       line-height: 150%;
+      background-color: tomato;
+      &.noDisplay {
+        display: none;
+      }
     }
 
     &Handler {
