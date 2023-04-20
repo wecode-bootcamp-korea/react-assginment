@@ -2,7 +2,6 @@ import React from "react";
 import "./ColorButton.scss";
 
 const ColorButton = ({ changeColor, colors, upColor }) => {
-  console.log(`여기`, upColor[0]);
 
   return (
     <>
