@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./introduce.scss";
 
-function handleInput() {
-  console.log("input 태그 동작");
-}
-
 const Profile = () => {
   const navigate = useNavigate();
   const ToProduct = () => {
     navigate("/product");
   };
+  function handleInput() {
+    console.log("input 태그 동작");
+  }
 
   return (
     <div className="container">
