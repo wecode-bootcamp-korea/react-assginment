@@ -16,12 +16,8 @@ const Profile = () => {
   return (
     <div className="container">
       <img alt="myimg" src="/images/me.jpg" />
-      <p className="content" id="이경진">
-        이경진
-      </p>
-      <p className="content" id="기수">
-        45기
-      </p>
+      <p className="content Lee">이경진</p>
+      <p className="content 기수">45기</p>
       <div className="search">
         <input type="text" onChange={handleInput}></input>
         <button onClick={ToProduct}>클릭</button>
