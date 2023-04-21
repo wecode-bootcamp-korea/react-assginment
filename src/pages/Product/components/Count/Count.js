@@ -4,7 +4,7 @@ const Count = (props) => {
       <div className="countInput">
         <button
           onClick={() => {
-            props.handleCountChange(props.counting - 1);
+            if (props.counting > 1) props.setCounting(props.counting - 1);
           }}
         >
           -
@@ -12,7 +12,7 @@ const Count = (props) => {
         <div className="countInputText">{props.counting}</div>
         <button
           onClick={() => {
-            props.handleCountChange(props.counting + 1);
+            props.setCounting(props.counting + 1);
           }}
         >
           +
@@ -21,7 +21,7 @@ const Count = (props) => {
       <button
         className="resetBtn"
         onClick={() => {
-          props.handleCountChange(1);
+          props.setCounting(1);
         }}
       >
         reset

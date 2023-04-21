@@ -39,7 +39,11 @@ const Product = () => {
           <Color boxColor={boxColor} handleColorChange={handleColorChange} />
           <div className="quantity">
             <span> 수량 : </span>
-            <Count counting={counting} handleCountChange={handleCountChange} />
+            <Count
+              counting={counting}
+              setCounting={setCounting}
+              handleCountChange={handleCountChange}
+            />
           </div>
           <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
           <button className="buyBtn">구매하기</button>
