@@ -5,20 +5,19 @@ import Count from "../Product/components/Count/Count"
 import Review from "../Product/components/Review/Review"
 import "./Product.scss";
 
-const Product = (props) => {
+const Product = () => {
   const [ colorChange, setColorChange ] = useState("white")
   const [ count, setCount ] = useState(1)
-  const [ isOpenReview, setIsOpenReview ] = useState(false);
 
   const price = 300
-  const totalPrice = price * count;
+  const totalPrice = price * count
 
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
           <img
-            src={`/images/golf-ball-${colorChange}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+            src={`/images/golf-ball-${colorChange}.jpg`}
             alt={`golf-ball`}
           />
           <ColorButton changeBackground={colorChange} />
@@ -40,7 +39,7 @@ const Product = (props) => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review isOpenReview={isOpenReview} setIsOpenReview={setIsOpenReview} />
+        <Review />
       </div>
     </div>
   );

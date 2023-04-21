@@ -4,16 +4,6 @@ import "./Color.scss";
 
 const Color = (props) => {
 
-  const changeColorWhite = () => {
-    props.setColorChange("white")
-  };
-  const changeColorRed = () => {
-    props.setColorChange("red")
-  };
-  const changeColorYellow = () => {
-    props.setColorChange("yellow")
-  };
-
   return (
     <div className="color">
       <span className="colorText">
@@ -22,9 +12,11 @@ const Color = (props) => {
         {props.colorChange}
       </span>
       <div className="colorHandler">
-        <ColorButton changeColor={changeColorWhite} changeBackground={"white"} />
-        <ColorButton changeColor={changeColorRed} changeBackground={"red"}/>
-        <ColorButton changeColor={changeColorYellow} changeBackground={"yellow"}/>
+
+        <ColorButton changeColor={() => {props.setColorChange("white")}} changeBackground={"white"} />
+        <ColorButton changeColor={() => {props.setColorChange("red")}} changeBackground={"red"}/>
+        <ColorButton changeColor={() => {props.setColorChange("yellow")}} changeBackground={"yellow"}/>
+        
       </div>
     </div>
   )

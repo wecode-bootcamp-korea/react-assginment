@@ -7,6 +7,7 @@ const Count = (props) => {
     if (props.count === 1 && num === -1) return; 
     props.setCount(props.count + num)
   }
+  
   return (
     <div className="count">
       <div className="countInput">
