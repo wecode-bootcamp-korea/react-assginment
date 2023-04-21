@@ -20,7 +20,7 @@ const Product = () => {
 
   const counter = number => {   // 구매 수량 증가
     if (count === 1 && number === -1) return;
-    setCount(count + number);
+    setCount(count => count + number);
   };
 
 
