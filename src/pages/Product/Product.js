@@ -19,6 +19,11 @@ const Product = () => {
       setCounting(x);
     }
   };
+  const [viewing, setViewing] = useState(false);
+
+  const toggleReview = () => {
+    setViewing(!viewing);
+  };
 
   const totalPrice = price * counting;
 
@@ -53,7 +58,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review />
+        <Review viewing={viewing} toggleReview={toggleReview} />
       </div>
     </div>
   );
