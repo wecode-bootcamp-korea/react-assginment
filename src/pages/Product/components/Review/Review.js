@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Review.scss";
 
 
-const Review = () => {
+const Review = (props) => {
   const [showText, setShowText] = useState(false);
 
   const content = () => {
