@@ -9,31 +9,20 @@ import "./Product.scss";
 const Product = () => {
 
   // 변수
-  const colors = [`white`, `red`, `yellow`];            // 색상
-  const [color, setColor] = useState(colors[0]);        // 색상 변경
-  const price = 300;                                    // 가격
-  const [totalPrice, setTotalPrice] = useState(price);  // 가격 총합
-  const [count, setCount] = useState(1);                // 가격 카운트
+  const colors = [`white`, `red`, `yellow`];      // 색상
+  const [color, setColor] = useState(colors[0]);  // 색상 변경
+  const price = 300;                              // 가격
+  const [count, setCount] = useState(1);          // 가격 카운트
+  const totalPrice = price * count;               // 가격 총합
 
   // 함수
   const changeColor = col => setColor(col); // 색상 변경
 
-  const countUp = () => {   // 구매 수량 증가
-    setCount(count + 1);
-    setTotalPrice(totalPrice + price);
+  const counter = number => {   // 구매 수량 증가
+    if (count === 1 && number === -1) return;
+    setCount(count + number);
   };
 
-  const countDown = () => { // 구매 수량 감소
-    if (count > 1) {
-      setCount(count - 1);
-      setTotalPrice(totalPrice - price);
-    }
-  };
-
-  const reset = () => {     // 구매 수량 초기화
-    setCount(1);
-    setTotalPrice(price);
-  };
 
   // 출력
   return (
@@ -59,7 +48,7 @@ const Product = () => {
           <Color colors={colors} color={color} changeColor={changeColor} />
           <div className="quantity">
             <span> 수량 : </span>
-            <Count count={count} countUp={countUp} countDown={countDown} reset={reset} />
+            <Count count={count} setCount={setCount} counter={counter} />
           </div>
           <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
           <button className="buyBtn">구매하기</button>
