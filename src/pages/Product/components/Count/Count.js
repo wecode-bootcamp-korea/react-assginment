@@ -8,6 +8,10 @@ const Count = (props) => {
     }
   };
 
+  const handleReset = () => {
+    props.setCount(1);
+  };
+
   return (
     <div className="count">
       <div className="countInput">
@@ -15,7 +19,7 @@ const Count = (props) => {
         <div className="countInputText">{props.count}</div>
         <button onClick={() => props.setCount((prev) => prev + 1)}>+</button>
       </div>
-      <button className="resetBtn" onClick={() => {}}>
+      <button className="resetBtn" onClick={handleReset}>
         reset
       </button>
     </div>
