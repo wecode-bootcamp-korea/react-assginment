@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Review.scss";
 
 const Review = (props) => {
@@ -14,14 +14,14 @@ const Review = (props) => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {props.isOpenReview ? <div className="reviewMainContents">
+        {props.isOpenReview && <div className="reviewMainContents">
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div> : ""}
+        </div>}
         
         <span className="reviewMainHandler" onClick={()=>props.setIsOpenReview(!props.isOpenReview)}>
-          {!props.isOpenReview ? "더보기 ▼" : "접기 ▲"}
+          {props.isOpenReview ? "접기 ▲" : "더보기 ▼"}
         </span>
       </div>
     </div>

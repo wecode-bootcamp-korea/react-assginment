@@ -6,8 +6,7 @@ import Review from "../Product/components/Review/Review"
 import "./Product.scss";
 
 const Product = (props) => {
-    const [ colorChange, setColorChange ] = useState("white")
-  const [ state, setState ] = useState("white")
+  const [ colorChange, setColorChange ] = useState("white")
   const [ count, setCount ] = useState(1)
   const [ isOpenReview, setIsOpenReview ] = useState(false);
 
