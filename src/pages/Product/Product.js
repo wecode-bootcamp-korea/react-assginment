@@ -21,7 +21,7 @@ const Product = (props) => {
           <img
             src={`/images/golf-ball-${colorChange}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
-          />;
+          />
           <ColorButton changeBackground={colorChange} />
         </div>
         <div className="productDetailInfo">
@@ -41,7 +41,7 @@ const Product = (props) => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review />
+        <Review isOpenReview={isOpenReview} setIsOpenReview={setIsOpenReview} />
       </div>
     </div>
   );
