@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = ({color}) => {
   const [summary, setSummary] = useState(Boolean);
 
   return (
@@ -10,7 +10,7 @@ const Review = () => {
         <img src="/images/avatar.jpg" alt="avatar" />
         <div className="userInfo">
           <div className="name">위코드</div>
-          <div className="itemName">골프공, white 색상 구매</div>
+          <div className="itemName">골프공, {color} 색상 구매</div>
         </div>
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>

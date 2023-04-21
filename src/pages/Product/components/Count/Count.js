@@ -1,29 +1,16 @@
 import React from "react";
 import "./Count.scss";
 
-const Count = (props) => {
-    const handleMinus = () => {
-      if(props.quantity >= 2){
-        props.count(props.quantity-1)
-        props.price(`${(props.quantity-1)*300}`)
-      }
-    }
-    const handlePlus = () => {
-      props.count(props.quantity+1);
-      props.price(`${(props.quantity+1)*300}`)
-    }
-    const handleReset = () => {
-      props.count(1)
-      props.price('300')
-    }
+const Count = ({count, setCount}) => {
+
   return (
     <div className="count">
       <div className="countInput">
-        <button onClick={handleMinus}>-</button>
-        <div className="countInputText">{props.quantity}</div>
-        <button onClick={handlePlus}>+</button>
+        <button onClick={() => {if(count > 1){setCount(count-1)}}}>-</button>
+        <div className="countInputText">{count}</div>
+        <button onClick={() => setCount(count+1)}>+</button>
       </div>
-      <button className="resetBtn" onClick={handleReset}>
+      <button className="resetBtn" onClick={() => setCount(1)}>
         reset
       </button>
     </div>

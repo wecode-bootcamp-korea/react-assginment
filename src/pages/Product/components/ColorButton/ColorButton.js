@@ -1,15 +1,13 @@
 import React from 'react'
 import "./ColorButton.scss";
 
-const ColorButton = (props) => { 
+const ColorButton = ({className, color, ProductSetColor}) => { 
   const handle = () => {
-    props.change(`selected ${props.choice}`);
-    props.img(`images/golf-ball-${props.choice}.jpg`);
-    props.setPre(`colorButton ${props.choice}`);
+    ProductSetColor()
   }
 
   return (
-    <button className={props.className} onClick={handle} />
+    <button className={className} onClick={handle} />
   )
 }
 
