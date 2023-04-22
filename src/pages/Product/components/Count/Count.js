@@ -1,17 +1,30 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [num, setNum] = useState(1);
+const Count = (props) => {
+  props.setAmount(props.count);
+
+  const countMinus = () => {
+    if( 1 >= props.count) return;
+    props.setCount(props.count - 1);
+  }
+
+  const countPlus = () => {
+    props.setCount(props.count + 1)
+  }
+
+  const handleReset = () => {
+    props.setCount(1);
+  }
 
   return (
     <div className="count">
       <div className="countInput">
-        <button onClick={() => setNum(num === 1 ? 1 : num - 1)}>-</button>
-        <div className="countInputText">{num}</div>
-        <button onClick={() => setNum(num+1)}>+</button>
+        <button onClick={countMinus}>-</button>
+        <div className="countInputText">{`${props.count}`}</div>
+        <button onClick={countPlus}>+</button>
       </div>
-      <button className="resetBtn" onClick={() => setNum(1)}>
+      <button className="resetBtn" onClick={handleReset}>
         reset
       </button>
     </div>
