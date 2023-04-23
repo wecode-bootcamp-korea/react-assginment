@@ -35,7 +35,7 @@ const TOP_MENU = [
   { id: 3, link: `/productList`, text: `목록 컴포넌트 가기` },
   { id: 4, link: `/review`, text: `리뷰 가기` },
   { id: 5, link: `/count`, text: `카운트 가기` },
-  { id: 5, link: `/color`, text: `컬러 가기` },
+  { id: 6, link: `/color`, text: `컬러 가기` },
 ];
 
 export default Nav;

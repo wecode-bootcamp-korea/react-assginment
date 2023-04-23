@@ -3,8 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Introduce.scss";
 
 const Introduce = () => {
+
+  // 변수
   const navigate = useNavigate();
 
+  // 함수
   const handleInput = () => {
     console.log(`input 태그 동작`);
   };
@@ -14,6 +17,7 @@ const Introduce = () => {
     navigate("/product");
   };
 
+  // 출력
   return (
     <div className="introduce">
 

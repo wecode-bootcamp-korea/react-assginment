@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = ({ review }) => {
 
   // 변수
   const [isExtend, setIsExtend] = useState(false);
@@ -16,7 +16,7 @@ const Review = () => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{review}</div>
       <div className="reviewMain">
         {isExtend ?
           <div className="reviewMainContents" >
