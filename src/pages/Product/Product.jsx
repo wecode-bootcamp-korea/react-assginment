@@ -8,7 +8,7 @@ import "./Product.scss";
 const Product = () => {
 
   // DB
-  const [{ img, title, price, count, review }, setProduct] = useState([]);
+  const [{ img, title, price, count, review }, setProduct] = useState(null);
 
   // 변수
   const colors = [`white`, `red`, `yellow`];      // 색상
@@ -26,7 +26,7 @@ const Product = () => {
 
   // 동작
   useEffect(() => {
-    fetch(`/data/db.json`)
+    fetch(`/data/product.json`)
       .then(res => res.json())
       .then(res => setProduct(res));
   }, []);
