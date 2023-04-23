@@ -22,7 +22,7 @@ const Nav = () => {
       </div>
       {isOpenMenu ? (
         <div className="menuBox">
-          {TOP_MENU.map(({ id, link, text }) => <Link id={id} to={link}>{text}</Link>)}
+          {TOP_MENU.map(({ id, link, text }) => <Link key={id} to={link}>{text}</Link>)}
         </div>
       ) : null}
     </div>
