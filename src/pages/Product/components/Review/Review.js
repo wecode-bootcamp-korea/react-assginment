@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Review.scss";
-import { isVisible } from "@testing-library/user-event/dist/utils";
 
 const Review = () => {
   const [mode, setMode] = useState(true);

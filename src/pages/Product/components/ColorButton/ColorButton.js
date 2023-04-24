@@ -6,7 +6,7 @@ const ColorButton = (props) => {
     <button
       className={`colorButton ${props.color}`}
       onClick={() => {
-        props.setColor(`${props.color}`);
+        props.setColor(props.color);
       }}
     />
   );

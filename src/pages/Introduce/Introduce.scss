@@ -16,8 +16,9 @@
     background-color: white;
 
     .name {
-      display: inline;
       @include textStyle(30px, bold);
+      display: inline;
+
       &:hover {
         color: $green;
       }
