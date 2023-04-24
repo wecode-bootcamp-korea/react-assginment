@@ -1,0 +1,31 @@
+.colorBox {
+  padding: 20px;
+  margin: 20px 20px 0 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  .colorBoxPaint {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+
+    &.red {
+      background-color: red;
+    }
+
+    &.yellow {
+      background-color: yellow;
+    }
+
+    &.green {
+      background-color: green;
+    }
+
+    &.blue {
+      background-color: blue;
+    }
+  }
+
+  .colorBoxName {
+    margin-bottom: 10px;
+  }
+}

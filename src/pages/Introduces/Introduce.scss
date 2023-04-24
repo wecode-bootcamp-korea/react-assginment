@@ -4,6 +4,8 @@
 .introduce {
   @include flexCenter;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .box {
     display: flex;
@@ -34,5 +36,9 @@
       display: flex;
       align-items: center;
     }
+  }
+
+  .colorBoxes {
+    display: flex;
   }
 }
