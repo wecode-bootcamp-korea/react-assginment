@@ -4,53 +4,54 @@
 .introduce {
   @include flexcenter;
   height: 100vh;
+  box-sizing: border-box;
 
-  .userProfileContainer {
+  .userProfile {
     padding: 15px;
     border: 1px solid #000;
     border-radius: 6px;
 
-    img {
+    &Img {
       width: 155px;
       height: 155px;
 
       border-radius: 6px;
     }
 
-    .bottomWrapper {
-      div {
+    &Info {
+      &Text {
         line-height: 2px;
 
-        p {
-          &:first-child {
-            font-weight: 900;
-            transition: color ease-in-out 0.3s;
+        &Name {
+          font-weight: 900;
+          transition: color ease-in-out 0.3s;
 
-            &:hover {
-              color: $green;
-              transition: color ease-in-out 0.3s;
-            }
+          &:hover {
+            color: $green;
+            transition: color ease-in-out 0.3s;
           }
-          &:last-child {
-            font-size: 0.7rem;
-          }
+        }
+
+        &Class {
+          font-size: 0.7rem;
         }
       }
-      form {
-        input {
-          display: inline-block;
+
+      &Form {
+        display: flex;
+
+        &Input {
           width: 100px;
-          height: 100%;
         }
-        button {
+
+        &Btn {
           width: 50px;
-          height: 100%;
           font-size: 0.65rem;
         }
       }
     }
 
-    a {
+    &Link {
       font-size: 0.8rem;
     }
   }

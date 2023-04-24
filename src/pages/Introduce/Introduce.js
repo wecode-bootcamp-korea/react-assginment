@@ -15,22 +15,36 @@ function Introduce() {
   };
 
   return (
-    <div className="introduce" style={{ boxSizing: "border-box" }}>
-      <div className="userProfileContainer">
-        <img alt="user profile" src="/images/cat.jpeg" />
-        <div className="bottomWrapper">
-          <div>
-            <p>문유현</p>
-            <p>45기</p>
+    <div className="introduce">
+      <div className="userProfile">
+        <img
+          alt="user profile"
+          src="/images/cat.jpeg"
+          className="userProfileImg"
+        />
+        <div className="userProfileInfo">
+          <div className="userProfileInfoText">
+            <p className="userProfileInfoTextName">문유현</p>
+            <p className="userProfileInfoTextClass">45기</p>
           </div>
-          <form>
-            <input type="text" onChange={handleInput} />
-            <button type="button" onClick={handleButton}>
+          <form className="userProfileInfoForm">
+            <input
+              type="text"
+              onChange={handleInput}
+              className="userProfileInfoFormInput"
+            />
+            <button
+              type="button"
+              onClick={handleButton}
+              className="userProfileInfoFormBtn"
+            >
               클릭
             </button>
           </form>
         </div>
-        <Link to="/product">product 페이지로 이동</Link>
+        <Link className="userProfileLink" to="/product">
+          product 페이지로 이동
+        </Link>
       </div>
     </div>
   );
