@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Product.scss";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Color from "./components/Color/Color";
 import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
+import "./Product.scss";
 
 const Product = () => {
   const [color, setColor] = useState("white");

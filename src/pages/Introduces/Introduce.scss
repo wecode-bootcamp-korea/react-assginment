@@ -2,8 +2,8 @@
 @import "../../style/mixin.scss";
 
 .introduce {
-  height: 100vh;
   @include flexCenter;
+  height: 100vh;
 
   .box {
     display: flex;
