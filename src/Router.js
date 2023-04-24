@@ -7,10 +7,12 @@ import Review from "./pages/Product/components/Review/Review";
 import Count from "./pages/Product/components/Count/Count";
 import Color from "./pages/Product/components/Color/Color";
 import NotFound from "./pages/NotFound/NotFound";
+import Nav from "./pages/components/Nav/Nav";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Introduce />} />
         <Route path="/product" element={<Product />} />
