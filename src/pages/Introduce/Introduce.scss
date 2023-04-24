@@ -1,0 +1,35 @@
+    .introduce  {
+        border: 1px solid black; //테두리
+        border-radius: 7px; //테두리 둥굴게
+        width: 120px; //너비
+        margin:auto; //4방향 여백
+        justify-content: center;
+        align-items: center;
+        
+      ;
+      
+    .weCodeBox  {
+        display: flex;
+        height: 100px;
+        background-color: black;
+        color: white;
+        width: 100px;
+        align-Items:center;
+        margin: 10px auto;
+      
+        justify-Content: center;
+        border-Radius: 7px;
+      };
+      
+    .content  {
+        margin-left: 10px;
+        margin-Bottom: 3px;
+        font-weight: bold;
+      };
+      
+    .subcontent  {
+        margin-left: 10px;
+        font-Size: 8px;
+        font-weight: 400;
+      };
+    }
