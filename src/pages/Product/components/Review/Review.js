@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = (review) => {
   const [visible, setVisible] = useState("close");
   const visibleBtn = () => {
     setVisible(visible === "open" ? "close" : "open");
@@ -18,7 +18,7 @@ const Review = () => {
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
         <div className={`reviewMainContents ${visible}`}>
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+          {review.review}
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
         </div>
