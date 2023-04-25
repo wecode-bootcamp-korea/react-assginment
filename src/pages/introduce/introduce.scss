@@ -1,56 +1,97 @@
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
-.profile {
-  border: 2px solid yellowgreen;
-  width: 250px;
-  height: 320px;
-  position: relative;
-  top: 150px;
-  left: 50%;
-  transform: translate(-50%);
-  border-radius: 5%;
+.container {
+  height: 100vh;
 
-  img {
-    width: 200px;
-    height: 200px;
-    margin-left: 50%;
-    margin-top: 15px;
-    transform: translate(-50%);
+  .profile {
+    border: 2px solid yellowgreen;
+    width: 250px;
+    height: 320px;
+    margin: 40px auto;
     border-radius: 5%;
-  }
 
-  .content {
-    margin-bottom: 0;
-    margin-top: 0;
-    margin-left: 10%;
-  }
+    img {
+      width: 200px;
+      height: 200px;
+      margin-left: 50%;
+      margin-top: 15px;
+      transform: translate(-50%);
+      border-radius: 5%;
+    }
 
-  .Lee {
-    font-weight: bold;
-  }
+    .content {
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-left: 10%;
+    }
 
-  .기수 {
-    font-size: 15px;
-  }
+    .Lee {
+      font-weight: bold;
+    }
 
-  .search {
-    width: 200px;
-    margin-right: 0;
-    margin-left: 10%;
+    .기수 {
+      font-size: 15px;
+    }
 
-    input {
-      width: 150px;
+    .search {
+      width: 200px;
+      margin-right: 0;
+      margin-left: 10%;
+
+      input {
+        width: 150px;
+      }
+    }
+
+    .link {
+      margin-left: 10%;
+      text-decoration: none;
+      color: $black;
+
+      &:hover {
+        color: $green;
+      }
     }
   }
 
-  .link {
-    margin-left: 10%;
-    text-decoration: none;
-    color: $black;
+  .colorContainer {
+    display: flex;
+    justify-content: center;
 
-    &:hover {
-      color: $green;
+    .colorCard {
+      border: 1.5px solid black;
+      border-radius: 10px;
+      margin: auto 10px;
+      width: 150px;
+      height: 200px;
+
+      .color {
+        margin: 10px auto;
+        width: 120px;
+        height: 120px;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      div {
+        margin-left: 15px;
+        font-weight: bold;
+      }
     }
   }
 }

@@ -5,6 +5,17 @@ import "./introduce.scss";
 
 const Profile = () => {
   const navigate = useNavigate();
+  const colorCard = [
+    { id: 1, className: "red", name: "이름 : red", rgb: "rgb : 255, 0, 0" },
+    {
+      id: 2,
+      className: "yellow",
+      name: "이름 : yellow",
+      rgb: "rgb : 255, 255, 0",
+    },
+    { id: 3, className: "green", name: "이름 : green", rgb: "rgb : 0, 128, 0" },
+    { id: 4, className: "blue", name: "이름 : blue", rgb: "rgb : 0, 0, 255" },
+  ];
   const ToProduct = () => {
     navigate("/product");
   };
@@ -13,17 +24,33 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile">
-      <img alt="myimg" src="/images/me.jpg" />
-      <p className="content Lee">이경진</p>
-      <p className="content 기수">45기</p>
-      <div className="search">
-        <input type="text" onChange={handleInput}></input>
-        <button onClick={ToProduct}>클릭</button>
+    <div className="container">
+      <div className="profile">
+        <img alt="myimg" src="/images/me.jpg" />
+        <p className="content Lee">이경진</p>
+        <p className="content 기수">45기</p>
+        <div className="search">
+          <input type="text" onChange={handleInput}></input>
+          <button onClick={ToProduct}>클릭</button>
+        </div>
+        <Link to="/product" className="link">
+          Product로 이동
+        </Link>
       </div>
-      <Link to="/product" className="link">
-        Product로 이동
-      </Link>
+      <div className="colorContainer">
+        {colorCard.map((color) => {
+          return (
+            <div className="colorCard">
+              <div className={`color ${color.className}`} />
+              <div className="content">
+                {color.name}
+                <br />
+                {color.rgb}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
