@@ -1,0 +1,29 @@
+@mixin colors {
+  &.red {
+    background-color: red;
+  }
+
+  &.yellow {
+    background-color: yellow;
+  }
+
+  &.green {
+    background-color: green;
+  }
+
+  &.blue {
+    background-color: blue;
+  }
+}
+
+.colorBox {
+  padding: 30px;
+  border: 1px solid black;
+  background-color: white;
+
+  .color {
+    @include colors;
+    width: 100px;
+    height: 100px;
+  }
+}
