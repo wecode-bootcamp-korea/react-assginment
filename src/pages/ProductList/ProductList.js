@@ -5,14 +5,10 @@ const ProductList = () => {
   const [productList, setProductList] = useState();
 
   useEffect(() => {
-    getProductList();
+    fetch("data/productlist.json", { method: "GET" })
+      .then((response) => response.json())
+      .then((data) => setProductList(data.list));
   }, []);
-
-  const getProductList = async () => {
-    const response = await fetch("data/productlist.json");
-    const productlist = await response.json();
-    setProductList(productlist.list);
-  };
 
   return (
     <div className="productList">

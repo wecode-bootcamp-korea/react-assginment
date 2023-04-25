@@ -14,14 +14,10 @@ const Product = () => {
   const totalPrice = price * count;
 
   useEffect(() => {
-    getData();
+    fetch("data/product.json", { method: "GET" })
+      .then((response) => response.json())
+      .then((data) => setProduct(data));
   }, []);
-
-  const getData = async () => {
-    const response = await fetch("data/product.json", { method: "GET" });
-    const data = await response.json();
-    setProduct(data);
-  };
 
   return (
     <div className="product">
