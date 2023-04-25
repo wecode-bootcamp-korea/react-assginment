@@ -1,0 +1,60 @@
+{
+  "list": [
+    {
+      "img": "/images/cat.jpeg",
+      "name": "고양이",
+      "age": "4살",
+      "gender": "male",
+      "address": "춘천"
+    },
+    {
+      "img": "/images/cat.jpeg",
+      "name": "고냥이",
+      "age": "14살",
+      "gender": "female",
+      "address": "양평"
+    },
+    {
+      "img": "/images/cat.jpeg",
+      "name": "고용이",
+      "age": "7살",
+      "gender": "male",
+      "address": "천안"
+    },
+    {
+      "img": "/images/cat.jpeg",
+      "name": "모울이",
+      "age": "1살",
+      "gender": "female",
+      "address": "부산"
+    },
+    {
+      "img": "/images/cat.jpeg",
+      "name": "곰율이",
+      "age": "3살",
+      "gender": "male",
+      "address": "노원"
+    },
+    {
+      "img": "/images/cat.jpeg",
+      "name": "고울이",
+      "age": "11살",
+      "gender": "male",
+      "address": "평양"
+    },
+    {
+      "img": "/images/cat.jpeg",
+      "name": "고물이",
+      "age": "9살",
+      "gender": "male",
+      "address": "전주"
+    },
+    {
+      "img": "/images/cat.jpeg",
+      "name": "기양이",
+      "age": "2살",
+      "gender": "male",
+      "address": "충청"
+    }
+  ]
+}

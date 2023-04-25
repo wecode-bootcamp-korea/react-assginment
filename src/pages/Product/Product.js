@@ -18,7 +18,7 @@ const Product = () => {
   }, []);
 
   const getData = async () => {
-    const response = await fetch("data/data.json", { method: "GET" });
+    const response = await fetch("data/product.json", { method: "GET" });
     const data = await response.json();
     setProduct(data);
   };
