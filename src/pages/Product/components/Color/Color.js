@@ -21,12 +21,12 @@ const Color = (props) => {
         <ColorButton
           setColor={props.setColor}
           color="yellow"
-          onClick={props.setImg(`/images/golf-ball-${props.color}.jpg`)}
+          // onClick={props.setImg(`/images/golf-ball-${props.color}.jpg`)}
         />
         <ColorButton
           setColor={props.setColor}
           color="red"
-          onClick={props.setImg(`/images/golf-ball-${props.color}.jpg`)}
+          // onClick={props.setImg(`/images/golf-ball-${props.color}.jpg`)}
         />
       </div>
     </div>

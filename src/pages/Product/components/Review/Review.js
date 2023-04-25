@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = (props) => {
+  console.log("review props", props);
   const [showReview, setShowReview] = useState(true);
   // showReview => 더보기, !showReview => 접기
 
@@ -14,7 +15,9 @@ const Review = () => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">
+        {props.productInfo[0] && props.productInfo[0].review}
+      </div>
       <div className="reviewMain">
         <div
           className={`reviewMainContents ${!showReview ? null : "noDisplay"}`}
