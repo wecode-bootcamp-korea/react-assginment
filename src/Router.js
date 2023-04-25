@@ -7,6 +7,7 @@ import Count from './pages/Product/components/Count/Count';
 import Review from './pages/Product/components/Review/Review';
 import ColorButton from './pages/Product/components/ColorButton/ColorButton';
 import Nav from './pages/components/Nav/Nav';
+import NewBox from './pages/Introduce/NewBox';
 
   const Router = () => {
     return (
@@ -20,11 +21,10 @@ import Nav from './pages/components/Nav/Nav';
           <Route path="/Count" element={<Count />} />
           <Route path="/Review" element={<Review />} />
           <Route path="/ColorButton" element={<ColorButton />} />
-        </Routes>
-                                      
+          <Route path="/NewBox" element={<NewBox />} />
+        </Routes>     
       </BrowserRouter>
-    );
-    }
+    )};
 
 
     export default Router;

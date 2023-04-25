@@ -1,0 +1,57 @@
+.NewBox {
+  position: relative;
+  display: block; 
+  width: 220px;
+  height: 300px;
+  background-color: white;
+  border-color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-left: 30px;
+
+  .colorBox {
+    width: 180px;
+    height: 180px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+
+  .colorName {
+    width: auto;
+    height: auto;
+    margin-left: 28px;
+    margin-top: 10px;
+  }
+
+  .rgbName {
+    width: auto;
+    height: auto;
+    margin-left: 28px;
+  }
+
+  &.red {
+    .colorBox {
+      background-color: red;
+    }
+  }
+
+  &.yellow {
+    .colorBox {
+      background-color: yellow;
+    }
+  }
+
+  &.green {
+    .colorBox {
+      background-color: green;
+    }
+  }
+
+  &.blue {
+    .colorBox {
+      background-color: blue;
+    }
+  }
+}
