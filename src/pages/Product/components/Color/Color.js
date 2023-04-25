@@ -18,8 +18,16 @@ const Color = (props) => {
           color="white"
           onClick={props.setImg(`/images/golf-ball-${props.color}.jpg`)}
         />
-        <ColorButton setColor={props.setColor} color="red" />
-        <ColorButton setColor={props.setColor} color="yellow" />
+        <ColorButton
+          setColor={props.setColor}
+          color="yellow"
+          onClick={props.setImg(`/images/golf-ball-${props.color}.jpg`)}
+        />
+        <ColorButton
+          setColor={props.setColor}
+          color="red"
+          onClick={props.setImg(`/images/golf-ball-${props.color}.jpg`)}
+        />
       </div>
     </div>
   );

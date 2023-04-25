@@ -20,12 +20,6 @@ const Product = () => {
   // 색상 누르면, 상품 이미지 변경하기.
   const [img, setImg] = useState(`/images/golf-ball-${color}.jpg`);
 
-  // const colorArr = [
-  //   { id: 1, color: "white", img: `/images/golf-ball-white.jpg` },
-  //   { id: 2, color: "red", img: `/images/golf-ball-red.jpg` },
-  //   { id: 3, color: "yellow", img: `/images/golf-ball-yellow.jpg` },
-  // ];
-
   return (
     <div className="product">
       <div className="productDetail">
