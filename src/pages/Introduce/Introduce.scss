@@ -12,6 +12,11 @@
     border-radius: 10px;
     height: 300px;
     width: 250px;
+    font-weight: bold;
+    margin-top: -500px;
+    position: absolute;
+    top: 70%;
+    left: 43%;
   }
 
   .introduceimg {
@@ -30,5 +35,45 @@
     &:hover {
       color: green;
     }
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+
+    .colorcard {
+      border: solid black;
+      border-radius: 10px;
+      margin: 10px;
+      height: 300px;
+      width: 250px;
+      margin-left: 30px;
+    }
+    .colorcontainer {
+      margin-top: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .color {
+      margin: 10px auto;
+      height: 200px;
+      width: 200px;
+    }
+  }
+  .red {
+    background-color: red;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .blue {
+    background-color: blue;
   }
 }

@@ -34,8 +34,29 @@ const Introduce = () => {
           <Link to="/product">product 페이지로 이동</Link>
         </div>
       </div>
+      <div className="cards">
+        {INTRODUCE_CARD.map((color) => {
+          return (
+            <div className="colorcard">
+              <div className={`color ${color.className}`} />
+              <div className="colorcontainer">
+                {color.name}
+                <br />
+                {color.rgb}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
 
 export default Introduce;
+
+const INTRODUCE_CARD = [
+  { id: 1, className: "red", name: "이름 : red", rgb: "rgb : 255,0,0" },
+  { id: 2, className: "yellow", name: "이름 : yellow", rgb: "rgb : 255,255,0" },
+  { id: 3, className: "green", name: "이름: green", rgb: "rgb : 0,128,0" },
+  { id: 4, className: "blue", name: "이름 : blue", rgb: "rgb : 0,0,255" },
+];
