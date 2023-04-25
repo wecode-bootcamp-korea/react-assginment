@@ -46,9 +46,9 @@ const Introduce=() => {
       <div className="blank">
         <input type="text" onChange={handleInput} />
       </div>
-      <button className="button" onClick={handleButton}>버튼</button>
+      <button className="button" onClick={handleButton}>버튼</button> //버튼이랑 클릭 을 하나로 합쳐야하는데 방법을 잘모르겠습니다!//
       <button className="loginBtn" onClick={goToProduct}>클릭</button>
-      
+
       <Link to='/product'> Product 페이지로 이동 </Link>
       </div>
   );
