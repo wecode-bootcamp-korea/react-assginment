@@ -7,10 +7,10 @@ import "./Product.scss";
 
 const Product = () => {
   const [selectedColor, setSelectedColor] = useState("white");
-  const [count, setCount] = useState(null);
-  const [product, setProduct] = useState([]);
-  const [price, setPrice] = useState(null);
-  const [totalPrice, setTotalPrice] = useState(null);
+  const [count, setCount] = useState(0);
+  const [product, setProduct] = useState(null);
+  const [price, setPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     fetch("/data/data.json")
@@ -21,14 +21,12 @@ const Product = () => {
         setPrice(data.price);
       });
   }, []);
-  console.log(product);
 
   useEffect(() => {
-    if (count !== null && price !== null) {
-      setTotalPrice(count * price);
-    }
+    setTotalPrice(count * price);
   }, [count, price]);
 
+  if (!product) return <></>;
   return (
     <div className="product">
       <div className="productDetail">
@@ -43,7 +41,7 @@ const Product = () => {
         <div className="productDetailInfo">
           <span className="title">{product.title}</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price && price.toLocaleString()}원</span>
+          <span>가격 : {price.toLocaleString()}원</span>
           <Color selectedColor={selectedColor} changeColor={setSelectedColor} />
           {/* Color 컴포넌트 위치 */}
           <div className="quantity">
@@ -51,7 +49,7 @@ const Product = () => {
             <Count count={count} setCount={setCount} />
             {/* Count 컴포넌트 위치 */}
           </div>
-          <span>최종 가격 : {totalPrice && totalPrice.toLocaleString()}원</span>
+          <span>최종 가격 : {totalPrice.toLocaleString()}원</span>
           <button className="buyBtn">구매하기</button>
         </div>
       </div>

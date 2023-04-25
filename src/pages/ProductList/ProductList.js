@@ -1,37 +1,44 @@
 import React, { useState, useEffect } from "react";
 import "./ProductList.scss";
 
-const ProductList = () => {
-  const [catInfo, setCatInfo] = useState([]);
+const ProductListPage = () => {
+  const [cats, setCats] = useState([]);
   useEffect(() => {
     fetch("/data/catdata.json")
       .then((res) => res.json())
       .then((data) => {
-        setCatInfo(data);
+        setCats(data);
       });
   }, []);
   return (
     <div className="productList">
       <h2 className="title">고양이 리스트</h2>
-      <div className="listContainer">
-        {catInfo.length !== 0 &&
-          catInfo.map((cat) => (
-            <CatLists
-              key={cat.id}
-              name={cat.name}
-              age={cat.age}
-              gender={cat.gender}
-              region={cat.region}
-            />
-          ))}
-      </div>
+      <CatList cats={cats} />
     </div>
   );
 };
 
-export default ProductList;
+export default ProductListPage;
 
-export const CatLists = (props) => {
+export const CatList = (props) => {
+  const { cats } = props;
+
+  return (
+    <div className="listContainer">
+      {cats.map((cat) => (
+        <CatCard
+          key={cat.id}
+          name={cat.name}
+          age={cat.age}
+          gender={cat.gender}
+          region={cat.region}
+        />
+      ))}
+    </div>
+  );
+};
+
+export const CatCard = (props) => {
   const { name, age, gender, region } = props;
   return (
     <div className="listBox">
