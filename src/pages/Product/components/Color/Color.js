@@ -4,8 +4,6 @@ import ColorButton from "../ColorButton/ColorButton";
 
 const Color = (props) => {
 
-  
-
   return (
     <div className="color">
       <span className="colorText">

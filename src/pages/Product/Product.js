@@ -10,8 +10,6 @@ const Product = () => {
   const [count, setCount] = useState(1);
   const [color, setColor] = useState('white');
 
-
-
   const price = 300;
   const totalPrice = price * count;
 
@@ -25,7 +23,6 @@ const Product = () => {
           />
           {/* ColorButton 컴포넌트 위치 */}
           <ColorButton color={color} setColor={setColor} />
-          
         </div>
         <div className="productDetailInfo">
           <span className="title">골프공</span>

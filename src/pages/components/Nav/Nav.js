@@ -34,7 +34,6 @@ const Nav = () => {
 
 export default Nav;
 
-
 const LINK_TO = [
   {id: 1, link:"/", text:'메인으로가기' },
   {id: 2, link:"/review", text:'리뷰 컴포넌트 가기' },
