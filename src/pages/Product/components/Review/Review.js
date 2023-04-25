@@ -1,13 +1,13 @@
 import React from "react";
 import "./Review.scss";
 
-const Review = (props) => {
+const Review = ({comment, setComment, dataReview})  => {
 
   const handleOpen = () => {
-    props.setComment(!props.comment);
+    setComment(!comment);
   }
 
-  let openFold = props.comment ? '더보기 ▼' : '접기▲';
+  let openFold = comment ? '더보기 ▼' : '접기▲';
 
   return (
     <div className="review">
@@ -18,9 +18,9 @@ const Review = (props) => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{dataReview}</div>
       <div className="reviewMain">
-        { props.comment ? '' : <div className="reviewMainContents">
+        { comment ? '' : <div className="reviewMainContents">
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
