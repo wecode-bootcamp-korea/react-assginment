@@ -22,16 +22,19 @@ const Introduce=() => {
   const handleInput = () => {
     console.log("input 태그 동작");
   }
+  const navigate = useNavigate();
+  const goToProduct = () => {                            
+    navigate('/product');
+  };
 
   const handleButton = () => {
     console.log("button 태그 동작");
+    goToProduct()
   }
 
-  const navigate = useNavigate(
-  );
-  const goToProduct = () => {                            // 3
-    navigate('/product');
-  };
+  //함수 2개 합치는 방법!!//
+
+  
 
 
 
@@ -45,9 +48,10 @@ const Introduce=() => {
       <div className="subcontent">45기</div>
       <div className="blank">
         <input type="text" onChange={handleInput} />
+        <button className="button" onClick={handleButton}>버튼</button> 
       </div>
-      <button className="button" onClick={handleButton}>버튼</button> //버튼이랑 클릭 을 하나로 합쳐야하는데 방법을 잘모르겠습니다!//
-      <button className="loginBtn" onClick={goToProduct}>클릭</button>
+      
+      {/* <button className="loginBtn" onClick={goToProduct}>클릭</button> */}
 
       <Link to='/product'> Product 페이지로 이동 </Link>
       </div>
