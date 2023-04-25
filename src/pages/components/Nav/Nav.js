@@ -29,8 +29,8 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          {MENU_LIST.map((menu, index) => (
-            <Link key={index} to={menu.link}>
+          {MENU_LIST.map((menu) => (
+            <Link key={menu.id} to={menu.link}>
               {menu.title}
             </Link>
           ))}

@@ -33,9 +33,9 @@ const Introduce = () => {
         </Link>
       </div>
       <div className="colorBoxes">
-        {COLOR_INFO.map((colorItem, index) => (
+        {COLOR_INFO.map((colorItem) => (
           <ColorBox
-            key={index}
+            key={colorItem.id}
             color={colorItem.color}
             name={colorItem.name}
             rgb={colorItem.rgb}
