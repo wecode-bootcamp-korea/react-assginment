@@ -9,12 +9,11 @@ const Product = () => {
   const [comment, setComment] = useState(true);
   const [count, setCount] = useState(1);
   const [color, setColor] = useState('white');
-  const [amount, setAmount] = useState(count);
 
 
 
   const price = 300;
-  const totalPrice = price * amount;
+  const totalPrice = price * count;
 
   return (
     <div className="product">
@@ -39,9 +38,7 @@ const Product = () => {
             {/* Count 컴포넌트 위치 */}
             <Count 
             count={count} 
-            setCount={setCount} 
-            amount={amount}
-            setAmount={setAmount}
+            setCount={setCount}
             />
           </div>
           <span>최종 가격 : {totalPrice} 원</span>

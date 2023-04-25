@@ -2,7 +2,6 @@ import React from "react";
 import "./Count.scss";
 
 const Count = (props) => {
-  props.setAmount(props.count);
 
   const countMinus = () => {
     if( 1 >= props.count) return;

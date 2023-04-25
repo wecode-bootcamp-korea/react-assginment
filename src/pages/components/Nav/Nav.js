@@ -22,10 +22,10 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          <Link to="/">메인으로 가기</Link>
-          <Link to="/review">리뷰 컴포넌트 가기</Link>
-          <Link to="/count">카운트 컴포넌트 가기</Link>
-          <Link to="/color">컬러 컴포넌트 가기</Link>
+          {LINK_TO.map((link) => {
+          console.log(link.id, link.link, link.text)
+            return <Link id={link.id} to={link.link}>{link.text}</Link>
+          })}
         </div>
       )}
     </div>
@@ -33,3 +33,11 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+const LINK_TO = [
+  {id: 1, link:"/", text:'메인으로가기' },
+  {id: 2, link:"/review", text:'리뷰 컴포넌트 가기' },
+  {id: 3, link:"/count", text:'카운트 컴포넌트 가기' },
+  {id: 4, link:"/color", text:'컬러 컴포넌트 가기' }
+]

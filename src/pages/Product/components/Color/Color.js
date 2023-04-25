@@ -14,9 +14,9 @@ const Color = (props) => {
         {`${props.color}`}
       </span>
       <div className="colorHandler">
-        <ColorButton className='colorButton white' color={'white'} setColor={props.setColor}/>
-        <ColorButton className='colorButton red' color={'red'} setColor={props.setColor} />
-        <ColorButton className='colorButton yellow' color={'yellow'} setColor={props.setColor} />
+        <ColorButton color='white' setColor={props.setColor}/>
+        <ColorButton color='red' setColor={props.setColor} />
+        <ColorButton color='yellow' setColor={props.setColor} />
       </div>
     </div>
   );
