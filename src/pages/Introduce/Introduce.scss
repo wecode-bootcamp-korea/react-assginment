@@ -4,6 +4,7 @@
 .introduce{
   @include flexCenter;
   height: 100vh;
+  flex-direction: column;
 
 .wrapper{
   padding: 16px;
@@ -30,6 +31,51 @@ color: $green-color;
 };
 
 
+.red {
+    background-color: #f32321;
+  }
+
+.yellow {
+    background-color: #faf1b0;
+  }
+.green {
+    background-color: green;
+  }
+.blue {
+    background-color: blue}
 
 
 
+.color-box{
+  width: 80px;
+  height: 80px;
+}
+
+.colorCards{
+  display: flex;
+  padding-top:36px;
+}
+.colors-wrapper{
+ border: 1px solid black;
+ width: 110px;
+ @include flexCenter;
+ flex-direction: column;
+ padding: 8px;
+border-radius: 8px;
+
+.profile-img{
+  width: 100%;
+};
+.profile-info{
+  padding-top: 16px;
+
+.name{
+  font-weight: bolder;
+  &:hover{
+color: $green-color;
+  };
+};
+
+};
+
+};
