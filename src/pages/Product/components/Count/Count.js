@@ -1,18 +1,18 @@
 import React from "react";
 import "./Count.scss";
 
-const Count = (props) => {
+const Count = ({ count, decrease, increase, setcount }) => {
   return (
     <div className="count">
       <div className="countInput">
-        <button onClick={props.decrease}>-</button>
-        <div className="countInputText">{props.count}</div>
-        <button onClick={props.increase}>+</button>
+        <button onClick={decrease}>-</button>
+        <div className="countInputText">{count}</div>
+        <button onClick={increase}>+</button>
       </div>
       <button
         className="resetBtn"
         onClick={() => {
-          props.setcount(1);
+          setcount(1);
         }}
       >
         reset

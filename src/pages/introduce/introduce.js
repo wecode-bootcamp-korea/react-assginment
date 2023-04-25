@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../style/common.scss";
 import "./introduce.scss";
 
@@ -14,7 +13,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="container">
+    <div className="profile">
       <img alt="myimg" src="/images/me.jpg" />
       <p className="content Lee">이경진</p>
       <p className="content 기수">45기</p>

@@ -27,8 +27,6 @@ const Review = () => {
         <span
           className="reviewMainHandler"
           onClick={() => {
-            setShow(true);
-
             show ? setShow(false) : setShow(true);
           }}
         >
