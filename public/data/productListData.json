@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "age": "4살",
+    "name": "고양이",
+    "img": "/images/cat.jpeg",
+    "gender": "male",
+    "residence": "춘천"
+  },
+  {
+    "id": 2,
+    "age": "14살",
+    "name": "고냥이",
+    "img": "/images/cat.jpeg",
+    "gender": "female",
+    "residence": "양평"
+  },
+  {
+    "id": 3,
+    "age": "7살",
+    "name": "고용이",
+    "img": "/images/cat.jpeg",
+    "gender": "male",
+    "residence": "천안"
+  },
+  {
+    "id": 4,
+    "age": "1살",
+    "name": "모울이",
+    "img": "/images/cat.jpeg",
+    "gender": "female",
+    "residence": "부산"
+  },
+  {
+    "id": 5,
+    "age": "3살",
+    "name": "곰율이",
+    "img": "/images/cat.jpeg",
+    "gender": "male",
+    "residence": "노원"
+  },
+  {
+    "id": 6,
+    "age": "11살",
+    "name": "고울이",
+    "img": "/images/cat.jpeg",
+    "gender": "male",
+    "residence": "평양"
+  },
+  {
+    "id": 7,
+    "age": "9살",
+    "name": "고물이",
+    "img": "/images/cat.jpeg",
+    "gender": "male",
+    "residence": "전주"
+  },
+  {
+    "id": 8,
+    "age": "2살",
+    "name": "기양이",
+    "img": "/images/cat.jpeg",
+    "gender": "male",
+    "residence": "충청"
+  }
+]
