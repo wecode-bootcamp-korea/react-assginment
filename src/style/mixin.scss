@@ -8,3 +8,28 @@
   font-size: $fontSize;
   font-weight: $fontWeight;
 }
+
+@mixin colors {
+  &.red {
+    background-color: red;
+  }
+  &.yellow {
+    background-color: yellow;
+  }
+  &.green {
+    background-color: green;
+  }
+  &.blue {
+    background-color: blue;
+  }
+}
+
+/* @mixin colors {
+  &.unactivate {
+    background-color: $btnColor;
+  }
+  &.activate {
+    background-color: $activatedBtnColor;
+  }
+}
+ */

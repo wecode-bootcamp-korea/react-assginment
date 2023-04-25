@@ -3,6 +3,9 @@
 
 .introduce {
   @include flexcenter;
+  flex-direction: column;
+  gap: 30px;
+
   height: 100vh;
   box-sizing: border-box;
 
@@ -54,5 +57,10 @@
     &Link {
       font-size: 0.8rem;
     }
+  }
+
+  .cardWrapper {
+    display: flex;
+    gap: 5px;
   }
 }

@@ -1,0 +1,27 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
+.colorCard {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 6px;
+
+  &Poster {
+    @include colors;
+    width: 100px;
+    height: 100px;
+  }
+
+  &Info {
+    @include textStyle(0.8rem, 700);
+    width: 100px;
+    line-height: 5px;
+    white-space: nowrap;
+
+    &Name {
+    }
+
+    &Rgb {
+    }
+  }
+}
