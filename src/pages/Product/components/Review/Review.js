@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = ({review}) => {
   const [ isOpenReview, setIsOpenReview ] = useState(false);
-
   return (
-    <div className="review">
+    
+    <div className="review" >
       <div className="user">
         <img src="/images/avatar.jpg" alt="avatar" />
         <div className="userInfo">
@@ -13,7 +13,7 @@ const Review = () => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{review}</div>
       <div className="reviewMain">
         {isOpenReview && <div className="reviewMainContents">
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
