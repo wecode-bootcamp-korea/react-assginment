@@ -14,8 +14,7 @@ const Introduce = () => {
   
 
   return (
-      <>
-        <div className='wrap'>
+        <div className='Introduce'>
             <div className='container'>
                 <div className='box'>
                 </div>
@@ -33,7 +32,6 @@ const Introduce = () => {
               </div>
             </div>
         </div>
-        </>
   )
 }
 
