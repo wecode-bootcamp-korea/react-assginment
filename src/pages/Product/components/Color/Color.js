@@ -1,8 +1,8 @@
 import React, { useState } from "react";         //버튼을 누르면 바뀌는 동적인 값을 관리하기 위해 state사용
 import "./Color.scss";                           //useState 함수는 Hook의 일종//
 
-const Color = () => {                            /함수만들기, const 새롭게만들함수 = () => {} , color 컴포넌트 만들기 /
-  const [color, setColor] = useState("white");   //변수 color, setColor는 다름 이름으로 바뀔 수 있습니다.// 
+const Color = () => {                           
+  const [color, setColor] = useState("white");   //변수 color, setColor는 임의의 변수.// 
 
   const changeColor = (selectedColor) => {
     setColor(selectedColor);
