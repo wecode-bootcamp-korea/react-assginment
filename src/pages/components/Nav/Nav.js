@@ -23,7 +23,9 @@ const Nav = () => {
       {isOpenMenu && (
         <div className="menuBox">
           {menuList.map((menu) => (
-            <Link to={menu.goTo}>{menu.title}</Link>
+            <Link to={menu.goTo} key={menu.id}>
+              {menu.title}
+            </Link>
           ))}
         </div>
       )}

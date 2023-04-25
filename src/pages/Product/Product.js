@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Color from "./components/Color/Color";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Count from "./components/Count/Count";
@@ -6,7 +6,7 @@ import Review from "./components/Review/Review";
 import "./Product.scss";
 
 const Product = () => {
-  const [color, setColor] = useState('white');
+  const [color, setColor] = useState("white");
   const [count, setCount] = useState(1);
   let price = 300;
 
@@ -18,7 +18,7 @@ const Product = () => {
             src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
           />
-        <ColorButton className={`colorButton ${color}`}/>
+          <ColorButton className={`colorButton ${color}`} />
         </div>
         <div className="productDetailInfo">
           <span className="title">골프공</span>
@@ -27,9 +27,9 @@ const Product = () => {
           <Color color={color} setColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
-            <Count count={count} setCount={setCount}/>
+            <Count count={count} setCount={setCount} />
           </div>
-          <span>최종 가격 : {count*price} 원</span>
+          <span>최종 가격 : {count * price} 원</span>
           <button className="buyBtn">구매하기</button>
         </div>
       </div>
@@ -37,7 +37,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review color={color}/>
+        <Review color={color} />
       </div>
     </div>
   );
