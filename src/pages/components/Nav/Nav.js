@@ -5,6 +5,12 @@ import "./Nav.scss";
 const Nav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const location = useLocation();
+  const Menu = [
+    { id: 1, link: "/", name: "메인으로 가기" },
+    { id: 2, link: "/review", name: "리뷰 컴포넌트 가기" },
+    { id: 3, link: "/count", name: "카운트 컴포넌트 가기" },
+    { id: 4, link: "/color", name: "컬러 컴포넌트 가기" },
+  ];
 
   useEffect(() => {
     setIsOpenMenu(false);
@@ -22,10 +28,13 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          <Link to="/">메인으로 가기</Link>
-          <Link to="/review">리뷰 컴포넌트 가기</Link>
-          <Link to="/count">카운트 컴포넌트 가기</Link>
-          <Link to="/color">컬러 컴포넌트 가기</Link>
+          {Menu.map((menuList) => {
+            return (
+              <Link key={menuList.id} to={menuList.link}>
+                {menuList.name}
+              </Link>
+            );
+          })}
         </div>
       )}
     </div>
