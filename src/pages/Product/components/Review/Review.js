@@ -1,7 +1,14 @@
-import React from "react";
+
 import "./Review.scss";
+import React, {useState} from "react";
 
 const Review = () => {
+const [comment, stateComment ] = useState(false)
+  
+const handleButton =()=>{
+  stateComment(!comment)
+}
+
   return (
     <div className="review">
       <div className="user">
@@ -12,15 +19,31 @@ const Review = () => {
         </div>
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+
+
+
+      {stateComment ==="false" ? null : null }
+     
       <div className="reviewMain">
-        <div className="reviewMainContents">
+
+        {comment===true ?         <div className="reviewMainContents">
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div>
-        <span className="reviewMainHandler" onClick={() => {}}>
+        </div>    : null}
+
+      
+        {comment===true ? <span className="reviewMainHandler" onClick={handleButton}>
+          
+          
+          접기 ⬆️
+        </span> :<span className="reviewMainHandler" onClick={handleButton}>
+          
           더보기 ▼
-        </span>
+          
+        </span>}
+        
+        
       </div>
     </div>
   );
