@@ -13,15 +13,15 @@ const Product = () => {
   // 변수
   const colors = [`white`, `red`, `yellow`];      // 색상
   const [color, setColor] = useState(colors[0]);  // 색상 변경
-  const [buyNum, setBuyNum] = useState(0);        // 가격 카운트
-  const totalPrice = product?.price * buyNum;     // 가격 총합
+  const [buyCount, setBuyCount] = useState(0);        // 가격 카운트
+  const totalPrice = product?.price * buyCount;     // 가격 총합
 
   // 함수
   const changeColor = col => setColor(col); // 색상 변경
 
   const counter = number => {   // 구매 수량 증가
-    if (buyNum === 1 && number === -1) return;
-    setBuyNum(buyNum => buyNum + number);
+    if (buyCount === 1 && number === -1) return;
+    setBuyCount(buyCount => buyCount + number);
   };
 
   // 동작
@@ -32,7 +32,7 @@ const Product = () => {
   }, []);
 
   useEffect(() => {
-    setBuyNum(product?.count);
+    setBuyCount(product?.count);
   }, [product?.count]);
 
   // 출력
@@ -61,7 +61,7 @@ const Product = () => {
               <Color colors={colors} color={color} changeColor={changeColor} />
               <div className="quantity">
                 <span> 수량 : </span>
-                <Count count={product.count} buyNum={buyNum} setBuyNum={setBuyNum} counter={counter} />
+                <Count count={product.count} buyCount={buyCount} setBuyCount={setBuyCount} counter={counter} />
               </div>
               <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
               <button className="buyBtn">구매하기</button>
