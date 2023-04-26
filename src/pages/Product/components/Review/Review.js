@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Review.scss";
 
 const Review = (props) => {
-  const { viewing, toggleReview } = props;
+  const { viewing, toggleReview, review } = props;
 
   return (
     <div className="review">
@@ -17,7 +17,7 @@ const Review = (props) => {
       <div className="reviewMain">
         {!viewing ? (
           <div className="reviewMainContents">
-            주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+            {review}
             <br />
             다음에도 필요하면 또 여기서 시킬 것 같아요.
           </div>
