@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = ({ color, productList }) => {
+const Review = ({ color, review }) => {
   const [summary, setSummary] = useState(Boolean);
   return (
     <div className="review">
@@ -12,7 +12,7 @@ const Review = ({ color, productList }) => {
           <div className="itemName">골프공, {color} 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">{productList && productList[0].review}</div>
+      <div className="reviewTitle">{review}</div>
       <div className="reviewMain">
         <div className={summary ? "hide" : "reviewMainContents"}>
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.

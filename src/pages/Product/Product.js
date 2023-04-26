@@ -9,7 +9,6 @@ const Product = () => {
   const [color, setColor] = useState("white");
   const [count, setCount] = useState(1);
   const [productList, setProductList] = useState([]);
-  let price = 300;
 
   useEffect(() => {
     fetch("/data/productData.json", {
@@ -40,7 +39,7 @@ const Product = () => {
             <Count count={count} setCount={setCount} />
           </div>
           <span>
-            최종 가격 : {productList[0] && productList[0].price * count} 원
+            최종 가격 : {count * (productList[0] && productList[0].price)} 원
           </span>
           <button className="buyBtn">구매하기</button>
         </div>
@@ -49,7 +48,10 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review color={color} />
+        <Review
+          color={color}
+          review={productList[0] && productList[0].review}
+        />
       </div>
     </div>
   );
