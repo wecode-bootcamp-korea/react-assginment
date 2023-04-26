@@ -7,8 +7,8 @@ import "./Product.scss";
 
 const Product = () => {
   const [color, setColor] = useState("white");
-  const [count, setCount] = useState(1);
   const [product, setProduct] = useState();
+  const [count, setCount] = useState();
 
   const price = 300;
   const totalPrice = price * count;
@@ -16,7 +16,10 @@ const Product = () => {
   useEffect(() => {
     fetch("data/product.json", { method: "GET" })
       .then((response) => response.json())
-      .then((data) => setProduct(data));
+      .then((data) => {
+        setProduct(data);
+        setCount(data?.count);
+      });
   }, []);
 
   return (
