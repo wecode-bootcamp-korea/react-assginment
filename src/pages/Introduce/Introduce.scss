@@ -4,6 +4,8 @@
 .introduce {
   @include flexCenter;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .wrapper {
     @include flexCenter;
@@ -58,6 +60,16 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         margin-top: 10px;
+      }
+    }
+  }
+  .colorCards {
+    display: flex;
+    .colorBox {
+      border: 1px solid black;
+      .colorBg {
+        width: 150px;
+        height: 150px;
       }
     }
   }
