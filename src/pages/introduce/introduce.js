@@ -40,7 +40,7 @@ const Profile = () => {
       <div className="colorContainer">
         {colorCard.map((color) => {
           return (
-            <div className="colorCard">
+            <div className="colorCard" key={color.id}>
               <div className={`color ${color.className}`} />
               <div className="content">
                 {color.name}
