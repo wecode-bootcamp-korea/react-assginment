@@ -4,33 +4,26 @@ import Color from "./components/Color/Color";
 import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
 import "./Product.scss";
+import useFetch from "../../hooks/useFetch";
 
 const Product = () => {
 
-  // DB
-  const [product, setProduct] = useState(null);
-
   // 변수
+  const product = useFetch(`/data/product.json`); // DB
   const colors = [`white`, `red`, `yellow`];      // 색상
   const [color, setColor] = useState(colors[0]);  // 색상 변경
-  const [buyCount, setBuyCount] = useState(0);        // 가격 카운트
-  const totalPrice = product?.price * buyCount;     // 가격 총합
+  const [buyCount, setBuyCount] = useState(0);    // 가격 카운트
+  const totalPrice = product?.price * buyCount;   // 가격 총합
 
   // 함수
-  const changeColor = col => setColor(col); // 색상 변경
+  const changeColor = select => setColor(select); // 색상 변경
 
-  const counter = number => {   // 구매 수량 증가
+  const counter = number => {               // 구매 수량 증가
     if (buyCount === 1 && number === -1) return;
     setBuyCount(buyCount => buyCount + number);
   };
 
   // 동작
-  useEffect(() => {
-    fetch(`/data/product.json`)
-      .then(res => res.json())
-      .then(res => setProduct(res));
-  }, []);
-
   useEffect(() => {
     setBuyCount(product?.count);
   }, [product?.count]);
