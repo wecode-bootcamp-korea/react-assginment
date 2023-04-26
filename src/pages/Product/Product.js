@@ -13,12 +13,13 @@ const Product = () => {
   const price = 300;
   const totalPrice = price * count;
 
+  // if(!product) return;
+
   useEffect(() => {
     fetch("data/product.json", { method: "GET" })
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
-        setCount(data?.count);
       });
   }, []);
 
