@@ -1,0 +1,50 @@
+[
+  {
+    "name": "고양이",
+    "age": 4,
+    "gender": "male",
+    "hometown": "춘천"
+  },
+  {
+    "name": "고냥이",
+    "age": 14,
+    "gender": "female",
+    "hometown": "양평"
+  },
+  {
+    "name": "고용이",
+    "age": 7,
+    "gender": "male",
+    "hometown": "천안"
+  },
+  {
+    "name": "모울이",
+    "age": 1,
+    "gender": "female",
+    "hometown": "부산"
+  },
+  {
+    "name": "곰율이",
+    "age": 3,
+    "gender": "male",
+    "hometown": "노원"
+  },
+  {
+    "name": "고울이",
+    "age": 11,
+    "gender": "male",
+    "hometown": "평양"
+  },
+  {
+    "name": "고물이",
+    "age": 9,
+    "gender": "male",
+    "hometown": "전주"
+  },
+  {
+    "name": "기양이",
+    "age": 2,
+    "gender": "male",
+    "hometown": "충청"
+  }
+]
