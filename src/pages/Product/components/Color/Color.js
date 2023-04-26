@@ -1,12 +1,18 @@
-import React, { useState } from "react";         //버튼을 누르면 바뀌는 동적인 값을 관리하기 위해 state사용
-import "./Color.scss";                           //useState 함수는 Hook의 일종//
+import React, { useState } from "react";         
+import "./Color.scss";                         
+import ColorButton from "../ColorButton/ColorButton";
 
 const Color = () => {                           
-  const [color, setColor] = useState("white");   //변수 color, setColor는 임의의 변수.// 
+  const [color, setColor] = useState("white");   
 
-  const changeColor = (selectedColor) => {
-    setColor(selectedColor);
-  };
+  const changeColorWhite = () => {setColor('white')};
+  const changeColorRed = () => {setColor('red')};
+  const changeColorYellow = () => {setColor('yellow')};
+
+
+  // const changeColor = (selectedColor) => {
+  //   setColor(selectedColor);
+  // };
 
   return (
     <div className="color">
@@ -16,18 +22,13 @@ const Color = () => {
         {color}
       </span>
       <div className="colorHandler">
-        <button
-          className="colorButton white"
-          onClick={() => changeColor("white")}
-        />
-        <button
-          className="colorButton red"
-          onClick={() => changeColor("red")}
-        />
-        <button
-          className="colorButton yellow"
-          onClick={() => changeColor("yellow")}
-        />
+
+        <ColorButton changeColor={changeColorWhite} color={"white"}/>
+
+        <ColorButton changeColor={changeColorRed} color={"red"}/>
+        
+        <ColorButton changeColor={changeColorYellow} color={"yellow"}/>
+        
       </div>
     </div>
   );

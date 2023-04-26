@@ -1,6 +1,6 @@
-
-import "./Review.scss";
 import React, {useState} from "react";
+import "./Review.scss";
+
 
 const Review = () => {
 const [comment, stateComment ] = useState(false)
@@ -22,7 +22,7 @@ const handleButton =()=>{
 
 
 
-      {stateComment ==="false" ? null : null }
+      {stateComment ===false ? null : null }
      
       <div className="reviewMain">
 

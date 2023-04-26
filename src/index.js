@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Router from './Router' //라우터연결 방법
-
+import ColorButton from "./pages/Product/components/ColorButton/ColorButton";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Router/>);
