@@ -1,19 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ProductList.scss";
+import useFetch from "../../hooks/useFetch";
 
 const ProductList = () => {
 
-  // DB
-  const [productList, setproductList] = useState(null);
-
-  // 동작
-  useState(() =>
-    fetch(`/data/ProductList.json`)
-      .then(res => res.json())
-      // .then(res => console.log(res))
-      .then(res => setproductList(res))
-    , []
-  );
+  // 변수
+  const productList = useFetch(`/data/ProductList.json`);
 
   // 출력
   return (
