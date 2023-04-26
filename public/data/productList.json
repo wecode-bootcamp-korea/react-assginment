@@ -1,0 +1,16 @@
+[
+  { "name": "고양이", "age": 4, "gender": "male", "region": "춘천", "id": 1 },
+  {
+    "name": "고냥이",
+    "age": 14,
+    "gender": "female",
+    "region": "양평",
+    "id": 2
+  },
+  { "name": "고용이", "age": 7, "gender": "male", "region": "천안", "id": 3 },
+  { "name": "모울이", "age": 1, "id": 4, "gender": "female", "region": "부산" },
+  { "name": "곰율이", "age": 3, "id": 5, "gender": "male", "region": "노원" },
+  { "name": "고울이", "age": 11, "id": 6, "gender": "male", "region": "평양" },
+  { "name": "고물이", "age": 9, "id": 7, "gender": "male", "region": "전주" },
+  { "name": "기양이", "age": 2, "id": 8, "gender": "male", "region": "충청" }
+]
