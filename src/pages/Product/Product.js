@@ -6,12 +6,17 @@ import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
 
 const Product = () => {
+  const [productInfo, setProductInfo] = useState([]);
+
   // 가격*수량 = 최종가격 로직
-  const [count, setCount] = useState(1);
+  // const [count, setCount] = useState(1);
+  // const countInitialVal = productInfo[0] && productInfo[0].count;
+  const [count, setCount] = useState(null);
+  console.log("JSON count? ", productInfo[0] && typeof productInfo[0].count);
   // console.log("수량 알려줘 ", count);
 
-  const price = 300;
-  // const price = productInfo[0].price;
+  // const price = 300;
+  const price = productInfo[0] && productInfo[0].price; //type : number
   const totalPrice = price * count;
 
   // 색상 누르면, <ColorButton /> 색상 변경하기.
@@ -23,14 +28,12 @@ const Product = () => {
   // => setImg는 필요가 없다. color라는 state를 전역에서 공유하기 때문에(부모에서 state 관리를 해줌) // ColorButton 컴포넌트와 해당 컴포넌트 내 button 태그 둘 다 클릭에 해당하는 이벤트핸들러가 존재한다. -> Warning 발생
   const [img, setImg] = useState(`/images/golf-ball-${color}.jpg`);
 
-  const [productInfo, setProductInfo] = useState([]);
-
   useEffect(() => {
     fetch("/data/productInfo.json")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setProductInfo(data);
+        setCount(data[0].count);
       });
   }, []);
 
@@ -53,7 +56,7 @@ const Product = () => {
             {productInfo[0] && productInfo[0].title}
           </span>
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+          <span>가격 : {price && price.toLocaleString()} 원</span>
           <Color color={color} setColor={setColor} setImg={setImg} />
           <div className="quantity">
             <span> 수량 : </span>
