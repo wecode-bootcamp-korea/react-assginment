@@ -1,19 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Count.scss";
 
 const Count = (props) => {
-  console.log(props);
-  // useEffect(() => {
-  //   props.setCount(props.count + 1);
-  // }, [props]);
-
-  const handlePlusClick = () => {
-    props.setCount(props.count + 1);
-    // props.setCount((prev) => prev + 1);
-    console.log("handle");
-    console.log(props.count);
-  };
-
   return (
     <div className="count">
       <div className="countInput">
@@ -25,7 +13,13 @@ const Count = (props) => {
           -
         </button>
         <div className="countInputText">{props.count}</div>
-        <button onClick={handlePlusClick}>+</button>
+        <button
+          onClick={() => {
+            props.setCount(props.count + 1);
+          }}
+        >
+          +
+        </button>
       </div>
       <button
         className="resetBtn"
