@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "고양이",
+        "img": "/images/cat.jpeg",
+        "age": "4살",
+        "gender": "male",
+        "home": "춘천"
+    },
+
+    {
+        "id": 2,
+        "name": "고용이",
+        "img": "/images/cat.jpeg",
+        "age": "7살",
+        "gender": "male",
+        "home": "천안"
+    },
+
+    {
+        "id": 3,
+        "name": "모올이",
+        "img": "/images/cat.jpeg",
+        "age": "1살",
+        "gender": "female",
+        "home": "부산"
+    
+    },
+    
+    {
+        "id": 4,
+        "name": "곰율이",
+        "img": "/images/cat.jpeg",
+        "age": "3살",
+        "gender": "male",
+        "home": "노원"
+    
+    },
+
+{
+    "id": 5,
+    "name": "고물이",
+    "img": "/images/cat.jpeg",
+    "age": "9살",
+    "gender": "male",
+    "home": "전주"
+
+    },
+
+{  
+    "id": 6,
+    "name": "기양이",
+    "img": "/images/cat.jpeg",
+    "age": "2살",
+    "gender": "male",
+    "home": "충청"
+
+},
+
+{
+    "id": 7,
+    "name": "고울이",
+    "img": "/images/cat.jpeg",
+    "age": "11살",
+    "gender": "male",
+    "home": "평양"
+
+},
+
+{
+    "id": 8,
+    "name": "고냥이",
+    "img": "/images/cat.jpeg",
+    "age": "14살",
+    "gender": "female",
+    "home": "양평"
+
+}
+]
