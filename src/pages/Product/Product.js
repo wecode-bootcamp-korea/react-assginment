@@ -7,7 +7,7 @@ import "./Product.scss";
 
 const Product = () => {
   const [color, setColor] = useState("white");
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState();
   const [count, setCount] = useState(1);
 
   const price = 300;
