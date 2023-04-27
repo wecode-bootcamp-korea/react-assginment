@@ -3,15 +3,15 @@ import "./Count.scss";
 
 
 const Count= () => { 
-  const [count, setCount] = useState(1)
+ const [props, setCount] =  useState(1)
 
   const decreaseCount = ()=> {
-    if (count>1){
-      setCount(count -1)
+    if (props>1){
+      setCount(props -1)
     }
   }
   const increaseCount = ()=> {
-      setCount(count +1)
+      setCount(props +1)
   }
   
   const resetCount = ()=> {
@@ -22,7 +22,7 @@ const Count= () => {
    
   <div>
       <button onClick={decreaseCount}>-</button>
-      <div>{count}</div>
+      <div>{props}</div>
       <button onClick={increaseCount}>+</button>
       <button onClick={resetCount}>reset</button>
   </div>
