@@ -8,7 +8,6 @@ const Introduce = () => {
 
   const handleInput = (e) => {
     console.log("input 태그 동작");
-    // console.log(e.target.value)
   };
 
   const handleButton = () => {
