@@ -12,6 +12,8 @@ const Product = () => {
   const price = 300 
   const totalPrice = price * count;
 
+    
+
 
   return (
     <div className="product">
