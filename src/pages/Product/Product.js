@@ -6,11 +6,12 @@ import Review from "./components/Review/Review";
 import "./Product.scss";
 
 const Product = () => {
-  const [color, setColor] = useState("white");
-  const [count, setCount] = useState(1);
   const [product, setProduct] = useState({});
+  const [color, setColor] = useState("white");
+  const [count, setCount] = useState();
+  // const [count, setCount] = useState(product.count);
 
-  const totalPrice = product ? product.price * count : 0;
+  const totalPrice = product.price ? product.price * count : 0;
 
   useEffect(() => {
     fetch("/data/productData.json", {
@@ -19,8 +20,13 @@ const Product = () => {
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
+        // setCount(data.count);
       });
   }, []);
+
+  useEffect(() => {
+    setCount(product.count);
+  }, [product.count]);
 
   // if (!product) return;
 
