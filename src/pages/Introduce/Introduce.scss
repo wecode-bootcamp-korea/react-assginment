@@ -13,10 +13,10 @@
       padding-bottom: 0;
     }
     h1 {
+      @include textStyle(20px, 20px);
       margin-left: 15px;
       margin-top: 0px;
       margin-bottom: 0;
-      @include textStyle(20px, 20px);
       // font-size: 20px;
       // font-weight: 20px;
       &:hover {
@@ -24,11 +24,11 @@
       }
     }
     h2 {
+      @include textStyle(15px, 15px);
       margin-left: 15px;
       margin-top: 0px;
-      @include textStyle(15px, 15px);
     }
-    input {
+    .inputClass {
       width: 80px;
     }
   }

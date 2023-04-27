@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
 import "./ColorButton.scss";
 
-const ColorButton = ({className, color, ProductSetColor}) => { 
+const ColorButton = ({ className, ProductSetColor }) => {
   const handle = () => {
-    ProductSetColor()
-  }
+    ProductSetColor();
+  };
 
-  return (
-    <button className={className} onClick={handle} />
-  )
-}
+  return <button className={className} onClick={handle} />;
+};
 
-export default ColorButton
+export default ColorButton;
