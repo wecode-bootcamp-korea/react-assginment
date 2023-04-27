@@ -1,6 +1,7 @@
 import React ,{useState}from "react";
 import ColorButton from "../ColorButton/ColorButton";
-import "../ColorButton/ColorButton.scss";
+import "./Color.scss";
+
 
 const Color = () => {
 
