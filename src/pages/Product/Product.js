@@ -11,7 +11,7 @@ const Product = () => {
         <div className="productDetailImg">
           <img
             src={`/images/golf-ball-.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-            alt={`golf-ball`}
+            alt={`golf-ball`} 
           />
           {/* ColorButton 컴포넌트 위치 */}
         </div>
