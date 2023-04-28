@@ -5,17 +5,6 @@ import "./introduce.scss";
 
 const Profile = () => {
   const navigate = useNavigate();
-  const colorCard = [
-    { id: 1, className: "red", name: "이름 : red", rgb: "rgb : 255, 0, 0" },
-    {
-      id: 2,
-      className: "yellow",
-      name: "이름 : yellow",
-      rgb: "rgb : 255, 255, 0",
-    },
-    { id: 3, className: "green", name: "이름 : green", rgb: "rgb : 0, 128, 0" },
-    { id: 4, className: "blue", name: "이름 : blue", rgb: "rgb : 0, 0, 255" },
-  ];
   const ToProduct = () => {
     navigate("/product");
   };
@@ -38,7 +27,7 @@ const Profile = () => {
         </Link>
       </div>
       <div className="colorContainer">
-        {colorCard.map((color) => {
+        {COLORCARD.map((color) => {
           return (
             <div className="colorCard" key={color.id}>
               <div className={`color ${color.className}`} />
@@ -56,3 +45,15 @@ const Profile = () => {
 };
 
 export default Profile;
+
+const COLORCARD = [
+  { id: 1, className: "red", name: "이름 : red", rgb: "rgb : 255, 0, 0" },
+  {
+    id: 2,
+    className: "yellow",
+    name: "이름 : yellow",
+    rgb: "rgb : 255, 255, 0",
+  },
+  { id: 3, className: "green", name: "이름 : green", rgb: "rgb : 0, 128, 0" },
+  { id: 4, className: "blue", name: "이름 : blue", rgb: "rgb : 0, 0, 255" },
+];

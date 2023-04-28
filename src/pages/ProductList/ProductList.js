@@ -18,7 +18,7 @@ const ProductList = () => {
       <div className="listContainer">
         {kitty.map((kittyInfo) => {
           return (
-            <div className="listBox">
+            <div className="listBox" key={kittyInfo.id}>
               <img
                 className="listImage"
                 src={`${kittyInfo.img}.jpeg`}
