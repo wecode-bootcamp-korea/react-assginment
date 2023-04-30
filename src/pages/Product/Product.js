@@ -13,9 +13,7 @@ const Product = () => {
   const totalPrice = price * count
 
   useEffect(() => {
-    fetch('/data/product_info.json', {
-      method: 'GET'
-    }).then(res => res.json()).then(data => {
+    fetch('/data/product_info.json').then(res => res.json()).then(data => {
       setProduct(data)
     })
   }, [])
@@ -24,7 +22,6 @@ const Product = () => {
     <div className="product">
       {product.map((productInfo) => (
       <div key={productInfo.id} >
-        {console.log(productInfo)}
         <div className="productDetail" >
           <div className="productDetailImg">
             <img

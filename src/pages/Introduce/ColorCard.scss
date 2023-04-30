@@ -1,7 +1,7 @@
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
-.colorcardItem {
+.ColorCard {
   margin: 5px;
   padding: 10px;
   width: 120px;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 
   .colorBox{
-    margin:0 0 10px 0;
+    margin-bottom: 10px;
     width: 100px;
     height: 100px;
   }

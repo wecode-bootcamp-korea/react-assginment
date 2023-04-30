@@ -15,8 +15,8 @@ const Introduce = () => {
   }
 
   return (
-    <div className="introBox">
-      <div className="introduce">
+    <div className="Introduce">
+      <div className="introBox">
         <img src="images/jellyfish.jpg" alt="해파리 사진" />
         <h2>김수정</h2>
         <h3>45기</h3>
