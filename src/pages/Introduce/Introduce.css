@@ -41,3 +41,12 @@
 .smallStyle {
     font-size: small;
 }
+
+input {
+    width: 100px;
+}
+
+button {
+    width: 40px;
+    
+}

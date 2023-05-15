@@ -1,6 +1,13 @@
 import React from "react"
 import "./Introduce.css";
 
+const handleInput = (e) => {
+    console.log("input 태그 동작");
+}
+
+const handleButton = (e) => {
+    console.log("button 태그 동작");
+}
 function Introduce (){
     return(
         <div className="main">
@@ -13,6 +20,9 @@ function Introduce (){
                         <span className="boldStyle">김민지</span>
                         <br/>
                         <span className="smallStyle">46기</span>
+                        <br />
+                        <input type="text" onChange={handleInput}/>
+                        <button type="button" onClick={handleButton}>클릭</button>
                     </div>
                 </div>
             </div>
