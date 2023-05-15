@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#root {
+  width: 120px;
+  height: 150px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.Image {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+.Wrap {
+  margin-left: 9px;
+  margin-top: 5px;
+}
+
+.Name {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 1px;
+}
+
+.Number {
+  margin-top: -10px;
+  font-size: 10px;
+}
