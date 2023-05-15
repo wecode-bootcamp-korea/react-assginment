@@ -1,16 +1,23 @@
-p {
-  margin: 0 0 0 5px;
+* {
+  box-sizing: border-box;
+}
+
+p,
+button,
+input {
+  margin: 0;
   padding: 0;
 }
 
 .introduce {
   border: 1px solid black;
-  width: 100px;
-  height: 120px;
+  width: 160px;
+  height: 170px;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-items: center;
+  align-items: 0;
   border-radius: 6px;
 }
 
@@ -19,15 +26,33 @@ img {
   width: 50px;
   height: 50px;
   border: 1px solid transparent;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .name {
   font-weight: bold;
   margin-top: 10px;
   font-size: 14px;
+  margin-left: 15px;
 }
 
 .th {
   font-size: 12px;
+  margin-left: 15px;
+}
+
+.textInput {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  width: 40px;
+  height: 20px;
+}
+
+input {
+  width: 90px;
+  height: 20px;
 }
