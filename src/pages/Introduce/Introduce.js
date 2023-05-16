@@ -1,17 +1,20 @@
 import React from 'react';
-import './Introduce.css';
+import { Link, useNavigate } from 'react-router-dom';
+import './Introduce.scss';
+
 
 function Introduce () {
     function handleInput() {
         console.log("input 태그 동작");
-    }
+    };
     
+    const navigate = useNavigate();
     function handleButton() {
-        console.log("button 태그 동작");
-    }
+        navigate('/product');
+    };
 
     return (
-        <main>
+        <main className='introduce'>
             <article>
                 <img src="/images/wecode_logo.png" alt="wecode logo" className="logo"/>
                 <p className="myName">손자현</p>
@@ -20,10 +23,14 @@ function Introduce () {
                     <input 
                         type="text" 
                         className="inputBox"
-                        onChange={event => handleInput()}
+                        onChange={handleInput}
                     />
-                    <button type="button" className="inputBtn" onClick={event => handleButton()}>클릭</button>
+                    <button
+                        type="button"
+                        className="inputBtn"
+                        onClick={handleButton}>클릭</button>
                 </div>
+                <Link to='/product' className='link'>product 페이지로 이동</Link>
             </article>
         </main>
     );
