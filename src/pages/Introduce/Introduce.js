@@ -1,7 +1,6 @@
-import React from "react";
-import { flushSync } from "react-dom";
+import { Link } from "react-router-dom";
 
-import "./Introduce.css";
+import "./Introduce.scss";
 
 function Introduce() {
   function handleButton() {
@@ -20,9 +19,14 @@ function Introduce() {
         <p className="Number">46기 </p>
 
         <div className="btnWrap">
-          <input type={"Text"} onChange={handleInput} />
-          <button onClick={handleButton}>클릭</button>
+          <input type={"text"} onChange={handleInput} />
+          <Link to="/product" className="productBtn">
+            클릭
+          </Link>
         </div>
+        <Link to="/product" className="productBtn">
+          product 페이지로 이동
+        </Link>
       </div>
     </div>
   );

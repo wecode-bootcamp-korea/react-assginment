@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Introduce from "./pages/Introduce/Introduce";
-import "./pages/Introduce/Introduce.css";
+import Router from "./Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render();
-root.render(<Introduce />);
+root.render(<Router />);
