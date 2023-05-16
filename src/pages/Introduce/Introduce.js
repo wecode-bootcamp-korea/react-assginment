@@ -14,7 +14,7 @@ const Introduce = () => {
       <p className="name">백지율</p>
       <p className="batch">46기</p>
       <div className="textInput">
-        <input type={"text"} onClick={handleInput} placeholder="입력"></input>
+        <input type="text" onClick={handleInput} placeholder="입력" />
         <button
           onClick={() => {
             navigate("/product");
