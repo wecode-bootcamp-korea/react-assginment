@@ -1,5 +1,5 @@
 import React from "react";
-import "./introduce.css";
+import "./introduce.scss";
 import { Link } from "react-router-dom";
 
 const handleInput = () => {
