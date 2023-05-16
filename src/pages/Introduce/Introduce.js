@@ -17,18 +17,18 @@ function Introduce () {
         <main className='introduce'>
             <article>
                 <img src="/images/wecode_logo.png" alt="wecode logo" className="logo"/>
-                <p className="myName">손자현</p>
+                <a className="myName">손자현</a>
                 <p className="description">46기</p>
                 <div className="inputContainer">
                     <input 
                         type="text" 
                         className="inputBox"
-                        onChange={handleInput}
+                        onChange={ handleInput }
                     />
                     <button
                         type="button"
                         className="inputBtn"
-                        onClick={handleButton}>클릭</button>
+                        onClick={ handleButton }>클릭</button>
                 </div>
                 <Link to='/product' className='link'>product 페이지로 이동</Link>
             </article>
