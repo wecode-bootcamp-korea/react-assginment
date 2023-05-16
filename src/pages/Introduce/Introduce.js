@@ -8,13 +8,13 @@ function Introduce() {
 
   return (
     <div className="wecode">
-      <div className="Wrap">
+      <div className="wrap">
         <div className="image">>wecode</div>
-        <p className="Name">김민정</p>
-        <p className="Number">46기 </p>
+        <p className="name">김민정</p>
+        <p className="number">46기 </p>
 
         <div className="btnWrap">
-          <input type={"text"} onChange={handleInput} />
+          <input type="text" onChange={handleInput} />
           <Link to="/product" className="productBtn">
             클릭!
           </Link>
