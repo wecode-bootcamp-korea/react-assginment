@@ -1,0 +1,40 @@
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
+
+body {
+  @include flexCenter;
+}
+
+.introduce {
+
+  .container {
+    box-sizing: border-box;
+    padding: 35px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .name {
+    width: 300px;
+    font-family: sans-serif;
+    @include textStyle(35px, 600);
+    &:hover {
+      color: $color-green;
+    }
+  }
+
+  .batch {
+    width: 300px;
+    font-family: sans-serif;
+    @include textStyle(25px, 500);
+  }
+}
