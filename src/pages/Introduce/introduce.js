@@ -1,5 +1,6 @@
 import React from "react";
 import "./introduce.css";
+import { Link } from "react-router-dom";
 
 const handleInput = () => {
   console.log("input 태그 동작");
@@ -23,7 +24,12 @@ const Introduce = () => {
         </div>
 
         <input type="text" onChange={handleInput} />
-        <button onClick={handleButton}>클릭</button>
+        <Link to="Product">
+          <button onClick={handleButton}>클릭</button>
+        </Link>
+        <Link to="Product">
+          <a href="/">product 페이지로 이동</a>
+        </Link>
       </div>
     </>
   );
