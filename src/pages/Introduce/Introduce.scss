@@ -1,0 +1,74 @@
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+p,
+button,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+.introduce {
+  @include flexCenter;
+  border: 1px solid $colorBlack;
+  width: 160px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: 0;
+  border-radius: 6px;
+}
+
+.introduce {
+  img {
+    align-self: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    margin-top: 20px;
+  }
+
+  .name {
+    @include textStyle(16px, bold);
+    margin-top: 10px;
+    margin-left: 15px;
+    color: $colorBlack;
+    &:hover {
+      color: $colorGreen;
+    }
+  }
+
+  .batch {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .textInput {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .textInput {
+    button {
+      width: 40px;
+      height: 20px;
+    }
+
+    input {
+      width: 90px;
+      height: 20px;
+    }
+  }
+
+  a {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
