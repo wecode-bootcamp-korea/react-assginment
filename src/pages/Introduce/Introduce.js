@@ -1,14 +1,18 @@
 import React from "react"
 import "./Introduce.css";
+import { Link, useNavigate } from "react-router-dom";
 
-const handleInput = (e) => {
-    console.log("input 태그 동작");
-}
 
-const handleButton = (e) => {
-    console.log("button 태그 동작");
-}
 function Introduce (){
+    const navigate = useNavigate();
+    
+    const handleButton = () => {
+        navigate('./product');
+    }
+
+    const handleInput = (e) => {
+        console.log("input 태그 동작");
+    }
     return(
         <div className="main">
             <div className="container">
@@ -23,6 +27,7 @@ function Introduce (){
                         <br />
                         <input type="text" onChange={handleInput}/>
                         <button type="button" onClick={handleButton}>클릭</button>
+                        <Link to="./product">product페이지로 이동</Link>
                     </div>
                 </div>
             </div>
