@@ -1,6 +1,8 @@
 import React from "react"
 import { useNavigate,Link } from "react-router-dom"
-import "./Introduce.css"
+import "./Introduce.scss"
+import "../../style/variables.scss"
+
 
 function Introduce(){
     let navigate = useNavigate();
