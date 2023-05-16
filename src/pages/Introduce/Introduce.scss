@@ -1,11 +1,8 @@
+@import "../../style/common.scss";
+@import "../../style/reset.scss";
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
-* {
-  box-sizing: border-box;
-}
-
-p,
 button,
 input {
   margin: 0;
@@ -14,7 +11,7 @@ input {
 
 .introduce {
   @include flexCenter;
-  border: 1px solid $colorBlack;
+  border: 1px solid $blackColor;
   width: 160px;
   height: 190px;
   display: flex;
@@ -35,10 +32,10 @@ input {
     @include textStyle(16px, bold);
     margin-top: 10px;
     margin-left: 15px;
-    color: $colorBlack;
+    color: $blackColor;
 
     &:hover {
-      color: $colorGreen;
+      color: $greenColor;
     }
   }
 
