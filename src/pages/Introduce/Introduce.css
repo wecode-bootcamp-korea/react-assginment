@@ -6,6 +6,11 @@ main {
 }
 
 .box {
+<<<<<<< HEAD
+=======
+  width: 150px;
+  height: 205px;
+>>>>>>> 594f0cb0c1880982972ebb95cf99b3d7b8559c7c
   border: 1px solid black;
   border-radius: 5px;
 }
