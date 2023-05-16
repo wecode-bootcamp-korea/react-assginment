@@ -12,8 +12,8 @@ const handleButton = () => {
 const Introduce = () => {
   return (
     <>
-      <div id="wrap">
-        <div id="Black">
+      <div className="wrap">
+        <div className="profileBackgroundColor">
           <p id="wecode"> &gt; wecode </p>
         </div>
         <div id="profile">
