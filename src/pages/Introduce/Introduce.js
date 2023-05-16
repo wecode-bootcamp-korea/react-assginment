@@ -1,4 +1,4 @@
-import "./Introduce.css";
+import "./Introduce.scss";
 import { Link, Navigate, UseNavigate, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
@@ -9,13 +9,9 @@ const Introduce = () => {
   return (
     <main>
       <div className="introduce">
-        <img
-          className="myprofile"
-          src="images/myprofile.JPG"
-          alt="프로필사진"
-        />
+        <div className="card">wecode</div>
         <p className="name">장건웅</p>
-        <p className="YearTh">46기</p>
+        <p className="yearTh">46기</p>
         <div className="form-wrap">
           <input className="introduce-input" onChange={handleInput} />
           <button
