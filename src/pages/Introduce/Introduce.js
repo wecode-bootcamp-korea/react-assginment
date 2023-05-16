@@ -1,5 +1,6 @@
 import React from "react";
 import "./Introduce.css";
+import { Link } from "react-router-dom";
 
 function Introduce() {
   const handleInput = () => {
@@ -15,16 +16,11 @@ function Introduce() {
       <div className="name">조혜진</div>
       <div className="batch">46기</div>
       <input type="text" onChange={handleInput} />
-      <button onClick={handleButton}>클릭</button>
-
+      <Link to="/product"><button onClick={handleButton}>클릭</button></Link>
+      <br/>
+      <Link to="/product">product 페이지로 이동</Link>
     </div>
-  )
+  );
 };
-
-function handleButton() {
-  console.log("button 태그 동작")
-}
-
-
 
 export default Introduce;
