@@ -12,7 +12,7 @@ input {
 .introduce {
   border: 1px solid black;
   width: 160px;
-  height: 170px;
+  height: 190px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -32,12 +32,12 @@ img {
 .name {
   font-weight: bold;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 15px;
 }
 
 .th {
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 15px;
 }
 
@@ -55,4 +55,10 @@ button {
 input {
   width: 90px;
   height: 20px;
+}
+
+a {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
 }

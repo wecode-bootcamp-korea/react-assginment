@@ -1,14 +1,13 @@
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Introduce.css";
 
 const handleInput = () => {
   console.log("input 태그 동작");
 };
 
-const handleButton = () => {
-  console.log("button 태그 동작");
-};
-
 const Introduce = () => {
+  const navigate = useNavigate();
   return (
     <div className="introduce">
       <img src="images/avatar.jpg" alt="" />
@@ -16,8 +15,15 @@ const Introduce = () => {
       <p className="th">46기</p>
       <div className="textInput">
         <input type={"text"} onClick={handleInput} placeholder="입력"></input>
-        <button onClick={handleButton}>클릭</button>
+        <button
+          onClick={() => {
+            navigate("/product");
+          }}
+        >
+          클릭
+        </button>
       </div>
+      <Link to="/product">product 페이지로 이동</Link>
     </div>
   );
 };
