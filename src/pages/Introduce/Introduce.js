@@ -21,7 +21,7 @@ function Introduce() {
         <div className="btnWrap">
           <input type={"text"} onChange={handleInput} />
           <Link to="/product" className="productBtn">
-            클릭
+            클릭!
           </Link>
         </div>
         <Link to="/product" className="productBtn">
