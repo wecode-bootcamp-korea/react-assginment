@@ -1,0 +1,10 @@
+@mixin flexCenter($flexDirection, $justify, $alignItems) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justify;
+    align-items: $alignItems;
+}
+
+@mixin textStyle($weight) {
+    font-weight: $weight;
+  }
