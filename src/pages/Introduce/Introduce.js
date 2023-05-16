@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
-
 import "./Introduce.scss";
 
 function Introduce() {
-  function handleButton() {
-    console.log("button 태그 동작");
-  }
-
   function handleInput() {
     console.log("input 태그 동작");
   }
