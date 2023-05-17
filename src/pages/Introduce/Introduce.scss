@@ -13,12 +13,12 @@ body {
   height: 260px;
   border-radius: 5px;
   border: 1px solid black;
-}
 
-.Wrap {
-  height: 260px;
-  margin-left: 15px;
-  margin-top: 10px;
+  .wrap {
+    height: 260px;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
 
   .image {
     height: 100vh;
@@ -32,7 +32,12 @@ body {
     color: white;
   }
 
-  .Name {
+  .number {
+    margin-top: -10px;
+    font-size: 10px;
+  }
+
+  .name {
     font-weight: bold;
     font-size: 13px;
     margin-top: 1px;
@@ -40,11 +45,6 @@ body {
     &:hover {
       color: $PrimaryGreen;
     }
-  }
-
-  .Number {
-    margin-top: -10px;
-    font-size: 10px;
   }
 }
 
@@ -65,7 +65,7 @@ body {
     text-decoration: none;
   }
 
-  input {
+  .inputTxt {
     margin-left: -10px;
     height: 13px;
     width: 130px;

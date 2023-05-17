@@ -14,7 +14,7 @@ function Introduce() {
         <p className="number">46기 </p>
 
         <div className="btnWrap">
-          <input type="text" onChange={handleInput} />
+          <input className="inputTxt" type="text" onChange={handleInput} />
           <Link to="/product" className="productBtn">
             클릭!
           </Link>
