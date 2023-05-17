@@ -1,20 +1,27 @@
 import React from "react";
-import titleImage from "../../assets/src/images/images.png";
+import titleImage from "../../images/images.png";
+import "./Introduce.css";
 
-const Introduce =()=> {
+const handleButton = () => {
+  console.log("button 태그 동작");
+};
 
+const handleInput = () => {
+  console.log("input 태그 동작");
+};
 
-return (
-    <>
+const Introduce = () => {
+  return (
     <div className="introduce">
-        <div className="cardcontainer">
-        <img src={titleImage} alt="main" className="mainImage" />
-        <p className="name">옥준우</p>
-        <p className="number">46기</p>
-        </div></div>
-        </>
-);
-
-}
+      <img src={titleImage} alt="main" className="mainImage" />
+      <p className="name">옥준우</p>
+      <p className="number">46기</p>
+      <div className="wrap">
+        <input type="text" onChange={handleInput} />
+        <button onClick={handleButton}>클릭</button>
+      </div>
+    </div>
+  );
+};
 
 export default Introduce;
