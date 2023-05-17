@@ -4,7 +4,9 @@ import "./Count.scss";
 const Count = () => {
   const [count, setCount] = useState(1);
 
-  const onPlus = () => setCount(count + 1);
+  const onPlus = () => {
+    setCount(count + 1);
+  };
 
   const onMinus = () => {
     if (count > 1) {
