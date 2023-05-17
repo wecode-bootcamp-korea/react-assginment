@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Introduce.scss";
+import { useNavigate } from "react-router-dom";
 
 function Introduce() {
   function handleInput() {
     console.log("input 태그 동작");
   }
+  let navigate = useNavigate();
 
   return (
     <div className="wecode">
@@ -15,9 +17,14 @@ function Introduce() {
 
         <div className="btnWrap">
           <input className="inputTxt" type="text" onChange={handleInput} />
-          <Link to="/product" className="productBtn">
-            클릭!
-          </Link>
+          <button
+            className="productBtn"
+            onClick={() => {
+              navigate("/product");
+            }}
+          >
+            클릭
+          </button>
         </div>
         <Link to="/product" className="productBtn">
           product 페이지로 이동
