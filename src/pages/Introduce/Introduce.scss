@@ -1,11 +1,8 @@
-@import "../../style/variables.scss";
-@import "../../style/mixin.scss";
-
-body {
-  @include flexCenter;
-}
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
 
 .introduce {
+  @include flexCenter;
 
   .container {
     box-sizing: border-box;
@@ -24,11 +21,11 @@ body {
   }
 
   .name {
+    @include textStyle(35px, 600);
     width: 300px;
     font-family: sans-serif;
-    @include textStyle(35px, 600);
     &:hover {
-      color: $color-green;
+      color: $primary-green;
     }
   }
 
@@ -36,5 +33,9 @@ body {
     width: 300px;
     font-family: sans-serif;
     @include textStyle(25px, 500);
+  }
+
+  .toProductPage {
+    font-family: sans-serif;
   }
 }
