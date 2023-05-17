@@ -19,9 +19,16 @@ const Introduce = () => {
       <img src="images/avatar.jpg" alt="main" />
       <p className="name">백지율</p>
       <p className="batch">46기</p>
-      <div className="textInput">
-        <input type="text" onChange={handleInput} placeholder="입력" />
-        <button onClick={handleButton}>클릭</button>
+      <div className="inputBox">
+        <input
+          className="textInput"
+          type="text"
+          onChange={handleInput}
+          placeholder="입력"
+        />
+        <button className="clickBtn" onClick={handleButton}>
+          클릭
+        </button>
       </div>
       <Link to="/product">product 페이지로 이동</Link>
     </div>

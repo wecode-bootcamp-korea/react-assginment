@@ -1,10 +1,8 @@
-@import "../../style/common.scss";
-@import "../../style/reset.scss";
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
-button,
-input {
+.textInput,
+.clickBtn {
   margin: 0;
   padding: 0;
 }
@@ -44,7 +42,7 @@ input {
     margin-left: 15px;
   }
 
-  .textInput {
+  .inputBox {
     display: flex;
     justify-content: center;
     margin-top: 20px;
