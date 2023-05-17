@@ -3,7 +3,9 @@ import "./Review.scss";
 
 const Review = () => {
   const [review, setReview] = useState(true);
+
   const onClick = () => setReview((prev) => !prev);
+
   return (
     <div className="review">
       <div className="user">
