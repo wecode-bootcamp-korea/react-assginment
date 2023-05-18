@@ -1,5 +1,5 @@
-import "./ColorButton.scss";
 import React from "react";
+import "./ColorButton.scss";
 
 const ColorButton = (props) => {
   return (
