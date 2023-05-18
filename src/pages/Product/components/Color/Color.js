@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { flushSync } from "react-dom";
 import "./Color.scss";
+import ColorButton from "../ColorButton/ColorButton";
 
 const Color = () => {
-  let [change, setChange] = useState("white");
+  let [change, setChange] = useState("");
 
   const buttonClick = (color) => {
     setChange(color);
@@ -13,20 +14,24 @@ const Color = () => {
     <div className="color">
       <span className="colorText">
         색상:
-        <div className="selected" style={{ backgroundColor: change }} />
+        <div className="selected " style={{ backgroundColor: change }} />
         {change}
       </span>
+
       <div className="colorHandler">
-        <button
-          className="colorButton white"
+        <ColorButton
+          color="white"
+          change={change}
           onClick={() => buttonClick("white")}
         />
-        <button
-          className="colorButton red"
+        <ColorButton
+          color="red"
+          change={change}
           onClick={() => buttonClick("red")}
         />
-        <button
-          className="colorButton yellow"
+        <ColorButton
+          color="yellow"
+          change={change}
           onClick={() => buttonClick("yellow")}
         />
       </div>
