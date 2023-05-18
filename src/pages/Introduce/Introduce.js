@@ -16,9 +16,7 @@ function Introduce() {
     <main className="introduce">
       <article className="card">
         <img src="/images/wecode_logo.png" alt="wecode logo" className="logo" />
-        <a className="myName" href="#">
-          손자현
-        </a>
+        <a className="my-name">손자현</a>
         <p className="description">46기</p>
         <div className="inputContainer">
           <input type="text" className="inputBox" onChange={handleInput} />
