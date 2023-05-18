@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Product.scss";
-import Color from "./components/Color/Color";
 import ColorButton from "./components/ColorButton/ColorButton";
+import Color from "./components/Color/Color";
 import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
 
