@@ -6,18 +6,17 @@ import Count from "./components/Count/Count";
 import Review from "./components/Review/Review";
 
 const Product = () => {
-  const price = 300;
-  const totalPrice = price;
   const [color, setColor] = useState("white");
+  const [count, setCount] = useState(1);
+
+  const price = 300;
+  const totalPrice = price * count;
 
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
-          <img
-            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-            alt={`golf-ball`}
-          />
+          <img src={`/images/golf-ball-${color}.jpg`} alt={`golf-ball`} />
           <ColorButton color={color} />
         </div>
         <div className="productDetailInfo">
@@ -27,7 +26,7 @@ const Product = () => {
           <Color color={color} setColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
-            <Count />
+            <Count count={count} onChange={setCount} />
           </div>
           <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
           <button className="buyBtn">구매하기</button>

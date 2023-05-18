@@ -3,7 +3,6 @@ import "./Color.scss";
 import ColorButton from "../ColorButton/ColorButton";
 
 const Color = (props) => {
-  console.log(props);
   return (
     <div className="color">
       <span className="colorText">

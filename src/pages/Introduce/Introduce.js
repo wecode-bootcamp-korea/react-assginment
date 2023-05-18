@@ -16,7 +16,7 @@ const Introduce = () => {
 
   return (
     <div className="introduce">
-      <img src="images/avatar.jpg" alt="main" />
+      <img className="mainImg" src="images/avatar.jpg" alt="main" />
       <p className="name">백지율</p>
       <p className="batch">46기</p>
       <div className="inputBox">
