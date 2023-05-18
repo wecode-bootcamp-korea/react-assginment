@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Count.scss";
 
 const Count = (props) => {
-  let [nums, setNums] = useState(1);
-
   function minus() {
     if (props.nums > 1) {
       return props.setNums(props.nums - 1);
