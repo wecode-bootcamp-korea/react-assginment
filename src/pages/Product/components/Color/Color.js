@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { flushSync } from "react-dom";
-import "./Color.scss";
 import ColorButton from "../ColorButton/ColorButton";
 
 const Color = () => {
   let [change, setChange] = useState("");
+  let [btnColor, setBtnColor] = useState(["white", "red", "yellow"]);
 
   const buttonClick = (color) => {
     setChange(color);
@@ -19,21 +19,9 @@ const Color = () => {
       </span>
 
       <div className="colorHandler">
-        <ColorButton
-          color="white"
-          change={change}
-          onClick={() => buttonClick("white")}
-        />
-        <ColorButton
-          color="red"
-          change={change}
-          onClick={() => buttonClick("red")}
-        />
-        <ColorButton
-          color="yellow"
-          change={change}
-          onClick={() => buttonClick("yellow")}
-        />
+        <ColorButton color={btnColor[0]} buttonClick={buttonClick} />
+        <ColorButton color={btnColor[1]} buttonClick={buttonClick} />
+        <ColorButton color={btnColor[2]} buttonClick={buttonClick} />
       </div>
     </div>
   );
