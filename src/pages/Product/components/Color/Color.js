@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Color.scss";
 
 const Color = () => {
-  const [color, setColor] = useState("white");
+  const [color, setColor] = useState("");
 
   return (
     <div className="color">
