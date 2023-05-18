@@ -4,7 +4,7 @@ import './Introduce.scss';
 
 function Introduce() {
   function handleInput() {
-    console.log('input 태그 동작');
+    //console.log('input 태그 동작');
   }
 
   const navigate = useNavigate();
@@ -16,7 +16,9 @@ function Introduce() {
     <main className="introduce">
       <article className="card">
         <img src="/images/wecode_logo.png" alt="wecode logo" className="logo" />
-        <a className="myName">손자현</a>
+        <a className="myName" href="#">
+          손자현
+        </a>
         <p className="description">46기</p>
         <div className="inputContainer">
           <input type="text" className="inputBox" onChange={handleInput} />

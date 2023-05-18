@@ -1,5 +1,5 @@
-import React from "react";
-import "./Review.scss";
+import React from 'react';
+import './Review.scss';
 
 const Review = () => {
   return (
