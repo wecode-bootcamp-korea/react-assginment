@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Introduce from "./pages/Introduce/Introduce";
 
 import Router from "./Router";
 
