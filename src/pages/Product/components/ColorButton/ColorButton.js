@@ -3,10 +3,15 @@ import React from 'react';
 import './ColorButton.scss';
 
 const ColorButton = props => {
+  const changeColor = props => {
+    props.setColor(props.color);
+    props.setGolfBallImg(props.golfBallImg);
+  };
+
   return (
     <button
       className={`color-button ${props.color}`}
-      onClick={() => props.setColor(props.color)}
+      onClick={() => changeColor(props)}
     />
   );
 };
