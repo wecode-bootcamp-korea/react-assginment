@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { flushSync } from "react-dom";
 import ColorButton from "../ColorButton/ColorButton";
 
 const Color = () => {
