@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ColorButton.scss";
 
 const ColorButton = (props) => {
+  const handleClick = () => {
+    props.changeColor(props.color);
+  };
   return (
-    <button className={`colorButton ${props.color}`} onClick={props.change} />
+    <button className={`colorButton ${props.color}`} onClick={handleClick} />
   );
 };
 
