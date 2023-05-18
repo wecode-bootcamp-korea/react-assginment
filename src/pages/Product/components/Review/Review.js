@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-let count = 0 ;
 const Review = () => {
-  let [review,setReview] = useState(false);
-  let [btn,setBtn] = useState('더보기 ▼');
+  const [review, setReview] = useState(false);
   return (
     <div className="review">
       <div className="user">
@@ -16,24 +14,14 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {
-          review === true ? <ReviewMainContents/> : null
-        }
-        {/* // <div className="reviewMainContents">
-        //   주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-        //   <br />
-        //   다음에도 필요하면 또 여기서 시킬 것 같아요.
-        // </div> */}
-        <span className="reviewMainHandler" onClick={() => {
-          setReview(!review);
-          count++;
-          if(count%2===1){
-            setBtn('접기 ▲')
-          }else{
-            setBtn('더보기 ▼')
-          }
-        }}>
-          {btn}
+        {review === true ? <ReviewMainContents /> : null}
+        <span
+          className="reviewMainHandler"
+          onClick={() => {
+            setReview(!review);
+          }}
+        >
+          {review === true ? "접기 ▲" : "더보기 ▼"}
         </span>
       </div>
     </div>
@@ -41,13 +29,13 @@ const Review = () => {
 };
 
 const ReviewMainContents = () => {
-  return(
+  return (
     <div className="reviewMainContents">
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-          <br />
-          다음에도 필요하면 또 여기서 시킬 것 같아요.
+      주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+      <br />
+      다음에도 필요하면 또 여기서 시킬 것 같아요.
     </div>
-  )
-}
+  );
+};
 
 export default Review;
