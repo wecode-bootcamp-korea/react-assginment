@@ -3,15 +3,16 @@ import { Link, Navigate, UseNavigate, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
   const navigate = useNavigate();
-  const goToProduct = () => {
-    navigate("/product");
-  };
+
   const handleInput = () => {
     console.log("input 태그 동작");
   };
+
   const handleButton = () => {
     console.log("button 태그 동작");
+    navigate("/product");
   };
+
   return (
     <main>
       <div className="introduce">
@@ -23,7 +24,7 @@ const Introduce = () => {
           <button
             className="introduce-button"
             value="버튼"
-            onClick={(handleButton, goToProduct)}
+            onClick={handleButton}
           >
             클릭
           </button>
