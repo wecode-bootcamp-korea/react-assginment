@@ -29,12 +29,12 @@
     margin-top: 10px;
   }
 
-  #profile {
+  .profile {
     font-size: 12px;
     margin-left: 10px;
   }
 
-  #bold {
+  .bold {
     font-weight: 900;
     font-size: 13px;
     &:hover {
@@ -42,25 +42,25 @@
     }
   }
 
-  #wecode {
+  .wecode {
     font-weight: 900;
   }
 
-  input {
+  .inputText {
     width: 70px;
     height: 20px;
     /* margin-bottom: 10px; */
     margin-left: 10px;
   }
 
-  button {
+  .clickBtn {
     width: 30px;
     height: 20px;
     font-size: 10px;
     /* margin-bottom: 10px; */
   }
 
-  a {
+  .moveToProductPage {
     font-size: 12px;
     margin-bottom: 5px;
   }
