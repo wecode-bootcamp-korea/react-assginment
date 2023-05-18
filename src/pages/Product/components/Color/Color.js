@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ColorButton from '../ColorButton/ColorButton';
 import './Color.scss';
 
 const Color = () => {
@@ -11,7 +12,11 @@ const Color = () => {
         <div className={`selected ${color}`} />
         {color}
       </span>
-      <div className="colorHandler">{/* <ColorButton props=/> */}</div>
+      <div className="colorHandler">
+        <ColorButton color="white" setColor={setColor} />
+        <ColorButton color="red" setColor={setColor} />
+        <ColorButton color="yellow" setColor={setColor} />
+      </div>
     </div>
   );
 };
