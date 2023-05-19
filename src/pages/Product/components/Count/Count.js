@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [count, setCount] = useState(1);
-
+const Count = ({ count, setCount }) => {
   const increase = () => {
     setCount(count + 1);
   };
