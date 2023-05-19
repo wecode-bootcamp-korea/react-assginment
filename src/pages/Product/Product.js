@@ -9,7 +9,7 @@ import "./Product.scss";
 const Product = () => {
   let [nums, setNums] = useState(1);
   let [btnColor, setBtnColor] = useState("white");
-  let [change, setChange] = useState("");
+  let [change, setChange] = useState("white");
 
   // console.log(btnColor[]);
   const price = 300;
