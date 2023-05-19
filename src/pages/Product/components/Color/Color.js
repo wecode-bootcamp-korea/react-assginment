@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = () => {
@@ -8,28 +9,13 @@ const Color = () => {
     <div className="color">
       <span className="colorText">
         색상 :
-        <div className="selected" style={{ backgroundColor: colorName }} />
-        {`${colorName}`}
+        <div className={`selected ${colorName}`} />
+        {colorName}
       </span>
       <div className="colorHandler">
-        <button
-          className="colorButton white"
-          onClick={() => {
-            setColorName("white");
-          }}
-        />
-        <button
-          className="colorButton red"
-          onClick={() => {
-            setColorName("red");
-          }}
-        />
-        <button
-          className="colorButton yellow"
-          onClick={() => {
-            setColorName("yellow");
-          }}
-        />
+        <ColorButton color="white" setColorName={setColorName} />
+        <ColorButton color="red" setColorName={setColorName} />
+        <ColorButton color="yellow" setColorName={setColorName} />
       </div>
     </div>
   );
