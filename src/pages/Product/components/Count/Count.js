@@ -1,27 +1,32 @@
 import React from "react";
 import "./Count.scss";
 
-const Count = (props) => {
-  const onPlus = () => {
-    props.onChange(props.count + 1);
-  };
-
-  const onMinus = () => {
-    if (props.count > 1) {
-      props.onChange(props.count - 1);
-    } else {
-      props.onChange(1);
-    }
+const Count = ({ count, onChange }) => {
+  const handleCount = (value) => {
+    if (count + value < 1) return;
+    onChange(count + value);
   };
 
   return (
     <div className="count">
       <div className="countInput">
-        <button onClick={onMinus}>-</button>
-        <div className="countInputText">{props.count}</div>
-        <button onClick={onPlus}>+</button>
+        <button
+          onClick={() => {
+            handleCount(-1);
+          }}
+        >
+          -
+        </button>
+        <div className="countInputText">{count}</div>
+        <button
+          onClick={() => {
+            handleCount(1);
+          }}
+        >
+          +
+        </button>
       </div>
-      <button className="resetBtn" onClick={() => props.onChange(1)}>
+      <button className="resetBtn" onClick={() => onChange(1)}>
         reset
       </button>
     </div>
