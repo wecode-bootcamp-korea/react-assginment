@@ -1,7 +1,7 @@
 import React from "react";
 import titleImage from "../../images/images.png";
-import { Link, useNavigate } from "react-router-dom";
-import "./Introduce.css";
+import { Link, useNavigate, useState } from "react-router-dom";
+import "../Introduce/Introduce.scss";
 
 const Introduce = () => {
   const navigate = useNavigate();
