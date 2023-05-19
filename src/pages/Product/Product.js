@@ -17,7 +17,7 @@ const Product = () => {
       <div className="productDetail">
         <div className="productDetailImg">
           <img src={`/images/golf-ball-${color}.jpg`} alt={`golf-ball`} />
-          <ColorButton color={color} />
+          <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
           <span className="title">골프공</span>
