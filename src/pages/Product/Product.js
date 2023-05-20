@@ -1,5 +1,6 @@
 import React from "react";
 import "./Product.scss";
+import { useState } from "react";
 
 const Product = () => {
   const price = 300;
