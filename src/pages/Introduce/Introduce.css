@@ -32,7 +32,6 @@ img {
 .boxBottom {
   display: flex;
   margin-top: 3px;
-  padding-bottom: 10px;
 }
 
 input {
@@ -44,4 +43,12 @@ input {
 button {
   height: 16px;
   font-size: 5px;
+}
+
+.pageToPage {
+  font-size: 12px;
+  display: block;
+  position: relative;
+  left: 8px;
+  margin-bottom: 10px;
 }
