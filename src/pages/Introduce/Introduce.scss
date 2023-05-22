@@ -64,3 +64,43 @@
     margin-top: 5px;
   }
 }
+
+.color-card-list {
+  display: flex;
+  justify-content: center;
+
+  .color-card {
+    width: 125px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+    .color-card-background {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 5px;
+
+      &.red {
+        background-color: rgb(255, 0, 0);
+      }
+
+      &.yellow {
+        background-color: rgb(255, 255, 0);
+      }
+
+      &.green {
+        background-color: rgb(0, 128, 0);
+      }
+
+      &.blue {
+        background-color: rgb(0, 0, 255);
+      }
+    }
+  }
+}
