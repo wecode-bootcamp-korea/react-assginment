@@ -30,9 +30,9 @@
   }
 
   .batch {
+    @include textStyle(25px, 500);
     width: 300px;
     font-family: sans-serif;
-    @include textStyle(25px, 500);
   }
 
   .toProductPage {
