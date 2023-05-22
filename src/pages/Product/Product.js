@@ -7,11 +7,9 @@ import Review from "../Product/components/Review/Review";
 import "./Product.scss";
 
 const Product = () => {
-  let [nums, setNums] = useState(1);
-  let [btnColor, setBtnColor] = useState("white");
-  let [change, setChange] = useState("white");
+  const [nums, setNums] = useState(1);
+  const [color, setColor] = useState("white");
 
-  // console.log(btnColor[]);
   const price = 300;
   const totalPrice = price * nums;
 
@@ -20,18 +18,18 @@ const Product = () => {
       <div className="productDetail">
         <div className="productDetailImg">
           <img
-            src={`/images/golf-ball-${change}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
           />
 
-          <ColorButton btnColor={btnColor} setBtnColor={setBtnColor} />
+          <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
           <span className="title">골프공</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
           <span>가격 : {price.toLocaleString()} 원</span>
 
-          <Color change={change} setChange={setChange} />
+          <Color color={color} setColor={setColor} />
 
           <div className="quantity">
             <span> 수량 : </span>

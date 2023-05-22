@@ -6,10 +6,10 @@ function Introduce() {
   function handleInput() {
     console.log("input 태그 동작");
   }
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
-    <div className="wecode">
+    <div className="Introduce">
       <div className="wrap">
         <div className="image">>wecode</div>
         <p className="name">김민정</p>

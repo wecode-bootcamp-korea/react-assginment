@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 import ColorButton from "../ColorButton/ColorButton";
 
-const Color = (props) => {
-  const buttonClick = (color) => {
-    props.setChange(color);
-  };
-
+const Color = ({ color, setColor }) => {
   return (
     <div className="color">
       <span className="colorText">
         색상:
-        <div className="selected " style={{ backgroundColor: props.change }} />
-        {props.change}
+        <div className={`selected ${color}`} />
       </span>
 
       <div className="colorHandler">
-        <ColorButton color={"white"} buttonClick={buttonClick} />
-        <ColorButton color={"red"} buttonClick={buttonClick} />
-        <ColorButton color={"yellow"} buttonClick={buttonClick} />
+        <ColorButton color="white" setColor={setColor} />
+        <ColorButton color="red" setColor={setColor} />
+        <ColorButton color="yellow" setColor={setColor} />
       </div>
     </div>
   );
