@@ -2,12 +2,12 @@
 @import '../../style/mixin.scss';
 
 .introduce{
-    width: 100vw;
-    height: 100vh;
-    @include flexCenter
+    @include flexCenter;
+    margin-top: 50px;
 }
 
 .card-box{
+    display: block;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
@@ -30,3 +30,40 @@
         }
     }
 }
+
+.card{
+    display: block;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    .color{
+        @include flexCenter;
+        // background-color: rgb(255,0,0);
+        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .name{
+        margin: 5px 0px 5px 0px;
+    }
+}
+
+.red{
+    background-color: rgb(255,0,0);
+}
+
+.yellow{
+    background-color: rgb(255,255,0);
+}
+
+.green{
+    background-color: rgb(0,128,0);
+}
+
+.blue{
+    background-color: rgb(0,0,255);
+}
+
