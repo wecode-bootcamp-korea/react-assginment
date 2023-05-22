@@ -1,14 +1,14 @@
 import React from "react";
 import "./Introduce.css";
 
-const handleInput = () => {
-  console.log("input 태그 동작");
-};
-const handleButton = () => {
-  console.log("button 태그 동작");
-};
-
 function Introduce() {
+  const handleInput = () => {
+    console.log("input 태그 동작");
+  };
+  const handleButton = () => {
+    console.log("button 태그 동작");
+  };
+
   return (
     <>
       <main>
