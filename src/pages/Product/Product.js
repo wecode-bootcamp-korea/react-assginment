@@ -3,7 +3,6 @@ import Color from "../Product/components/Color/Color";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Count from "../Product/components/Count/Count";
 import Review from "../Product/components/Review/Review";
-
 import "./Product.scss";
 
 const Product = () => {
