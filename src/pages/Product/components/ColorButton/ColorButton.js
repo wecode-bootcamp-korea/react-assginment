@@ -5,9 +5,7 @@ const ColorButton = (props) => {
     props.setColor(props.color);
   };
   return (
-    <>
-      <button className={`colorButton ${props.color}`} onClick={switchColor} />
-    </>
+    <button className={`colorButton ${props.color}`} onClick={switchColor} />
   );
 };
 export default ColorButton;
