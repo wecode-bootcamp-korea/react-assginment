@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { INTRODUCE_CARD } from "../../uiData/introduce";
 import "./Introduce.scss";
 
 function Introduce() {
@@ -30,6 +31,26 @@ function Introduce() {
             </button>
             <Link to="/product">product페이지로 이동</Link>
           </div>
+        </div>
+        <div className="container-card-area">
+          {INTRODUCE_CARD.map((card) => {
+            return (
+              <div className="container-color-card">
+                <div className="inner">
+                  <div
+                    className="card-box"
+                    style={{ backgroundColor: `rgb(${card.color})` }}
+                  ></div>
+                  <div className="card-exp">
+                    <span className="bold">이름 : {card.name}</span>
+                  </div>
+                  <div className="card-exp">
+                    <span className="bold">rgb : {card.color}</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
