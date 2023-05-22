@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./Introduce.css";
+import "./Introduce.scss";
 
 function Introduce() {
   const navigate = useNavigate();
