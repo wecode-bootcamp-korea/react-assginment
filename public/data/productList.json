@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "img": "/images/cat",
+    "name": "고양이",
+    "age": "12",
+    "gender": "female",
+    "add": "부산"
+  },
+  {
+    "id": 2,
+    "img": "/images/cat",
+    "name": "고뭄무",
+    "age": "1",
+    "gender": "male",
+    "add": "서울"
+  },
+  {
+    "id": 3,
+    "img": "/images/cat",
+    "name": "고밈미",
+    "age": "7",
+    "gender": "female",
+    "add": "대전"
+  },
+  {
+    "id": 4,
+    "img": "/images/cat",
+    "name": "고맘미",
+    "age": "2",
+    "gender": "female",
+    "add": "경주"
+  },
+  {
+    "id": 5,
+    "img": "/images/cat",
+    "name": "고얌미",
+    "age": "2",
+    "gender": "male",
+    "add": "포항"
+  },
+  {
+    "id": 6,
+    "img": "/images/cat",
+    "name": "기영이",
+    "age": "4",
+    "gender": "female",
+    "add": "광주"
+  },
+  {
+    "id": 7,
+    "img": "/images/cat",
+    "name": "고영이",
+    "age": "8",
+    "gender": "female",
+    "add": "속초"
+  },
+  {
+    "id": 8,
+    "img": "/images/cat",
+    "name": "고냥이",
+    "age": "15",
+    "gender": "female",
+    "add": "부산"
+  }
+]
