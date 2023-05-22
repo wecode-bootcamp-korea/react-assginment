@@ -30,8 +30,26 @@ function Introduce() {
           product 페이지로 이동
         </Link>
       </div>
+      {COLOR_CARD.map((colorCard) => {
+        return (
+          <div key={colorCard.id} className="colorCard">
+            <div className="wrap">
+              <div className={`image ${colorCard.name}`}></div>
+              <p className="text">이름 :{colorCard.name}</p>
+              <p className="text">rgb :{colorCard.color}</p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
 
 export default Introduce;
+
+const COLOR_CARD = [
+  { id: 1, name: "red", color: "255, 0, 0" },
+  { id: 2, name: "yellow", color: "255, 255, 0" },
+  { id: 3, name: "green", color: "0, 128, 0" },
+  { id: 4, name: "blue", color: "0, 0, 255" },
+];
