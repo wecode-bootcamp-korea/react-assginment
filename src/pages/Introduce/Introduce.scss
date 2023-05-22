@@ -1,7 +1,7 @@
 @import '../../style/variables.scss';
 @import '../../style/mixin.scss';
 
-.container{
+.introduce{
     width: 100vw;
     height: 100vh;
     @include flexCenter
@@ -12,13 +12,13 @@
     border: 1px solid black;
     border-radius: 10px;
     .wecode{
+        @include flexCenter;
+        @include textStyle(40px,bold);
         background-color: black;
         border-radius: 10px;
         color: white;
         width: 200px;
         height: 200px;
-        @include flexCenter;
-        @include textStyle(40px,bold);
         margin: 0 auto;
     }
     

@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./Count.scss";
 
 const Count = (props) => {
+  // const handleCount = value => {
+  //   if(props.count+value===0) return;
+  //   props.setCount(props.count+value);
+  // }
   return (
     <div className="count">
       <div className="countInput">
@@ -10,6 +14,7 @@ const Count = (props) => {
             props.count > 1
               ? props.setCount(props.count - 1)
               : props.setCount(1);
+            // handleCount(-1);
           }}
         >
           -
@@ -18,6 +23,7 @@ const Count = (props) => {
         <button
           onClick={() => {
             props.setCount(props.count + 1);
+            // handleCount(1);
           }}
         >
           +

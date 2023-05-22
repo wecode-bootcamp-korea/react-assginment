@@ -21,7 +21,7 @@ const Review = () => {
             setReview(!review);
           }}
         >
-          {review === true ? "접기 ▲" : "더보기 ▼"}
+          {review ? "접기 ▲" : "더보기 ▼"}
         </span>
       </div>
     </div>

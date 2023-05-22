@@ -3,16 +3,19 @@ import { useNavigate, Link } from "react-router-dom";
 import "./Introduce.scss";
 
 function Introduce() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+
   function handleInput() {
     console.log("input 태그 동작");
   }
+
   function handleButton() {
     console.log("button 태그 동작");
     navigate("/product");
   }
+
   return (
-    <div className="container">
+    <div className="introduce">
       <div className="card-box">
         <div className="wecode">
           <p>>wecode</p>
