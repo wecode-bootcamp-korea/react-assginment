@@ -3,9 +3,6 @@ import "./Review.scss";
 
 const Review = (props) => {
   // const [click, setClick] = useState("더보기 ▼");
-
-  console.log(props);
-
   return (
     <div className="review">
       <div className="user">
@@ -15,7 +12,7 @@ const Review = (props) => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{props.reviewName}</div>
       <div className="reviewMain">
         {props.click === "접기 ▲" ? (
           <div className="reviewMainContents">
