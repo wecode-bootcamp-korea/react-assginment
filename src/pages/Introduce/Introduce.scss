@@ -1,26 +1,26 @@
 @import "../../style/mixin.scss";
 @import "../../style/variables.scss";
 
-main {
+#root {
   width: 100vw;
   height: 100vh;
   @include flexCenter;
+  flex-direction: column;
+}
+.introduce {
+  @include flexCenter;
+  width: 300px;
+  height: 300px;
+  flex-direction: column;
+  border: 3px solid;
+  border-radius: 10px;
+  padding: 10px;
 
-  .introduce {
-    @include flexCenter;
-    width: 500px;
-    height: 500px;
-    flex-direction: column;
-    border: 3px solid;
-    border-radius: 10px;
-    padding: 10px;
+  .name {
+    @include textStyle(25px, bolder);
 
-    .name {
-      @include textStyle(25px, bolder);
-
-      &:hover {
-        color: $green;
-      }
+    &:hover {
+      color: $green;
     }
   }
   .card {
@@ -40,5 +40,25 @@ main {
     display: flex;
     width: 300px;
     height: 50px;
+  }
+}
+#colorCardContainer {
+  display: flex;
+
+  .colorCard {
+    width: 100px;
+    height: 100px;
+  }
+  .colorCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  p.colorCardText {
+    font-size: 20px;
   }
 }
