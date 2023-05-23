@@ -1,15 +1,6 @@
 import React from "react";
 import "./Review.scss";
 import { useState } from "react";
-// export default class reviewMainContents extends React.Component{
-//   reder() {
-//     if (review === true) {
-//       return {reviewMainContents}
-//     } else{
-//       return;
-//     }
-//   }
-// }
 
 const Review = () => {
   const [review, setReview] = useState(true);

@@ -1,13 +1,13 @@
 import React from "react";
 import "./Count.scss";
 
-const Count = (props) => {
+const Count = ({ count, setCount }) => {
   return (
     <div className="count">
       <div className="countInput">
         <button
           onClick={() => {
-            if (props.count <= 1) {
+            if (count <= 1) {
               return;
             }
 
@@ -15,15 +15,15 @@ const Count = (props) => {
             //   props.count <= 1 ? props.count : props.setCount(props.count - 1);
             //   //여기서 오류가 난다고 뜨는데 작동은 하고, 뭐가 문제인지 알 수 없음...
             // }
-            props.setCount(props.count - 1);
+            setCount(count - 1);
           }}
         >
           -
         </button>
-        <div className="countInputText">{props.count}</div>
+        <div className="countInputText">{count}</div>
         <button
           onClick={() => {
-            props.setCount(props.count + 1);
+            setCount(count + 1);
           }}
         >
           +
@@ -32,7 +32,7 @@ const Count = (props) => {
       <button
         className="resetBtn"
         onClick={() => {
-          props.setCount(1);
+          setCount(1);
         }}
       >
         reset
