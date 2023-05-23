@@ -1,6 +1,6 @@
 import React from "react";
-import "./introduce.scss";
 import { Link, useNavigate } from "react-router-dom";
+import "./introduce.scss";
 
 const Introduce = () => {
   const navigate = useNavigate();

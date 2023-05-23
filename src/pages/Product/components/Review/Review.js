@@ -1,6 +1,6 @@
 import React from "react";
-import "./Review.scss";
 import { useState } from "react";
+import "./Review.scss";
 
 const Review = () => {
   const [review, setReview] = useState(true);
