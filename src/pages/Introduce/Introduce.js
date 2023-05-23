@@ -38,8 +38,8 @@ const Introduce = () => {
           return (
             <div className="color-card" key={card.id}>
               <div className={`color-card-background ${card.name}`}></div>
-              <div>이름: {card.name}</div>
-              <div>rgb: {card.rgb}</div>
+              <div className="name">이름: {card.name}</div>
+              <div className="rgb">rgb: {card.rgb}</div>
             </div>
           );
         })}

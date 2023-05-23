@@ -79,7 +79,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+
+    .name,
+    .rgb {
+      font-size: 14px;
+      font-weight: bold;
+    }
 
     .color-card-background {
       width: 90px;
