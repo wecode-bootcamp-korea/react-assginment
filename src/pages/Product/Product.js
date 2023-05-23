@@ -8,7 +8,7 @@ import Review from "./components/Review/Review";
 const Product = () => {
   const [color, setColor] = useState("");
   const [count, setCount] = useState(1);
-  const [productList, setProductList] = useState([]);
+  const [productInfo, setProductInfo] = useState([]);
   const price = 300;
   const totalPrice = price * count;
 
@@ -16,8 +16,8 @@ const Product = () => {
     fetch("/data/productInfoList.json",{method:'GET'})
       .then(res => res.json())
       .then(data => {
-        setProductList(...data);
-        console.log(productList);
+        setProductInfo(...data);
+        console.log(productInfo);
       })
   }, []);
 
@@ -25,13 +25,13 @@ const Product = () => {
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
-          <img src={`${productList.img}${color}.jpg`} alt={`golf-ball`} />
+          <img src={`${productInfo.img}${color}.jpg`} alt={`golf-ball`} />
           <Colorbutton setColor={setColor} color={color} />
         </div>
         <div className="productDetailInfo">
-          <span className="title">{productList.title}</span>
+          <span className="title">{productInfo.title}</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {productList.price} 원</span>
+          <span>가격 : {productInfo.price} 원</span>
           <Color color={color} setColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
@@ -45,7 +45,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review productList={productList}/>
+        <Review productInfo={productInfo}/>
       </div>
     </div>
   );

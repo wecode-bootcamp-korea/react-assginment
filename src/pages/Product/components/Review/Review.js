@@ -12,7 +12,7 @@ const Review = (props) => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">{props.productList.review}</div>
+      <div className="reviewTitle">{props.productInfo.review}</div>
       <div className="reviewMain">
         {review === true ? <ReviewMainContents /> : null}
         <span
