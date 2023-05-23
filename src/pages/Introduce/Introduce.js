@@ -30,17 +30,19 @@ function Introduce() {
           product 페이지로 이동
         </Link>
       </div>
-      {COLOR_CARD.map((colorCard) => {
-        return (
-          <div key={colorCard.id} className="colorCard">
-            <div className="wrap">
-              <div className={`image ${colorCard.name}`}></div>
-              <p className="text">이름 :{colorCard.name}</p>
-              <p className="text">rgb :{colorCard.color}</p>
+      <div className="colorbox">
+        {COLOR_CARD.map((colorCard) => {
+          return (
+            <div key={colorCard.id} className="colorCard">
+              <div className="wrap">
+                <div className={`image ${colorCard.name}`}></div>
+                <p className="text">이름 :{colorCard.name}</p>
+                <p className="text">rgb :{colorCard.color}</p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

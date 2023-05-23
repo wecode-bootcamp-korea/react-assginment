@@ -79,6 +79,7 @@ body {
 }
 
 .colorCard {
+  display: flex;
   width: 100px;
   height: 130px;
   border-radius: 5px;
@@ -115,4 +116,8 @@ body {
       background-color: rgb(0, 0, 255);
     }
   }
+}
+.colorbox {
+  display: flex;
+  margin-left: -100px;
 }

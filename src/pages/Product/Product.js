@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Color from "../Product/components/Color/Color";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Count from "../Product/components/Count/Count";
@@ -6,47 +6,58 @@ import Review from "../Product/components/Review/Review";
 import "./Product.scss";
 
 const Product = () => {
+  const [reviewInfo, setReviewInfo] = useState([]);
   const [nums, setNums] = useState(1);
   const [color, setColor] = useState("white");
-
   const price = 300;
   const totalPrice = price * nums;
 
+  useEffect(() => {
+    fetch("/data/reviewList.json")
+      .then((response) => response.json())
+      .then((result) => setReviewInfo(result));
+  }, []);
+
   return (
-    <div className="product">
-      <div className="productDetail">
-        <div className="productDetailImg">
-          <img
-            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-            alt={`golf-ball`}
-          />
+    <>
+      {reviewInfo.map((reviewInfo) => {
+        return (
+          <div className="product">
+            <div className="productDetail">
+              <div className="productDetailImg">
+                <img
+                  src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+                  alt={`golf-ball`}
+                />
 
-          <ColorButton color={color} setColor={setColor} />
-        </div>
-        <div className="productDetailInfo">
-          <span className="title">골프공</span>
-          <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+                <ColorButton color={color} setColor={setColor} />
+              </div>
+              <div className="productDetailInfo">
+                <span className="title">{reviewInfo.title}</span>
+                <span>비거리를 비약적으로 늘려줍니다</span>
+                <span>가격 : {price.toLocaleString()} 원</span>
 
-          <Color color={color} setColor={setColor} />
+                <Color color={color} setColor={setColor} />
 
-          <div className="quantity">
-            <span> 수량 : </span>
+                <div className="quantity">
+                  <span> 수량 : </span>
 
-            <Count nums={nums} setNums={setNums} />
+                  <Count nums={nums} setNums={setNums} />
+                </div>
+                <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
+                <button className="buyBtn">구매하기</button>
+              </div>
+            </div>
+            <div className="reviewList">
+              <div className="reviewListHeader">
+                <span>상품평</span>
+              </div>
+              <Review reviewInfo={reviewInfo} setReviewInfo={setReviewInfo} />
+            </div>
           </div>
-          <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
-          <button className="buyBtn">구매하기</button>
-        </div>
-      </div>
-      <div className="reviewList">
-        <div className="reviewListHeader">
-          <span>상품평</span>
-        </div>
-
-        <Review />
-      </div>
-    </div>
+        );
+      })}
+    </>
   );
 };
 

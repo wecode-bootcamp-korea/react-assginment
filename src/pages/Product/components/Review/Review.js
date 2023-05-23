@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = ({ reviewInfo, setReviewInfo }) => {
   let [isMore, isSetMore] = useState(false);
 
   return (
@@ -10,10 +10,10 @@ const Review = () => {
         <img src="/images/avatar.jpg" alt="avatar" />
         <div className="userInfo">
           <div className="name">위코드</div>
-          <div className="itemName">골프공, white 색상 구매</div>
+          <div className="itemName">{reviewInfo.title}, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{reviewInfo.review}</div>
       <div className="reviewMain">
         {isMore && (
           <div className="reviewMainContents">
