@@ -55,15 +55,15 @@
       }
 
       .inputBtn {
+        @include textStyle(10px, 400);
         height: 18px;
         padding: 0;
-        @include textStyle(10px, 400);
       }
     }
 
     .link {
-      margin-top: 5px;
       @include textStyle(11px, 400);
+      margin-top: 5px;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ColorButton from '../ColorButton/ColorButton';
 import './Color.scss';
 
@@ -11,24 +11,9 @@ const Color = props => {
         {props.color}
       </span>
       <div className="colorHandler">
-        <ColorButton
-          color="white"
-          setColor={props.setColor}
-          golfBallImg="/images/golf-ball-white.jpg"
-          setGolfBallImg={props.setGolfBallImg}
-        />
-        <ColorButton
-          color="red"
-          setColor={props.setColor}
-          golfBallImg="/images/golf-ball-red.jpg"
-          setGolfBallImg={props.setGolfBallImg}
-        />
-        <ColorButton
-          color="yellow"
-          setColor={props.setColor}
-          golfBallImg="/images/golf-ball-yellow.jpg"
-          setGolfBallImg={props.setGolfBallImg}
-        />
+        <ColorButton color="white" setColor={props.setColor} />
+        <ColorButton color="red" setColor={props.setColor} />
+        <ColorButton color="yellow" setColor={props.setColor} />
       </div>
     </div>
   );

@@ -5,7 +5,6 @@ import './ColorButton.scss';
 const ColorButton = props => {
   const changeColor = props => {
     props.setColor(props.color);
-    props.setGolfBallImg(props.golfBallImg);
   };
 
   return (
