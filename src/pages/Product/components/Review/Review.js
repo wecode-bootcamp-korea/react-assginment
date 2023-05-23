@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = ({ productInfo }) => {
   const [display, setDisplay] = useState(false);
 
   const ReviewMainContents = () => {
@@ -23,7 +23,7 @@ const Review = () => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{productInfo.review}</div>
       <div className="reviewMain">
         {display === false ? <ReviewMainContents /> : null}
         <span
