@@ -1,13 +1,15 @@
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
-main {
+.IntroduceMain {
   @include flexCenter;
   height: 100vh;
+  flex-direction: column;
 
   .box {
     border: 1px solid $black-color;
     border-radius: 5px;
+    margin-bottom: 20px;
 
     img {
       width: 130px;
@@ -53,5 +55,46 @@ main {
       left: 8px;
       margin-bottom: 10px;
     }
+  }
+}
+
+.secondGround {
+  display: flex;
+}
+
+.secondBox {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 5px;
+
+  .secondBackground {
+    border: none;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+
+    &.red {
+      background-color: rgb(255, 0, 0);
+    }
+
+    &.yellow {
+      background-color: rgb(255, 255, 0);
+    }
+
+    &.green {
+      background-color: rgb(0, 128, 0);
+    }
+
+    &.blue {
+      background-color: rgb(0, 0, 225);
+    }
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    margin-top: 10px;
   }
 }
