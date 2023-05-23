@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Nav.scss";
+import NAV_INFO_LIST from "./NavData";
 
 const Nav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -22,10 +23,11 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          <Link to="/">메인으로 가기</Link>
-          <Link to="/review">리뷰 컴포넌트 가기</Link>
-          <Link to="/count">카운트 컴포넌트 가기</Link>
-          <Link to="/color">컬러 컴포넌트 가기</Link>
+          {NAV_INFO_LIST.map((info) => (
+            <Link key={info.id} to={info.link}>
+              {info.text}
+            </Link>
+          ))}
         </div>
       )}
     </div>
