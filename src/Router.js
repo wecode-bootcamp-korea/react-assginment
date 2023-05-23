@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./pages/components/Nav/Nav";
 import Introduce from "./pages/Introduce/Introduce";
 import Product from "./pages/Product/Product";
 import ProductList from "./pages/ProductList/ProductList";
@@ -11,6 +12,7 @@ import ColorButton from "./pages/Product/components/ColorButton/ColorButton";
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Introduce />} />
         <Route path="/product" element={<Product />} />
