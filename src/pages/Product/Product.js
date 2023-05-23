@@ -11,7 +11,7 @@ const Product = () => {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    fetch('/data/mockData1.json', {
+    fetch('/data/mockData-golfBall.json', {
       method: 'GET',
     })
       .then(res => res.json())
