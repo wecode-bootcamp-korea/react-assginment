@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [number, setNumber] = useState(1);
+const Count = (props) => {
+  // const [number, setNumber] = useState(1);
 
   return (
     <div className="count">
       <div className="countInput">
         <button
           onClick={() => {
-            setNumber((prev) => {
+            props.setNumber((prev) => {
               if (prev > 1) {
                 return (prev = prev - 1);
               }
@@ -20,10 +20,10 @@ const Count = () => {
         >
           -
         </button>
-        <div className="countInputText">{number}</div>
+        <div className="countInputText">{props.number}</div>
         <button
           onClick={() => {
-            setNumber((prev) => (prev = prev + 1));
+            props.setNumber((prev) => (prev = prev + 1));
           }}
         >
           +
@@ -32,7 +32,7 @@ const Count = () => {
       <button
         className="resetBtn"
         onClick={() => {
-          setNumber(1);
+          props.setNumber(1);
         }}
       >
         reset

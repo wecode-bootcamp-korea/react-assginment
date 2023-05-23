@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
-  const [click, setClick] = useState("더보기 ▼");
+const Review = (props) => {
+  // const [click, setClick] = useState("더보기 ▼");
+
+  console.log(props);
 
   return (
     <div className="review">
@@ -15,7 +17,7 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {click === "접기 ▲" ? (
+        {props.click === "접기 ▲" ? (
           <div className="reviewMainContents">
             주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
             <br />
@@ -25,7 +27,7 @@ const Review = () => {
         <span
           className="reviewMainHandler"
           onClick={() => {
-            setClick((prev) => {
+            props.setClick((prev) => {
               if (prev === "더보기 ▼") {
                 return (prev = "접기 ▲");
               } else {
@@ -34,7 +36,7 @@ const Review = () => {
             });
           }}
         >
-          {click}
+          {props.click}
         </span>
       </div>
     </div>
