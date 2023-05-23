@@ -23,13 +23,6 @@ const ProductList = () => {
               <span>성별 : {data.gender}</span>
               <span>거주지 : {data.address}</span>
             </div>
-            // <div className="listBox">
-            //   <img className="listImage" src="/images/cat.jpeg" alt="cat" />
-            //   <span className="listTitle">기양이</span>
-            //   <span>나이 : 2살</span>
-            //   <span>성별 : male</span>
-            //   <span>거주지 : 충청</span>
-            // </div>
           );
         })}
       </div>
