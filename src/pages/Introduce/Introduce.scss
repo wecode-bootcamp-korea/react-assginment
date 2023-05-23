@@ -1,12 +1,32 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixin.scss";
 
+@mixin colors {
+  &.red {
+    background-color: rgb(255, 0, 0);
+  }
+
+  &.yellow {
+    background-color: rgb(255, 255, 0);
+  }
+
+  &.green {
+    background-color: rgb(0, 128, 0);
+  }
+
+  &.blue {
+    background-color: rgb(0, 0, 255);
+  }
+}
+
 .introduce {
   @include flexCenter;
+  flex-direction: column;
 
-  .container {
-    box-sizing: border-box;
+  .profile-container {
     padding: 35px;
+    margin: 30px;
+    width: fit-content;
     border: 1px solid black;
     border-radius: 20px;
   }
@@ -36,6 +56,39 @@
   }
 
   .toProductPage {
+    font-family: sans-serif;
+  }
+
+  .color-card {
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .color-card-container {
+    @include flexCenter;
+  }
+
+  .color-card {
+    margin: 10px;
+    width: fit-content;
+  }
+
+  .color-box {
+    @include colors;
+    margin-bottom: 10px;
+    width: 150px;
+    aspect-ratio: 1/1;
+  }
+
+  .color-name {
+    @include textStyle(18px, 600);
+    font-family: sans-serif;
+  }
+
+  .color-code {
+    @include textStyle(18px, 600);
     font-family: sans-serif;
   }
 }
