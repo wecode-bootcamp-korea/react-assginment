@@ -8,21 +8,23 @@
 
 .introduce {
   @include flexCenter;
+  flex-direction: column;
 
   .card {
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    width: 140px;
-    height: 230px;
+    width: 220px;
+    height: 300px;
+    margin: 20px;
     padding: 10px;
     border: 1px solid $primary-black;
-    border-radius: 5px;
+    border-radius: 10px;
 
     .logo {
-      width: 120px;
-      height: 120px;
+      width: 180px;
+      height: 180px;
       margin: 0 0 10px;
-      border-radius: 5px;
+      border-radius: 10px;
     }
 
     & > p {
@@ -31,7 +33,8 @@
     }
 
     .my-name {
-      @include textStyle(12px, 700);
+      @include textStyle(15px, 700);
+      width: 80%;
       text-align: left;
 
       &:hover {
@@ -40,30 +43,74 @@
     }
 
     .description {
-      @include textStyle(11px, 400);
+      @include textStyle(12px, 400);
+      width: 80%;
       margin: 0;
+      text-align: left;
     }
 
     .inputContainer {
       @include flexCenter;
-      width: 120px;
+      width: 180px;
       margin-top: 5px;
 
       .inputBox {
-        width: 90px;
+        width: 130px;
         height: 18px;
       }
 
       .inputBtn {
         @include textStyle(10px, 400);
         height: 18px;
-        padding: 0;
+        padding: 0 5px;
       }
     }
 
     .link {
       @include textStyle(11px, 400);
       margin-top: 5px;
+    }
+  }
+
+  .colorCardContainer {
+    @include flexCenter;
+
+    .colorCard {
+      @include flexCenter;
+      flex-direction: column;
+      width: 120px;
+      height: 170px;
+      margin: 5px;
+      border: 1px solid black;
+      border-radius: 10px;
+
+      div {
+        width: 85%;
+        aspect-ratio: 1;
+      }
+
+      p {
+        @include textStyle(12px, 500);
+        width: 80%;
+        margin: 8px 0 0 0;
+        text-align: left;
+      }
+
+      .red {
+        background-color: rgb(255, 0, 0);
+      }
+
+      .yellow {
+        background-color: rgb(255, 255, 0);
+      }
+
+      .green {
+        background-color: rgb(0, 128, 0);
+      }
+
+      .blue {
+        background-color: rgb(0, 0, 255);
+      }
     }
   }
 }
