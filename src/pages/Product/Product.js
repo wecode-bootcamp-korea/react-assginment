@@ -8,53 +8,51 @@ import "./Product.scss";
 const Product = () => {
   const [count, setCount] = useState(1);
   const [color, setColor] = useState("white");
-  const [productList, setProductist] = useState([]);
-  const price = 300;
+  const [product, setProduct] = useState([]);
+  const price = product?.price?.toLocaleString();
   const totalPrice = price * count;
 
   useEffect(() => {
     fetch("/data/product.json")
       .then((response) => response.json())
-      .then((result) => setProductist(result));
+      .then((result) => setProduct(result));
   }, []);
 
-  return productList.map((product) => {
-    return (
-      <div className="product" key={product.id}>
-        <div className="productDetail">
-          <div className="productDetailImg">
-            <img
-              src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
-              alt={`golf-ball`}
-            />
-            {/* ColorButton 컴포넌트 위치 */}
-            <ColorButton color={color} setColor={setColor} />
-          </div>
-          <div className="productDetailInfo">
-            <span className="title">{product.title}</span>
-            <span>비거리를 비약적으로 늘려줍니다</span>
-            <span>가격 : {price.toLocaleString()} 원</span>
-            {/* Color 컴포넌트 위치 */}
-            <Color color={color} setColor={setColor} />
-            <div className="quantity">
-              <span> 수량 : </span>
-              {/* Count 컴포넌트 위치 */}
-              <Count count={count} setCount={setCount} />
-            </div>
-            <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
-            <button className="buyBtn">구매하기</button>
-          </div>
+  return (
+    <div className="product" key={product.id}>
+      <div className="productDetail">
+        <div className="productDetailImg">
+          <img
+            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+            alt={`golf-ball`}
+          />
+          {/* ColorButton 컴포넌트 위치 */}
+          <ColorButton color={color} setColor={setColor} />
         </div>
-        <div className="reviewList">
-          <div className="reviewListHeader">
-            <span>상품평</span>
+        <div className="productDetailInfo">
+          <span className="title">{product.title}</span>
+          <span>비거리를 비약적으로 늘려줍니다</span>
+          <span>가격 : {price.toLocaleString()} 원</span>
+          {/* Color 컴포넌트 위치 */}
+          <Color color={color} setColor={setColor} />
+          <div className="quantity">
+            <span> 수량 : </span>
+            {/* Count 컴포넌트 위치 */}
+            <Count count={count} setCount={setCount} />
           </div>
-          {/* Review 컴포넌트 위치 */}
-          <Review review={product.review} />
+          <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
+          <button className="buyBtn">구매하기</button>
         </div>
       </div>
-    );
-  });
+      <div className="reviewList">
+        <div className="reviewListHeader">
+          <span>상품평</span>
+        </div>
+        {/* Review 컴포넌트 위치 */}
+        <Review review={product.review} />
+      </div>
+    </div>
+  );
 };
 
 export default Product;
