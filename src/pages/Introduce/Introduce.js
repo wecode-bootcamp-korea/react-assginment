@@ -30,7 +30,7 @@ function Introduce() {
           product 페이지로 이동
         </Link>
       </div>
-      
+
       <div className="colorbox">
         {COLOR_CARD.map((colorCard) => {
           return (
