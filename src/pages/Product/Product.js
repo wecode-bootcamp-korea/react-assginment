@@ -25,7 +25,7 @@ const Product = () => {
     <div className="product" key={productList.id}>
       <div className="productDetail">
         <div className="productDetailImg">
-          <img src={`/images/golf-ball-${color}.jpg`} alt={`golf-ball`} />
+          <img src={`${productList.img}${color}.jpg`} alt={`golf-ball`} />
           <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
