@@ -19,3 +19,5 @@ const Color = ({ color, setColor }) => {
 };
 
 export default Color;
+
+
