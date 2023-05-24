@@ -11,11 +11,8 @@ const Product = () => {
   const [color, setColor] = useState("white");
   const [productList, setProductList] = useState([]);
 
-  const price = 300;
-  const totalPrice = price * number;
-
   useEffect(() => {
-    fetch("/data/product.json", { method: "GET" })
+    fetch("/data/product.json")
       .then((res) => res.json())
       .then((data) => setProductList(data));
   }, []);
@@ -29,20 +26,17 @@ const Product = () => {
             alt={`golf-ball`}
           />
           <ColorButton />
-          {/* ColorButton 컴포넌트 위치 */}
         </div>
         <div className="productDetailInfo">
           <span className="title">{productList.title}</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
           <span>가격 : {productList.price} 원</span>
           <Color color={color} setColor={setColor} />
-          {/* Color 컴포넌트 위치 */}
           <div className="quantity">
             <span> 수량 : </span>
             <Count number={number} setNumber={setNumber} />
-            {/* Count 컴포넌트 위치 */}
           </div>
-          <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
+          <span>최종 가격 : {productList.price * number} 원</span>
           <button className="buyBtn">구매하기</button>
         </div>
       </div>
@@ -55,7 +49,6 @@ const Product = () => {
           setClick={setClick}
           reviewName={productList.review}
         />
-        {/* Review 컴포넌트 위치 */}
       </div>
     </div>
   );
