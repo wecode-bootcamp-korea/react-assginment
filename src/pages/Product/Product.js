@@ -10,7 +10,7 @@ const Product = () => {
   const [count, setCount] = useState(1);
   const [productList, setProductList] = useState({});
 
-  const price = 300;
+  const price = productList?.price?.toLocaleString();
   const totalPrice = price * count;
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Product = () => {
         <div className="productDetailInfo">
           <span className="title">{productList.title}</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+          <span>가격 : {price?.toLocaleString()} 원</span>
           <Color color={color} setColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
