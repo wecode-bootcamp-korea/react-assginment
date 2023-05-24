@@ -1,7 +1,66 @@
-{
-  "id": 1,
-  "img": "/images/golf-ball-",
-  "title": "골프공",
-  "price": 300,
-  "review": "배송도 빠르고 정말 좋아요."
-}
+[
+  {
+    "id": 1,
+    "img": "/images/golf-ball-",
+    "name": "고양이",
+    "age": "4살",
+    "gender": "male",
+    "residence": "춘천"
+  },
+  {
+    "id": 2,
+    "img": "/images/golf-ball-",
+    "name": "고냥이",
+    "age": "14살",
+    "gender": "female",
+    "residence": "양평"
+  },
+  {
+    "id": 3,
+    "img": "/images/golf-ball-",
+    "name": "고용이",
+    "age": "7살",
+    "gender": "male",
+    "residence": "천안"
+  },
+  {
+    "id": 4,
+    "img": "/images/golf-ball-",
+    "name": "모울이",
+    "age": "1살",
+    "gender": "female",
+    "residence": "부산"
+  },
+  {
+    "id": 5,
+    "img": "/images/golf-ball-",
+    "name": "곰율이",
+    "age": "3살",
+    "gender": "male",
+    "residence": "노원"
+  },
+  {
+    "id": 6,
+    "img": "/images/golf-ball-",
+    "name": "고울이",
+    "age": "11살",
+    "gender": "male",
+    "residence": "평양"
+  },
+  {
+    "id": 7,
+    "img": "/images/golf-ball-",
+    "name": "고물이",
+    "age": "9살",
+    "gender": "male",
+    "residence": "전주"
+  },
+  {
+    "id": 8,
+    "img": "/images/golf-ball-",
+    "name": "기양이",
+    "age": "2살",
+    "gender": "male",
+    "residence": "충청"
+  }
+]

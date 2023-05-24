@@ -15,7 +15,7 @@ const Product = () => {
   const totalPrice = price * number;
 
   useEffect(() => {
-    fetch("/data/productList.json", { method: "GET" })
+    fetch("/data/product.json", { method: "GET" })
       .then((res) => res.json())
       .then((data) => setProductList(data));
   }, []);
