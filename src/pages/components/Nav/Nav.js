@@ -6,10 +6,10 @@ const Nav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const location = useLocation();
   const MENU_LIST = [
-    { id: "/", menuName: "메인으로 가기" },
-    { id: "/review", menuName: "리뷰 컴포넌트 가기" },
-    { id: "/count", menuName: "카운트 컴포넌트 가기" },
-    { id: "/color", menuName: "컬러 컴포넌트 가기" },
+    { id: 1, url: "/", menuName: "메인으로 가기" },
+    { id: 2, url: "/review", menuName: "리뷰 컴포넌트 가기" },
+    { id: 3, url: "/count", menuName: "카운트 컴포넌트 가기" },
+    { id: 4, url: "/color", menuName: "컬러 컴포넌트 가기" },
   ];
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Nav = () => {
         <div className="menuBox">
           {MENU_LIST.map((menuList) => {
             return (
-              <Link key={menuList.id} to={menuList.id}>
+              <Link key={menuList.id} to={menuList.url}>
                 {menuList.menuName}
               </Link>
             );
