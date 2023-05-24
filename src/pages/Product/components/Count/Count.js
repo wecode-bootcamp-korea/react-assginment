@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [count, setCount] = useState(1);
+const Count = (props) => {
+  console.log("PROPS>>>", props);
+  const { count, setCount } = props;
+  // const [count, setCount] = useState(1);
 
   return (
     <div className="count">
