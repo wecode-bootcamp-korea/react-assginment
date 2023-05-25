@@ -16,7 +16,7 @@ const Product = () => {
     fetch("/data/productInfoList.json",{method:'GET'})
       .then(res => res.json())
       .then(data => {
-        setProductInfo(...data);
+        setProductInfo(data);
         console.log(productInfo);
       })
   }, []);
