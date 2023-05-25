@@ -1,5 +1,6 @@
 import React from "react";
 import "./Color.scss";
+import React,{useState} from "react";
 
 const Color = () => {
   return (
