@@ -19,13 +19,17 @@ const Color = () => {
         <div className="selected" style={{backgroundColor:color}}/>
         {`${color}`}
       </span>
-      <ColorButton color={color} change={colorHandler}>
+      <div ColorButton>
+      <ColorButton color="red" change={colorHandler}/>
+      <ColorButton color="white" change={colorHandler}/>
+      <ColorButton color="yellow" change={colorHandler}/>
+      </div>
       {/* <div className="colorHandler">
         <button className="colorButton white" onClick={() => {setColor('white')}} />
         <button className="colorButton red" onClick={() => {setColor('red')}} />
         <button className="colorButton yellow" onClick={() => {setColor('yellow')}} />
       </div> */}
-      </ColorButton>
+      {/* </ColorButton> */}
     </div>
   );
 };

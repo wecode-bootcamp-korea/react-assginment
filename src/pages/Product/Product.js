@@ -17,9 +17,9 @@ const Product = () => {
         <div className="productDetailImg">
           {/* {if(props==white) { } } return 밑에서는 if문 사용불가??? */}
         {
-        color == "white" ? <img src={`/images/golf-ball-white.jpg`} alt={`golf-ball`}/> 
-        :  (color == "red" ?<img src={`/images/golf-ball-red.jpg`}  alt={`golf-ball`}/> 
-        :  <img src={`/images/golf-ball-yellow.jpg`}  alt={`golf-ball`}/> )
+        color === "white" ? <img src={`/images/golf-ball-white.jpg`} alt={`golf-ball`}/> 
+        :  color === "red" ?<img src={`/images/golf-ball-red.jpg`}  alt={`golf-ball`}/> 
+        :  <img src={`/images/golf-ball-yellow.jpg`}  alt={`golf-ball`}/> 
       }
         
            {/* <img src={`/images/golf-ball-.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
