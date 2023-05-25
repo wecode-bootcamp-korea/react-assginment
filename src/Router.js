@@ -5,7 +5,7 @@ import Product from "./pages/Product/Product" ;
 import ProductList from "./pages/ProductList/ProductList" ;
 import Review from "./pages/Review/Review" ;
 import Count from "./pages/Count/Count" ; 
-import Color from "./pages/Color/Color" ; 
+import Color from "./pages/Product/components/Color/Color";
 
 const Router = ( ) => {
     return (
