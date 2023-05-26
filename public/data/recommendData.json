@@ -1,0 +1,8 @@
+const COLOR_CARD_INFO = [
+
+{
+  "id": 0,
+  "color": "red",
+  "name": "이름 : red",
+  "rgb": "255, 0, 0"
+}
