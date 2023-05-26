@@ -22,6 +22,7 @@ const Product = () => {
       <div className="productDetail">
         <div className="productDetailImg">
           <img
+            className="productDetailImgthis"
             src={`${productList.img}${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
           />

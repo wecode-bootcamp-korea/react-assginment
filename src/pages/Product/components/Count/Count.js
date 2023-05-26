@@ -8,6 +8,7 @@ const Count = (props) => {
     <div className="count">
       <div className="countInput">
         <button
+          className="countBtn"
           onClick={() => {
             props.setNumber((prev) => {
               if (prev > 1) {
@@ -22,6 +23,7 @@ const Count = (props) => {
         </button>
         <div className="countInputText">{props.number}</div>
         <button
+          className="countBtn"
           onClick={() => {
             props.setNumber((prev) => (prev = prev + 1));
           }}

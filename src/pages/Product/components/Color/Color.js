@@ -3,8 +3,6 @@ import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = (props) => {
-  // const [color, setColor] = useState("white");
-
   return (
     <div className="color">
       <span className="colorText">

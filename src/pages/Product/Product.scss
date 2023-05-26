@@ -13,7 +13,7 @@
     &Img {
       position: relative;
 
-      img {
+      &this {
         align-self: center;
         justify-self: center;
         width: 600px;

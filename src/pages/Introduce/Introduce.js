@@ -18,12 +18,14 @@ function Introduce() {
     <>
       <main className="IntroduceMain">
         <div className="box">
-          <img alt="위코드로고" src="images/wecode.webp" />
+          <img className="boxImg" alt="위코드로고" src="images/wecode.webp" />
           <p className="name">조수진</p>
           <p className="number">46기</p>
           <div className="boxBottom">
-            <input onChange={handleInput}></input>
-            <button onClick={goToProduct}>클릭</button>
+            <input className="bottomInput" onChange={handleInput}></input>
+            <button className="bottomBtn" onClick={goToProduct}>
+              클릭
+            </button>
           </div>
           <Link className="pageToPage" to="/product">
             product 페이지로 이동
