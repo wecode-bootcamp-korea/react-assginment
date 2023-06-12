@@ -1,0 +1,50 @@
+.review {
+  width: 1024px;
+
+  &Title {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 12px;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+
+    &Info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .name {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .itemName {
+        color: gray;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &Main {
+    &Contents {
+      margin-bottom: 12px;
+      line-height: 150%;
+    }
+
+    &Handler {
+      color: gray;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
