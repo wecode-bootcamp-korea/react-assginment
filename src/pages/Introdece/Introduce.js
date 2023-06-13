@@ -1,14 +1,18 @@
+import React from "react";
 import "./Introduce.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
   const handleInput = () => {
     console.log("input 태그 동작");
   };
 
-  const handleButton = (event) => {
-    event.preventDefault();
-    console.log("button 태그 동작");
-  };
+  // const handleButton = (event) => {
+  //   event.preventDefault();
+  //   console.log("button 태그 동작");
+  // };
+
+  const navigate = useNavigate();
 
   return (
     <div className="introduce">
@@ -23,10 +27,17 @@ const Introduce = () => {
             placeholder="내용입력"
             onChange={handleInput}
           />
-          <button className="introduceBtn" type="sumbit" onClick={handleButton}>
+          <button
+            className="introduceBtn"
+            type="sumbit"
+            onClick={() => {
+              navigate("./Product");
+            }}
+          >
             클릭
           </button>
         </form>
+        <Link to="./Product">Product 페이지로 이동</Link>
       </div>
     </div>
   );
