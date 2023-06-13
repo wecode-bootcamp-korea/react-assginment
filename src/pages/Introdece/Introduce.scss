@@ -1,0 +1,32 @@
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
+
+.introduce {
+  @include flexCenter;
+
+  .introduceBox {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid $colorBlack;
+    border-radius: 10px;
+
+    .introduceImg {
+      width: 200px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .introduceName {
+      width: 50px;
+      @include textStyle(18px, bold);
+      cursor: pointer;
+
+      &:hover {
+        color: $colorGreen;
+      }
+    }
+    .introduceNum {
+      margin-bottom: 5px;
+    }
+  }
+}
