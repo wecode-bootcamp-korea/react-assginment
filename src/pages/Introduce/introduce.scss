@@ -1,9 +1,10 @@
+@import "../../styles/variables";
+@import "../../styles/mixin.scss";
+
 .profile {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
 }
 
 .profile-box {
@@ -22,11 +23,14 @@
 
 .user-name {
   margin: 0 1px;
-  font-weight: 900;
   margin-bottom: 2px;
+  @include textStyle("user-name");
+  &:hover {
+    color: $green;
+  }
 }
 
 .class-number {
   margin: 0 1px;
-  font-weight: 400;
+  @include textStyle("class-name");
 }

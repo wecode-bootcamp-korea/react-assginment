@@ -1,0 +1,15 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyle($word: word) {
+  @if $word == "user-name" {
+    font-size: 20px;
+    font-weight: 700;
+  } @else if $word == "class-name" {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}

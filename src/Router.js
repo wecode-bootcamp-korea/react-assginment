@@ -1,5 +1,5 @@
 import React from "react";
-import Introduce from "./introduce";
+import Introduce from "./pages/Introduce/introduce";
 import Product from "./pages/Product/Product";
 import ProductList from "./pages/ProductList/ProductList";
 import Review from "./pages/Product/components/Review/Review";

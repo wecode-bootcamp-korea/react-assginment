@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./styles/introduce.css";
+import "./introduce.scss";
 const Introduce = () => {
   const handleButton = () => {};
   const changeInput = () => {
