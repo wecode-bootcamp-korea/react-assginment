@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Introduce.css";
 
 function MissionOne() {
-  const [InputValue, inputTag] = useState("");
-  const [ButtonValue, buttonTag] = useState("");
+  const navigate = useNavigate();
 
-  function HandleInput(e) {
-    inputTag(e.target.value);
+  function HandleInput() {
     console.log("input 태그 동작");
   }
 
-  function HandleButton(e) {
-    buttonTag(e.target.value);
-    console.log("button 태그 동작");
+  function HandleButton() {
+    navigate("/Product");
   }
   return (
     <>
@@ -25,10 +24,12 @@ function MissionOne() {
           <p className="number">47기</p>
         </div>
         <div className="inputButton">
-          <input id="input" value={InputValue} onChange={HandleInput}></input>
-          <button id="button" value={ButtonValue} onClick={HandleButton}>
+          <input id="input" onChange={HandleInput}></input>
+          <button id="button" onClick={HandleButton}>
             클릭
           </button>
+          <br />
+          <Link to="./Product">move to Product page</Link>
         </div>
       </div>
     </>

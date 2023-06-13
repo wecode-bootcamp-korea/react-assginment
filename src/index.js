@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MissionOne from "./pages/Introduce/Introduce";
+//import MissionOne from "./pages/Introduce/Introduce";
+import Router from "./Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<MissionOne />);
+root.render(<Router />);
