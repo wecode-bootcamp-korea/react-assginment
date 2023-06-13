@@ -1,9 +1,14 @@
 import React from "react";
 import "./Product.scss";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const price = 300;
   const totalPrice = price;
+
+  const handleButton = () => {
+    window.location = "/product";
+  };
 
   return (
     <div className="product">
@@ -25,7 +30,11 @@ const Product = () => {
             {/* Count 컴포넌트 위치 */}
           </div>
           <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
-          <button className="buyBtn">구매하기</button>
+          <Link to="/Product">
+            <button className="buyBtn" onClick={handleButton}>
+              구매하기
+            </button>
+          </Link>
         </div>
       </div>
       <div className="reviewList">
