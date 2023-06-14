@@ -1,10 +1,11 @@
-
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
 
 .introduce {
     border: 1px solid black;
     border-radius: 10px;
     width: 250px;
-    height: 320px;
+    height: 390px;
     position: relative;
     top: 200px;
     left: 41%;
@@ -25,6 +26,9 @@
     align-items: flex-start;
     margin-left: 12px;
     font-weight: bolder;
+    &:hover {
+        color: green;
+    }
 }
 
 .num {
@@ -32,3 +36,20 @@
     color: gray;
     margin-left: 12px;
 }
+
+.input {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    width: 180px;
+    height: 15px;
+}
+
+.btn {
+    position: relative;
+    left: 200px;
+    width: 45px;
+    bottom: 68px;
+}
+
+
