@@ -1,18 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Color.scss";
 
 const Color = () => {
+  let [textColor, setTextColor] = useState("red");
+
   return (
     <div className="color">
       <span className="colorText">
         색상 :
-        <div className="selected" />
-        white
+        <div className={`selected ${textColor}`} />
+        {textColor}
       </span>
       <div className="colorHandler">
-        <button className="colorButton white" onClick={() => {}} />
-        <button className="colorButton red" onClick={() => {}} />
-        <button className="colorButton yellow" onClick={() => {}} />
+        <button
+          className="colorButton white"
+          onClick={() => {
+            setTextColor("white");
+          }}
+        />
+        <button
+          className="colorButton red"
+          onClick={() => {
+            setTextColor("red");
+          }}
+        />
+        <button
+          className="colorButton yellow"
+          onClick={() => {
+            setTextColor("yellow");
+          }}
+        />
       </div>
     </div>
   );
