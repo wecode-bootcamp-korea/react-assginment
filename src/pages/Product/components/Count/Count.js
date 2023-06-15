@@ -5,7 +5,7 @@ const Count = () => {
   let [countNumber, setCount] = useState(1);
 
   const vanDecrease = () => {
-    if (countNumber == 1) {
+    if (countNumber <= 1) {
       setCount(countNumber);
     } else {
       setCount(countNumber - 1);
