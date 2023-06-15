@@ -12,7 +12,6 @@ const Color = () => {
     <div className="color">
       <span className="colorText">
         색상 :
-        {/* 1.inline style -> style={{ }}   2. className  */}
         <div className={`selected ${changedColor}`} />
         {changedColor}
       </span>
