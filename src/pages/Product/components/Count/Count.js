@@ -1,15 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Count.scss";
 
 const Count = () => {
+  const [number, setNumber] = useState(1);
+
+  const increase = () => {
+    setNumber(number + 1);
+  };
+
+  const decrease = () => {
+    setNumber(number - 1);
+  };
+
+  const resetNum = () => {
+    setNumber(1);
+  };
+
   return (
     <div className="count">
       <div className="countInput">
-        <button onClick={() => {}}>-</button>
-        <div className="countInputText">1</div>
-        <button onClick={() => {}}>+</button>
+        <button
+          onClick={() => {
+            decrease();
+          }}
+        >
+          -
+        </button>
+        <div className="countInputText">{number}</div>
+        <button
+          onClick={() => {
+            increase();
+          }}
+        >
+          +
+        </button>
       </div>
-      <button className="resetBtn" onClick={() => {}}>
+      <button
+        className="resetBtn"
+        onClick={() => {
+          resetNum();
+        }}
+      >
         reset
       </button>
     </div>
