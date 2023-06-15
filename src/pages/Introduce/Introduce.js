@@ -11,22 +11,24 @@ function Introduce() {
   }
 
   function HandleButton() {
-    navigate("/Product");
+    navigate("/product");
   }
   return (
     <div className="introduce">
-      <img className="photo" alt="hambbang" src="images/IMG_7632.JPG" />
-      <div className="letters">
-        <p className="name">양회진</p>
-        <p className="number">47기</p>
-      </div>
-      <div className="inputButton">
-        <input id="input" onChange={HandleInput}></input>
-        <button id="button" onClick={HandleButton}>
-          클릭
-        </button>
-        <br />
-        <Link to="./Product">move to Product page</Link>
+      <div className="container">
+        <img className="photo" alt="hambbang" src="images/IMG_7632.JPG" />
+        <div className="letters">
+          <p className="name">이름</p>
+          <p className="number">기수</p>
+        </div>
+        <div className="inputButton">
+          <input id="input" onChange={HandleInput}></input>
+          <button id="button" onClick={HandleButton}>
+            클릭
+          </button>
+          <br />
+          <Link to="/product">move to Product page</Link>
+        </div>
       </div>
     </div>
   );

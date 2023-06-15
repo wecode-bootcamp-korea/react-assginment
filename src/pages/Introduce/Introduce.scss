@@ -1,43 +1,43 @@
 @import "../../style/variables.scss";
 @import "../../style/mixin.scss";
 
-body {
+.introduce {
   height: 100vh;
   @include flexCenter;
-}
-.introduce {
-  border: solid 1px gray;
-  border-radius: 5px;
-  width: 300px;
-  height: 400px;
-  padding: 10px;
-  margin: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-
-  .photo {
-    width: 300px;
-    height: 300px;
-    border: solid 0px;
+  .container {
+    border: solid 1px gray;
     border-radius: 5px;
-  }
-  .letters {
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 
-    p {
-      margin: 0px;
+    .photo {
+      width: 300px;
+      height: 300px;
+      border: solid 0px;
+      border-radius: 5px;
     }
-    .name {
-      &:hover {
-        color: $green;
+    .letters {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 0px;
       }
-    }
-    .number {
-      color: gray;
-      @include textStyle(large, lighter);
+      .name {
+        &:hover {
+          color: $green;
+        }
+      }
+      .number {
+        color: gray;
+        @include textStyle(large, lighter);
+      }
     }
   }
 }
