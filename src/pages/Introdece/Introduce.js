@@ -7,10 +7,9 @@ const Introduce = () => {
     console.log("input 태그 동작");
   };
 
-  // const handleButton = (event) => {
-  //   event.preventDefault();
-  //   console.log("button 태그 동작");
-  // };
+  const handleButton = () => {
+    navigate("/Product");
+  };
 
   const navigate = useNavigate();
 
@@ -27,17 +26,11 @@ const Introduce = () => {
             placeholder="내용입력"
             onChange={handleInput}
           />
-          <button
-            className="introduceBtn"
-            type="sumbit"
-            onClick={() => {
-              navigate("./Product");
-            }}
-          >
+          <button className="introduceBtn" type="sumbit" onClick={handleButton}>
             클릭
           </button>
         </form>
-        <Link to="./Product">Product 페이지로 이동</Link>
+        <Link to="/Product">Product 페이지로 이동</Link>
       </div>
     </div>
   );

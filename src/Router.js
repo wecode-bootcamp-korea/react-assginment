@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Introduce from "./pages/Introdece/Introduce";
 import Product from "./pages/Product/Product";
@@ -16,6 +17,7 @@ const Router = () => {
         <Route path="/Review" element={<Review />} />
         <Route path="/Count" element={<Count />} />
         <Route path="/Color" element={<Color />} />
+        {/* <Route path="*" element={<Error />} /> */}
         {/* path로 가면 element에 있는 컴포넌트를 보여줘 */}
       </Routes>
     </BrowserRouter>
