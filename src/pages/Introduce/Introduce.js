@@ -21,7 +21,7 @@ function Introduce() {
         <p className="name">이지원</p>
         <p className="num">47기</p>
         <input className="input" type="text" placeholder="입력" onChange={handleInput} />
-        <Link to="./Product"><p className="move">product 페이지로 이동</p></Link>
+        <p className="move"><Link to="/Product">product 페이지로 이동</Link></p>
         <button className="btn" onClick={handleButton}>Click</button>
       </div>
     </div>
