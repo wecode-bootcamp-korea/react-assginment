@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "./introduce.scss";
+import { useNavigate } from "react-router-dom";
+
 const Introduce = () => {
   const handleButton = () => {};
   const changeInput = () => {
     console.log("input value 변동");
   };
+  const navigate = useNavigate();
   return (
     <div className="introduce">
       <div className="profile">
@@ -19,7 +22,12 @@ const Introduce = () => {
           <div>
             <input className="write-input" onChange={changeInput} />
             <Link to="/Product">
-              <button className="click-button" onClick={handleButton}>
+              <button
+                className="click-button"
+                onClick={() => {
+                  navigate("/product");
+                }}
+              >
                 클릭
               </button>
             </Link>
