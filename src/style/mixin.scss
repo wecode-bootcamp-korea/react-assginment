@@ -5,4 +5,7 @@
     align-items: center;
 }
 
-@mixin text {}
+@mixin text {
+    text-decoration: none;
+    text-decoration-style: none;
+}
