@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Review.scss";
 
 const Review = () => {
+  const [review, setReview] = useState(true);
+  const handleExpand = () => {
+    setReview(!review);
+  };
   return (
     <div className="review">
       <div className="user">
@@ -18,9 +22,21 @@ const Review = () => {
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
         </div>
-        <span className="reviewMainHandler" onClick={() => {}}>
-          더보기 ▼
-        </span>
+        {review ? (
+          <span className="reviewMainHandler" onClick={handleExpand}>
+            더보기 ▼
+          </span>
+        ) : (
+          <div className="reviewMainExpanded">
+            추가 내용이 들어갈 부분입니다.
+            <br />
+            이렇게 확장되어 나타납니다.
+            <br />
+            <span className="reviewMainHandler" onClick={handleExpand}>
+              접기 ▲
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );

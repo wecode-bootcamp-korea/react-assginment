@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Count.scss";
 
 const Count = () => {
-  let [countNumber, setCount] = useState(1);
+  const [countNumber, setCount] = useState(1);
 
   const vanDecrease = () => {
     if (countNumber <= 1) {
