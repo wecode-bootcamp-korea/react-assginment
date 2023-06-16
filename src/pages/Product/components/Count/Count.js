@@ -6,12 +6,14 @@ const Count = () => {
 
   function upNumber() {
     setNumber(number + 1);
+    // setNumber((prev)=>prev+1)
   }
 
   function downNumber() {
-    if (number > 1) {
-      setNumber(number - 1);
+    if (count <= 1) {
+      return;
     }
+    setNumber(number - 1);
   }
 
   function reset() {

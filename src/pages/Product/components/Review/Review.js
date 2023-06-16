@@ -3,11 +3,9 @@ import "./Review.scss";
 
 const Review = () => {
   const [togle, setTogle] = useState(true);
-  const [exit, setExit] = useState(true);
 
   function makeTogle() {
     setTogle(!togle);
-    setExit(!exit);
   }
 
   return (
@@ -29,6 +27,7 @@ const Review = () => {
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
         </div>
+
         <span
           onClick={() => {
             makeTogle();
@@ -40,7 +39,7 @@ const Review = () => {
               makeTogle();
             }}
           >
-            {exit ? "더보기 ▼" : "접기"}
+            {togle ? "더보기 ▼" : "접기"}
           </span>
         </span>
       </div>
