@@ -6,10 +6,23 @@ const Count = () => {
 
   const increase = () => {
     setNumber(number + 1);
+    // setNumber((prev)=>prev +1)
   };
 
   const decrease = () => {
-    return number > 1 ? setNumber(number - 1) : false;
+    //1. return number > 1 ? setNumber(number - 1) : false; //false -> return 으로 변경
+
+    //2. else생략 가능
+    // if (number <= 1) {
+    //   return;
+    // } else {
+    //   setNumber(number - 1);
+    // }
+
+    if (number <= 1) {
+      return;
+    }
+    setNumber(number - 1);
   };
 
   const resetNum = () => {
