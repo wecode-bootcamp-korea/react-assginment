@@ -9,7 +9,7 @@ const Count = () => {
   };
 
   const decrease = () => {
-    setNumber(number - 1);
+    return number > 1 ? setNumber(number - 1) : false;
   };
 
   const resetNum = () => {

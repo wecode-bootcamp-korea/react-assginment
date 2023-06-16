@@ -3,11 +3,9 @@ import "./Review.scss";
 
 const Review = () => {
   const [review, setReview] = useState(true);
-  const [display, setDisplay] = useState(true);
 
   const more = () => {
     setReview(!review);
-    setDisplay(!display);
   };
   return (
     <div className="review">
@@ -22,7 +20,7 @@ const Review = () => {
       <div className="reviewMain">
         <div
           className="reviewMainContents"
-          style={{ display: `${display ? "block" : "none"}` }}
+          style={{ display: `${review ? "block" : "none"}` }}
         >
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
           <br />
