@@ -6,8 +6,10 @@ const Count = () => {
 
   const decreaseCount = () => { 
     if (count > 1) {
-      setCount(count -1);
-    }
+      setCount(count -1)
+    } else {
+      return;
+    };
   };
 
   const increaseCount = () => {
