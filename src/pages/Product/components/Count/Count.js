@@ -10,7 +10,7 @@ const Count = () => {
   }
 
   function downNumber() {
-    if (count <= 1) {
+    if (number <= 1) {
       return;
     }
     setNumber(number - 1);

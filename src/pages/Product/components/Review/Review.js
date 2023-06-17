@@ -27,7 +27,23 @@ const Review = () => {
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
         </div>
+        {/* {togle ? <div
+          style={{ display: `${togle ? "none" : "block"}` }}
+          className="reviewMainContents"
+        >
+          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+          <br />
+          다음에도 필요하면 또 여기서 시킬 것 같아요.
+        </div> : null} */}
 
+        {/* {togle && <div
+          style={{ display: `${togle ? "none" : "block"}` }}
+          className="reviewMainContents"
+        >
+          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+          <br />
+          다음에도 필요하면 또 여기서 시킬 것 같아요.
+        </div> } */}
         <span
           onClick={() => {
             makeTogle();
