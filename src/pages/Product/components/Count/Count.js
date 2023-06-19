@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [number, setNumber] = useState(1);
-
+const Count = ({ number, setNumber }) => {
   function upNumber() {
     setNumber(number + 1);
     // setNumber((prev)=>prev+1)

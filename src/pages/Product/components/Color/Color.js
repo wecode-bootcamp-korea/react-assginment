@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
-const Color = () => {
-  const [color, setColor] = useState("white");
-
-  function changeColor(color) {
-    setColor(color);
-  }
-
+const Color = ({ color, colors, changeColor }) => {
   return (
     <div className="color">
       <span className="colorText">
@@ -16,7 +10,11 @@ const Color = () => {
         <div className={`${color} selected`} />
         {color}
       </span>
-      <ColorButton changeColor={changeColor} />
+      <div className="colorBtn">
+        {colors.map((color) => {
+          return <ColorButton color={color} changeColor={changeColor} />;
+        })}
+      </div>
     </div>
   );
 };

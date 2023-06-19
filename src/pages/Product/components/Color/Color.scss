@@ -21,7 +21,9 @@
     display: flex;
     gap: 10px;
   }
-
+  .colorBtn {
+    display: flex;
+  }
   .selected {
     @include colors;
     width: 24px;
