@@ -6,7 +6,7 @@ const Count = () => {
 
   const vanDecrease = () => {
     if (countNumber <= 1) {
-      setCount(countNumber);
+      return;
     } else {
       setCount(countNumber - 1);
     }
@@ -16,8 +16,8 @@ const Count = () => {
     <div className="count">
       <div className="countInput">
         <button
-          onClick={() => {
-            vanDecrease();
+          onClick={{
+            vanDecrease,
           }}
         >
           -

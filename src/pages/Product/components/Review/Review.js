@@ -24,6 +24,7 @@ const Review = () => {
         </div>
         {review ? (
           <span className="reviewMainHandler" onClick={handleExpand}>
+            {/* onClick={함수()}를하면 함수를 그냥 호출해서 에러가난다. */}
             더보기 ▼
           </span>
         ) : (
