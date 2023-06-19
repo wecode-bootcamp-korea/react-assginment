@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
-const Color = () => {
-  const [textColor, setTextColor] = useState("white");
-
-  const colors = ["white", "red", "yellow"];
-
+const Color = ({ textColor, setTextColor, colors }) => {
   return (
     <div className="color">
       <span className="colorText">
@@ -15,8 +11,10 @@ const Color = () => {
         {textColor}
       </span>
       <div className="colorHandler">
-        {colors.map((ele, idx) => {
-          return <ColorButton textColor={ele} setTextColor={setTextColor} />;
+        {colors.map((textColor) => {
+          return (
+            <ColorButton textColor={textColor} setTextColor={setTextColor} />
+          );
         })}
       </div>
     </div>

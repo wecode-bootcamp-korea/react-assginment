@@ -4,7 +4,7 @@ import "./Count.scss";
 const Count = () => {
   const [countNumber, setCount] = useState(1);
 
-  const vanDecrease = () => {
+  const decrease = () => {
     if (countNumber <= 1) {
       return;
     } else {
@@ -15,13 +15,7 @@ const Count = () => {
   return (
     <div className="count">
       <div className="countInput">
-        <button
-          onClick={{
-            vanDecrease,
-          }}
-        >
-          -
-        </button>
+        <button onClick={decrease}>-</button>
         <div className="countInputText">{countNumber}</div>
         <button
           onClick={() => {
