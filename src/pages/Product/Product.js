@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Product.scss";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Review from "./components/Review/Review";
 import Color from "./components/Color/Color";
@@ -10,8 +10,8 @@ import Count from "./components/Count/Count";
 const Product = () => {
   const price = 300;
   const totalPrice = price;
+  const [countNumber, setCount] = useState(1);
   const navigate = useNavigate();
-
   const [textColor, setTextColor] = useState("white");
   const colors = ["white", "red", "yellow"];
 
@@ -39,9 +39,11 @@ const Product = () => {
           <div className="quantity">
             <span> 수량 : </span>
             {/* Count 컴포넌트 위치 */}
-            <Count />
+            <Count countNumber={countNumber} setCount={setCount} />
           </div>
-          <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
+          <span>
+            최종 가격 : {totalPrice.toLocaleString() * countNumber} 원
+          </span>
           <Link to="/ProductList">
             <button
               className="buyBtn"

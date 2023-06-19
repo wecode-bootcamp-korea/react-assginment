@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [countNumber, setCount] = useState(1);
-
+const Count = ({ countNumber, setCount }) => {
   const decrease = () => {
     if (countNumber <= 1) {
       return;
