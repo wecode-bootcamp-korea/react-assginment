@@ -4,6 +4,9 @@
 .introduce {
   height: 100vh;
   @include flexCenter;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   .container {
     border: solid 1px gray;
     border-radius: 5px;
@@ -37,6 +40,23 @@
       .number {
         color: gray;
         @include textStyle(large, lighter);
+      }
+    }
+  }
+  .allCard {
+    display: flex;
+    gap: 10px;
+    .card {
+      border: solid 1px black;
+      border-radius: 5px;
+      padding: 5px;
+      .color {
+        width: 100px;
+        height: 100px;
+      }
+      p {
+        margin: 0;
+        padding: 5px 0px;
       }
     }
   }

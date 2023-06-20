@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { NAV_LINK_LIST } from "./Data";
+import { NAV_LINK_LIST } from "./Modal";
 import "./Nav.scss";
 
 const Nav = () => {
