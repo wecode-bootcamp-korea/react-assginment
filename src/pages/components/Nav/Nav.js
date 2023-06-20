@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { NAV_LINK_LIST } from "./Data";
 import "./Nav.scss";
 
 const Nav = () => {
@@ -22,10 +23,13 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          <Link to="/">메인으로 가기</Link>
-          <Link to="/review">리뷰 컴포넌트 가기</Link>
-          <Link to="/count">카운트 컴포넌트 가기</Link>
-          <Link to="/color">컬러 컴포넌트 가기</Link>
+          {NAV_LINK_LIST.map((ele) => {
+            return (
+              <Link to={ele.link} key={ele.id}>
+                {ele.text}
+              </Link>
+            );
+          })}
         </div>
       )}
     </div>

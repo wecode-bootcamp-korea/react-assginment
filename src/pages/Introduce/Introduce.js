@@ -18,8 +18,8 @@ function Introduce() {
       <div className="container">
         <img className="photo" alt="hambbang" src="images/IMG_7632.JPG" />
         <div className="letters">
-          <p className="name">이름</p>
-          <p className="number">기수</p>
+          <p className="name">양회진</p>
+          <p className="number">47기</p>
         </div>
         <div className="inputButton">
           <input id="input" onChange={HandleInput}></input>
