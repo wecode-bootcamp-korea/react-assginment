@@ -2,7 +2,6 @@ import React from "react";
 import "./ColorButton.scss";
 
 const ColorButton = (props) => {
-  console.log(props.color);
   return (
     <div className="colorHandler">
       <button
