@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Review.scss";
 
-const Review = () => {
-  const [review, setReview] = useState(true);
-
+const Review = ({ review, setReview }) => {
   const more = () => {
     setReview(!review);
   };
@@ -25,14 +23,6 @@ const Review = () => {
             다음에도 필요하면 또 여기서 시킬 것 같아요.
           </div>
         )}
-        {/* <div
-          className="reviewMainContents"
-          style={{ display: `${review ? "block" : "none"}` }}
-        >
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-          <br />
-          다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div> */}
         <span
           className="reviewMainHandler"
           onClick={() => {

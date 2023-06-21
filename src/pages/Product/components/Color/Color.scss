@@ -21,7 +21,6 @@
     display: flex;
     gap: 10px;
   }
-
   .selected {
     @include colors;
     width: 24px;
@@ -35,17 +34,5 @@
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
-  }
-
-  .colorButton {
-    @include colors;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &.selected {
-      border: double;
-    }
   }
 }

@@ -1,24 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [number, setNumber] = useState(1);
-
+const Count = ({ number, setNumber }) => {
   const increase = () => {
     setNumber(number + 1);
-    // setNumber((prev)=>prev +1)
   };
 
   const decrease = () => {
-    //1. return number > 1 ? setNumber(number - 1) : false; //false -> return 으로 변경
-
-    //2. else생략 가능
-    // if (number <= 1) {
-    //   return;
-    // } else {
-    //   setNumber(number - 1);
-    // }
-
     if (number <= 1) {
       return;
     }
