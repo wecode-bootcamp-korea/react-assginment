@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Product.scss";
-// import { Link } from "react-router-dom";
 import { useNavigate, Link } from "react-router-dom";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Review from "./components/Review/Review";
@@ -36,6 +35,7 @@ const Product = () => {
             setTextColor={setTextColor}
             colors={colors}
           />
+          console.log(colors)
           <div className="quantity">
             <span> 수량 : </span>
             {/* Count 컴포넌트 위치 */}

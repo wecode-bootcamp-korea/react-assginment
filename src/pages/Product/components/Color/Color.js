@@ -3,6 +3,7 @@ import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = ({ textColor, setTextColor, colors }) => {
+  console.log(colors);
   return (
     <div className="color">
       <span className="colorText">
