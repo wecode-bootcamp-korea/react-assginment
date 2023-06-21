@@ -15,10 +15,9 @@ const Product = () => {
   const colors = ["white", "red", "yellow"];
   const [review, setReview] = useState(true);
   const [product, setProduct] = useState("");
-  console.log(product);
 
   useEffect(() => {
-    fetch("./data/productList.json")
+    fetch("./data/product.json")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
