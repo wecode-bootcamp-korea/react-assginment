@@ -5,7 +5,10 @@
   .profile {
     width: 100vw;
     height: 100vh;
-    @include flexCenter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .profile-box {
@@ -33,6 +36,37 @@
     .class-number {
       margin: 0 1px;
       @include textStyle("class-name");
+    }
+  }
+
+  .profile-list {
+    display: flex;
+    margin-top: 3em;
+
+    .profile-box {
+      margin-right: 30px;
+      width: 10vw;
+
+      .box-color {
+        justify-content: center;
+        width: 90%;
+        height: 18vh;
+      }
+    }
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .blue {
+      background-color: blue;
     }
   }
 }

@@ -3,10 +3,7 @@ import "./introduce.scss";
 import { useNavigate } from "react-router-dom";
 
 const Introduce = () => {
-  const handleButton = () => {};
-  const changeInput = () => {
-    console.log("input value 변동");
-  };
+  const changeInput = () => {};
   const navigate = useNavigate();
   return (
     <div className="introduce">
@@ -34,9 +31,25 @@ const Introduce = () => {
           </div>
           <a href="/Product">product 페이지로 이동</a>
         </div>
+        <div className="profile-list">
+          {COLOR_BOX.map((color) => (
+            <div className="profile-box">
+              <div className={`box-color ${color.title}`}></div>
+              <h4>이름: {color.title}</h4>
+              <h4>rgb: {color.rgb}</h4>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Introduce;
+
+const COLOR_BOX = [
+  { id: 1, title: "red", rgb: "255, 0, 0" },
+  { id: 2, title: "yellow", rgb: "255, 255, 0" },
+  { id: 3, title: "green", rgb: "0, 128, 0" },
+  { id: 4, title: "blue", rgb: "0, 0, 255" },
+];
