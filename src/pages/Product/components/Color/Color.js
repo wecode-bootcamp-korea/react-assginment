@@ -4,11 +4,12 @@ import "./Color.scss";
 
 const Color = () => {
   const [changedColor, setChangedColor] = useState("white");
+  
 
   const changeColor = (color) => {
     setChangedColor(color);
   };
-
+ 
   return (
     <div className="color">
       <span className="colorText">
