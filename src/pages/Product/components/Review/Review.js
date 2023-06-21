@@ -1,7 +1,7 @@
 import React from "react";
 import "./Review.scss";
 
-const Review = ({ review, setReview }) => {
+const Review = ({ review, setReview, product }) => {
   const more = () => {
     setReview(!review);
   };
@@ -14,7 +14,7 @@ const Review = ({ review, setReview }) => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{product.review}</div>
       <div className="reviewMain">
         {review && (
           <div className="reviewMainContents">
