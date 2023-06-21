@@ -7,6 +7,8 @@ import Review from "./pages/Product/components/Review/Review";
 import Count from "./pages/Product/components/Count/Count";
 import Color from "./pages/Product/components/Color/Color";
 import Nav from "./pages/components/Nav/Nav";
+import "./style/reset.scss";
+import "./style/common.scss";
 
 const Router = () => {
   return (

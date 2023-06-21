@@ -32,8 +32,27 @@ const Introduce = () => {
         </form>
         <Link to="/Product">Product 페이지로 이동</Link>
       </div>
+
+      <div className="colorList">
+        <ul>
+          {COLOR_LIST.map((info) => (
+            <li className="ColorBox" key={info.id}>
+              <div className={`bgColor ${info.color}`}></div>
+              <span className="colorName">이름 : {info.color}</span>
+              <span className="colorRgb">rgb : {info.colorRgb}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
 
 export default Introduce;
+
+const COLOR_LIST = [
+  { id: 1, color: "red", colorRgb: "255, 0, 0" },
+  { id: 2, color: "yellow", colorRgb: "255, 255, 0" },
+  { id: 3, color: "green", colorRgb: "0, 128, 0" },
+  { id: 4, color: "blue", colorRgb: "0, 0, 255" },
+];

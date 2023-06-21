@@ -3,6 +3,8 @@
 
 .introduce {
   @include flexCenter;
+  display: flex;
+  flex-direction: column;
 
   .introduceBox {
     display: flex;
@@ -27,6 +29,36 @@
     }
     .introduceNum {
       margin-bottom: 5px;
+    }
+  }
+
+  .colorList {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 520px;
+      padding-top: 20px;
+
+      .ColorBox {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid $colorBlack;
+        border-radius: 5px;
+
+        .bgColor {
+          @include colorsList;
+          width: 100px;
+          height: 110px;
+          margin-bottom: 10px;
+        }
+        .colorName {
+          @include textStyle(16px, bold);
+        }
+        .colorRgb {
+          font-size: 14px;
+        }
+      }
     }
   }
 }
