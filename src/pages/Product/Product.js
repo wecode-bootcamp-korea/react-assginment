@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Product.scss";
 import { useNavigate, Link } from "react-router-dom";
 import ColorButton from "./components/ColorButton/ColorButton";
@@ -13,22 +13,31 @@ const Product = () => {
   const navigate = useNavigate();
   const [textColor, setTextColor] = useState("white");
   const colors = ["white", "red", "yellow"];
+  const [review, setReview] = useState(true);
+  const [product, setProduct] = useState("");
+  console.log(product);
+
+  useEffect(() => {
+    fetch("./data/productList.json")
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
+  }, []);
 
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
           <img
-            src={`/images/golf-ball-${textColor}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+            src={`${product.img}${textColor}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
           />
           {/* ColorButton 컴포넌트 위치 */}
           <ColorButton textColor={textColor} setTextColor={setTextColor} />
         </div>
         <div className="productDetailInfo">
-          <span className="title">골프공</span>
+          <span className="title">{product.title}</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
-          <span>가격 : {price.toLocaleString()} 원</span>
+          <span>가격 : {product.price} 원</span>
           {/* Color 컴포넌트 위치 */}
           <Color
             textColor={textColor}
@@ -61,7 +70,7 @@ const Product = () => {
           <span>상품평</span>
         </div>
         {/* Review 컴포넌트 위치 */}
-        <Review />
+        <Review product={product} review={review} setReview={setReview} />
       </div>
     </div>
   );
