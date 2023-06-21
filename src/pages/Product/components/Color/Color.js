@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ColorButton from "../../../components/Nav/ColorButton/ColorButton";
 import "./Color.scss";
 
 const Color = () => {
@@ -16,23 +17,17 @@ const Color = () => {
         {changedColor}
       </span>
       <div className="colorHandler">
-        <button
-          className="colorButton white"
-          onClick={() => {
-            changeColor("white");
-          }}
+        <ColorButton
+          color="white"
+          onClick={() => changeColor("white")}
         />
-        <button
-          className="colorButton red"
-          onClick={() => {
-            changeColor("red");
-          }}
+        <ColorButton
+          color="red"
+          onClick={() => changeColor("red")}
         />
-        <button
-          className="colorButton yellow"
-          onClick={() => {
-            changeColor("yellow");
-          }}
+        <ColorButton
+          color="yellow"
+          onClick={() => changeColor("yellow")}
         />
       </div>
     </div>
@@ -40,4 +35,3 @@ const Color = () => {
 };
 
 export default Color;
-
