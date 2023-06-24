@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { NAV_MENU } from "./Data";
 import "./Nav.scss";
 
 const Nav = () => {
@@ -22,10 +23,9 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          <Link to="/">메인으로 가기</Link>
-          <Link to="/review">리뷰 컴포넌트 가기</Link>
-          <Link to="/count">카운트 컴포넌트 가기</Link>
-          <Link to="/color">컬러 컴포넌트 가기</Link>
+          { NAV_MENU.map((element)=>{
+            return(<Link to={element.link} key={element.id}>{element.text}</Link>)
+          }) }
         </div>
       )}
     </div>
@@ -33,4 +33,3 @@ const Nav = () => {
 };
 
 export default Nav;
-

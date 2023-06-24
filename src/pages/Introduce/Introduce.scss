@@ -6,6 +6,7 @@
     position: relative;
     top: 200px;
     left: 41%;
+ 
   
     .wecodeImg {
       position: relative;
@@ -53,6 +54,24 @@
       left: 200px;
       width: 45px;
       bottom: 68px;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px ;
+      .card {
+        border: solid 1px black;
+        border-radius: 5px;
+        padding: 5px;
+        .color {
+          width: 120px;
+          height: 120px;
+        }
+        p {
+          margin: 0;
+          padding: 5px 0px;
+        }
+      }
     }
   }
   
