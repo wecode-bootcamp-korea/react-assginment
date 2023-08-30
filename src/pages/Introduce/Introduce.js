@@ -6,10 +6,10 @@ const Introduce =()=>{
     return(
         <div className="flex">
             <section className="introduce-item">
-                <div class="image-area">
+                <div className="image-area">
                     <img src={profileImg} alt="49기 류창선 프로필 사진" />
                 </div>
-                <div class="text-area">
+                <div className="text-area">
                     <strong>류창선</strong>
                     <span>49기</span>
                 </div>
