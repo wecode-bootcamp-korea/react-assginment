@@ -1,12 +1,23 @@
 import React from 'react';
+import "./introduce.css";
+import mainImg from "../../assets/img/yojin.jpg";
 
 const Introduce =()=>{
     return(
-        <div>
-            자기소개 페이지 입니다.
-            <br />
-            과제안내에 따라 UI를 그려주세요
+        <div className="Container">
+
+            <div className="ImgBox">
+                <img src={mainImg} alt="img" className="Img"/>
+            </div> 
+
+            <div className="Profile">
+                <h1>박요진</h1>
+                <p>49기</p>
+            </div>
+
         </div>
+
+
     )
 }
 
