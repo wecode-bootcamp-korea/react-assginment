@@ -1,12 +1,17 @@
 import React from 'react';
+import './Introduce.scss';
 
 const Introduce =()=>{
     return(
-        <div>
-            자기소개 페이지 입니다.
-            <br />
-            과제안내에 따라 UI를 그려주세요
-        </div>
+        <React.Fragment>
+            <div className="bigBox">
+                <div className="pictureBox">
+                    <img src={`/images/다람쥐.jpg`} alt="myPicture"/>
+                </div>
+                <div className='name'>박인국</div>
+                <div className='number'>49기</div>
+            </div>    
+        </React.Fragment>
     )
 }
 
