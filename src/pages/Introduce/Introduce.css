@@ -7,7 +7,7 @@
 
 .introduce-container {
   width: 200px;
-  height: 250px;
+  height: 260px;
   border: 2px solid black;
   border-radius: 10px;
   padding-top: 10px;
@@ -21,13 +21,22 @@
   height: 180px;
 }
 
-.introduce-container-body {
+.introduce-container-info {
   width: 180px;
-  padding-top: 10px;
+  margin-top: 7px;
   display: flex;
   flex-direction: column;
 }
 
 .generation {
   font-size: 15px;
+}
+
+.introduce-container-form {
+  width: 180px;
+  display: flex;
+}
+
+.introduce-container-form input:first-child {
+  width: 130px;
 }
