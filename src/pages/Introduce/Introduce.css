@@ -1,0 +1,33 @@
+.introduce {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduce-container {
+  width: 200px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wecode-logo {
+  width: 180px;
+  height: 180px;
+}
+
+.introduce-container-body {
+  width: 180px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.generation {
+  font-size: 15px;
+}
