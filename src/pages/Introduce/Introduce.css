@@ -11,7 +11,7 @@
 
 .container {
   width: 250px;
-  height: 310px;
+  height: 320px;
   text-align: center;
   border: 2px solid black;
   border-radius: 10px;
@@ -44,4 +44,30 @@
 .th {
   font-size: 15px;
   font-weight: bold;
+}
+
+.inputDiv {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.inputText {
+  width: 150px;
+  height: 20px;
+  justify-content: flex-start;
+}
+
+.inputText:focus {
+  border-color: blue;
+  outline: none;
+  border-radius: 3px;
+}
+
+.inputBtn {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
