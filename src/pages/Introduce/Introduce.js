@@ -1,11 +1,15 @@
 import React from 'react';
+import "./introduceStyle.css";
+import imgProfile from "./49-youngeun-profile.jpg";
 
 const Introduce =()=>{
     return(
-        <div>
-            자기소개 페이지 입니다.
-            <br />
-            과제안내에 따라 UI를 그려주세요
+        <div className='wrap'>
+            <section className='imgProfile'><img src={imgProfile} alt='49-이영은의 프로필 사진'/></section>
+            <section>
+            <h1>이영은</h1>
+            <span>49기</span>
+            </section>
         </div>
     )
 }
