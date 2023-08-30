@@ -11,6 +11,16 @@ const Introduce = () => {
                     </p>
                     <p className="name">김세연</p>
                     <span>49기</span>
+                    <div className="input-wrapper">
+                        <input
+                            className="input-name"
+                            type="text"
+                            onChange={(hadleInput) => console.log("input 태그 동작")}
+                        />
+                        <button onClick={(handleButton) => console.log("button태그 동작")}>
+                            클릭
+                        </button>
+                    </div>
                 </div>
             </div>
         </>
