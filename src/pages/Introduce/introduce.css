@@ -1,0 +1,10 @@
+Introduce{
+flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fullline{
+    border: 4px color black;
+}
