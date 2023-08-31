@@ -1,18 +1,17 @@
 import React from "react";
-import "./Introduce.css";
+import "./Introduce.scss";
 import wecodelogo from "./wecodelogo.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
   const handleInput = () => {
     console.log("input 태그 동작");
   };
 
-  const handleButton = () => {
-    console.log("button 태그 동작");
-  };
+  const navigate = useNavigate();
 
   return (
-    <div className="introBody">
+    <div className="introduce">
       <div className="container">
         <div className="contentDiv">
           <img className="imgFile" src={wecodelogo} alt="imageFile" />
@@ -22,10 +21,18 @@ const Introduce = () => {
           </div>
           <div className="inputDiv">
             <input className="inputText" onChange={handleInput} type="text" />
-            <button className="inputBtn" onClick={handleButton}>
+            <button
+              className="inputBtn"
+              onClick={() => {
+                navigate("/product");
+              }}
+            >
               클릭
             </button>
           </div>
+          <Link to="/product">
+            <p className="productLink">product 페이지로 이동</p>
+          </Link>
         </div>
       </div>
     </div>
