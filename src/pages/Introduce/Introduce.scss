@@ -1,13 +1,17 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
 * {
     box-sizing: border-box;
     margin: 0px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexCenter;
     margin: 250px;
 }
 
@@ -26,10 +30,11 @@
 .main_image{
     width: 100%;
     height: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flexCenter;
     padding-top: 25px;
     /* border: 1px solid red ; */
 }
@@ -52,9 +57,16 @@
     align-items: flex-start;
 }
 
+
 .user_nick{
-    font-weight: bold;
-    font-size: large;
+    
+    // font-weight: bold;
+    // font-size: large;
+    @include textStyle;
+
+&:hover{
+    color: $redColor;
+}
 }
 
 .main_input_box{
@@ -66,5 +78,5 @@
 }
 
 .linkButton:visited{
-    color: green;
+    color: $greenColor;
 }
