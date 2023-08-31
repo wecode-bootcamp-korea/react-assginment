@@ -1,13 +1,16 @@
 import React from 'react';
 import "./Introduce.css";
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 const Introduce =()=>{
-
+    const navigate = useNavigate(); 
     function handleInput(){
         console.log("input 태그 동작");
     }
     function handleButton(){
-        console.log("button 태그 동작");
+        navigate('/Product');
     }
 
     return(
@@ -27,6 +30,9 @@ const Introduce =()=>{
                 </div>
                 <div>
                     <button type="button" onClick={handleButton}>클릭</button>
+                </div>
+                <div>
+                    <Link to="/product">회원가입</Link>
                 </div>
             </section>
         </div>
