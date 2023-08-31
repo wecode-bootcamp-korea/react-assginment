@@ -1,15 +1,18 @@
 import React from "react";
 import "./Introduce.css";
 import image_picture from "../../img/ko_592_1.jpg";
+import { Link, useNavigate } from "react-router-dom";
 
 const handleInput = () => {
   console.log("input 태그 동작");
 };
-const handleButton = () => {
-  console.log("button 태그 동작");
-};
 
 const Introduce = () => {
+  const navigate = useNavigate();
+  const goToMain = () => {
+    navigate("/Product");
+  };
+
   return (
     <div className="container">
       <div className="main">
@@ -22,9 +25,15 @@ const Introduce = () => {
         </div>
         <div className="main_input_box">
           <input className="profile_input" onChange={handleInput}></input>
-          <button className="profile_button" onClick={handleButton}>
+          <button className="profile_button" onClick={goToMain}>
             검색
           </button>
+        </div>
+        <div className="link">
+          <Link to="/Product" className="linkButton">
+            신세계로 가는 버튼
+          </Link>
+          ;
         </div>
       </div>
     </div>
