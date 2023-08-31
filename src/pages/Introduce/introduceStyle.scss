@@ -1,3 +1,8 @@
+@import "../../style/variables.scss";
+@import "../../style/mixin.scss";
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,8 +14,8 @@
     height: 460px;
     padding: 30px;
     border-radius: 10px;
-    border: 2px solid #000;
-    margin: 200px auto;
+    border: 2px solid $black;
+    margin: 50px auto;
 
     .imgProfile{
         width: 230px;
@@ -23,13 +28,27 @@
         }
         
     }
+
+    p{
+        @include flexCenter;
+        margin-top: 20px;
+    }
 }
 
 .textName{
 
+    display: inline-block;
+
     span{
         padding-left: 2px;
-    }    
+    }
+
+    h1{
+    
+        &:hover{
+            color: $green;
+            }
+        }
 
 }
 
