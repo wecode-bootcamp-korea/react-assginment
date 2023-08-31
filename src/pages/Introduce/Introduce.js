@@ -30,7 +30,7 @@ const Introduce =()=>{
                     <input type="text" className="input" onChange={handleInput}/>
                     <button className='button' onClick={navigateProduct}>클릭</button>
                 </div>
-                <Link to='/product'>product 페이지로 이동</Link>
+                <Link class="link" to='/product'>product 페이지로 이동</Link>
             </div>    
         </React.Fragment>
     )
