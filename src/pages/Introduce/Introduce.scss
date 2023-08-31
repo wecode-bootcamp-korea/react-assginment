@@ -1,0 +1,38 @@
+@import '../../style/reset.scss';
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.flex {
+    @include flexCenter;
+    width: 100vw;
+    height: 100vh;
+    .introduce-item {
+        width: 300px;
+        padding: 30px;
+        border: 2px $color-a solid;
+        border-radius: 10px;
+        .image-area {
+            overflow: hidden;
+            border-radius: inherit;
+            & + .text-area {
+                margin-top: 15px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .text-area {
+            display: flex;
+            flex-direction: column;
+            strong {
+                @include textStyle(20px, 700);
+                &:hover {
+                    color: $color-c;
+                }
+            }
+            span {
+                @include textStyle(15px, 400);
+            }
+        }
+    }
+}

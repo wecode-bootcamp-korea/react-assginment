@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import "./Introduce.css";
+import "./Introduce.scss";
 import profileImg from "../../assets/images/ryuchangsun.png"
 
 const Introduce =()=> {
