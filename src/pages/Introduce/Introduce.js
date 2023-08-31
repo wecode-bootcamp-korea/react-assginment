@@ -1,7 +1,12 @@
 import React from "react";
-import "./style.css";
+import "./style.scss";
+import { Link, useNavigate } from "react-router-dom";
 
 const Introduce = () => {
+    const navigate = useNavigate();
+    const goProduct = () => {
+        navigate("/Product");
+    };
     return (
         <>
             <div className="intro-wrapper">
@@ -17,9 +22,8 @@ const Introduce = () => {
                             type="text"
                             onChange={(hadleInput) => console.log("input 태그 동작")}
                         />
-                        <button onClick={(handleButton) => console.log("button태그 동작")}>
-                            클릭
-                        </button>
+                        <button onClick={goProduct}>클릭</button>
+                        <Link to="/product">product페이지로 이동</Link>
                     </div>
                 </div>
             </div>
