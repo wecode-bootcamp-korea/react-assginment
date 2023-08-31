@@ -4,15 +4,16 @@
     margin:auto;
     margin-top:70px;
     border-radius: 5px;
-    padding-bottom:1cqb;
+    padding:15px;
+
+
     
     .pictureBox{
-        width:170px;
-        height:170px;
+        width:100%;
+        height:190px;
         margin-left:auto;
         margin-right:auto;
         background-color: pink;
-        margin-top: 15px;
         margin-bottom: 7px;
         border-radius: 5px;
 
@@ -26,29 +27,22 @@
     }
 
     .name{
-        margin-left:14px;
         margin-bottom:2px;
         font-weight:700;
         font-size: 18px;
     }
 
-    .number {
-        margin-left:14px;
-
-    }
-
-
     .inputBox{
         display:flex;
 
         .input {
-            margin-left:14px;
-            width:120px;
+            width:150px;
             height:22px;
             box-sizing: border-box;
         }
     
         .button {
+            width:45px;
             height:22px;
             box-sizing: border-box;
         }
