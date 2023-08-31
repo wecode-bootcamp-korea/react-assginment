@@ -1,8 +1,19 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Introduce.css";
 import profileImg from "../../assets/images/ryuchangsun.png"
 
-const Introduce =()=>{
+const Introduce =()=> {
+    const handleInput =()=> {
+        console.log("input 태그 동작");
+    }
+
+    const navigate = useNavigate();
+
+    const goToProduct =()=> {
+        navigate('/product');
+    };
+
     return(
         <div className="flex">
             <section className="introduce-item">
@@ -15,19 +26,12 @@ const Introduce =()=>{
                 </div>
                 <div>
                     <input type="text" onChange={handleInput} />
-                    <button type="button" onClick={handleButton}>클릭</button>
+                    <button type="button" onClick={goToProduct}>클릭</button>
                 </div>
+                <Link to='/product'>product 페이지로 이동</Link>
             </section>
         </div>
     )
-}
-
-function handleInput () {
-    console.log("input 태그 동작");
-}
-
-function handleButton () {
-    console.log("button 태그 동작");
 }
 
 export default Introduce
