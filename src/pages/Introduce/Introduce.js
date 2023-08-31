@@ -2,6 +2,14 @@ import React from 'react';
 import "./Introduce.css";
 
 const Introduce =()=>{
+
+    function handleInput(){
+        console.log("input 태그 동작");
+    }
+    function handleButton(){
+        console.log("button 태그 동작")
+    }
+
     return(
         <div className="flex">
         <section className="introduce-item">
@@ -14,7 +22,15 @@ const Introduce =()=>{
             <div>
                 <span className="number">49기</span>
             </div>
-            </section>
+            <div>
+                <input type="text" onChange={handleInput}/>
+            </div>
+            <div>
+                <button type="click" onClick={handleButton}>클릭</button>
+            </div>
+            <div>
+            </div>
+        </section>
         </div>
     )
 }
