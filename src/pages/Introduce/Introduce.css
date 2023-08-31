@@ -7,7 +7,7 @@
 
 .introduce-container {
   width: 200px;
-  height: 260px;
+  height: 275px;
   border: 2px solid black;
   border-radius: 10px;
   padding-top: 10px;
@@ -39,4 +39,10 @@
 
 .introduce-container-form input:first-child {
   width: 130px;
+}
+
+.productLink {
+  width: 180px;
+  display: flex;
+  justify-content: flex-start;
 }
