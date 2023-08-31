@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../Introduce/wecode.png";
-import "./Introduce.css";
+import "./Introduce.scss";
 
 const Info = () => {
   return (
-    <div className="introduce-container-info">
-      <strong>JYJ</strong>
+    <div className="introduceContainerInfo">
+      <div className="name">JYJ</div>
       <div className="generation">49기</div>
     </div>
   );
@@ -15,7 +15,7 @@ const Info = () => {
 
 const Form = (props) => {
   return (
-    <form className="introduce-container-form">
+    <form className="introduceContainerForm">
       <input
         onChange={() => {
           console.log("input 태그 동작");
@@ -49,8 +49,8 @@ const Introduce = () => {
   };
   return (
     <div className="introduce">
-      <div className="introduce-container">
-        <img className="wecode-logo" src={logo} alt="wecode"></img>
+      <div className="introduceContainer">
+        <img className="wecodeLogo" src={logo} alt="wecode"></img>
         <Info />
         <Form productLink={goToProduct} />
         <ProductLink />

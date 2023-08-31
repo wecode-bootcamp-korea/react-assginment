@@ -1,0 +1,58 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
+.introduce {
+  height: 100vh;
+  display: flex;
+  @include flexCenter;
+
+  .introduceContainer {
+    width: 200px;
+    height: 275px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wecodeLogo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .introduceContainerInfo {
+    width: 180px;
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    @include textStyle;
+
+    &:hover {
+      color: $third-color;
+    }
+  }
+
+  .generation {
+    font-size: 15px;
+  }
+
+  .introduceContainerForm {
+    width: 180px;
+    display: flex;
+  }
+
+  .introduceContainerForm input:first-child {
+    width: 130px;
+  }
+
+  .productLink {
+    width: 180px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
