@@ -1,15 +1,19 @@
 import React from 'react';
 import "./Introduce.css";
 import capture from "../../assets/images/1692785007289.jpg";
+import { Link,useNavigate } from 'react-router-dom';
 
 
 const Introduce =()=>{
 
+    const navigate = useNavigate();
+
     function handleInput(){
         console.log("input 태그 동작")
     }
+    
     function handleButton(){
-        console.log("button 태그 동작")
+        navigate('/product');
     }
 
     return(
@@ -22,16 +26,17 @@ const Introduce =()=>{
                     <strong className="name">박민재</strong>
                     <span className="semester">49기</span>
                 </div>
-                <section> 
+                <div className='profile'> 
                     <input type="text" onChange={handleInput} />
                     <button type="button" onClick={handleButton}>클릭</button>
-                </section>
+                </div>
+                <div>
+                    <Link to="/product">회원가입</Link>
+                </div>
             </div>
         </div>
     )
 }
-
-
 
 
 export default Introduce
