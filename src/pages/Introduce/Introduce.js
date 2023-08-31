@@ -1,11 +1,13 @@
 import React from "react";
-import "./Introduce.css";
+import "./Introduce.scss";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-const Introduce = () => {
-  const handleInput = () => {
+import "../../style/mixin.scss";
+import "../../style/variables.scss";
+function Introduce() {
+  function handleInput() {
     console.log("input 태그 동작");
-  };
+  }
   const navigate = useNavigate();
   const handleButton = () => {
     navigate("/product");
@@ -35,6 +37,6 @@ const Introduce = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Introduce;
