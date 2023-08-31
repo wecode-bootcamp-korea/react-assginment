@@ -21,9 +21,26 @@
 .name,
 .number {
   display: flex;
+  margin: auto;
 }
 .info {
   font-weight: bold;
   font-size: small;
   margin-left: 20px;
+}
+.title {
+  display: flex;
+}
+.textbox {
+  width: 55%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.click {
+  margin: 0, auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
 }
