@@ -1,0 +1,29 @@
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  width: 200px;
+  border: solid 3px black;
+  border-radius: 4px;
+}
+.self {
+  display: inline;
+}
+.photo {
+  width: 80%;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.name,
+.number {
+  display: flex;
+}
+.info {
+  font-weight: bold;
+  font-size: small;
+  margin-left: 20px;
+}
