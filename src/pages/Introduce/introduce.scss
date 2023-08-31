@@ -1,3 +1,6 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -30,12 +33,28 @@
     margin-top : 10px;
     margin-left : 30px;
 
-    p {
+    h1{
+        &:hover{
+            color : $green;
+            // @include flexCenter;
+            // @include textStyle(30px, 700);
+        }
+
+
+    }  
+    
+
+    p{
         font-size : 20px;
         font-weight: 500;
-    }  
+    }
+
+        
 }
 
+.gisu{
+    margin-left : 30px;
+}
 
 
 .Event {
@@ -50,7 +69,10 @@
 
 
 
-.Event > button {
+.Event {
+
+    button {
     width : 10%;
     height : 30px;
+    }
 }

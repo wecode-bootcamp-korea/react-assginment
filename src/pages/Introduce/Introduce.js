@@ -31,7 +31,7 @@ const Introduce = () => {
             </div>
 
             <div className='Event'>
-                <input type='text' onChange={handleInput}></input>
+                <input type='text' id="Input" onChange={handleInput}></input>
                 <button onClick={handleButton}>클릭</button>
                 <Link to='./product'>product 페이지로 이동!</Link>
             </div>
