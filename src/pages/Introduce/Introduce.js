@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import "./introduce.css";
+import "./introduce.scss";
 import mainImg from "../../assets/img/yojin.jpg";
+import { useNavigate, Link } from "react-router-dom";
 
 const Introduce = () => {
 
-    const [ input, setInput ] = useState('');
-    const [ button, setButton ] = useState('');
+    // const [ input, setInput ] = useState('');
+    // const [ button, setButton ] = useState('');
+
+    const navigator = useNavigate();
     
-    const handleInput = (e) => {
-        setInput(console.log("input 태그 동작"));
+    const handleInput = () => {
+        console.log("input 태그 동작");
     }
 
-    const handleButton = (e) => {
-        setButton(console.log('button 태그 동작'));
+    const handleButton = () => {
+        navigator("/product");
     }
 
     return(
@@ -28,8 +31,9 @@ const Introduce = () => {
             </div>
 
             <div className='Event'>
-                <input type='text' value={input} onChange={handleInput}></input>
+                <input type='text' onChange={handleInput}></input>
                 <button onClick={handleButton}>클릭</button>
+                <Link to='./product'>product 페이지로 이동!</Link>
             </div>
         </div>
 
