@@ -1,6 +1,6 @@
 import React from 'react';
-import "./Introduece.scss";
-
+import "./Introduece.css";
+import { Link, useNavigate } from 'react-router-dom';
 
 const Introduce =()=>{  
 
@@ -8,8 +8,14 @@ const Introduce =()=>{
         console.log("input 태그 동작");
     };
 
-    const handleButton =()=> {
-        console.log("button 태그 동작");
+    // const handleButton =()=> {
+    //     console.log("button 태그 동작");
+    // };
+
+    const navigate = useNavigate();
+
+    const goToProduct =()=> {     //eslint-disable-line no-unused-vars
+        navigate("/Product");
     };
     
     return(
@@ -19,8 +25,10 @@ const Introduce =()=>{
             <p className="name">김기영</p>
             <p className="group">49기</p>
             <input className="input_1" type="text" onChange={myFunction}/> 
-            <button className="button_1" onClick={handleButton}>클릭</button>
-            <a className="product_1" href="" >product 페이지로 이동</a>
+            <button className="button_1"
+            /*onClick={handleButton}*/
+            onClick={goToProduct}>클릭</button>
+            <p className="product_1"><Link to="/Product">product 페이지로 이동</Link></p>
             </div>
         </div>
     )

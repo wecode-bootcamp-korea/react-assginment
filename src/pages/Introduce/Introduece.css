@@ -33,7 +33,7 @@
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 15px;
-    // background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .group {
@@ -43,24 +43,25 @@
     text-align: left;
     margin-top: 13px;
     margin-bottom: 40px;
-    // background-color: red;
+    /* background-color: red; */
 }
 
 .input_1 {
     position: absolute;
     left: 20px;
-    bottom: 20px;
+    bottom: 10px;
     margin-bottom: 20px;
 }
 
 .button_1 {
     position: absolute;
-    bottom: 18px;
+    bottom: 10px;
     right: 107px;
     margin-bottom: 20px;
 }
 
-// .product_1 {
-//     position: absolute;
-//     left: 10px;
-// }
+.product_1 {
+     position: absolute;
+     left: 20px;
+     bottom: -5px;
+}
