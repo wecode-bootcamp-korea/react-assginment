@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Introduce.css";
+import "./Introduce.scss";
 import capture from "../../assets/images/1692785007289.jpg";
 import { Link,useNavigate } from 'react-router-dom';
 
