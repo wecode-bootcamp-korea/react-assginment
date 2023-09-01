@@ -50,7 +50,7 @@ const Introduce = () => {
   return (
     <div className="introduce">
       <div className="introduceContainer">
-        <img className="wecodeLogo" src={logo} alt="wecode"></img>
+        <img className="wecodeLogo" src={logo} alt="wecode" />
         <Info />
         <Form productLink={goToProduct} />
         <ProductLink />
