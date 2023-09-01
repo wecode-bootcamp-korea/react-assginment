@@ -1,8 +1,15 @@
+@import "../../style/mixin.scss";
+@import "../../style/variable.scss";
+
 .introduction {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  @include flexCenter;
+  &:hover {
+    color: $three;
+  }
 }
 .container {
   width: 200px;
