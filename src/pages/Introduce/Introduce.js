@@ -1,11 +1,13 @@
 import React from "react";
-import "./introduce.css";
+import "./introduce.scss";
+import { Link, useNavigate } from "react-router-dom";
 const Introduce = () => {
   const handClick = () => {
     console.log("input 태그 동작");
   };
-
+  const navigate = useNavigate();
   const handButton = () => {
+    navigate("/product");
     console.log("button 태그 동작");
   };
   return (
@@ -27,6 +29,9 @@ const Introduce = () => {
               클릭
             </button>
           </div>
+          <p>
+            <Link to="/product">product 페이지로 이동</Link>
+          </p>
         </div>
       </div>
     </div>
