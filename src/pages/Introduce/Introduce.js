@@ -1,5 +1,6 @@
 import React from 'react';
 import "./introduce.css";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Introduce = () => {
@@ -9,7 +10,11 @@ const Introduce = () => {
     }
      function handleButton(){
         console.log("button 태그 동작");
+        navigate("/product");
     }
+    const navigate=useNavigate();
+    
+
     return (
         <div className="fullline">
             <div>
@@ -33,10 +38,11 @@ const Introduce = () => {
             <button onClick={handleButton}>클릭</button>
 
             </div>
-
+            <Link to="/product">product페이지로 이동</Link>
+            
 
         </div>
     )
 }
 
-export default Introduce
+export default Introduce;

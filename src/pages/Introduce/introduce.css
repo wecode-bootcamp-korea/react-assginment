@@ -1,4 +1,8 @@
-.introduce{
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+
+.introduce {
   flex-direction: column;
 }
 
@@ -8,8 +12,6 @@ html{
   padding-bottom: 700px;
   padding-left: 40% ;
   padding-right: 30% ;
-  
-  
 }
 
 
@@ -23,28 +25,22 @@ html{
     border-radius:3%;
     justify-content: center;
     align-items: center;
-  
-}
-
+    
 .thumbnail{
-  overflow: hidden;
-  border-radius:3%;
-  height: 300px;
-  width:300px;
-
-
-}
-
-.name{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+      overflow: hidden;
+      border-radius:3%;
+      height: 300px;
+      width:300px;}
+    
 }
 
 h1{
-
   padding-right:50%;
-
+  
+  &:hover{
+    color:$greencolor;
+  }
+  
 }
 
 h2{
@@ -55,3 +51,5 @@ h2{
   display: flex;
   padding-right:20%;
 }
+    
+    
