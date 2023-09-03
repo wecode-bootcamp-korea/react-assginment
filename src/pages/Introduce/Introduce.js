@@ -1,5 +1,5 @@
 import React from 'react';
-import "./introduce.css";
+import "./introduce.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 
@@ -24,7 +24,7 @@ const Introduce = () => {
                 박지원
             </h1>
 
-            <h2>49기</h2>
+            <h2 className="year"> 49기 </h2>
            
     
 
@@ -38,7 +38,8 @@ const Introduce = () => {
             <button onClick={handleButton}>클릭</button>
 
             </div>
-            <Link to="/product">product페이지로 이동</Link>
+            <Link to="/product" className="move">
+               product페이지로 이동</Link>
             
 
         </div>
