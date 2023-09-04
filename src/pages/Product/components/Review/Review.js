@@ -1,7 +1,49 @@
 import React from "react";
+import { useState } from "react";
 import "./Review.scss";
 
 const Review = () => {
+  const [review, setReview] = useState(true);
+  const handlerReview = () => {
+    review ? setReview(false) : setReview(true);
+    console.log(review);
+  };
+
+  const ReviewMain = () => {
+    if (review) {
+      return (
+        <div className="reviewMain">
+          <div className="reviewMainContents">
+            주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+            <br />
+            다음에도 필요하면 또 여기서 시킬 것 같아요.
+          </div>
+          <span
+            className="reviewMainHandler"
+            onClick={() => {
+              handlerReview();
+            }}
+          >
+            접기 ▼
+          </span>
+        </div>
+      );
+    } else {
+      return (
+        <div className="reviewMain">
+          <span
+            className="reviewMainHandler"
+            onClick={() => {
+              handlerReview();
+            }}
+          >
+            더보기 ▼
+          </span>
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="review">
       <div className="user">
@@ -12,16 +54,7 @@ const Review = () => {
         </div>
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
-      <div className="reviewMain">
-        <div className="reviewMainContents">
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-          <br />
-          다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div>
-        <span className="reviewMainHandler" onClick={() => {}}>
-          더보기 ▼
-        </span>
-      </div>
+      <ReviewMain></ReviewMain>
     </div>
   );
 };
