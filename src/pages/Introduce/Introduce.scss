@@ -1,7 +1,8 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
 .Introduction {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   height: 100vh;
 }
 .container {
