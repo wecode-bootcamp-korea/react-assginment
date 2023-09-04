@@ -5,7 +5,7 @@ const Review = () => {
   const [review, setReview] = useState("더보기 ▼");
   const [display, setDisplay] = useState('none');
   const reviewHandling = (e) => {
-    if(review == ("더보기 ▼")){
+    if(review === ("더보기 ▼")){
       setReview("접기 ▲");
       setDisplay('block');
     }else{
