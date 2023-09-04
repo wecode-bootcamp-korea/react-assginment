@@ -1,7 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Review.scss";
 
 const Review = () => {
+  const [review, setReview] = useState("더보기 ▼");
+  const [display, setDisplay] = useState('none');
+  const reviewHandling = (e) => {
+    if(review == ("더보기 ▼")){
+      setReview("접기 ▲");
+      setDisplay('block');
+    }else{
+      setReview("더보기 ▼");
+      setDisplay('none');
+    }
+    
+  }
   return (
     <div className="review">
       <div className="user">
@@ -13,13 +25,13 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        <div className="reviewMainContents">
+        <div className="reviewMainContents" style={{display: display }}>
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
         </div>
-        <span className="reviewMainHandler" onClick={() => {}}>
-          더보기 ▼
+        <span className="reviewMainHandler" onClick={reviewHandling}>
+          {review}
         </span>
       </div>
     </div>
