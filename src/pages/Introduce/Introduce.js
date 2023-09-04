@@ -16,7 +16,7 @@ const Introduce =()=>{
                 <div className="introduceBox">
                     <img src = "/images/cat.jpeg"/>
                     <div>
-                        <p className='name'>권기완</p>
+                        <p className='name'>권기완</p>
                         <p className='wecodNum'>49기</p>
                     </div>
                     <input onChange={change} type="text"/>
