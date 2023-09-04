@@ -2,9 +2,8 @@ import React from "react";
 import "./ColorButton.scss";
 
 const ColorButton = (props) => {
-
     return (
-        <>
+        <div className="colorHandler">
             <button 
                 className="colorButton white" 
                 onClick={() => {props.setColor('white')}} />
@@ -14,7 +13,7 @@ const ColorButton = (props) => {
             <button 
                 className="colorButton yellow" 
                 onClick={() => {props.setColor('yellow')}} />
-        </>
+        </div>
     )
 }
 
