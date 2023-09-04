@@ -7,8 +7,10 @@ const Introduce = () => {
   const handleInput = () => {
     console.log("input 태그 동작");
   };
-
   const navigate = useNavigate();
+  const handleButton = () => {
+    navigate("/product");
+  };
 
   return (
     <div className="introduce">
@@ -21,12 +23,7 @@ const Introduce = () => {
           </div>
           <div className="inputDiv">
             <input className="inputText" onChange={handleInput} type="text" />
-            <button
-              className="inputBtn"
-              onClick={() => {
-                navigate("/product");
-              }}
-            >
+            <button className="inputBtn" onClick={handleButton}>
               클릭
             </button>
           </div>
