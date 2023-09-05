@@ -4,43 +4,37 @@ import "./Review.scss";
 
 const Review = () => {
   const [review, setReview] = useState(true);
+  const [display, setDisplay] = useState("none");
+  const [view, setView] = useState("접기 ▲");
   const handlerReview = () => {
     review ? setReview(false) : setReview(true);
   };
 
   const ReviewMain = () => {
     if (review) {
-      return (
-        <div className="reviewMain">
-          <div className="reviewMainContents">
-            주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-            <br />
-            다음에도 필요하면 또 여기서 시킬 것 같아요.
-          </div>
-          <span
-            className="reviewMainHandler"
-            onClick={() => {
-              handlerReview();
-            }}
-          >
-            접기 ▼
-          </span>
-        </div>
-      );
+      setDisplay("");
+      setView("접기 ▲");
     } else {
-      return (
-        <div className="reviewMain">
-          <span
-            className="reviewMainHandler"
-            onClick={() => {
-              handlerReview();
-            }}
-          >
-            더보기 ▼
-          </span>
-        </div>
-      );
+      setDisplay("none");
+      setView("더보기 ▼");
     }
+    return (
+      <div className="reviewMain">
+        <div className="reviewMainContents" style={{ display: `${display}` }}>
+          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+          <br />
+          다음에도 필요하면 또 여기서 시킬 것 같아요.
+        </div>
+        <span
+          className="reviewMainHandler"
+          onClick={() => {
+            handlerReview();
+          }}
+        >
+          {view}
+        </span>
+      </div>
+    );
   };
 
   return (
