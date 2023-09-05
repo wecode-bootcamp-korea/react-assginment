@@ -19,22 +19,23 @@ const Introduce = () => {
     }
 
     return(
-        <div className="Container">
+        <div className="container">
 
-            <div className="ImgBox">
+            <div className="imgBox">
                 <img src={mainImg} alt="img" className="Img"/>
             </div> 
 
-            <div className="Profile">
+            <div className="profile">
                 <h1>박요진</h1>
                 <p>49기</p>
             </div>
 
-            <div className='Event'>
-                <input type='text' id="Input" onChange={handleInput}></input>
+            <div className='event'>
+                <input type='text' id="input" onChange={handleInput}></input>
                 <button onClick={handleButton}>클릭</button>
                 <Link to='./product'>product 페이지로 이동!</Link>
             </div>
+            
         </div>
 
 

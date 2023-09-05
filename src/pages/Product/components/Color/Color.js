@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 import "./Color.scss";
 import ColorButton from "../ColorButton/ColorButton";
+import ColorView from "../ColorView/ColorView";
 
-const Color = () => {
 
-  const [color, setColor] = useState("white");
-  
+const Color = (props) => {
 
   return (
     <div className="color">
-      <span className="colorText">
-        색상 :
-        <div className={`selected ${color}`} />
-        {color}
-      </span>
+        <ColorView color={props.color} />
       <div className="colorHandler">
-        <ColorButton color='white' onClick={() => {setColor('white')}} />
-        <ColorButton color='red'  onClick={() => {setColor('red')}}/>
-        <ColorButton color='yellow' onClick={() => {setColor('yellow')}} />
+        <ColorButton color='white' onClick={() => {props.setColor('white')}} />
+        <ColorButton color='red'  onClick={() => {props.setColor('red')}}/>
+        <ColorButton color='yellow' onClick={() => {props.setColor('yellow')}} />
       </div>
     </div>
   );
