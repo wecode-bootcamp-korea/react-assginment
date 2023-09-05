@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = (props) => {
 
-  const [review, setReview] = useState(true);
+  const {review, setReview} = props;
 
   return (
     <div className="review">
