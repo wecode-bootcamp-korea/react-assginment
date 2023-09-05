@@ -6,7 +6,6 @@ const Review = () => {
   const [review, setReview] = useState(true);
   const handlerReview = () => {
     review ? setReview(false) : setReview(true);
-    console.log(review);
   };
 
   const ReviewMain = () => {

@@ -1,34 +1,21 @@
 import React from "react";
-import { useState } from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [count, setCount] = useState(1);
-  const handleIncreaseBtn = () => {
-    setCount(count + 1);
-  };
-  const handleDecreaseBtn = () => {
-    if (count - 1) {
-      setCount(count - 1);
-    }
-  };
-  const handleResetBtn = () => {
-    setCount(1);
-  };
+const Count = (props) => {
   return (
     <div className="count">
       <div className="countInput">
         <button
           onClick={() => {
-            handleDecreaseBtn();
+            props.handleDecreaseBtn();
           }}
         >
           -
         </button>
-        <div className="countInputText">{count}</div>
+        <div className="countInputText">{props.count}</div>
         <button
           onClick={() => {
-            handleIncreaseBtn();
+            props.handleIncreaseBtn();
           }}
         >
           +
@@ -37,7 +24,7 @@ const Count = () => {
       <button
         className="resetBtn"
         onClick={() => {
-          handleResetBtn();
+          props.handleResetBtn();
         }}
       >
         reset

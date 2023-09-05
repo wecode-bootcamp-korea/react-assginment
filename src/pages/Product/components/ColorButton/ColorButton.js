@@ -1,3 +1,5 @@
+import "../ColorButton/ColorButton.scss";
+
 const ColorButton = (props) => {
   return (
     <div>
