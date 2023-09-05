@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
+const Count = (props) => {
 
-  const [number, setNumber] = useState(1);
+  // const [number, setNumber] = useState(1);
 
-  const numberPlus = () => {setNumber(number+1)};
+  const numberPlus = () => {props.setNumber(props.number+1)};
   const numberMinus = () => {
-    if(number===1){
+    if(props.number===1){
       console.log("감소시킬 수 없습니다!")
     } else {
-      setNumber(number-1)
+      props.setNumber(props.number-1)
       }
     }
   
@@ -19,10 +19,10 @@ const Count = () => {
     <div className="count">
       <div className="countInput">
         <button onClick={numberMinus}>-</button>
-        <div className="countInputText">{number}</div>
+        <div className="countInputText">{props.number}</div>
         <button onClick={numberPlus}>+</button>
       </div>
-      <button className="resetBtn" onClick={() => {setNumber(1)}}>
+      <button className="resetBtn" onClick={() => {props.setNumber(1)}}>
         reset
       </button>
     </div>
