@@ -1,30 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
-  const [count, setCount] = useState(0);
-
+const Count = (props) => {
   const handleButton = () => {
-    setCount((preNum) => preNum + 1);
+    props.setCount((preNum) => preNum + 1);
   };
 
   const handleMinusButton = () => {
-    if (count > 1) {
-      setCount((preNum) => preNum - 1);
-    } else if (count === 1) {
+    if (props.count > 1) {
+      props.setCount((preNum) => preNum - 1);
+    } else if (props.count === 1) {
       alert("이미 1 입니다.");
     }
   };
 
   const resetButton = () => {
-    setCount(1);
+    props.setCount(1);
   };
 
   return (
     <div className="count">
       <div className="countInput">
         <button onClick={handleMinusButton}>-</button>
-        <div className="countInputText">{count}</div>
+        <div className="countInputText">{props.count}</div>
         <button onClick={handleButton}>+</button>
       </div>
       <button className="resetBtn" onClick={resetButton}>
