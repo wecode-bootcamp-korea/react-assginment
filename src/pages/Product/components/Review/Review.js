@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Review.scss";
 
-const Review = () => {
-    const [toggleReview, setToggleReview] = useState(false);
+const Review = (props) => {
+    const { toggleReview, setToggleReview } = props;
 
     return (
         <div className="review">

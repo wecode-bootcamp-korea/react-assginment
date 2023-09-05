@@ -15,7 +15,7 @@ const Introduce = () => {
                         <img src="/images/cat.jpeg" alt="사진" />
                     </p>
                     <p className="name">김세연</p>
-                    <span>49기</span>
+                    <span className="class-num">49기</span>
                     <div className="input-wrapper">
                         <input
                             className="input-name"

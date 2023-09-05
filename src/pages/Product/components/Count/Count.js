@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Count.scss";
 
-const Count = () => {
-    const [countNum, setCountNum] = useState(1);
+const Count = (props) => {
+    const { countNum, setCountNum } = props;
     const handlePlusButton = () => {
-        setCountNum(countNum + 1);
+        props.setCountNum(countNum + 1);
     };
     const handleMinusButton = () => {
-        if (countNum <= 1) {
+        if (props.countNum <= 1) {
             return;
         } else {
             setCountNum(countNum - 1);
