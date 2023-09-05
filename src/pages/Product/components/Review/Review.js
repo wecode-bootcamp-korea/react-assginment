@@ -3,24 +3,18 @@ import { useState } from "react";
 import "./Review.scss";
 
 const Review = () => {
-  const [review, setReview] = useState(true);
-  const [display, setDisplay] = useState("none");
-  const [view, setView] = useState("접기 ▲");
-  const handlerReview = () => {
-    review ? setReview(false) : setReview(true);
-  };
+  const [toggle, setToggle] = useState(true);
 
+  const handleReview = () => {
+    setToggle(!toggle);
+  };
   const ReviewMain = () => {
-    if (review) {
-      setDisplay("");
-      setView("접기 ▲");
-    } else {
-      setDisplay("none");
-      setView("더보기 ▼");
-    }
     return (
       <div className="reviewMain">
-        <div className="reviewMainContents" style={{ display: `${display}` }}>
+        <div
+          className="reviewMainContents"
+          style={{ display: `${toggle ? "" : "none"}` }}
+        >
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
           <br />
           다음에도 필요하면 또 여기서 시킬 것 같아요.
@@ -28,10 +22,10 @@ const Review = () => {
         <span
           className="reviewMainHandler"
           onClick={() => {
-            handlerReview();
+            handleReview();
           }}
         >
-          {view}
+          {toggle ? "접기 ▲" : "더보기 ▼"}
         </span>
       </div>
     );
