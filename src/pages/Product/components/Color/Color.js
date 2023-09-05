@@ -10,7 +10,11 @@ const Color = (props) => {
         <div className={`selected ${props.color}`} />
         {props.color}
       </span>
-      <ColorButton color={props.color} setColor={props.setColor} />
+      <div className="colorHandler">
+        <ColorButton color="white" setColor={props.setColor} />
+        <ColorButton color="red" setColor={props.setColor} />
+        <ColorButton color="yellow" setColor={props.setColor} />
+      </div>
     </div>
   );
 };
