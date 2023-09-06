@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./Review.scss";
 
-const Review = () => {
+const Review = (props) => {
   const [review, setReview] = useState("더보기 ▼");
   const [display, setDisplay] = useState('none');
   const reviewHandling = (e) => {
@@ -23,7 +23,7 @@ const Review = () => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{props.review}</div>
       <div className="reviewMain">
         <div className="reviewMainContents" style={{display: display }}>
           주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
