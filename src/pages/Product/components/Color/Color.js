@@ -1,17 +1,16 @@
-import React, { useState } from "react"; //state 수정
-import "./Color.scss";
+import React, { useState } from "react";    
+import "./Color.scss"; 
 
-const Color = () => {
-  const [color, setColor] = useState('red'); //state 수정 
+const Color = () => {                        
+  const [color, setColor] = useState('red');  
 
   return (
-    <div className="color">
-      <span className="colorText">
-        색상 :
-      <div className={`selected ${color}`}/>{color}
-       White
+    <div className="color">                  
+      <span className="colorText">          
+        색상 : 
+      <div className={`selected ${color}`}/>{color} 
       </span>
-      <div className="colorHandler">
+      <div className="colorHandler">         
       <button className="colorButton white" onClick={() => setColor("white")} />
         <button className="colorButton red" onClick={() => setColor("red")} />
         <button className="colorButton yellow" onClick={() => setColor("yellow")} />
@@ -19,5 +18,5 @@ const Color = () => {
     </div>
   );
 };
-
+                                                        
 export default Color;

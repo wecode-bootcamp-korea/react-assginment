@@ -1,18 +1,18 @@
-import React from 'react';
-import "./Introduce.scss";
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';   
+import "./Introduce.scss";   
+import { Link, useNavigate } from 'react-router-dom';  
 
-const Introduce =()=>{
-    const navigate = useNavigate(); 
-    function handleInput(){
-        console.log("input 태그 동작");
+const Introduce =()=>{              
+    const navigate = useNavigate();     
+    function handleInput(){          
+        console.log("input 태그 동작");    
     }
-    function handleButton(){
-        navigate('/Product');
+    function handleButton(){ 
+        navigate('/Product');   
     }
 
     return(
-        <div className="flex">
+        <div className="flex">        
             <section className="introduce-item">
                 <div>
                     <img className="image" src="images/1000.jpg" alt="내사진" />
@@ -36,6 +36,6 @@ const Introduce =()=>{
         </div>
     )
 }
-
+                             
 export default Introduce
 
