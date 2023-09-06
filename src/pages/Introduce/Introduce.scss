@@ -1,0 +1,60 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+.center{
+    @include flexCenter
+}
+.bigbox{
+    border: 3px solid black;
+    width: 600px;
+    height: 100%;
+    border-radius: 16px;
+    padding-bottom: 30px;
+}
+
+.myimg{
+    width : 90%; 
+    display: flex;
+    margin: 0 auto;
+    img{
+    width : 100%;
+    margin-top : 30px;
+    border-radius: 16px;
+    }
+}
+.Name{
+    margin-left: 30px;
+    margin-top: 30px;
+
+    h1{
+        margin-bottom: 5px;
+        
+        &:hover{
+            color: $greencolor
+        }
+    }
+}
+
+.cardinal{
+    font-size: 25px;
+}
+.input{
+margin-top: 10px;
+    
+    input{
+    width: 80%;
+    padding:5px;
+    font-size: 16px;
+}
+
+}
+button{
+    padding:5px;
+    @include textStyle (16px,700)
+}
+

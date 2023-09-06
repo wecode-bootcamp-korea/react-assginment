@@ -1,0 +1,17 @@
+// mixin.scss에는 두 개의 mixin을 만들어주세요
+
+// flexCenter : 가운데 정렬을 하게하는 mixin
+// textStyle : font의 size와 weight를 인자로 넣으면 적용되는 mixin
+
+@mixin textStyle ($fontsize, $weight) {
+    font-size: $fontsize;
+    font-weight: $weight;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
