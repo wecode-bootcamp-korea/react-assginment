@@ -10,6 +10,13 @@ const Nav = () => {
     setIsOpenMenu(false);
   }, [location.pathname]);
 
+  const navList = [
+    { id: 1, path:"/", text: "메인으로 가기"},
+    { id: 2, path:"/review", text: "리뷰 컴포넌트 가기"},
+    { id: 3, path:"/count", text: "카운트 컴포넌트 가기"},
+    { id: 4, path:"/color", text: "컬러 컴포넌트 가기"}
+  ];
+  
   return (
     <div className="nav">
       <div
@@ -22,10 +29,12 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          <Link to="/">메인으로 가기</Link>
-          <Link to="/review">리뷰 컴포넌트 가기</Link>
-          <Link to="/count">카운트 컴포넌트 가기</Link>
-          <Link to="/color">컬러 컴포넌트 가기</Link>
+          {navList.map((list) => (
+            <Link key={list.key} to={list.link}>
+              {list.text}
+            </Link>
+
+          ))}
         </div>
       )}
     </div>
