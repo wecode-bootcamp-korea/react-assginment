@@ -6,7 +6,7 @@
 }
 
 .introduce {
-  height: 100vh;
+  margin-top: 5%;
   @include flexCenter;
 
   .container {
@@ -78,6 +78,68 @@
         display: flex;
         justify-content: flex-start;
         padding-left: 20px;
+      }
+    }
+  }
+}
+
+.introduceCardDiv {
+  @include flexCenter;
+  margin-top: 40px;
+  gap: 10px;
+
+  .container {
+    width: 200px;
+    height: 270px;
+    border: 2px solid $primary-black;
+    border-radius: 10px;
+
+    .contentDiv {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .colorDiv {
+        width: 170px;
+        height: 170px;
+        background-color: red;
+        margin-top: 13px;
+        margin-left: 13px;
+
+        &.red {
+          background-color: red;
+        }
+
+        &.yellow {
+          background-color: yellow;
+        }
+
+        &.green {
+          background-color: green;
+        }
+
+        &.blue {
+          background-color: blue;
+        }
+      }
+
+      .textDiv {
+        margin-top: 10px;
+        left: 0;
+
+        p {
+          margin: 0;
+          margin-left: 13px;
+          padding-bottom: 5px;
+        }
+
+        .name {
+          @include textStyle(20px, bold);
+        }
+
+        .th {
+          @include textStyle(20px, bold);
+        }
       }
     }
   }
