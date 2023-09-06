@@ -19,7 +19,7 @@ const Product = () => {
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
-          <img src={`/images/golf-ball-${color}.jpg`} />
+        <img src={`/images/golf-ball-${color}.jpg`} />
           <ColorButton color={color} setColor={setColor} />
         </div>
         <div className="productDetailInfo">
