@@ -8,7 +8,6 @@ import Review from "./components/Review/Review";
 const Product = () => {
     const [color, setColor] = useState("white");
     const [countNum, setCountNum] = useState(1);
-    const [toggleReview, setToggleReview] = useState(false);
 
     const price = 300;
     const totalPrice = price * countNum;
@@ -40,7 +39,7 @@ const Product = () => {
                 <div className="reviewListHeader">
                     <span>상품평</span>
                 </div>
-                <Review toggleReview={toggleReview} setToggleReview={setToggleReview} />
+                <Review />
             </div>
         </div>
     );

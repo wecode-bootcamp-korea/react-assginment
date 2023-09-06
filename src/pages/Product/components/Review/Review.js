@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./Review.scss";
+import Nav from "../../../components/Nav/Nav";
 
-const Review = (props) => {
-    const { toggleReview, setToggleReview } = props;
+const Review = () => {
+    const [toggleReview, setToggleReview] = useState(false);
 
     return (
         <div className="review">
+            <Nav />
             <div className="user">
                 <img src="/images/avatar.jpg" alt="avatar" />
                 <div className="userInfo">
@@ -26,7 +28,7 @@ const Review = (props) => {
                         setToggleReview(!toggleReview);
                     }}
                 >
-                    {toggleReview ? "접기 ▲" : "더보기 ▼"}
+                    {toggleReview ? "더보기 ▼" : "접기 ▲"}
                 </span>
             </div>
         </div>

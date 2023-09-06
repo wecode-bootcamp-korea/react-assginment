@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Count.scss";
+import Nav from "../../../components/Nav/Nav";
 
 const Count = (props) => {
     const { countNum, setCountNum } = props;
@@ -20,6 +21,7 @@ const Count = (props) => {
 
     return (
         <div className="count">
+            <Nav />
             <div className="countInput">
                 <button
                     onClick={() => {
