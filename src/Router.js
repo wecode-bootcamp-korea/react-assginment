@@ -11,6 +11,7 @@ import Nav from "./pages/components/Nav/Nav";
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav></Nav>
       <Routes>
         <Route path="/" element={<Introduce />} /> ⌉
         <Route path="/product" element={<Product />} />
