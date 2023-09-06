@@ -18,7 +18,7 @@ const Introduce = () => {
   };
 
   return (
-    <React.Fragment>
+    <div className="introduce">
       <div className="bigBox">
         <div className="pictureBox">
           <img src={"/images/다람쥐.jpg"} alt="myPicture" />
@@ -35,8 +35,28 @@ const Introduce = () => {
           product 페이지로 이동
         </Link>
       </div>
-    </React.Fragment>
+
+      <div className="colorCardBox">
+        {USER_INFO_LIST.map((info) => (
+          <div key={info.id} className="colorCard">
+            <div
+              className="colorImg"
+              style={{ backgroundColor: info.color }}
+            ></div>
+            <div className="colorName">이름 : {info.name}</div>
+            <div className="colorRgb">rgb : {info.rgb}</div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
 export default Introduce;
+
+const USER_INFO_LIST = [
+  { id: "1", name: "red", rgb: "255, 0, 0", color: "rgb(255,0,0)" },
+  { id: "2", name: "yellow", rgb: "255, 255, 0", color: "rgb(255, 255, 0)" },
+  { id: "3", name: "green", rgb: "0, 128, 0", color: "rgb(0, 128, 0)" },
+  { id: "4", name: "blue", rgb: "0, 0 ,255", color: "rgb(0, 0 ,255)" },
+];
