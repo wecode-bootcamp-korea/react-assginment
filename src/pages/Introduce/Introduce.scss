@@ -1,3 +1,6 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
 img {
     width: 100%;
     vertical-align: top;
@@ -36,6 +39,11 @@ img {
 .name {
     font-size: 20px;
     font-weight: bold;
+    @include textStyle(13px, 700);
+
+    &:hover{
+      color: $colorGreen;
+}
 }
 
 .number {
