@@ -1,4 +1,4 @@
-@import '../../style/variables.scss';
+@import '../../style/variable.scss';
 @import '../../style/mixin.scss';
 
 img {
@@ -42,7 +42,7 @@ img {
     @include textStyle(13px, 700);
 
     &:hover{
-      color: $colorGreen;
+      color: $green;
 }
 }
 

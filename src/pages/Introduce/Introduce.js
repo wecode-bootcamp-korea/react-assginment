@@ -2,8 +2,6 @@ import React from 'react';
 import "./Introduce.scss";
 import { Link, useNavigate } from 'react-router-dom';
 
-
-
 const Introduce =()=>{
     const navigate = useNavigate(); 
     function handleInput(){
@@ -29,7 +27,7 @@ const Introduce =()=>{
                     <input type="text" onChange={handleInput}/>
                 </div>
                 <div>
-                    <button type="button" onClick={handleButton}>클릭</button>
+                    <button type="button" onClick={handleButton}>product 페이지로 이동</button>
                 </div>
                 <div>
                     <Link to="/product">회원가입</Link>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; //state 수정
 import "./Color.scss";
 
 const Color = () => {
