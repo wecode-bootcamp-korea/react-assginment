@@ -1,20 +1,27 @@
 import React from "react";
 import './ColorButton.scss';
 
-const ColorButton=(props)=>{
+const ColorButton = (props) => {
 
-    
-    return( 
+
+
+    const handleClickOn = () => {
+
+        props.handleClick(props.selectColor);
+  
+    }
+
+
+    return (
         <div>
             <button
-            className={`colorButton ${props.color}`}
-            onClick={() => props.colorHandlerChange(props.color)}/>
+                className={`colorButton ${props.selectColor}`}
+                onClick={handleClickOn}
+            />
         </div>
-
     );
 };
 
-export default ColorButton
-
+export default ColorButton;
 
 

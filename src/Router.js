@@ -5,6 +5,8 @@ import Product from './pages/Product/Product';
 import Color from './pages/Product/components/Color/Color';
 import Count from './pages/Product/components/Count/Count';
 import Review from './pages/Product/components/Review/Review';
+import ColorButton from './pages/Product/components/Color/ColorButton/ColorButton';
+
 
 
 
@@ -18,6 +20,7 @@ const Router=()=>{
                 <Route path='/color' element={<Color/>} />
                 <Route path='/count' element={<Count/>} />
                 <Route path='/review' element={<Review/>} />
+                <Route path='/colorbutton' element={<ColorButton/>} />
             </Routes>
         </BrowserRouter>
     );

@@ -11,6 +11,8 @@
     border: 1px solid black;
     border-radius: 8px;
     gap: 8px;
+    display: flex;
+    align-items: center;
 
     button {
       border: none;

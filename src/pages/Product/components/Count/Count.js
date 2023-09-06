@@ -1,32 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Count.scss";
 
-const Count = () => {
+const Count = (props) => {
 
-  const [count, setCount] = useState(1);
+  console.log(props)
 
-  const minus=()=>{
-    if(count > 1){
-      setCount(count - 1);
-    }else{
-      setCount(1);
-      alert('숫자가 1보다 작습니다');
-    }
-  };
+  // const minusHandler=()=>{
+  //   if(props.countNum > 1){
+  //     props.countingHandler(props.countNum).countNum - 1;
+  //   }else{
+  //     props.countingHandler(1);
+  //   }
+  // };
 
   const plus=()=>{
-    setCount(count + 1);
+    props.plusHandler(props.countNum);
+  }
+
+  const minus=()=>{
+    props.minusHandler(props.countNum) ;
   }
 
   const reset=()=>{
-    setCount(1);
+    props.resetHandler();
   }
 
   return (
     <div className="count">
       <div className="countInput">
         <button onClick={minus}>-</button>
-        <div className="countInputText">{count}</div>
+        <div className="countInputText">{props.countNum}</div>
         <button onClick={plus}>+</button>
       </div>
       <button className="resetBtn" onClick={reset}>
