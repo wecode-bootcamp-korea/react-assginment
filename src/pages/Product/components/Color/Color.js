@@ -1,18 +1,28 @@
 import React from "react";
+import ColorButton from "../ColorButton/ColorButton";
 import "./Color.scss";
 
-const Color = () => {
+const Color = (props) => {
   return (
     <div className="color">
       <span className="colorText">
         색상 :
-        <div className="selected" />
-        white
+        <div className={`selected ${props.color}`} />
+        {props.color}
       </span>
       <div className="colorHandler">
-        <button className="colorButton white" onClick={() => {}} />
-        <button className="colorButton red" onClick={() => {}} />
-        <button className="colorButton yellow" onClick={() => {}} />
+        <ColorButton
+          color="white"
+          colorHandlerButton={() => props.colorHandlerButton("white")}
+        />
+        <ColorButton
+          color="red"
+          colorHandlerButton={() => props.colorHandlerButton("red")}
+        />
+        <ColorButton
+          color="yellow"
+          colorHandlerButton={() => props.colorHandlerButton("yellow")}
+        />
       </div>
     </div>
   );
