@@ -2,6 +2,16 @@ import React from 'react';
 import "./Introduece.scss";
 import { Link, useNavigate } from 'react-router-dom';
 
+
+const colorList = [
+    { id: 1, color: "red", code: "255, 0, 0" },
+    { id: 2, color: "yellow", code: "255, 255, 0" },
+    { id: 3, color: "green", code: "0, 128, 0" },
+    { id: 4, color: "blue", code: "0, 0, 255" },
+]
+
+
+
 const Introduce =()=>{  
 
     const myFunction =()=> {
@@ -29,6 +39,17 @@ const Introduce =()=>{
             /*onClick={handleButton}*/
             onClick={goToProduct}>클릭</button>
             <p className="product_1"><Link to="/Product">product 페이지로 이동</Link></p>
+            </div>
+            <div className="colorContainer">
+            {colorList.map((list) => {
+            return (
+            <div className="colorCard" key={list.id}>
+                <div className={`colorBox ${list.color}`}></div>
+                    <div>이름 : {list.color}</div>
+                    <div>rgb : {list.code}</div>
+            </div>
+            );
+            })}
             </div>
         </div>
     )
