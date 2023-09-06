@@ -1,0 +1,56 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
+img {
+  width: 100%;
+  border-radius: 5px;
+};
+
+.main {
+  width: 100%;
+  height: 100vh;
+  @include flexCenter;
+
+  .introBox{
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .imageBox{
+    border-radius: 5px;
+  }
+  .textBox{
+    width: 130px;
+    font-size: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .name{
+    display: block;
+ 
+    @include textStyle(13px, 700);
+  
+    &:hover{
+      color: $colorGreen;
+
+   }
+  } 
+  .semester{
+    font-size: 8px;
+  }
+
+  .profile{
+    display :flex;
+    height: 20px;
+  }
+
+  .profile input{
+    width : 100px;
+  }
+
+  .profile button{
+    font-size : 12px;  
+  }
+}
