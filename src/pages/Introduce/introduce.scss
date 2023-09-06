@@ -1,0 +1,56 @@
+@import "../../style/mixin.scss";
+@import "../../style/variable.scss";
+
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  @include flexCenter;
+  &:hover {
+    color: $three;
+  }
+}
+.container {
+  width: 200px;
+  border: solid 3px black;
+  border-radius: 4px;
+}
+.self {
+  display: inline;
+}
+.photo {
+  width: 80%;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.name,
+.number {
+  display: flex;
+  margin: auto;
+}
+.info {
+  font-weight: bold;
+  font-size: small;
+  margin-left: 20px;
+}
+.title {
+  display: flex;
+}
+.textbox {
+  width: 55%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.click {
+  margin: 0, auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+p {
+  text-align: center;
+}
