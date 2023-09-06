@@ -1,0 +1,51 @@
+@import '../../style/variable.scss';
+@import '../../style/mixin.scss';
+
+img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+.introduce-item {
+    width: 300px;
+    padding: 30px;
+    border: 2px #000 solid;
+    border-radius: 10px;
+}
+
+.image {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image + .name + .number {
+    margin-top: 15px;
+}
+
+.name + .number {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    @include textStyle(13px, 700);
+
+    &:hover{
+      color: $green;
+}
+}
+
+.number {
+    font-size: 15px
+}
