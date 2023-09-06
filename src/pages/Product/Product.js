@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Product.scss";
 import ColorButton from "./components/ColorButton/ColorButton";
 import Color from "./components/Color/Color";
@@ -24,19 +23,26 @@ const Product = () => {
   const colorHandlerButton = (e) => {
     setColor(e);
   };
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/mockData.json")
+      .then((response) => response.json())
+      .then((result) => setData(result));
+  }, []);
 
   return (
     <div className="product">
       <div className="productDetail">
         <div className="productDetailImg">
           <img
-            src={`/images/golf-ball-${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
+            src={`${data[0]?.img}${color}.jpg`} // color 이름에 따라 다른 이미지 경로 넣기
             alt={`golf-ball`}
           />
           <ColorButton color={color} />
         </div>
         <div className="productDetailInfo">
-          <span className="title">골프공</span>
+          <span className="title">{data[0]?.title}</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
           <span>가격 : {price.toLocaleString()} 원</span>
           <Color color={color} colorHandlerButton={colorHandlerButton} />
@@ -49,7 +55,7 @@ const Product = () => {
               handleResetBtn={handleResetBtn}
             />
           </div>
-          <span>최종 가격 : {count * price} 원</span>
+          <span>최종 가격 : {count * data[0]?.price} 원</span>
           <button className="buyBtn">구매하기</button>
         </div>
       </div>
@@ -57,7 +63,7 @@ const Product = () => {
         <div className="reviewListHeader">
           <span>상품평</span>
         </div>
-        <Review />
+        <Review review={data[0]?.review} />
       </div>
     </div>
   );
