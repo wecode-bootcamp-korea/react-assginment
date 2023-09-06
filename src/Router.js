@@ -7,18 +7,30 @@ import Review from "./pages/Product/components/Review/Review";
 import Count from "./pages/Product/components/Count/Count";
 import Color from "./pages/Product/components/Color/Color";
 import ColorButton from "./pages/Product/components/ColorButton/ColorButton"
+import Nav from "./pages/components/Nav/Nav";
+
+const NavLink = [
+    { path: 'white', element : `${<Introduce />}`},
+    { path: '/product', element : `${<Product />}`}, 
+    { path: '/productList', element : `${<ProductList />}`},
+    { path: '/review', element : `${<Review />}` },
+    { path: '/count', element : `${<Count />}` },
+    { path: '/color', element : `${<Color />}`},
+    { path: "/colorbutton", element : `${<ColorButton />}` }
+    ]
 
 const Router = () => {
     return (
         <BrowserRouter>
+            <Nav />
             <Routes>
-                <Route path='/' element={<Introduce />} />
-                <Route path='/product' element={<Product />} />
-                <Route path='/productList' element={<ProductList />} />
-                <Route path='/review' element={<Review />} />
-                <Route path='/count' element={<Count />} />
-                <Route path='/color' element={<Color />} />
-                <Route path="/colorbutton" element={<ColorButton />} />
+                {
+                NavLink.map((nav) => {
+                    return (
+                        <Route path="{nav.path}" element="{nav.element}" />
+                    )
+                })
+                }
             </Routes>
         </BrowserRouter>
     )

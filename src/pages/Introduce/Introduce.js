@@ -20,7 +20,7 @@ const Introduce = () => {
 
     return(
         <div className="container">
-
+            
             <div className="imgBox">
                 <img src={mainImg} alt="img" className="Img"/>
             </div> 
