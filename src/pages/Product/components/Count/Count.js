@@ -8,7 +8,7 @@ const Count = () => {
   };
   const decreaseNumber = () => {
     setCounter(counter - 1);
-    if (counter <= 1) return setCounter();
+    if (counter <= 1) return setCounter(0);
   };
   const resetNumber = () => {
     setCounter(1);
