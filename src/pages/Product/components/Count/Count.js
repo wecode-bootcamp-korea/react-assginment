@@ -5,28 +5,11 @@ const Count = (props) => {
   return (
     <div className="count">
       <div className="countInput">
-        <button
-          onClick={() => {
-            props.handleDecreaseBtn();
-          }}
-        >
-          -
-        </button>
+        <button onClick={props.handleDecreaseBtn}>-</button>
         <div className="countInputText">{props.count}</div>
-        <button
-          onClick={() => {
-            props.handleIncreaseBtn();
-          }}
-        >
-          +
-        </button>
+        <button onClick={props.handleIncreaseBtn}>+</button>
       </div>
-      <button
-        className="resetBtn"
-        onClick={() => {
-          props.handleResetBtn();
-        }}
-      >
+      <button className="resetBtn" onClick={props.handleResetBtn}>
         reset
       </button>
     </div>

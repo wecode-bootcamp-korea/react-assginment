@@ -4,6 +4,7 @@
 .introduce {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   @include flexCenter;
 
   .introduceContainer {
@@ -15,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   .wecodeLogo {
@@ -54,5 +56,37 @@
     width: 180px;
     display: flex;
     justify-content: flex-start;
+  }
+}
+
+.introduce2 {
+  display: flex;
+  .introduceContainer2 {
+    width: 120px;
+    height: 160px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    .red {
+      background-color: red;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+    .green {
+      background-color: green;
+    }
+    .blue {
+      background-color: blue;
+    }
   }
 }
