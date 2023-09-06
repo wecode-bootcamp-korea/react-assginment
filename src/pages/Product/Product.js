@@ -1,15 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Product.scss";
-import Color from "./components/Color/Color"
-import ColorButton from './components/ColorButton/ColorButton'; 
-import Count from './components/Count/Count';
-import Review from './components/Review/Review';
+import Color from "./components/Color/Color";
+import ColorButton from "./components/ColorButton/ColorButton";
+import Count from "./components/Count/Count";
+import Review from "./components/Review/Review";
 
 const Product = () => {
   const price = 300;
   const [number, setNumber] = useState(1);
-  const [color, setColor] = useState('white');
-  const totalPrice = price*number;
+  const [color, setColor] = useState("white");
+  const totalPrice = price * number;
 
   return (
     <div className="product">
@@ -20,18 +20,18 @@ const Product = () => {
             alt={`golf-ball`}
           />
           {/* ColorButton 컴포넌트 위치 */}
-          <ColorButton color={color}></ColorButton>
+          <ColorButton color={color} />
         </div>
         <div className="productDetailInfo">
           <span className="title">골프공</span>
           <span>비거리를 비약적으로 늘려줍니다</span>
           <span>가격 : {price.toLocaleString()} 원</span>
 
-          <Color color={color} changeColor={setColor}></Color>
+          <Color color={color} changeColor={setColor} />
           <div className="quantity">
             <span> 수량 : </span>
 
-            <Count number={number} setNumber={setNumber}></Count>
+            <Count number={number} setNumber={setNumber} />
           </div>
           <span>최종 가격 : {totalPrice.toLocaleString()} 원</span>
           <button className="buyBtn">구매하기</button>
