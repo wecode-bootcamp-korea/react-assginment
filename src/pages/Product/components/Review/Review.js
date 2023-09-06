@@ -11,7 +11,7 @@ const Review = (props) => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{props.productMockData}</div>
       <div className="reviewMain">
         {props.isHidden ? (
           <button className="reviewMainHandler" onClick={props.setIsHidden}>
