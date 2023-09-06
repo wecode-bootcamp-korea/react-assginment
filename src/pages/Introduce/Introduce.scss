@@ -1,0 +1,84 @@
+@import '/src/style/mixin.scss';
+@import '/src/style/variables.scss';
+
+.Introduce {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .centerBox {
+        width: 200px;
+        height: 265px;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid black;
+        position: absolute;
+        top: 220px;
+    }
+
+    .centerBox2{
+        width: 130px;
+        height: 170px;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+    .redBox{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: inline-block;
+    }
+    .yellowBox{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        display: inline-block;
+    }
+    .greenBox{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        display: inline-block;
+    }
+    .blueBox{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        display: inline-block;
+    }
+
+    .introduceBox{
+        display: inline-block;
+    }
+    .introduceBox > img {
+        width: 165px;
+        height: 165px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    .introduceBox > div > p {
+        margin : 0;
+        text-align: left;
+        margin-left: 10px;
+    }
+    
+    .introduceBox > div {
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    
+    .name {
+        @include textStyle(16px,800);
+
+        &:hover{
+            color : $green;
+        }
+    }
+    
+    .wecodNum {
+        @include textStyle(8px,500)
+    }
+}
+
