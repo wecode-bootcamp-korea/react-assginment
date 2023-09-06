@@ -11,6 +11,7 @@ import Nav from "./pages/components/Nav/Nav";
 const Router = () => {
     return (
         <BrowserRouter>
+            <Nav />
             <Routes>
                 <Route path="/" element={<Introduce />} />
                 <Route path="/Product" element={<Product />} />
@@ -18,7 +19,6 @@ const Router = () => {
                 <Route path="/Count" element={<Count />} />
                 <Route path="/ProductList" element={<ProductList />} />
                 <Route path="/Review" element={<Review />} />
-                <Route path="/Nav" element={<Nav />} />
             </Routes>
         </BrowserRouter>
     );

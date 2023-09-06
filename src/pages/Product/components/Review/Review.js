@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "./Review.scss";
-import Nav from "../../../components/Nav/Nav";
 
 const Review = () => {
     const [toggleReview, setToggleReview] = useState(false);
 
     return (
         <div className="review">
-            <Nav />
             <div className="user">
                 <img src="/images/avatar.jpg" alt="avatar" />
                 <div className="userInfo">
