@@ -4,7 +4,7 @@ import "./Review.scss";
 const Review = () => {
   const [open , setOpen] = useState(true)
   
-  const isConfum = () => {
+  const click = () => {
     if(open === true){
       setOpen(false)
     }else if (open === false){
@@ -23,14 +23,16 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        <div className="reviewMainContents">
-          주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-          <br />
-          다음에도 필요하면 또 여기서 시킬 것 같아요.
-        </div>
-        <span className="reviewMainHandler" onClick={() => isConfum()}>
-          {open === false ? '더보기 ▼' : '접기 ▲'}
+        <span className="reviewMainHandler" onClick={() => click()}>
+          {open === false ? "더보기 ▼" : "접기 ▲"}
         </span>
+        {open === false ? null : (
+          <div className="reviewMainContents">
+            주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+            <br />
+            다음에도 필요하면 또 여기서 시킬 것 같아요.
+          </div>
+        )}
       </div>
     </div>
   );
