@@ -3,6 +3,13 @@ import "./introduce.scss";
 import mainImg from "../../assets/img/yojin.jpg";
 import { useNavigate, Link } from "react-router-dom";
 
+const imgCard = [
+    { id : 1 , 이름 : 'red' , rgb : 'rgb(255, 0, 0)' },
+    { id : 2 , 이름 : 'yellow' , rgb : 'rgb(255, 255, 0)' },
+    { id : 3 , 이름 : 'green' , rgb : 'rgb(0, 128, 0)' },
+    { id : 4 , 이름 : 'blue' , rgb : 'rgb(0, 0, 255)' },
+]
+
 const Introduce = () => {
 
     // const [ input, setInput ] = useState('');
@@ -35,6 +42,19 @@ const Introduce = () => {
                 <button onClick={handleButton}>클릭</button>
                 <Link to='./product'>product 페이지로 이동!</Link>
             </div>
+
+
+            <div className="colorBox">
+                <div />
+            </div>
+
+            {/* {imgCard.map((card)=> {
+                return (
+                    <div className="card" key={card.id}>
+                        
+                    </div>
+                )
+            })} */}
             
         </div>
 

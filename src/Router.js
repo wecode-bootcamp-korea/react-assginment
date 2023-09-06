@@ -10,14 +10,16 @@ import ColorButton from "./pages/Product/components/ColorButton/ColorButton"
 import Nav from "./pages/components/Nav/Nav";
 
 const NavLink = [
-    { path: 'white', element : `${<Introduce />}`},
-    { path: '/product', element : `${<Product />}`}, 
+    { path: '/', element : <Introduce />},
+    { path: '/product', element : <Product />}, 
     { path: '/productList', element : `${<ProductList />}`},
-    { path: '/review', element : `${<Review />}` },
-    { path: '/count', element : `${<Count />}` },
-    { path: '/color', element : `${<Color />}`},
-    { path: "/colorbutton", element : `${<ColorButton />}` }
+    { path: '/review', element : <Review />},
+    { path: '/count', element : <Count />},
+    { path: '/color', element : <Color />},
+    { path: "/colorbutton", element : <ColorButton />},
     ]
+
+    console.log(NavLink)
 
 const Router = () => {
     return (
@@ -27,7 +29,7 @@ const Router = () => {
                 {
                 NavLink.map((nav) => {
                     return (
-                        <Route path="{nav.path}" element="{nav.element}" />
+                        <Route path={nav.path} element={nav.element} />
                     )
                 })
                 }
