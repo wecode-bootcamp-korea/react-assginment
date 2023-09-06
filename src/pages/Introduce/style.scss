@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .intro-box {
     border-radius: 8px;
@@ -52,5 +53,16 @@
         position: absolute;
         right: 0;
         top: 1px;
+    }
+}
+.intro-card-wrapper {
+    display: flex;
+    margin-top: 40px;
+
+    .intro-box {
+        margin-right: 20px;
+    }
+    .intro-box:last-child {
+        margin-right: 0;
     }
 }

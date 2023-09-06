@@ -7,6 +7,13 @@ const Introduce = () => {
     const goProduct = () => {
         navigate("/Product");
     };
+
+    const INTRO = [
+        { boxColor: "red", rgb: "rgb : 255, 0, 0 ", name: "이름 : red" },
+        { boxColor: "yellow", rgb: "rgb : 255, 255, 0 ", name: "이름 : yellow" },
+        { boxColor: "green", rgb: "rgb : 0, 128, 0 ", name: "이름 : green" },
+        { boxColor: "blue", rgb: "rgb : 0, 0, 255 ", name: "이름 : blue" },
+    ];
     return (
         <>
             <div className="intro-wrapper">
@@ -25,6 +32,15 @@ const Introduce = () => {
                         <button onClick={goProduct}>클릭</button>
                         <Link to="/product">product페이지로 이동</Link>
                     </div>
+                </div>
+                <div className="intro-card-wrapper">
+                    {INTRO.map((info) => (
+                        <div className="intro-box">
+                            <p className="img-box" style={{ backgroundColor: info.boxColor }}></p>
+                            <p className="name">{info.name}</p>
+                            <span className="class-num">{info.rgb}</span>
+                        </div>
+                    ))}
                 </div>
             </div>
         </>
