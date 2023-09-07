@@ -2,20 +2,18 @@ import React, { useState } from "react";
 import "./Review.scss";
 
 const ReviewMain = () => {
-  return(
-  <div className="reviewMainContents">
-    주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
-    <br />
-    다음에도 필요하면 또 여기서 시킬 것 같아요.
-  </div>
-  )
-}
+  return (
+    <div className="reviewMainContents">
+      주문한지 하루만에 배송이 도착해서 너무 좋았습니다.
+      <br />
+      다음에도 필요하면 또 여기서 시킬 것 같아요.
+    </div>
+  );
+};
 
-const Review = () => {
-
+const Review = (props) => {
   const [reviewOpen, setRiviewOpen] = useState(false);
   const [more, setMore] = useState(false);
-
 
   console.log(reviewOpen);
 
@@ -28,17 +26,20 @@ const Review = () => {
           <div className="itemName">골프공, white 색상 구매</div>
         </div>
       </div>
-      <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
+      <div className="reviewTitle">{props.product[0].review}</div>
       <div className="reviewMain">
         {reviewOpen === true ? <ReviewMain /> : null}
-        <span className="reviewMainHandler" onClick={() => {
-           if(reviewOpen === false) {
-            setRiviewOpen(true);
-          } else {
-            setRiviewOpen(false);
-          }
-        }}>
-          { reviewOpen === true ? '접기 ▲' : '더보기 ▼'}
+        <span
+          className="reviewMainHandler"
+          onClick={() => {
+            if (reviewOpen === false) {
+              setRiviewOpen(true);
+            } else {
+              setRiviewOpen(false);
+            }
+          }}
+        >
+          {reviewOpen === true ? "접기 ▲" : "더보기 ▼"}
         </span>
       </div>
     </div>

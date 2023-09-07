@@ -2,6 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Nav.scss";
 
+const NavData = [
+  { id : 1 , to : '/' , text : '메인으로 가기'},
+  { id : 2 , to : '/review' , text : '리뷰 컴포넌트 가기'},
+  { id : 3 , to : '/count' , text : '카운트 컴포넌트 가기'},
+  { id : 4 , to : '/color' , text : '컬러 컴포넌트 가기'},
+]
+
 const Nav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const location = useLocation();
@@ -22,10 +29,16 @@ const Nav = () => {
       </div>
       {isOpenMenu && (
         <div className="menuBox">
-          <Link to="/">메인으로 가기</Link>
+          {NavData.map((nav) => {
+            return (
+              <Link to={nav.to} key={nav.id}>{nav.text}</Link>
+            )
+          })}
+
+          {/* <Link to="/">메인으로 가기</Link>
           <Link to="/review">리뷰 컴포넌트 가기</Link>
           <Link to="/count">카운트 컴포넌트 가기</Link>
-          <Link to="/color">컬러 컴포넌트 가기</Link>
+          <Link to="/color">컬러 컴포넌트 가기</Link> */}
         </div>
       )}
     </div>
