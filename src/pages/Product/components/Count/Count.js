@@ -3,16 +3,6 @@ import "./Count.scss";
 
 const Count = (props) => {
 
-  console.log(props)
-
-  // const minusHandler=()=>{
-  //   if(props.countNum > 1){
-  //     props.countingHandler(props.countNum).countNum - 1;
-  //   }else{
-  //     props.countingHandler(1);
-  //   }
-  // };
-
   const plus=()=>{
     props.plusHandler(props.countNum);
   }
