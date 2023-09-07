@@ -8,7 +8,7 @@ import Review from "./components/Review/Review";
 const Product = () => {
     const [color, setColor] = useState("white");
     const [countNum, setCountNum] = useState(1);
-    const [info, setInfo] = useState();
+    const [info, setInfo] = useState({});
 
     useEffect(() => {
         fetch("/data/data.json")
@@ -20,12 +20,12 @@ const Product = () => {
     }, []);
     console.log("info : " + JSON.stringify(info));
 
-    const price = info.price;
-    const totalPrice = price * countNum;
+    const price1 = info.price;
+    const totalPrice = price1 * countNum;
 
-    if (!info) {
-        return null;
-    }
+    // if (!info) {
+    //     return null;
+    // }
 
     return (
         <div className="product" key={info.title}>
@@ -41,7 +41,7 @@ const Product = () => {
                     <div className="productDetailInfo">
                         <span className="title">{info.title}</span>
                         <span>비거리를 비약적으로 늘려줍니다</span>
-                        <span>가격 : {price.toLocaleString()} 원</span>
+                        <span>가격 : {price1 ? price1.toLocaleString() : price1} 원</span>
                         <Color color={color} setColor={setColor} />
                         <div className="quantity">
                             <span> 수량 : </span>
