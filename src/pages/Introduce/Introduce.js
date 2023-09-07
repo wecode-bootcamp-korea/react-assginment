@@ -3,12 +3,14 @@ import "./introduce.scss";
 import mainImg from "../../assets/img/yojin.jpg";
 import { useNavigate, Link } from "react-router-dom";
 
-const imgCard = [
-    { id : 1 , 이름 : 'red' , rgb : 'rgb(255, 0, 0)' },
-    { id : 2 , 이름 : 'yellow' , rgb : 'rgb(255, 255, 0)' },
-    { id : 3 , 이름 : 'green' , rgb : 'rgb(0, 128, 0)' },
-    { id : 4 , 이름 : 'blue' , rgb : 'rgb(0, 0, 255)' },
+const ColorCard = [
+    { id : 1 , name : 'red' , rgb : 'rgb(255, 0, 0)' },
+    { id : 2 , name : 'yellow' , rgb : 'rgb(255, 255, 0)' },
+    { id : 3 , name : 'green' , rgb : 'rgb(0, 128, 0)' },
+    { id : 4 , name : 'blue' , rgb : 'rgb(0, 0, 255)' },
 ]
+
+console.log(ColorCard)
 
 const Introduce = () => {
 
@@ -26,6 +28,7 @@ const Introduce = () => {
     }
 
     return(
+        <>
         <div className="container">
             
             <div className="imgBox">
@@ -44,9 +47,7 @@ const Introduce = () => {
             </div>
 
 
-            <div className="colorBox">
-                <div />
-            </div>
+
 
             {/* {imgCard.map((card)=> {
                 return (
@@ -58,6 +59,26 @@ const Introduce = () => {
             
         </div>
 
+        <div className='colorCard'>
+            {
+            ColorCard.map((card) => {
+            return (
+            
+                <div className="colorCardBox">
+                    <div className="cardBox" style={{background:card.rgb}}></div>
+                    <div className="colorBoxInfo">
+                        <h4>{card.name}</h4>
+                        <p>{card.rgb}</p>
+                    </div>
+                </div>
+            
+            )
+            })
+            }
+            </div>     
+
+
+</>
 
     )
 }
