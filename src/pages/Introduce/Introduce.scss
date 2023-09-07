@@ -4,14 +4,22 @@
 
 .flex {
     @include flexCenter;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
+    .introduce-list {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
     .introduce-item {
-        width: 300px;
+        width: 200px;
         padding: 30px;
         border: 2px $color-a solid;
         border-radius: 10px;
         .image-area {
+            width: 200px;
+            height: 200px;
             overflow: hidden;
             border-radius: inherit;
             & + .text-area {
