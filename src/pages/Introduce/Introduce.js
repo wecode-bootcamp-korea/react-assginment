@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Introduce.scss";
-import profileImg from "../../assets/images/ryuchangsun.png"
+import profileImg from "../../assets/images/ryuchangsun.png";
 
 const COLOR_CARD_LIST = [
     {
@@ -23,21 +23,21 @@ const COLOR_CARD_LIST = [
         id: "card4",
         colorName: "blue",
         colorCode: "0, 0, 255",
-    }
-]
+    },
+];
 
-const Introduce =()=> {
-    const handleInput =()=> {
+const Introduce = () => {
+    const handleInput = () => {
         console.log("input 태그 동작");
-    }
+    };
 
     const navigate = useNavigate();
 
-    const goToProduct =()=> {
-        navigate('/product');
+    const goToProduct = () => {
+        navigate("/product");
     };
 
-    return(
+    return (
         <div className="flex">
             <section className="introduce-item">
                 <div className="image-area">
@@ -49,27 +49,34 @@ const Introduce =()=> {
                 </div>
                 <div>
                     <input type="text" onChange={handleInput} />
-                    <button type="button" onClick={goToProduct}>클릭</button>
+                    <button type="button" onClick={goToProduct}>
+                        클릭
+                    </button>
                 </div>
-                <Link to='/product'>product 페이지로 이동</Link>
+                <Link to="/product">product 페이지로 이동</Link>
             </section>
 
-            <ul className='introduce-list'>
+            <ul className="introduce-list">
                 {COLOR_CARD_LIST.map((item) => {
                     return (
-                        <li key={item.id} className='introduce-item'>
-                            <div className="image-area" style={{backgroundColor: 'rgb(' + item.colorCode + ')'}}></div>
+                        <li key={item.id} className="introduce-item">
+                            <div
+                                className="image-area"
+                                style={{
+                                    backgroundColor:
+                                        "rgb(" + item.colorCode + ")",
+                                }}
+                            ></div>
                             <div className="text-area">
                                 <strong>이름 : {item.colorName}</strong>
                                 <span>rgb : {item.colorCode}</span>
                             </div>
                         </li>
-                    )
-                    })
-                }
+                    );
+                })}
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default Introduce
+export default Introduce;
