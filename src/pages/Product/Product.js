@@ -16,7 +16,7 @@ const Product = () => {
     let finalPrice = totalPrice * count;
 
     useEffect(() => {
-        fetch("/data/mock.json", {
+        fetch("/data/productMock.json", {
             method: "GET",
         })
             .then((res) => res.json())
