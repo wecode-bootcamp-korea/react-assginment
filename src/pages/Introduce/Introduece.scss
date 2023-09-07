@@ -1,0 +1,116 @@
+@import "../../style/mixin.scss";
+@import "../../style/variables.scss";
+
+
+.introduce {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .introduceContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid black;
+        padding: 20px 20px 20px 20px;
+        border-radius: 5px;
+        position: relative;
+    }
+}
+
+.main_img {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.name {
+    width: 100%;
+    height: 10px;
+    @include textStyle;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* background-color: yellow; */
+
+    &:hover {
+        color: $third-color;
+    }
+}
+
+.group {
+    width: 100%;
+    height: 15px;
+    font-size: 17px;
+    text-align: left;
+    margin-top: 13px;
+    margin-bottom: 40px;
+    /* background-color: red; */
+}
+
+.input_1 {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.button_1 {
+    position: absolute;
+    bottom: 10px;
+    right: 107px;
+    margin-bottom: 20px;
+}
+
+.product_1 {
+     position: absolute;
+     left: 20px;
+     bottom: -5px;
+}
+
+.colorContainer {
+    width: 700px;
+    height: 280px;
+    margin-top: 50px;
+    // border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .colorCard {
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 17px;
+        margin: 10px;
+        width: 150px;
+        height: 250px;
+        
+        .colorBox {
+            // border: 5px solid black;
+            height: 150px;
+            
+
+            &.red {
+                background-color: rgb(255, 0, 0);
+            }
+
+            &.yellow {
+                background-color: rgb(255, 255, 0);
+            }
+
+            &.green {
+                background-color: rgb(0, 128, 0);
+            }
+
+            &.blue {
+                background-color: rgb(0, 0, 255);
+            }
+        }
+    }   
+}
