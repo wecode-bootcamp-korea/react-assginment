@@ -9,10 +9,12 @@ import Count from "../src/pages/Product/components/Count/Count";
 import Review from "../src/pages/Product/components/Review/Review";
 import Product from "../src/pages/Product/Product";
 import ProductList from "../src/pages/ProductList/ProductList";
+import Nav from "./pages/components/Nav/Nav";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Introduce />} />
         <Route path="/product" element={<Product />} />
