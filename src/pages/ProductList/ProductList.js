@@ -31,13 +31,3 @@ const ProductList = () => {
 };
 
 export default ProductList;
-// {USER_INFO_LIST.map((info) => (
-//   <div key={info.id} className="colorCard">
-//     <div
-//       className="colorImg"
-//       style={{ backgroundColor: info.color }}
-//     ></div>
-//     <div className="colorName">이름 : {info.name}</div>
-//     <div className="colorRgb">rgb : {info.rgb}</div>
-//   </div>
-// ))}
