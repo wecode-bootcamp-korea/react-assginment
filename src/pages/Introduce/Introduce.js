@@ -35,7 +35,7 @@ const Introduce = () => {
                 </div>
                 <div className="intro-card-wrapper">
                     {INTRO.map((info) => (
-                        <div className="intro-box">
+                        <div className="intro-box" key={info.name}>
                             <p className="img-box" style={{ backgroundColor: info.boxColor }}></p>
                             <p className="name">{info.name}</p>
                             <span className="class-num">{info.rgb}</span>
