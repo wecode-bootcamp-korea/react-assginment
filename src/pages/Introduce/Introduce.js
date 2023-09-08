@@ -2,6 +2,12 @@ import React from "react";
 import "./Introduce.scss";
 import { Link, useNavigate } from "react-router-dom";
 
+const COLOR_BOX_LIST = [
+  { id: 1, color: "red", rgb: "255,0,0" },
+  { id: 2, color: "yellow", rgb: "255,255,0" },
+  { id: 3, color: "green", rgb: "0,128,0" },
+  { id: 4, color: "blue", rgb: "0,0,255" },
+];
 function Introduce() {
   function handleInput() {
     console.log("input 태그 동작");
@@ -32,6 +38,18 @@ function Introduce() {
             <Link to="/product">product 페이지로 이동</Link>
           </p>
         </div>
+      </div>
+      <div className="fourcolorcontainer">
+        {COLOR_BOX_LIST.map((info) => (
+          <div className="colorbox" id={info.id}>
+            <div
+              className="colorimage"
+              style={{ backgroundColor: info.color }}
+            />
+            <p>이름 : {info.color}</p>
+            <p>rgb : {info.rgb}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
