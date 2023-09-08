@@ -1,10 +1,10 @@
 import React from "react";
 import "./Review.scss";
-import { useState } from "react";
-const Review = () => {
-  const [viewMore, setviewMore] = useState(false);
+
+const Review = (props) => {
+  const { review, setReview } = props;
   const handleReview = () => {
-    setviewMore(!viewMore);
+    setReview(!review);
   };
   return (
     <div className="review">
@@ -17,7 +17,7 @@ const Review = () => {
       </div>
       <div className="reviewTitle">배송도 빠르고 정말 좋아요.</div>
       <div className="reviewMain">
-        {!viewMore ? (
+        {!review ? (
           ""
         ) : (
           <div className="reviewMainContents">

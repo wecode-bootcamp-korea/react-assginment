@@ -1,8 +1,7 @@
 import React from "react";
 import "./Count.scss";
-import { useState } from "react";
-const Count = () => {
-  const [count, setCount] = useState(1);
+const Count = (props) => {
+  const { count, setCount } = props;
   const increasBtn = () => {
     setCount(count + 1);
   };
