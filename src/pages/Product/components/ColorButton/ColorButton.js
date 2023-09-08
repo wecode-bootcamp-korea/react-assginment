@@ -4,15 +4,24 @@ import "./ColorButton.scss";
 const ColorButton = (props) => {
   console.log(props);
   return (
-    <div>
-      <button className={`colorButton ${props.color}`}
-        onClick={() => props.setColor("white")}
+    <div className="colorHandler">
+      <button
+        className={`colorButton white`}
+        onClick={() => {
+          props.setColor("white");
+        }}
       />
-        <button className={`colorButton ${props.color}`}
-        onClick={() => props.setColor("red")}
+      <button
+        className={`colorButton red`}
+        onClick={() => {
+          props.setColor("red");
+        }}
       />
-        <button className={`colorButton ${props.color}`}
-        onClick={() => props.setColor("yellow")}
+      <button
+        className={`colorButton yellow`}
+        onClick={() => {
+          props.setColor("yellow");
+        }}
       />
     </div>
   );

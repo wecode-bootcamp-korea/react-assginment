@@ -13,8 +13,8 @@
 }
 
 .color {
-  display: flex;
-  flex-direction: column;
+
+ 
   gap: 10px;
 
   &Text {
@@ -43,6 +43,7 @@
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
+    display:flex
 
     &.selected {
       border: double;
