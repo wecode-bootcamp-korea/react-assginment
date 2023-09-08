@@ -1,3 +1,17 @@
+@mixin colors {
+  &.white {
+    background-color: white;
+  }
+
+  &.red {
+    background-color: #f32321;
+  }
+
+  &.yellow {
+    background-color: #faf1b0;
+  }
+}
+
 .product {
   display: flex;
   flex-direction: column;
@@ -61,6 +75,7 @@
       }
 
       .buyBtn {
+        @include colors;
         padding: 20px;
         border-radius: 20px;
         background-color: black;
@@ -72,6 +87,7 @@
   }
 
   .reviewList {
+    padding: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,10 +95,11 @@
     border-top: 1px solid lightgray;
 
     &Header {
+      margin-right: 20%;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: 980px;
       height: 80px;
       background-color: #f4f6f8;
       span {
@@ -92,4 +109,13 @@
       }
     }
   }
+}
+
+.button {
+  @include colors;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
 }
