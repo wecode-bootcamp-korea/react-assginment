@@ -1,0 +1,115 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border : 1px solid black;
+    border-radius: 10px;
+    width : 400px;
+    height : 100%;
+    padding-bottom : 30px;
+    margin : 0 auto;
+}
+
+.imgBox {
+    width : 100%;
+    height : 100%;
+    display : flex;
+    margin : 0 auto;
+    padding-top : 40px;
+
+    img {
+        width : 90%;
+        border-radius: 16px;
+        margin : 0 auto;
+    }
+}
+
+.profile{
+    margin-top : 10px;
+    margin-left : 30px;
+
+    h1{
+        &:hover{
+            color : $green;
+            // @include flexCenter;
+            @include textStyle('30px', '700');
+        }
+
+
+    }  
+    
+
+    p{
+        font-size : 20px;
+        font-weight: 500;
+    }
+
+        
+}
+
+
+.event {
+    margin-top : 10px;
+    text-align : center;
+
+    input {
+        width : 80%;
+        height : 30px;
+    }
+
+    button {
+        width : 10%;
+        height : 30px;
+    }
+}
+
+.colorCard{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    .colorCardBox{
+        display : flex;
+        flex-direction : column;
+        width : 150px;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin : 10px;
+        
+
+        .cardBox{
+            display : flex;
+            flex-direction : column;
+            width : 80%;
+            height : 80%;
+            margin : 0 auto;
+            margin-top : 10px;
+            background : red;
+        }
+
+        .colorBoxInfo{
+            display : flex;
+            flex-direction : column;
+            width : 100%;
+            height : 100px;
+            margin-left : 15px;
+
+            h4 {
+                margin-top : 10px;
+            }
+            p{
+                font-size : 15px;
+                font-weight: 600;
+            }
+            
+        }
+
+    }
+}
